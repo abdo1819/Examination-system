@@ -1,17 +1,17 @@
 QuestionAssumtions:
     - 
+    priority: 5
+    topic: "Examination"
+    question: what is the duration of exam
+    assumtion: exam duration is fixed and set at program level by admin
+    # reviewer-note: please uncomment me and write your note here
+    
+    - 
     priority: 3
     topic: "Examination"
     affected-etities: ["Exam","course"]
     question: who many exams per course?
     assumtion: student can take multible exams per course.
-    # reviewer-note: please uncomment me and write your note here
-
-    - 
-    priority: 5
-    topic: "Examination"
-    question: what is the duration of exam
-    assumtion: exam duration is fixed and set at program level by admin
     # reviewer-note: please uncomment me and write your note here
 
     -
