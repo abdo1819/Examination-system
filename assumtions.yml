@@ -23,13 +23,6 @@ QuestionAssumtions:
     in another hand the each course is contained in a topic and can have mulitple topics
     # reviewer-note: please uncomment me and write your note here
 
-    -
-    priority: 0
-    topic: "Examination"
-    affected-etities: ["Exam","Question"]
-    question: is there a chance for the number of question to change
-    assumtion: yes, number of question may change in future and we should build flexable database for that matter
-    # reviewer-note: please uncomment me and write your note here
     
     -
     priority: 0
@@ -78,3 +71,13 @@ QuestionAssumtions:
     question: can instructor exist without having any course to teach?
     assumtion: yes
     # reviewer-note: please uncomment me and write your note here
+
+
+drafted:
+#     -
+#     priority: 0
+#     topic: "Examination"
+#     affected-etities: ["Exam","Question"]
+#     question: is there a chance for the number of question to change
+#     assumtion: yes, number of question may change in future and we should build flexable database for that matter
+#     # reviewer-note: please uncomment me and write your note here
