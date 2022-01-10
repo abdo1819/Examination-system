@@ -15,7 +15,7 @@ QuestionAssumtions:
     # reviewer-note: please uncomment me and write your note here
 
     -
-    priority: 1
+    priority: 0
     question: does department have set of teaching topics or courses?
     topic: "teaching"
     affected-etities: ["Department","Course","Topic"]
