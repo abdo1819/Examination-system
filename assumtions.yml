@@ -23,6 +23,12 @@ QuestionAssumtions:
     in another hand the each course is contained in a topic and can have mulitple topics
     # reviewer-note: please uncomment me and write your note here
 
+    -
+    priority: 1
+    question: how many choices in MCQ question
+    topic: "examination"
+    affected-entities: ["question"]
+    assumtion: MCQ are always 4 choices
     
     -
     priority: 0
