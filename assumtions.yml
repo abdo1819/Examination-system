@@ -11,7 +11,7 @@ QuestionAssumtions:
     topic: "Examination"
     affected-etities: ["Exam","course"]
     question: who many exams per course?
-    assumtion: student can take multible exams per course.
+    assumtion: student can take multible exams per course but only the last one is saved as grade
     # reviewer-note: please uncomment me and write your note here
 
     -
