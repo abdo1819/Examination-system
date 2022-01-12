@@ -1,6 +1,8 @@
 # Examination-system
 # EERD 
-<img src="ERD.drawio.svg" />
+
+![ERD](design/ERD.drawio.svg)
 
 # mapping to tables
-![diagram](diagram.png)
+
+![diagram](initiateDB/diagram.png)
