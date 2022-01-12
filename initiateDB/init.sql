@@ -1,3 +1,54 @@
+-- WARNNING this script will drop all tables in the database
+-- and create new ones.
+
+
+/* -------------------------------------------------------------------------- */
+/*                      create the database if not exist                      */
+/* -------------------------------------------------------------------------- */
+
+-- Create a new database called 'Examination'
+-- Connect to the 'master' database to run this snippet
+USE master
+GO
+-- Create the new database if it does not exist already
+IF NOT EXISTS (
+    SELECT name
+        FROM sys.databases
+        WHERE name = N'Examination'
+)
+CREATE DATABASE Examination
+GO
+USE Examination;
+GO
+/* -------------------------------------------------------------------------- */
+/*                       remove all tables if the exist                       */
+/* -------------------------------------------------------------------------- */
+-- ref https://stackoverflow.com/questions/8439650/how-to-drop-all-tables-in-a-sql-server-database
+
+-- remove FOREIGN key CONSTRAINT
+DECLARE @Sql NVARCHAR(500) DECLARE @Cursor CURSOR
+
+SET @Cursor = CURSOR FAST_FORWARD FOR
+SELECT DISTINCT sql = 'ALTER TABLE [' + tc2.TABLE_SCHEMA + '].[' +  tc2.TABLE_NAME + '] DROP [' + rc1.CONSTRAINT_NAME + '];'
+FROM INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc1
+LEFT JOIN INFORMATION_SCHEMA.TABLE_CONSTRAINTS tc2 ON tc2.CONSTRAINT_NAME =rc1.CONSTRAINT_NAME
+
+OPEN @Cursor FETCH NEXT FROM @Cursor INTO @Sql
+
+WHILE (@@FETCH_STATUS = 0)
+BEGIN
+Exec sp_executesql @Sql
+FETCH NEXT FROM @Cursor INTO @Sql
+END
+
+CLOSE @Cursor DEALLOCATE @Cursor
+GO
+
+-- drop actual tables
+EXEC sp_MSforeachtable 'DROP TABLE ?'
+GO
+
+
 -- User [usr_id, user_type, f_name, l_name, address, email, password]
 
 CREATE TABLE [User]
