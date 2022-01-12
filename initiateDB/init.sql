@@ -170,8 +170,8 @@ CREATE TABLE [Question]
     type varChar(255) NOT NULL,
     q_text varChar(255) NOT NULL,
     corr_answer varChar(255) NOT NULL,
-    crs_id INTEGER NOT NULL,
-    FOREIGN KEY (crs_id) REFERENCES Course(crs_id),
+    top_id INTEGER NOT NULL,
+    FOREIGN KEY (top_id) REFERENCES Topic(top_id),
 );
 ALTER TABLE [Exam_Question] ADD CONSTRAINT [Exam_Question_fk_1] FOREIGN KEY (q_id) REFERENCES Question(q_id);
 ALTER TABLE [Exam_Answer] ADD CONSTRAINT [Exam_Answer_fk_1] FOREIGN KEY (q_id) REFERENCES Question(q_id);
