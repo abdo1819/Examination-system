@@ -1,6 +1,8 @@
 # Examination-system
 # EERD 
-<img src="ERD.drawio.svg" />
+* if you use dark theme click the image for background
+![ERD](design/ERD.drawio.svg)
 
 # mapping to tables
-![diagram](diagram.png)
+
+![diagram](initiateDB/diagram.png)
