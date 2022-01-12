@@ -67,6 +67,7 @@ CREATE TABLE [Student]
 (
     std_id INTEGER PRIMARY KEY ,
     dept_id INTEGER NOT NULL,
+    FOREIGN KEY (std_id) REFERENCES [User](usr_id),
 );
 
 -- Instructor [ins_id, salary, degree, dept_id]
@@ -77,6 +78,7 @@ CREATE TABLE [Instructor]
     salary INTEGER ,
     degree varChar(255) ,
     dept_id INTEGER NOT NULL,
+    FOREIGN KEY (ins_id) REFERENCES [User](usr_id),
 );
 -- Course [crs_id, crs_name]
 
