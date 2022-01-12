@@ -49,17 +49,19 @@ EXEC sp_MSforeachtable 'DROP TABLE ?'
 GO
 
 
+
 -- User [usr_id, user_type, f_name, l_name, address, email, password]
 
 CREATE TABLE [User]
 (
-    usr_id INTEGER PRIMARY KEY ,
+    usr_id INTEGER PRIMARY KEY IDENTITY,
     user_type varChar(1) NOT NULL,
-    f_name varChar(255) NOT NULL,
-    l_name varChar(255) NOT NULL,
-    address varChar(255) NOT NULL,
-    email varChar(255) NOT NULL,
-    password varChar(255) NOT NULL,
+    f_name varChar(50) NOT NULL,
+    l_name varChar(50) NOT NULL,
+    address varChar(150) ,
+    email varChar(90) UNIQUE NOT NULL,
+    password varChar(255) NOT NULL, 
+	CONSTRAINT c_user_type CHECK (user_type IN ('I','S'))
 );
 
 -- Student [std_id, dept_id]
@@ -67,7 +69,7 @@ CREATE TABLE [Student]
 (
     std_id INTEGER PRIMARY KEY ,
     dept_id INTEGER NOT NULL,
-    FOREIGN KEY (std_id) REFERENCES [User](usr_id),
+    FOREIGN KEY (std_id) REFERENCES [User](usr_id) ON DELETE CASCADE,
 );
 
 -- Instructor [ins_id, salary, degree, dept_id]
@@ -75,40 +77,44 @@ CREATE TABLE [Student]
 CREATE TABLE [Instructor]
 (
     ins_id INTEGER PRIMARY KEY ,
-    salary INTEGER ,
-    degree varChar(255) ,
+    salary MONEY ,
+    degree varChar(50) ,
     dept_id INTEGER NOT NULL,
-    FOREIGN KEY (ins_id) REFERENCES [User](usr_id),
+	hire_date DATE DEFAULT GETDATE(),
+    FOREIGN KEY (ins_id) REFERENCES [User](usr_id) ON DELETE CASCADE,
 );
 -- Course [crs_id, crs_name]
 
 CREATE TABLE [Course]
 (
     crs_id INTEGER PRIMARY KEY ,
-    crs_name varChar(255) NOT NULL,
+    crs_name varChar(100) NOT NULL,
 );
 
 -- Course_Attendance [crs_id, std_id, ins_id, grade]
 
 CREATE TABLE [Course_Attendance]
 (
-    crs_id INTEGER NOT NULL,
-    std_id INTEGER NOT NULL,
-    ins_id INTEGER NOT NULL,
-    grade varChar(255) NOT NULL,
+    crs_id INTEGER ,
+    std_id INTEGER ,
+    ins_id INTEGER ,
+    grade INTEGER , -- The grade of the last exam taken by student in this course -- Derived
     FOREIGN KEY (crs_id) REFERENCES Course(crs_id),
     FOREIGN KEY (std_id) REFERENCES Student(std_id),
     FOREIGN KEY (ins_id) REFERENCES Instructor(ins_id),
+	PRIMARY KEY (crs_id,std_id,ins_id)
 );
 -- Ins_Course [crs_id, ins_id, evaluation, dept_id]
 
 CREATE TABLE [Ins_Course]
 (
-    crs_id INTEGER NOT NULL,
-    ins_id INTEGER NOT NULL,
+    crs_id INTEGER ,
+    ins_id INTEGER ,
     evaluation INTEGER ,
-    FOREIGN KEY (crs_id) REFERENCES Course(crs_id),
-    FOREIGN KEY (ins_id) REFERENCES Instructor(ins_id),
+    FOREIGN KEY (crs_id) REFERENCES Course(crs_id) ,
+    FOREIGN KEY (ins_id) REFERENCES Instructor(ins_id) ,
+	CONSTRAINT c_CA_PK PRIMARY KEY (crs_id,ins_id),
+	CONSTRAINT c_IC_eval CHECK (evaluation BETWEEN 0 AND 10)
 );
 
 -- Department [dept_id, dept_name, mgr_id]
@@ -116,22 +122,22 @@ CREATE TABLE [Ins_Course]
 CREATE TABLE [Department]
 (
     dept_id INTEGER PRIMARY KEY ,
-    dept_name varChar(255) NOT NULL,
-    mgr_id INTEGER NOT NULL,
-    FOREIGN KEY (mgr_id) REFERENCES Instructor(ins_id),
+    dept_name varChar(100) NOT NULL,
+    mgr_id INTEGER NOT NULL ,
+    FOREIGN KEY (mgr_id) REFERENCES Instructor(ins_id) , -- Check Constraints later
 );
 
-ALTER TABLE [Student] ADD CONSTRAINT [Student_fk_1] FOREIGN KEY (dept_id) REFERENCES Department(dept_id);
-ALTER TABLE [Instructor] ADD CONSTRAINT [Instructor_fk_1] FOREIGN KEY (dept_id) REFERENCES Department(dept_id);
+ALTER TABLE [Student] ADD CONSTRAINT [Student_fk_1] FOREIGN KEY (dept_id) REFERENCES Department(dept_id); -- Check Constraints later
+ALTER TABLE [Instructor] ADD CONSTRAINT [Instructor_fk_1] FOREIGN KEY (dept_id) REFERENCES Department(dept_id); -- Check Constraints later
 
 -- Topic [top_id, top_name, crs_id]
 
 CREATE TABLE [Topic]
 (
     top_id INTEGER PRIMARY KEY ,
-    top_name varChar(255) NOT NULL,
+    top_name varChar(100) NOT NULL,
     crs_id INTEGER NOT NULL,
-    FOREIGN KEY (crs_id) REFERENCES Course(crs_id),
+    FOREIGN KEY (crs_id) REFERENCES Course(crs_id) ON DELETE CASCADE,
 );
 
 -- Exam [ex_id, date, crs_id]
@@ -139,52 +145,59 @@ CREATE TABLE [Topic]
 CREATE TABLE [Exam]
 (
     ex_id INTEGER PRIMARY KEY ,
-    date Date NOT NULL,
+    date Date NOT NULL DEFAULT GETDATE(),
     crs_id INTEGER NOT NULL,
-    FOREIGN KEY (crs_id) REFERENCES Course(crs_id),
+    FOREIGN KEY (crs_id) REFERENCES Course(crs_id) , -- Check constraints later
 );
 
 -- Exam_Question [ex_id, q_id]
 
 CREATE TABLE [Exam_Question]
 (
-    ex_id INTEGER NOT NULL,
-    q_id INTEGER NOT NULL,
+    ex_id INTEGER ,
+    q_id INTEGER ,
     FOREIGN KEY (ex_id) REFERENCES Exam(ex_id),
+	PRIMARY KEY (ex_id,q_id)
 );
 
 -- Exam_Answer [std_id, ex_id, q_id, std_answer]
 
 CREATE TABLE [Exam_Answer]
 (
-    std_id INTEGER NOT NULL,
-    ex_id INTEGER NOT NULL,
-    q_id INTEGER NOT NULL,
-    std_answer varChar(255) NOT NULL,
-    FOREIGN KEY (std_id) REFERENCES Student(std_id),
-    FOREIGN KEY (ex_id) REFERENCES Exam(ex_id),
+    std_id INTEGER ,
+    ex_id INTEGER ,
+    q_id INTEGER ,
+    std_answer VARCHAR(1) NOT NULL,
+    FOREIGN KEY (std_id) REFERENCES Student(std_id) ,
+    FOREIGN KEY (ex_id) REFERENCES Exam(ex_id) , 
+	CONSTRAINT c_EA CHECK (std_answer IN ('a','b','c','d','T','F')), -- Possible trigger on insert 
+	PRIMARY KEY (std_id,ex_id,q_id)
 );
 
--- Question [q_id, type, q_text, corr_answer, crs_id]
+-- Question [q_id, q_type, q_text, corr_answer, crs_id]
 CREATE TABLE [Question]
 (
     q_id INTEGER PRIMARY KEY ,
-    type varChar(255) NOT NULL,
-    q_text varChar(255) NOT NULL,
-    corr_answer varChar(255) NOT NULL,
+    q_type varChar(3) NOT NULL,
+    q_text varChar(300) NOT NULL,
+    corr_answer varChar(1) NOT NULL,
     top_id INTEGER NOT NULL,
-    FOREIGN KEY (top_id) REFERENCES Topic(top_id),
+    FOREIGN KEY (top_id) REFERENCES Topic(top_id) ON DELETE CASCADE,
+	CONSTRAINT c_questype CHECK (q_type IN ('TF', 'MCQ')) ,
+	CONSTRAINT c_corr_answer CHECK ( ( (q_type = 'TF') AND (corr_answer IN ('T', 'F') ) ) OR ( (q_type = 'MCQ') AND (corr_answer IN ('a', 'b','c','d')) ) ) 
 );
-ALTER TABLE [Exam_Question] ADD CONSTRAINT [Exam_Question_fk_1] FOREIGN KEY (q_id) REFERENCES Question(q_id);
-ALTER TABLE [Exam_Answer] ADD CONSTRAINT [Exam_Answer_fk_1] FOREIGN KEY (q_id) REFERENCES Question(q_id);
 
--- MCQ [¬¬¬¬¬¬q_id, ch1, ch2, ch3, ch4]
+ALTER TABLE [Exam_Question] ADD CONSTRAINT [Exam_Question_fk_1] FOREIGN KEY (q_id) REFERENCES Question(q_id) ;
+ALTER TABLE [Exam_Answer] ADD CONSTRAINT [Exam_Answer_fk_1] FOREIGN KEY (q_id) REFERENCES Question(q_id) ; -- Check constraints
+
+-- MCQ [q_id, ch_a, ch_b, ch_c, ch_d]
 CREATE TABLE [MCQ]
 (
-    q_id INTEGER NOT NULL,
-    ch1 varChar(255) NOT NULL,
-    ch2 varChar(255) NOT NULL,
-    ch3 varChar(255) NOT NULL,
-    ch4 varChar(255) NOT NULL,
-    FOREIGN KEY (q_id) REFERENCES Question(q_id),
+    q_id INTEGER ,
+    ch_a varChar(300) NOT NULL,
+    ch_b varChar(300) NOT NULL,
+    ch_c varChar(300) NOT NULL,
+    ch_d varChar(300) NOT NULL,
+    FOREIGN KEY (q_id) REFERENCES Question(q_id) ON DELETE CASCADE,
+	PRIMARY KEY (q_id)
 );
