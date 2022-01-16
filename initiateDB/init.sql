@@ -314,7 +314,8 @@ if exists (select crs_name from [Course] where crs_name = @crs_name)
 		declare @id_course int
 		select @id_course = crs_id from [Course] where crs_name = @crs_name
 
-		delete from [Course_Attendance] where crs_id = @id_course			
+		delete from [Course_Attendance] where crs_id = @id_course
+		delete from Ins_Course] where crs_id = @id_course
 		delete from [Course] where crs_name = @crs_name
 	end
 else 
