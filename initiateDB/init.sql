@@ -310,7 +310,13 @@ alter procedure Delete_Course @crs_name varchar(20)
 with encryption
 as
 if exists (select crs_name from [Course] where crs_name = @crs_name)
+	begin
+		declare @id_course int
+		select @id_course = crs_id from [Course] where crs_name = @crs_name
+
+		delete from [Course_Attendance] where crs_id = @id_course			
 		delete from [Course] where crs_name = @crs_name
+	end
 else 
 	select 'There is no course named ' + @crs_name
 
