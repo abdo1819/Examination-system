@@ -237,3 +237,57 @@ declare @id_dept int
 		select 'Duplicate Email'
 	end catch
 
+
+alter procedure Insert_Department @dept_id int, @dept_name varchar(20), @mgr_name varchar(20), @id_mgr int output
+with encryption
+as
+if not exists (select dept_id from [Department] where dept_id = @dept_id)
+begin
+	begin try
+		select @id_mgr = usr_id from [User] where f_name = @mgr_name
+		insert into [Department] values (@dept_id, @dept_name, @id_mgr)
+		return @id_mgr
+	end try
+	begin catch
+		select 'no instructor with name ' + @mgr_name ' found'
+	end catch
+end
+else 
+	select 'duplicate Department ID'
+
+
+create procedure Delete_Department @dept_name varchar(20)
+with encryption
+as
+if exists (select dept_name from [Department] where dept_name = @dept_name)
+begin
+	begin try
+		delete from [Department] where dept_name = @dept_name
+	end try
+	begin catch
+		select 'Please assign the manager to another department first'
+	end catch
+end
+else 
+	select 'No department with name ' + @dept_name
+
+
+create procedure Update_Department_Manager @dept_name varchar(20), @mgr_name varchar(20)
+with encryption
+as
+if exists (select dept_name from [Department] where dept_name = @dept_name)
+begin
+declare @id_mgr int
+	begin try
+		select @id_mgr = usr_id from [User] where f_name = @mgr_name
+		update [Department] set mgr_id = @id_mgr where dept_name = @dept_name
+	end try
+	begin catch
+		select 'Error: There is no an instructor named ' + @mgr_name
+	end catch
+end
+else 
+	select 'No department with name ' + @dept_name
+
+
+
