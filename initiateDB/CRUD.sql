@@ -29,7 +29,7 @@ BEGIN
     -- TODO define the seed globally
     SELECT @hashed_password = HASHBYTES('SHA2_256', @password+'seed');
     INSERT INTO [User]
-        (user_type, f_name, l_name, address, email, [password])
+        (user_type, f_name, l_name, address, email, [hashed_password])
     VALUES
         (
             @user_type,

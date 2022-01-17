@@ -60,7 +60,7 @@ CREATE TABLE [User]
     l_name varChar(50) NOT NULL,
     address varChar(150) ,
     email varChar(90) UNIQUE NOT NULL,
-    password varChar(255) NOT NULL, 
+    hashed_password varChar(255) NOT NULL, 
 	CONSTRAINT c_user_type CHECK (user_type IN ('I','S'))
 );
 
@@ -121,7 +121,7 @@ CREATE TABLE [Ins_Course]
 
 CREATE TABLE [Department]
 (
-    dept_id INTEGER PRIMARY KEY ,
+    dept_id INTEGER PRIMARY KEY IDENTITY,
     dept_name varChar(100) NOT NULL,
     mgr_id INTEGER NOT NULL ,
     FOREIGN KEY (mgr_id) REFERENCES Instructor(ins_id) , -- Check Constraints later
