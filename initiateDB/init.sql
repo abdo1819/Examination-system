@@ -202,38 +202,3 @@ CREATE TABLE [MCQ]
 	PRIMARY KEY (q_id)
 );
 
-
-
-use Examination
-GO
-create or alter procedure Insert_Student @f_name varchar(20), @l_name varchar(20), @address varchar(30), @email varchar(20), @password varchar(30), @dept_name varchar(20), @id_std int output
-with encryption
-as
-declare @id_dept int
-	begin try
-		insert into [User] values ('s', @f_name, @l_name, @address, @email, @password)
-		select @id_std = usr_id from [User] where email = @email
-		select @id_dept = dept_id from [Department] where dept_name = @dept_name
-		insert into [Student] values (@id_std, @id_dept)
-		return @id_std
-	end try
-	begin catch
-		select 'Duplicate Email'
-	end catch
-
-GO
-create or alter procedure Insert_Instructor @f_name varchar(20), @l_name varchar(20), @address varchar(30), @email varchar(20), @password varchar(30), @sal int, @degree varchar(50), @hire_date date = getdate, @dept_name varchar(20), @id_ins int output
-with encryption
-as
-declare @id_dept int
-	begin try
-		insert into [User] values ('i', @f_name, @l_name, @address, @email, @password)
-		select @id_ins = usr_id from [User] where email = @email
-		select @id_dept = dept_id from [Department] where dept_name = @dept_name
-		insert into [Instructor] values (@id_ins, @sal, @degree, @id_dept, @hire_date)
-		return @id_ins
-	end try
-	begin catch
-		select 'Duplicate Email'
-	end catch
-
