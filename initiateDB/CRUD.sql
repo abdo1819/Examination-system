@@ -232,3 +232,92 @@ BEGIN
 END
 GO
 
+/* -------------------------------------------------------------------------- */
+/*                              update user data                              */
+/* -------------------------------------------------------------------------- */
+CREATE OR ALTER PROCEDURE updateUserData
+    @usr_id INTEGER,
+    @f_name varChar(50),
+    @l_name varChar(50),
+    @address varChar(150),
+    @email varChar(90)
+AS
+BEGIN
+    BEGIN TRY
+    UPDATE [User]
+    SET
+        f_name = @f_name,
+        l_name = @l_name,
+        address = @address,
+        email = @email
+    WHERE usr_id = @usr_id;
+    END TRY
+    BEGIN CATCH
+        -- TODO send specific error message when email is already in database
+        SELECT "failed to update user" as [Error Message];
+    END CATCH
+END
+
+GO
+
+
+CREATE OR ALTER PROCEDURE updateStudentData
+    @f_name varChar(50),
+    @l_name varChar(50),
+    @address varChar(150),
+    @email varChar(90),
+    @dept_id INTEGER,
+    @std_id INTEGER
+AS
+BEGIN
+    BEGIN TRY
+    -- update the userInfo
+    EXEC [dbo].[updateUserData] 
+    @usr_id = @std_id,
+    @f_name = @f_name,
+    @l_name = @l_name,
+    @address = @address,
+    @email = @email;
+    -- update student specificInfo
+    UPDATE [Student]
+    SET dept_id = @dept_id
+    WHERE std_id = @std_id;
+    END TRY
+    BEGIN CATCH
+        -- TODO send specific error message when department id is not in the database
+        SELECT "failed to update student" as [Error Message];
+    END CATCH
+END
+GO
+
+CREATE OR ALTER PROCEDURE updateInstructorData
+    @f_name varChar(50),
+    @l_name varChar(50),
+    @address varChar(150),
+    @email varChar(90),
+    @salary MONEY,
+    @degree varChar(50),
+    @dept_id INTEGER,
+    @ins_id INTEGER
+AS
+BEGIN
+    BEGIN TRY
+    -- update the userInfo
+    EXEC [dbo].[updateUserData] 
+    @usr_id = @ins_id,
+    @f_name = @f_name,
+    @l_name = @l_name,
+    @address = @address,
+    @email = @email;
+    -- update instructor specificInfo
+    UPDATE [Instructor]
+    SET salary = @salary,
+        degree = @degree,
+        dept_id = @dept_id
+    WHERE ins_id = @ins_id;
+    END TRY
+    BEGIN CATCH
+        -- TODO send specific error message when department id is not in the database
+        SELECT "failed to update instructor" as [Error Message];
+    END CATCH
+END
