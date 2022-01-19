@@ -66,6 +66,16 @@ ELSE
         insert into @test_result
 VALUES('Insert_Student', 0);
 
+/* -------------------------------------------------------------------------- */
+/*                         read student and instructor                        */
+/* -------------------------------------------------------------------------- */
+
+-- exec getAllStudents;
+-- exec getAllStudents @dept_id = @dept_id;
+
+-- exec getAllInstructors;
+-- exec getAllInstructors @dept_id = @dept_id;
+
 
 SELECT *
 from @test_result;
