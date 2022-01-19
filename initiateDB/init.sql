@@ -206,7 +206,7 @@ CREATE TABLE [MCQ]
 
 ------------------------------------------------------------------------
 
-alter procedure Insert_Student @f_name varchar(20), @l_name varchar(20), @address varchar(30), @email varchar(20), @password varchar(30), @dept_name varchar(20), @id_std int output
+create or alter procedure Insert_Student @f_name varchar(20), @l_name varchar(20), @address varchar(30), @email varchar(20), @password varchar(30), @dept_name varchar(20), @id_std int output
 with encryption
 as
 declare @id_dept int
@@ -223,7 +223,7 @@ declare @id_dept int
 
 ------------------------------------------------------------------------
 
-alter procedure Insert_Instructor @f_name varchar(20), @l_name varchar(20), @address varchar(30), @email varchar(20), @password varchar(30), @sal int, @degree varchar(50), @hire_date date = getdate, @dept_name varchar(20), @id_ins int output
+create or alter procedure Insert_Instructor @f_name varchar(20), @l_name varchar(20), @address varchar(30), @email varchar(20), @password varchar(30), @sal int, @degree varchar(50), @hire_date date = getdate, @dept_name varchar(20), @id_ins int output
 with encryption
 as
 declare @id_dept int
@@ -240,35 +240,48 @@ declare @id_dept int
 
 ------------------------------------------------------------------------
 
-alter procedure Insert_Department @dept_id int, @dept_name varchar(20), @mgr_name varchar(20), @id_mgr int output
+create or alter procedure Insert_Department @dept_id int, @dept_name varchar(20), @id_mgr int output
 with encryption
 as
 if not exists (select dept_id from [Department] where dept_id = @dept_id)
 begin
-	begin try
-		select @id_mgr = usr_id from [User] where f_name = @mgr_name
-		insert into [Department] values (@dept_id, @dept_name, @id_mgr)
-		return @id_mgr
-	end try
-	begin catch
-		select 'no instructor with name ' + @mgr_name ' found'
-	end catch
+		if not exists (select usr_id from [User] where usr_id = @id_mgr)
+		begin
+			insert into [Department] values (@dept_id, @dept_name, @id_mgr)
+			return @id_mgr
+		end
+		else
+			select 'no instructor with ID ' + @id_mgr' found'
 end
 else 
 	select 'duplicate Department ID'
 
 ------------------------------------------------------------------------
 
-create procedure Delete_Department @dept_name varchar(20)
+create or alter procedure Delete_Department @dept_name varchar(20), @success int output
+with encryption
+as
+if exists (select dept_name from [Department] where dept_name = @dept_name)
+begin
+	delete from [Department] where dept_name = @dept_name
+	set @success = 1
+	return @success -- deleted successfully 
+end
+else 
+	select 'No department with name ' + @dept_name
+
+------------------------------------------------------------------------
+
+create or alter procedure Update_Department_Manager @dept_name varchar(20), @mgr_id varchar(20)
 with encryption
 as
 if exists (select dept_name from [Department] where dept_name = @dept_name)
 begin
 	begin try
-		delete from [Department] where dept_name = @dept_name
+		update [Department] set mgr_id = @mgr_id where dept_name = @dept_name
 	end try
 	begin catch
-		select 'Please assign the manager to another department first'
+		select 'Error: There is no an instructor with ID ' + @mgr_id
 	end catch
 end
 else 
@@ -276,27 +289,8 @@ else
 
 ------------------------------------------------------------------------
 
-create procedure Update_Department_Manager @dept_name varchar(20), @mgr_name varchar(20)
-with encryption
-as
-if exists (select dept_name from [Department] where dept_name = @dept_name)
-begin
-declare @id_mgr int
-	begin try
-		select @id_mgr = usr_id from [User] where f_name = @mgr_name
-		update [Department] set mgr_id = @id_mgr where dept_name = @dept_name
-	end try
-	begin catch
-		select 'Error: There is no an instructor named ' + @mgr_name
-	end catch
-end
-else 
-	select 'No department with name ' + @dept_name
 
-------------------------------------------------------------------------
-
-
-create procedure Insert_Course @crs_id int, @crs_name varchar(20)
+create or alter procedure Insert_Course @crs_id int, @crs_name varchar(20)
 with encryption
 as
 if not exists (select crs_id from [Course] where crs_id = @crs_id)
@@ -306,17 +300,24 @@ else
 
 ------------------------------------------------------------------------
 
-alter procedure Delete_Course @crs_name varchar(20)
+create or alter procedure Delete_Course @crs_name varchar(20)
 with encryption
 as
 if exists (select crs_name from [Course] where crs_name = @crs_name)
+	begin
+		declare @id_course int
+		select @id_course = crs_id from [Course] where crs_name = @crs_name
+
+		delete from [Course_Attendance] where crs_id = @id_course
+		delete from Ins_Course] where crs_id = @id_course
 		delete from [Course] where crs_name = @crs_name
+	end
 else 
 	select 'There is no course named ' + @crs_name
 
 ------------------------------------------------------------------------
 
-alter procedure Insert_Topic @top_id int, @top_name varchar(20), @crs_name varchar(20)
+create or alter procedure Insert_Topic @top_id int, @top_name varchar(20), @crs_name varchar(20)
 with encryption
 as
 declare @id_crs int
@@ -330,7 +331,7 @@ else
 
 ------------------------------------------------------------------------
 
-create procedure Delete_Topic @top_name varchar(20)
+create or alter procedure Delete_Topic @top_name varchar(20)
 with encryption
 as
 if exists (select top_name from [Topic] where top_name = @top_name)
@@ -342,7 +343,7 @@ else
 
 ------------------------------------------------------------------------
 
-alter procedure Assign_Course_to_Instructor @crs_name varchar(20), @ins_id int
+create or alter procedure Assign_Course_to_Instructor @crs_name varchar(20), @ins_id int
 with encryption
 as
 if not exists (select crs_name from [course] where crs_name = @crs_name)
@@ -363,7 +364,7 @@ else
 
 ------------------------------------------------------------------------
 
-alter procedure End_Course_with_Instructor @crs_name varchar(20), @ins_id int
+create or alter procedure End_Course_with_Instructor @crs_name varchar(20), @ins_id int
 with encryption
 as
 if not exists (select crs_name from [course] where crs_name = @crs_name)
@@ -382,7 +383,7 @@ else
 
 --------------------------------------------------------------------------
 
-create procedure Student_Take_course_with_Instructor @std_id int, @crs_id int, @ins_id int
+create or alter procedure Student_Take_course_with_Instructor @std_id int, @crs_id int, @ins_id int
 as
 if not exists (select usr_id from [User] where usr_id = @ins_id)
 and not exists (select usr_id from [User] where usr_id = @std_id)
@@ -406,7 +407,7 @@ else
 
 -----------------------------------------------------------------------
 
-create procedure End_Course_for_Student @crs_name varchar(20), @std_id int
+create or alter procedure End_Course_for_Student @crs_name varchar(20), @std_id int
 with encryption
 as
 if exists (select crs_name from [course] where crs_name = @crs_name)
