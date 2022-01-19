@@ -168,8 +168,8 @@ CREATE TABLE [Exam_Answer]
     ex_id INTEGER ,
     q_id INTEGER ,
     std_answer VARCHAR(1) NOT NULL,
-    FOREIGN KEY (std_id) REFERENCES Student(std_id) ,
-    FOREIGN KEY (ex_id) REFERENCES Exam(ex_id) , 
+    FOREIGN KEY (std_id) REFERENCES Student(std_id) on delete cascade,
+    FOREIGN KEY (ex_id) REFERENCES Exam(ex_id) on delete cascade, 
 	CONSTRAINT c_EA CHECK (std_answer IN ('a','b','c','d','T','F')), -- Possible trigger on insert 
 	PRIMARY KEY (std_id,ex_id,q_id)
 );
