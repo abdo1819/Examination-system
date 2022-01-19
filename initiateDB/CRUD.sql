@@ -321,3 +321,51 @@ BEGIN
         SELECT "failed to update instructor" as [Error Message];
     END CATCH
 END
+GO
+
+/* -------------------------------------------------------------------------- */
+/*                        delete student or instructor                        */
+/* -------------------------------------------------------------------------- */
+
+CREATE OR ALTER PROCEDURE deleteStudent
+    @std_id INTEGER
+AS
+BEGIN
+    BEGIN TRY
+    -- FIXME delete course attendance
+    -- FIXME delete exam answers
+    
+    
+    DELETE FROM [Student]
+    WHERE std_id = @std_id;
+  
+    DELETE FROM [User]
+    WHERE usr_id = @std_id;
+    END TRY
+    BEGIN CATCH
+        SELECT "failed to delete student" as [Error Message];
+    END CATCH
+END
+GO
+
+CREATE OR ALTER PROCEDURE deleteInstructor
+    @ins_id INTEGER
+AS
+BEGIN
+    BEGIN TRY
+    -- FIXME delete course attendance
+    -- FIXME handle Ins_Course
+    -- FIXME handle if instructor is a manager of a department
+    
+    
+    DELETE FROM [Instructor]
+    WHERE ins_id = @ins_id;
+  
+    DELETE FROM [User]
+    WHERE usr_id = @ins_id;
+    END TRY
+    BEGIN CATCH
+        SELECT "failed to delete instructor" as [Error Message];
+    END CATCH
+END
+GO
