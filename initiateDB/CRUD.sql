@@ -47,12 +47,17 @@ BEGIN
     */
     END TRY
     BEGIN CATCH
-    select ERROR_MESSAGE() 'Error Message'
-	, ERROR_NUMBER() 'Error Number'
-	, ERROR_LINE () 'Error Line Number'
-	, ERROR_SEVERITY () 'Error Severity Level'
-	, ERROR_PROCEDURE() 'Error Procedure'
-	, ERROR_STATE () 'Error State';
+    
+    -- select ERROR_MESSAGE() 'Error Message'
+	-- , ERROR_NUMBER() 'Error Number'
+	-- , ERROR_LINE () 'Error Line Number'
+	-- , ERROR_SEVERITY () 'Error Severity Level'
+	-- , ERROR_PROCEDURE() 'Error Procedure'
+	-- , ERROR_STATE () 'Error State';
+    IF (ERROR_NUMBER() = 2627)
+        SELECT "User already exists" as [Error Message];
+    ELSE
+        SELECT ERROR_NUMBER() 'Error Number',ERROR_MESSAGE() 'Error Message';
     END CATCH
 END
 GO
