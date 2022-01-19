@@ -60,7 +60,7 @@ CREATE TABLE [User]
     l_name varChar(50) NOT NULL,
     address varChar(150) ,
     email varChar(90) UNIQUE NOT NULL,
-    password varChar(255) NOT NULL, 
+    hashed_password varChar(255) NOT NULL, 
 	CONSTRAINT c_user_type CHECK (user_type IN ('I','S'))
 );
 
@@ -201,5 +201,4 @@ CREATE TABLE [MCQ]
     FOREIGN KEY (q_id) REFERENCES Question(q_id) ON DELETE CASCADE,
 	PRIMARY KEY (q_id)
 );
-
 
