@@ -1,0 +1,1 @@
+sqlcmd -s "." -i init.sql -b 
