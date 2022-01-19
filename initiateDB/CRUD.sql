@@ -176,3 +176,59 @@ BEGIN
     ALTER TABLE Instructor CHECK CONSTRAINT Instructor_fk_1;
 
 END
+GO
+
+/* -------------------------------------------------------------------------- */
+/*                                  read user                                 */
+/* -------------------------------------------------------------------------- */
+
+
+/* --------------------------------- student -------------------------------- */
+/*
+•	Report that returns the students information according to Department No parameter.
+*/
+CREATE OR ALTER PROCEDURE getAllStudents
+AS
+BEGIN
+    SELECT *
+    FROM v_Students;
+END
+GO
+
+CREATE OR ALTER PROCEDURE getStudentsInDepartment
+    @dept_id INTEGER
+AS
+BEGIN
+    SELECT usr_id, f_name,
+        l_name,
+        address,
+        email
+    FROM v_Students
+    WHERE dept_id = @dept_id;
+END
+GO
+
+/* ------------------------------- instructor ------------------------------- */
+CREATE OR ALTER PROCEDURE getAllInstructors
+AS
+BEGIN
+    SELECT *
+    FROM v_Instructors;
+END
+GO
+
+CREATE OR ALTER PROCEDURE getInstructorsInDepartment
+    @dept_id INTEGER
+AS
+BEGIN
+    SELECT usr_id, f_name,
+        l_name,
+        address,
+        email,
+        salary,
+        degree
+    FROM v_Instructors
+    WHERE dept_id = @dept_id;
+END
+GO
+
