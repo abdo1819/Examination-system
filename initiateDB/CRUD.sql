@@ -2,6 +2,7 @@ USE Examination;
 GO
 
 -- create PRIVATE schema if not exist in the database
+-- PRIVATE schema is procedure not intended for end-user(developer)
 IF NOT EXISTS (SELECT *
 FROM sys.schemas
 WHERE name = 'PRIVATE')
@@ -10,6 +11,9 @@ BEGIN
 END
 GO
 
+/* -------------------------------------------------------------------------- */
+/*                                 create user                                */
+/* -------------------------------------------------------------------------- */
 -- User [usr_id, user_type, f_name, l_name, address, email, password]
 CREATE OR ALTER PROCEDURE [PRIVATE].[Insert_User]
     @user_type varChar(1),
@@ -57,7 +61,7 @@ BEGIN
     IF (ERROR_NUMBER() = 2627)
         SELECT "User already exists" as [Error Message];
     ELSE
-        SELECT ERROR_NUMBER() 'Error Number',ERROR_MESSAGE() 'Error Message';
+        SELECT ERROR_NUMBER() 'Error Number', ERROR_MESSAGE() 'Error Message';
     END CATCH
 END
 GO
@@ -128,7 +132,7 @@ BEGIN
 END
 GO
 
-
+/* ----------------------- required helping procedure ----------------------- */
 -- Department [dept_id, dept_name, mgr_id]
 -- TEMP 
 -- TODO remove this and replace it with the real procedure
@@ -145,7 +149,7 @@ BEGIN
             @mgr_id
     );
     set @dept_id = scope_identity();
-    -- TODO handle case if mgr_id is not in the database
+-- TODO handle case if mgr_id is not in the database
 END
 GO
 -- create a department with it's manager
