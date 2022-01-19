@@ -76,6 +76,7 @@ CREATE OR ALTER PROCEDURE [dbo].[Insert_Student]
     @stu_id INTEGER OUTPUT
 AS
 BEGIN
+    begin try
     Exec [PRIVATE].[Insert_User] 'S', @f_name, @l_name, @address, @email, @password, @stu_id OUTPUT;
     INSERT INTO [Student]
     VALUES
@@ -83,6 +84,10 @@ BEGIN
             @stu_id,
             @dept_id
     );
+    END TRY
+    BEGIN CATCH
+        SELECT "failed to insert student" as [Error Message];
+    END CATCH
 END
 GO
 
@@ -103,9 +108,11 @@ CREATE OR ALTER PROCEDURE [dbo].[Insert_Instructor]
     @ins_id INTEGER OUTPUT
 AS
 BEGIN
+    BEGIN TRY
     DECLARE @usr_id INTEGER;
     Exec [PRIVATE].[Insert_User] 'I', @f_name, @l_name, @address, @email, @password, @usr_id OUTPUT;
-    INSERT INTO [Instructor](ins_id, salary, degree, dept_id)
+    INSERT INTO [Instructor]
+        (ins_id, salary, degree, dept_id)
     VALUES
         (
             @usr_id,
@@ -114,6 +121,10 @@ BEGIN
             @dept_id
     );
     SET @ins_id = @usr_id;
+    END TRY
+    BEGIN CATCH
+        SELECT "failed to insert instructor" as [Error Message];
+    END CATCH
 END
 GO
 
