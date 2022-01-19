@@ -58,7 +58,7 @@ EXEC Insert_Student @f_name ='Armin',
     @password = 'password',
     @dept_id = @dept_id,
     @stu_id = @student_id OUTPUT;
-select @student_id;
+-- select @student_id;
 IF (@student_id IS NOT NULL)
     insert into @test_result
 VALUES('Insert_Student', 1);
@@ -75,6 +75,16 @@ VALUES('Insert_Student', 0);
 
 -- exec getAllInstructors;
 -- exec getAllInstructors @dept_id = @dept_id;
+
+
+/* -------------------------------------------------------------------------- */
+/*                        update student or instuctor                        */
+/* -------------------------------------------------------------------------- */
+-- TODO
+
+/* -------------------------------------------------------------------------- */
+/*                        delete student or instructor                        */
+/* -------------------------------------------------------------------------- */
 
 
 SELECT *
