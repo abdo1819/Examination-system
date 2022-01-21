@@ -2,6 +2,10 @@
 USE EXAMINATION
 
 
+/* -------------------------------------------------------------------------- */
+/*                  insert department , instructor , student                  */
+/* -------------------------------------------------------------------------- */
+
 /* ---------------- insert 9 departments with thier managers ---------------- */
 DECLARE @dept_id1 INTEGER, @mgr_id1 INTEGER;
 DECLARE @dept_id2 INTEGER, @mgr_id2 INTEGER;
@@ -121,3 +125,47 @@ EXEC Insert_Student @f_name="Vivi",@l_name="Druhan",@address="1776 Carioca Lane"
 EXEC Insert_Student @f_name="Gloriane",@l_name="Besnardeau",@address="14 Luster Drive",@email="gbesnardeau2q@theatlantic.com",@password="HlzCxkcVpjjA",@dept_id=@dept_id9,@stu_id=@temp_std_id output;
 EXEC Insert_Student @f_name="Lorne",@l_name="Foxen",@address=null,@email="lfoxen2r@google.com.hk",@password="ixaK4O",@dept_id=@dept_id3,@stu_id=@temp_std_id output;
 
+/* ------------------------------------------------------------------------------- */
+/*                                      Course Table                               */
+/* ------------------------------------------------------------------------------- */
+
+USE Examination
+GO
+
+Insert_Course 'Programming Basics'
+GO
+Insert_Course 'SQL'
+GO
+Insert_Course 'CST'
+GO
+Insert_Course 'Advanced CST'
+GO
+Insert_Course '.NET Core'
+GO
+
+/* ------------------------------------------------------------------------------- */
+/*                                      Topic Table                                */
+/* ------------------------------------------------------------------------------- */
+
+Insert_Topic 'C Language', 'Programming Basics'
+GO
+Insert_Topic 'C++ OOP', 'Programming Basics'
+GO
+Insert_Topic 'Software Architecture', 'Programming Basics'
+GO
+Insert_Topic 'Database' , 'SQL'
+GO
+Insert_Topic 'Advanced Database', 'SQL'
+GO
+Insert_Topic 'HTML', 'CST'
+GO
+Insert_Topic 'CSS', 'CST'
+GO
+Insert_Topic 'Javascript', 'CST'
+GO
+Insert_Topic 'Advanced Javascript', 'Advanced CST'
+GO
+Insert_Topic 'HTML5', 'Advanced CST'
+GO
+Insert_Topic 'C#', '.NET Core'
+GO
