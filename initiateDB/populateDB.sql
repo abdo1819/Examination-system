@@ -217,3 +217,20 @@ GO
 Assign_Course_to_Instructor 'Programming Basics', 23
 GO
 
+select * from Student
+select * from Instructor
+select * from Course
+select * from Ins_Course
+Select * from Ins_Course
+
+GO
+Student_Take_course_with_Instructor 25 ,1400 , 1
+GO
+Student_Take_course_with_Instructor 26, 1300,  6
+GO
+Student_Take_course_with_Instructor 29, 1200,  2
+GO
+Student_Take_course_with_Instructor 32, 1000,  20
+GO
+Student_Take_course_with_Instructor 33, 1100,  11
+GO
