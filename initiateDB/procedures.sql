@@ -604,7 +604,7 @@ if exists (select ins_id from [Instructor] where ins_id = @ins_id)
 		inner join Course c
 		on ic.crs_id = c.crs_id
 		inner join Course_Attendance ca
-		on c.crs_id = ca.crs_id
+		on (c.crs_id = ca.crs_id and ca.ins_id = @ins_id)
 		where i.ins_id = @ins_id
 		group by c.crs_name
 	end
