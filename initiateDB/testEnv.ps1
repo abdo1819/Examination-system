@@ -1,1 +1,1 @@
-sqlcmd -s "." -i init.sql views.sql procedures.sql CRUD.test.sql -b 
+sqlcmd -s "." -i init.sql views.sql procedures.sql populateDB.sql -b 
