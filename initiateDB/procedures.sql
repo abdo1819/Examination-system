@@ -639,7 +639,7 @@ create or alter procedure Get_Questions_in_Exam @ex_id int
 as
 if exists(select ex_id from Exam where ex_id = @ex_id)
 begin
-	select q.q_text, q.q_type, mcq.ch_a, mcq.ch_b, mcq.ch_c, mcq.ch_d ,q.corr_answer
+	select q.q_text, q.q_type, mcq.ch_a, mcq.ch_b, mcq.ch_c, mcq.ch_d
 	from Exam e
 	inner join Exam_Question eq
 	on e.ex_id = eq.ex_id
