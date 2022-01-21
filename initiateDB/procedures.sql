@@ -59,7 +59,7 @@ BEGIN
 	-- , ERROR_PROCEDURE() 'Error Procedure'
 	-- , ERROR_STATE () 'Error State';
     IF (ERROR_NUMBER() = 2627)
-        SELECT "User already exists" as [Error Message];
+        SELECT 'User already exists' as [Error Message];
     ELSE
         SELECT ERROR_NUMBER() 'Error Number', ERROR_MESSAGE() 'Error Message';
     END CATCH
@@ -90,7 +90,7 @@ BEGIN
     );
     END TRY
     BEGIN CATCH
-        SELECT "failed to insert student" as [Error Message];
+        SELECT 'failed to insert student' as [Error Message];
     END CATCH
 END
 GO
@@ -127,7 +127,7 @@ BEGIN
     SET @ins_id = @usr_id;
     END TRY
     BEGIN CATCH
-        SELECT "failed to insert instructor" as [Error Message];
+        SELECT 'failed to insert instructor' as [Error Message];
     END CATCH
 END
 GO
@@ -251,7 +251,7 @@ BEGIN
     END TRY
     BEGIN CATCH
         -- TODO send specific error message when email is already in database
-        SELECT "failed to update user" as [Error Message];
+        SELECT 'failed to update user' as [Error Message];
     END CATCH
 END
 
@@ -282,7 +282,7 @@ BEGIN
     END TRY
     BEGIN CATCH
         -- TODO send specific error message when department id is not in the database
-        SELECT "failed to update student" as [Error Message];
+        SELECT 'failed to update student' as [Error Message];
     END CATCH
 END
 GO
@@ -315,7 +315,7 @@ BEGIN
     END TRY
     BEGIN CATCH
         -- TODO send specific error message when department id is not in the database
-        SELECT "failed to update instructor" as [Error Message];
+        SELECT 'failed to update instructor' as [Error Message];
     END CATCH
 END
 GO
@@ -340,7 +340,7 @@ BEGIN
     WHERE usr_id = @std_id;
     END TRY
     BEGIN CATCH
-        SELECT "failed to delete student" as [Error Message];
+        SELECT 'failed to delete student' as [Error Message];
     END CATCH
 END
 GO
@@ -362,7 +362,7 @@ BEGIN
     WHERE usr_id = @ins_id;
     END TRY
     BEGIN CATCH
-        SELECT "failed to delete instructor" as [Error Message];
+        SELECT 'failed to delete instructor' as [Error Message];
     END CATCH
 END
 GO
