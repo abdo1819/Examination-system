@@ -167,14 +167,14 @@ CREATE TABLE [Exam_Answer]
     std_id INTEGER ,
     ex_id INTEGER ,
     q_id INTEGER ,
-    std_answer VARCHAR(1) NOT NULL,
+    std_answer VARCHAR(1),
     FOREIGN KEY (std_id) REFERENCES Student(std_id) on delete cascade,
     FOREIGN KEY (ex_id) REFERENCES Exam(ex_id) on delete cascade, 
 	CONSTRAINT c_EA CHECK (std_answer IN ('a','b','c','d','T','F')), -- Possible trigger on insert 
 	PRIMARY KEY (std_id,ex_id,q_id)
 );
 
--- Question [q_id, q_type, q_text, corr_answer, crs_id]
+-- Question [q_id, q_type, q_text, corr_answer, top_id]
 CREATE TABLE [Question]
 (
     q_id INTEGER PRIMARY KEY IDENTITY(500, 50),
