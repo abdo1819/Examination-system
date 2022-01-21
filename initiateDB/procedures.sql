@@ -631,3 +631,25 @@ else
 
 
 GO
+
+-- Report that takes exam number and returns the Questions in it and chocies
+GO
+
+create or alter procedure Get_Questions_in_Exam @ex_id int
+as
+if exists(select ex_id from Exam where ex_id = @ex_id)
+begin
+	select q.q_text, q.q_type, mcq.ch_a, mcq.ch_b, mcq.ch_c, mcq.ch_d ,q.corr_answer
+	from Exam e
+	inner join Exam_Question eq
+	on e.ex_id = eq.ex_id
+	inner join Question q
+	on eq.q_id = q.q_id
+	left join MCQ mcq
+	on q.q_id = mcq.q_id
+	where e.ex_id = @ex_id
+end
+else
+	select 'Wrong Exam ID'
+
+GO
