@@ -170,10 +170,6 @@ GO
 Insert_Topic 'C#', '.NET Core'
 GO
 
-select * from Instructor
-select * from Course
-select * from Ins_Course
-
 Assign_Course_to_Instructor 'CST', 1
 GO
 Assign_Course_to_Instructor 'CST', 2
