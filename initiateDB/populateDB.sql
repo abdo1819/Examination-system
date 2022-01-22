@@ -219,13 +219,6 @@ GO
 Assign_Course_to_Instructor 'Programming Basics', 22
 GO
 Assign_Course_to_Instructor 'Programming Basics', 23
-GO
-
-select * from Student
-select * from Instructor
-select * from Course
-select * from Ins_Course
-Select * from Ins_Course
 
 GO
 Student_Take_course_with_Instructor 25 ,1400 , 1
