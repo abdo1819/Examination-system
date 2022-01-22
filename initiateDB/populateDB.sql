@@ -297,9 +297,10 @@ printf("%c",*ch);',  '1234', '12345',
 
  DECLARE @q_id INT
 
- EXEC insertTFQ 10000, 'If you don’t initialize an array of integers, the elements of that array will be set by zero values.',
+ EXEC insertTFQ 10000, 'If you do not initialize an array of integers, the elements of that array will be set by zero values.',
  'F', @q_id OUTPUT
  GO
+<<<<<<< HEAD
 
 /* ------------------------------------------------------------------------------- */
 /*                                C++ OOP (top_id=11000)                           */
@@ -384,3 +385,5 @@ GO
 /* ------------------------------------------------------------------------------- */
 
 
+=======
+>>>>>>> 72dc92d2eccfc87f9ce2cb2e2eb1c6ee39de494a
