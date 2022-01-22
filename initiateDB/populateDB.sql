@@ -232,6 +232,89 @@ GO
 Student_Take_course_with_Instructor 33, 1100,  11
 GO
 
+--------------- TF (C Language Topic) ---------------------
+
+GO
+declare @que_id int
+execute insertTFQ 10000, 'Does C language support OOP concept?', 'F', @que_id output
+GO
+declare @que_id int
+execute insertTFQ 10000, 'IS there keywords for printing ans scanning inputs in c?', 'F', @que_id output
+GO
+declare @que_id int
+execute insertTFQ 10000, 'C language is platform dependant?', 'T', @que_id output
+GO
+declare @que_id int
+execute insertTFQ 10000, 'IS pointer to pointer to char like two-dimensional array of characters', 'T', @que_id output
+GO
+declare @que_id int
+execute insertTFQ 10000, 'Struct is a user defined data type in C?', 'T', @que_id output
+GO
+declare @que_id int
+execute insertTFQ 10000, 'Should we need to redeclare functions in header files before using it?', 'F', @que_id output
+GO
+declare @que_id int
+execute insertTFQ 10000, 'switch case must be int or any data type that implicitly map to int?', 'T', @que_id output
+GO
+
+--------------- MCQ (C Language Topic) ---------------------
+
+GO
+declare @que_id int
+execute insertMCQ 10000, 'how to declare a pointer to an integer in C?', 'int P*', 'int * ptr', 'integer pointer x', 'int &x', 'b', @que_id output
+
+GO
+declare @que_id int
+execute insertMCQ 10000, 'a function used to allocate memory in heap in c?', 'getMemory()', 'NEW keyword', 'malloc()', 'free()', 'c', @que_id output
+GO
+declare @que_id int
+execute insertMCQ 10000, 'a function used to deallocate memory from heap in C?', 'free()', 'delete keyword', 'letMemory()', 'realloc()', 'a', @que_id output
+
+GO
+declare @que_id int
+execute insertMCQ 10000, 'which is responsible to push and pop stack frames from stack?', 'Operating System', 'developer', 'push and pop functions', 'compiler', 'a', @que_id output
+
+GO
+declare @que_id int
+execute insertMCQ 10000, 'Which of the following are correct ways to refer to the variable ch, assuming
+the address of ch has been assigned to the pointer fingerch?', '*ch;', '*finger;', 'int *fingerch;', '* fingerch;', 'd', @que_id output
+
+GO
+declare @que_id int
+execute insertMCQ 10000, 'Which of the following is best suited for representing a Matrix with 3 Rows
+and 3 Columns?', 'One-Dimensional Array', 'Two-Dimensional Array', 'Three-Dimensional Array', 'All of the above', 'b', @que_id output
+
+GO
+declare @que_id int
+execute insertMCQ 10000, 'What does the following program segment do?
+int numb;
+do {
+scanf(“%d”, &numb);
+} while (numb < 1 && numb > 10);', 'Reads an integer in the range [1, 10]', 'Reads an integer out of range [1, 10]', 'Reads an integer other than 1 and 10', 'Non of the above', 'd', @que_id output
+GO
+
+declare @que_id int
+execute insertMCQ 10000, 'In the array below, how can you access the element which has the value 4:
+int  arr[3][3]={ {1,2,3}, {4,5,6}, {7,8,9} };', 'arr[0][0]', 'arr[0][1]', 'arr[1][0] ', 'arr[1][1]', 'c', @que_id output
+GO
+
+declare @que_id int
+execute insertMCQ 10000, 'The key of ....... is that you have to determine if you are dealing with the data or you are dealing with the address of data', 'Structure', 'Pointers', 'Stack', 'Binary Search Tree', 'b', @que_id output
+GO
+
+declare @que_id int
+execute insertMCQ 10000, 'An array is a collection of variables of:', 'Different data types scattered throughout memory', 'The same data type scattered throughout memory',
+'The same data type placed next to each other in memory', 'Different data types placed next to each other in memory', 'c', @que_id output
+GO
+
+declare @que_id int
+execute insertMCQ 10000, 'You have the following piece of code:
+int x = 0 , y = 4;
+while ( x < 11){
+     y --;
+     x + = 2 * y;} when the loop has finished the value of x is :' , '1', '12', '13', '14', 'b' @que_id output
+GO
+
 
 /* ------------------------------------------------------------------------------- */
 /*                                   Question Table                                */
