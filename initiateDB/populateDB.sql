@@ -231,6 +231,21 @@ EXEC Assign_Course_to_Instructor @crs_name = 'Programming Basics', @ins_id = 23
 GO
 
 /* ------------------------------------------------------------------------------- */
+/*                             Course_Attendance                                   */
+/* ------------------------------------------------------------------------------- */
+
+Student_Take_course_with_Instructor 25 ,1400 , 17
+GO
+Student_Take_course_with_Instructor 26, 1300,  6
+GO
+Student_Take_course_with_Instructor 29, 1200,  2
+GO
+Student_Take_course_with_Instructor 32, 1000,  20
+GO
+Student_Take_course_with_Instructor 33, 1100,  11
+GO
+
+/* ------------------------------------------------------------------------------- */
 /*                                 Question Table                                  */
 /* ------------------------------------------------------------------------------- */
 
@@ -242,7 +257,7 @@ for(i<5;i=0;i++)
 printf("%d",i);
 }
 If i is an integer and initialize to 1. What will be the output?',  '1234', '12345',
- '15',  'Nothing',  'fathy', @q_id OUTPUT
+ '15',  'Nothing',  'd', @q_id OUTPUT
 
  GO
 
@@ -254,5 +269,23 @@ char *ch;
 printf("%c",*ch);',  '1234', '12345',
  '15',  'Nothing',  'b', @q_id OUTPUT
 
+ GO
+
+ DECLARE @q_id INT
+
+ EXEC insertTFQ 10000, 'In C Programming language, any function can call any function except main it could not be called by any other function',
+ 'T', @q_id OUTPUT
+ GO
+
+ DECLARE @q_id INT
+
+ EXEC insertTFQ 10000, 'Control always return to the caller when the function terminates normally',
+ 'T', @q_id OUTPUT
+ GO
+
+ DECLARE @q_id INT
+
+ EXEC insertTFQ 10000, 'If you don’t initialize an array of integers, the elements of that array will be set by zero values.',
+ 'F', @q_id OUTPUT
  GO
 
