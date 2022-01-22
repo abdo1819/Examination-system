@@ -249,7 +249,15 @@ GO
 /*                                 Question Table                                  */
 /* ------------------------------------------------------------------------------- */
 
+/* ------------------------------------------------------------------------------- */
+/*                                C Programming (top_id=10000)                     */
+/* ------------------------------------------------------------------------------- */
+
 DECLARE @q_id INT
+
+/* ------------------------------------------------------------------------------- */
+/*									       MCQ                                     */
+/* ------------------------------------------------------------------------------- */
 
 EXEC insertMCQ 10000, 'Output for this piece of code is:
 for(i<5;i=0;i++)
@@ -271,6 +279,10 @@ printf("%c",*ch);',  '1234', '12345',
 
  GO
 
+/* ------------------------------------------------------------------------------- */
+/*									       TFQ                                     */
+/* ------------------------------------------------------------------------------- */
+
  DECLARE @q_id INT
 
  EXEC insertTFQ 10000, 'In C Programming language, any function can call any function except main it could not be called by any other function',
@@ -288,4 +300,87 @@ printf("%c",*ch);',  '1234', '12345',
  EXEC insertTFQ 10000, 'If you don’t initialize an array of integers, the elements of that array will be set by zero values.',
  'F', @q_id OUTPUT
  GO
+
+/* ------------------------------------------------------------------------------- */
+/*                                C++ OOP (top_id=11000)                           */
+/* ------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------- */
+/*									       MCQ                                     */
+/* ------------------------------------------------------------------------------- */
+
+DECLARE @q_id INT
+EXEC insertMCQ 11000, 'Which of the following access specifier is used as a default in a class definition?',  'Private', 'Public',
+ 'Friend',  'Protected',  'A', @q_id OUTPUT
+
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 11000, 'Not using virtual destructor feature in a C++ object oriented programing can cause',  'An Issue in creating object of the class', 'Memory leak',
+ 'An issue in calling base class destructor',  'None of the above',  'B', @q_id OUTPUT
+
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 11000, 'The order in which operands are evaluated in an expression is predictable if the operator is',  'Addition', 'Modulus',
+ 'Multiply',  '&&',  'D', @q_id OUTPUT
+
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 11000, 'Which of the following is a mechanism of static polymorphism?',  'Templates', 'Function overloading',
+ 'Operator overloading',  'All of the above',  'D', @q_id OUTPUT
+
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 11000, 'IS A relationship in C++ is',  'Inheritance', 'Encapsulation',
+ 'Composition',  'None of the above',  'A', @q_id OUTPUT
+
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 11000, 'In a class, encapsulating an object of another class is called',  'Encapsulation', 'Inheritance',
+ 'Composition',  'None of the above',  'C', @q_id OUTPUT
+
+GO
+
+/* ------------------------------------------------------------------------------- */
+/*									       TFQ                                     */
+/* ------------------------------------------------------------------------------- */
+
+DECLARE @q_id INT
+EXEC insertTFQ 11000, 'It is not possible to achieve inheritance of structures in c++',
+ 'F', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertTFQ 11000, 'Super classes are also called Parent classes/Base classes.',
+ 'T', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertTFQ 11000, 'Sub classes may also be called Child classes/Derived classes.',
+ 'T', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertTFQ 11000, 'Constructors must have parameters.',
+ 'F', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertTFQ 11000, 'Objects cannot be created without applying the new operator.',
+ 'F', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertTFQ 11000, 'Overloaded methods are distinguished by their parameters.',
+ 'T', @q_id OUTPUT
+GO
+
+/* ------------------------------------------------------------------------------- */
+/*                                  SWA (top_id=12000)                             */
+/* ------------------------------------------------------------------------------- */
+
 
