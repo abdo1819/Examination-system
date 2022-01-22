@@ -3,6 +3,8 @@
 /* -------------------------------------------------------------------------- */
 
 -- Fathy comment: Should we double check which procedures should go in [PRIVATE] schema?
+-- Link for using a function in check constraint (could be needed for take exam procedure later)
+-- https://stackoverflow.com/questions/26693571/custom-function-with-check-constraint-sql-server-2008/26694344
 
 USE Examination;
 GO
