@@ -169,3 +169,7 @@ Insert_Topic 'HTML5', 'Advanced CST'
 GO
 Insert_Topic 'C#', '.NET Core'
 GO
+Insert_Topic 'ASP.NET', '.NET Core'
+GO
+Insert_Topic 'ADO', '.NET Core'
+Go
