@@ -1348,6 +1348,5 @@ GO
 declare @que_id int
 execute insertMCQ 13000, 'Which of the following set should be associated with weak entity set for weak entity to be meaningful?', 'Neighbour set', 'Strong entity set', 'Owner set', 'Identifying set', 'd', @que_id output
 
-select * from Question
 
 
