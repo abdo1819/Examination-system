@@ -124,7 +124,7 @@ GO
 /*			returns the Questions in this exam with the student answers.   			        */
 /*     -------------------------------------------------------------------------------      */
 
-create or alter procedure GET_QUESTIONS_for_STUDENT_EXAM @exam_id int, @stduent_id int
+create or alter procedure getStudentAnswer @exam_id int, @stduent_id int
 as
 if exists (select ex_id from [Exam] where ex_id = @exam_id)
 	begin
