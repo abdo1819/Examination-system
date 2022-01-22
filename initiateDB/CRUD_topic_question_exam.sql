@@ -602,18 +602,17 @@ GO
 CREATE OR ALTER PROC generateExam @crs_name varchar(100), @std_id int, @ex_id int output
 AS
 BEGIN
-	IF NOT EXISTS(SELECT crs_name FROM Course WHERE crs_name = @crs_name)
-		SELECT 'Course not found'
+	IF NOT EXISTS(SELECT crs_name FROM Course WHERE crs_name = @crs_name) OR NOT EXISTS (Select std_id from Student WHERE std_id = @std_id)
+		SELECT 'Course or Student not found'
 	ELSE
 		BEGIN
-		IF NOT EXISTS (Select std_id from Student WHERE std_id = @std_id)
-			SELECT 'Student Not Found'
+		-- Get course ID
+			DECLARE @crs_id int;
+			SELECT @crs_id = crs_id FROM Course Where crs_name = @crs_name
+		IF NOT EXISTS (Select std_id from Course_Attendance WHERE std_id = @std_id AND crs_id = @crs_id)
+			SELECT 'Student not enrolled in this course'
 		ELSE
 			BEGIN
-				-- Get course ID
-				DECLARE @crs_id int;
-				SELECT @crs_id = crs_id FROM Course Where crs_name = @crs_name
-
 				-- Create exam instance and get the exam ID
 				INSERT INTO Exam(date, crs_id)
 					VALUES(GETDATE(), @crs_id)

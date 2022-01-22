@@ -702,7 +702,7 @@ BEGIN
 	ELSE
 		BEGIN
 			BEGIN TRY
-				EXECUTE insertQuestion @top_id, 'MCQ', @q_text, @corr_answer, @q_id output
+				EXECUTE [PRIVATE].insertQuestion @top_id, 'MCQ', @q_text, @corr_answer, @q_id output
 				INSERT INTO MCQ (q_id, ch_a, ch_b, ch_c, ch_d)
 					VALUES(@q_id, @ch_a, @ch_b, @ch_c, @ch_d)
 			END TRY
@@ -728,7 +728,7 @@ BEGIN
 	ELSE
 		BEGIN
 			BEGIN TRY
-				EXECUTE insertQuestion @top_id, 'TF', @q_text, @corr_answer, @q_id output
+				EXECUTE [PRIVATE].insertQuestion @top_id, 'TF', @q_text, @corr_answer, @q_id output
 			END TRY
 			BEGIN CATCH 
 				SELECT 'Make sure data is correct'
@@ -996,18 +996,17 @@ GO
 CREATE OR ALTER PROC generateExam @crs_name varchar(100), @std_id int, @ex_id int output
 AS
 BEGIN
-	IF NOT EXISTS(SELECT crs_name FROM Course WHERE crs_name = @crs_name)
-		SELECT 'Course not found'
+	IF NOT EXISTS(SELECT crs_name FROM Course WHERE crs_name = @crs_name) OR NOT EXISTS (Select std_id from Student WHERE std_id = @std_id)
+		SELECT 'Course or Student not found'
 	ELSE
 		BEGIN
-		IF NOT EXISTS (Select std_id from Student WHERE std_id = @std_id)
-			SELECT 'Student Not Found'
+		-- Get course ID
+			DECLARE @crs_id int;
+			SELECT @crs_id = crs_id FROM Course Where crs_name = @crs_name
+		IF NOT EXISTS (Select std_id from Course_Attendance WHERE std_id = @std_id AND crs_id = @crs_id)
+			SELECT 'Student not enrolled in this course'
 		ELSE
 			BEGIN
-				-- Get course ID
-				DECLARE @crs_id int;
-				SELECT @crs_id = crs_id FROM Course Where crs_name = @crs_name
-
 				-- Create exam instance and get the exam ID
 				INSERT INTO Exam(date, crs_id)
 					VALUES(GETDATE(), @crs_id)
@@ -1080,11 +1079,6 @@ BEGIN
 				SELECT @std_id = std_id from Exam_Answer WHERE ex_id = @ex_id 
 				SELECT @crs_id = crs_id from Exam WHERE ex_id = @ex_id
 				
-				-- Delete the grades of this student at this specific course
-				UPDATE Course_Attendance
-					SET grade = NULL
-					WHERE std_id = @std_id AND crs_id = @crs_id
-				
 				-- Delete the Exam Answers
 				DELETE FROM Exam_Answer
 				WHERE ex_id = @ex_id
@@ -1132,3 +1126,28 @@ BEGIN
 		END
 END
 go
+
+
+-- Report that takes exam number and the student ID then
+-- returns the Questions in this exam with the student answers.
+
+
+create or alter procedure GET_QUESTIONS_for_STUDENT_EXAM @exam_id int, @stduent_id int
+as
+if exists (select ex_id from [Exam] where ex_id = @exam_id)
+	begin
+		if exists (select std_id from Student where std_id = @stduent_id)
+			begin
+				select q.q_text, q.q_type, ea.std_answer, q.corr_answer
+				from Exam_Answer ea
+				inner join Exam_Question eq
+				on ea.ex_id = eq.ex_id
+				inner join Question q
+				on eq.q_id = q.q_id
+				where (ea.ex_id = @exam_id and ea.std_id = @stduent_id)
+			end
+		else 
+			select CONCAT('There is no student with this ID', @stduent_id)
+	end
+else
+	select CONCAT('There is no exam with this ID', @exam_id)
