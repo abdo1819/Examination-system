@@ -7,16 +7,6 @@
 USE Examination;
 GO
 
--- create PRIVATE schema if not exist in the database
--- PRIVATE schema is procedure not intended for end-user(developer)
-IF NOT EXISTS (SELECT *
-FROM sys.schemas
-WHERE name = 'PRIVATE')
-BEGIN
-    EXEC('CREATE SCHEMA [PRIVATE] ');
-END
-GO
-
 /* ------------------------------------------------------------------------------- */
 /*                                  Course CRUDs                                   */
 /* ------------------------------------------------------------------------------- */
@@ -337,8 +327,6 @@ BEGIN
 END
 
 GO
-
--- ISSUE FOUND : When you enter the answer as T% it will accept it
 
 /* ------------------------------------------------------------------------------- */
 /*                              Update Question                                    */
