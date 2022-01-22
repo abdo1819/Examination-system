@@ -1,4 +1,4 @@
-
+﻿
 USE EXAMINATION
 
 
@@ -289,7 +289,7 @@ declare @que_id int
 execute insertMCQ 10000, 'What does the following program segment do?
 int numb;
 do {
-scanf(�%d�, &numb);
+scanf(“%d”, &numb);
 } while (numb < 1 && numb > 10);', 'Reads an integer in the range [1, 10]', 'Reads an integer out of range [1, 10]', 'Reads an integer other than 1 and 10', 'Non of the above', 'd', @que_id output
 GO
 
@@ -312,9 +312,8 @@ execute insertMCQ 10000, 'You have the following piece of code:
 int x = 0 , y = 4;
 while ( x < 11){
      y --;
-     x + = 2 * y;} when the loop has finished the value of x is :' , '1', '12', '13', '14', 'b' @que_id output
+     x + = 2 * y;} when the loop has finished the value of x is :' , '1', '12', '13', '14', 'b', @que_id output
 GO
-
 
 /* ------------------------------------------------------------------------------- */
 /*                                   Question Table                                */
@@ -515,13 +514,15 @@ go
 ------------------------------------------------
 -- Javascript 17000
 
+-- MCQ
+
 declare @q_id int
 Execute insertMCQ 17000,
-	'What does CSS stand for?', 
-	'Cascade Style Sheet', 
-	'Common Style Sheet',
-	'Cascade Separate Sheet',
-	'Nothing from the above',
+	'What is JavaScript?', 
+	'JavaScript is a scripting language used to make the website interactive', 
+	'JavaScript is an assembly language used to make the website interactive',
+	'JavaScript is a compiled language used to make the website interactive',
+	'None of the mentioned',
 	'a',
 	@q_id output
 
@@ -529,23 +530,11 @@ go
 
 declare @q_id int
 Execute insertMCQ 17000,
-	'How can you created rounded corners using CSS3?', 
-	'border[round]: 30px;', 
-	'corner-effect: round;',
-	'border-radius: 30px;',
-	'alpha-effect: round-corner;',
-	'c',
-	@q_id output
-
-go
-
-declare @q_id int
-Execute insertMCQ 17000,
-	'How do you add shadow to elements in CSS3?', 
-	'box-shadow: 10px 10px 5px grey;', 
-	'shadow-right: 10px shadow-bottom: 10px;',
-	'shadow-color: grey;',
-	'alpha-effect[shadow]: 10px 10px 5px grey;',
+	'Which of the following is correct about JavaScript?', 
+	'JavaScript is an Object-Based language', 
+	'JavaScript is Assembly-language',
+	'JavaScript is an Object-Oriented language',
+	'JavaScript is a High-level language',
 	'a',
 	@q_id output
 
@@ -553,71 +542,11 @@ go
 
 declare @q_id int
 Execute insertMCQ 17000,
-	'How to you modify a border image using CSS3?', 
-	'border: url(image.png);', 
-	'border-variable: image url(image.png);',
-	'border-image: url(border.png) 30 30 round;',
-	'None',
-	'c',
-	@q_id output
-
-go
-
-declare @q_id int
-Execute insertMCQ 17000,
-	'How to resize a background image using CSS3?', 
-	'background-size: 80px 60px;', 
-	'bg-dimensions: 80px 60px;',
-	'background-proportion: 80px 60px;',
-	'None',
-	'a',
-	@q_id output
-
-go
-
-declare @q_id int
-Execute insertMCQ 17000,
-	'How to add text shadow using CSS3?', 
-	'font: shadowed 5px 5px 5px grey;', 
-	'font-shadow: 5px 5px 5px grey;',
-	'text-shadow: 5px 5px 5px grey;',
-	'None',
-	'c',
-	@q_id output
-
-go
-
-declare @q_id int
-Execute insertMCQ 17000,
-	'How to force a word wrap using CSS3?', 
-	'word-wrap: break-word;', 
-	'text-wrap: break-word;',
-	'text-wrap: force;',
-	'None',
-	'a',
-	@q_id output
-
-go
-
-declare @q_id int
-Execute insertMCQ 17000,
-	'Which of these are valid CSS3 transformation statements', 
-	'matrix()', 
-	'modify()',
-	'skip()',
-	'simulate()',
-	'a',
-	@q_id output
-
-go
-
-declare @q_id int
-Execute insertMCQ 17000,
-	'How to rotate objects using CSS3?', 
-	'object-rotation: 30deg;', 
-	'transform: rotate(30deg);',
-	'rotate-object: 30deg;',
-	'transform: rotate-30deg-clockwise;',
+	'Among the given statements, which statement defines closures in JavaScript?', 
+	'JavaScript is a function that is enclosed with references to its inner function scope', 
+	'JavaScript is a function that is enclosed with references to its lexical environment',
+	'JavaScript is a function that is enclosed with the object to its inner function scope',
+	'None of the mentioned',
 	'b',
 	@q_id output
 
@@ -625,11 +554,45 @@ go
 
 declare @q_id int
 Execute insertMCQ 17000,
-	'How to create transition effects using CSS3?', 
-	'transition: width 2s;', 
-	'transition-duration: 2s; transition-effect: width;',
-	'alpha-effect: transition (width,2s);',
-	'None',
+	'What will be the output of the following JavaScript code?
+	<p id="demo"></p>
+	<script>
+	var js = 10;
+	js *= 5;
+	document.getElementById("demo").innerHTML = js;
+	</script>', 
+	'10', 
+	'50',
+	'5',
+	'Error',
+	'b',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 17000,
+	'What will be the output of the following JavaScript code snippet?
+	<p id="demo"></p>
+	var txt1 = "Sanfoundry_";
+	var txt2 = "Javascriptmcq";
+	document.getElementById("demo").innerHTML = txt1 + txt2;', 
+	'error', 
+	'Sanfoundry_ Javascriptmcq',
+	'undefined',
+	'Sanfoundry_Javascriptmcq',
+	'd',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 17000,
+	'Arrays in JavaScript are defined by which of the following statements?', 
+	'It is an ordered list of values', 
+	'It is an ordered list of objects',
+	'It is an ordered list of string',
+	'It is an ordered list of functions',
 	'a',
 	@q_id output
 
@@ -637,12 +600,684 @@ go
 
 declare @q_id int
 Execute insertMCQ 17000,
-	'How to you modify a border image using CSS3?', 
-	'border: url(image.png);', 
-	'border: image url(image.png);',
-	'border-image: url(border.png) 30 30 round;',
-	'None',
+	'What will be the output of the following JavaScript code?
+	// JavaScript Comparison Operators
+	function compare()
+	{
+		int num=2;
+		char b=2;
+		if(a==b)
+			return true;
+		else
+			return false;
+	}', 
+	'false', 
+	'true',
+	'compilation error',
+	'runtime error',
+	'b',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 17000,
+	'What will be the output of the following JavaScript code snippet?
+	// JavaScript Equalto Operators
+	function equalto()
+	{
+		int num=10;
+		if(num===”10”)
+			return true;
+		else
+			return false;
+	}', 
+	'false', 
+	'true',
+	'compilation error',
+	'runtime error',
+	'b',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 17000,
+	'Will the following JavaScript code work?
+	var js = (function(x) {return x*x;}(10));', 
+	'Exception will be thrown', 
+	'Memory leak',
+	'Error',
+	'Yes, perfectly',
+	'd',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 17000,
+	'Which of the following is not javascript data types?', 
+	'Null type', 
+	'Undefined type',
+	'Number type',
+	'All of the mentioned',
+	'd',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 17000,
+	'Where is Client-side JavaScript code is embedded within HTML documents?', 
+	'A URL that uses the special javascript:code', 
+	'A URL that uses the special javascript:protocol',
+	'A URL that uses the special javascript:encoding',
+	'A URL that uses the special javascript:stack',
+	'b',
+	@q_id output
+
+go
+
+
+-- TFQ
+
+declare @q_id int
+Execute insertTFQ 17000,
+	'If you type the following code in the console window, what result will you get?
+	3 > 2 > 1 === false;', 
+	'T',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 17000,
+	'JavaScript is a client-side programming language.', 
+	'F',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 17000,
+	'You can find the minimum of x and y using min(x,y);', 
+	'F',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 17000,
+	'This statement will throw an error
+	var fun = function bar{ }', 
+	'T',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 17000,
+	'default is a JavaScript label that catches all the values, except for the ones specified', 
+	'T',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 17000,
+	'if(x = 2) is a valid statement to execute certain code if “x” is equal to 2', 
+	'F',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 17000,
+	'What will the code return?
+	Boolean(3 < 7)', 
+	'T',
+	@q_id output
+
+go
+
+
+------------------------------------------------
+-- Advanced Javascript 18000
+
+-- MCQ
+
+declare @q_id int
+Execute insertMCQ 18000,
+	'Can a JavaScript constructor return a primitive value (e.g. a number or a string)?', 
+	'Only in Constructor', 
+	'Yes',
+	'Only in a function',
+	'No',
+	'd',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 18000,
+	'Which method is called when all the page elements have loaded(HTML, CSS, images)?', 
+	'window.laoded()', 
+	'window.ondelay()',
+	'window.delay()',
+	'window.onload()',
+	'd',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 18000,
+	'Among the given statements, which statement defines closures in JavaScript?', 
+	'JavaScript is a function that is enclosed with references to its inner function scope', 
+	'JavaScript is a function that is enclosed with references to its lexical environment',
+	'JavaScript is a function that is enclosed with the object to its inner function scope',
+	'None of the mentioned',
+	'b',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 18000,
+	'Once you create an object, can we add, remove or change properties of that object at any time?', 
+	'Yes', 
+	'No',
+	'For some objects',
+	'For inherited objects',
+	'a',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 18000,
+	'Which of the following is the best example of automatic type conversion in JavaScript?', 
+	'"5" + cats = "5 cats"',
+	'"5" + "cats" = "5 cats"',
+	'"5" + cats = 5 cats',
+	'5 + "cats" = "5 cats"',
+	'd',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 18000,
+	'What is the name of the property that allows you to add properties and methods to an object?', 
+	'The "prototype" property', 
+	'The "public" property',
+	'The "protected" property',
+	'The "private" property',
+	'a',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 18000,
+	'What does the “this” keyword refer to in a function of a class?', 
+	'To that function.', 
+	'To the object that a function is a method of.',
+	'To the Class.',
+	'None of these.',
+	'b',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 18000,
+	'What will be the output of the following line in JavaScript?
+	"1"+2+3', 
+	'123', 
+	'15',
+	'14',
+	'23',
+	'a',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 18000,
+	'What you have to instantiate first with constructor functions?', 
+	'class', 
+	'none of these',
+	'object',
+	'function',
 	'c',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 18000,
+	'In JavaScript, addEvent is a combination of __________ function?', 
+	'None of these', 
+	'Event() and addEventListener()',
+	'addEventListener() and attachEvent() function',
+	'addEventListener()',
+	'c',
+	@q_id output
+
+go
+
+
+
+-- TFQ
+
+declare @q_id int
+Execute insertTFQ 18000,
+	'VARCHAR datatype is not supported in Javascript?', 
+	'T',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 18000,
+	'console.log((function f(n){return ((n > 1) ? n * f(n-1) : n)})(10));
+	The output will be the factorial of 10?', 
+	'F',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 18000,
+	'NaN is a Number', 
+	'T',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 18000,
+	'Custom Dialog popup box cannot be created in Javascript', 
+	'T',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 18000,
+	'JavaScript constructor can return a primitive value (e.g. a number or a string)?', 
+	'F',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 18000,
+	'Unobtrusive Javascript is basically a JavaScript methodology 
+	that seeks to overcome browser inconsistencies by separating page 
+	functionality from structure.', 
+	'T',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 18000,
+	'(function(x) {
+		return (function(y) {
+			console.log(x);
+		})(2)
+	})(1);
+	The output of this code is: 1', 
+	'T',
+	@q_id output
+
+go
+
+
+------------------------------------------------
+-- HTML5 19000
+
+-- MCQ
+
+declare @q_id int
+Execute insertMCQ 19000,
+	'____________tag is used to specify an inline frame', 
+	'<jframe>', 
+	'<frameset>',
+	'<iframe>',
+	'<frame>',
+	'c',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 19000,
+	'What is mean by DTD?', 
+	'Document type data', 
+	'Data type definition',
+	'Document type definition',
+	'Definition type document',
+	'c',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 19000,
+	'How many graphic object types are allowed by SVG?', 
+	'2', 
+	'3',
+	'5',
+	'7',
+	'b',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 19000,
+	'<canvas > element is only a ____________to the graphics.', 
+	'component', 
+	'container',
+	'attribute',
+	'method',
+	'b',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 19000,
+	'HTML is based on which language?', 
+	'XHTML',
+	'XML',
+	'SGML',
+	'DTD',
+	'c',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 19000,
+	'The following code is used for:
+	&lt;video width=“320″ height=“240″ controls=“controls”&gt; <br />&lt;source src=“test.mp4″ type=“video/mp4″ /&gt; <br />&lt;/video&gt;', 
+	'Display audio', 
+	'Display video ',
+	'Display text',
+	'None',
+	'b',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 19000,
+	'The __________ is an instruction to the web browser about what version of HTML the page is written in', 
+	'<!DOCTYPE>', 
+	'<DOCTYPE>',
+	'<!TYPE>',
+	'None of these.',
+	'a',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 19000,
+	'DHTML is the combination of
+		1)HTML
+		2)javascript
+		3)HTML  Dom
+		4)CSS', 
+	'1 and 2', 
+	'3 and 4',
+	'all of the above',
+	'none of these',
+	'c',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 19000,
+	'Ancestor of all other elements on the page is called________', 
+	'parent', 
+	'ancestor',
+	'root element',
+	'siblings',
+	'd',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 19000,
+	'Canvas is able to draw the 2D graphics using---------------', 
+	'XML', 
+	'HTML',
+	'Javascript',
+	'XHTML',
+	'c',
+	@q_id output
+
+go
+
+
+
+-- TFQ
+
+declare @q_id int
+Execute insertTFQ 19000,
+	'W3C stands for World Wide Web Consortium', 
+	'T',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 19000,
+	'SVG means scalable vertical graphics', 
+	'F',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 19000,
+	'Attributes consist of a name and a value separated by ; sign', 
+	'F',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 19000,
+	'It is possible to use HTML 5 for the mobile application', 
+	'T',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 19000,
+	'The sessionStorage object stores the data for multible sessions', 
+	'F',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 19000,
+	'Graphics defined by SVG is in DTD format.', 
+	'F',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 19000,
+	'If background image is smaller than the screen, It’ll be repeated', 
+	'T',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 19000,
+	'In the Article element, both start and end tag are required.', 
+	'F',
+	@q_id output
+
+go
+
+
+------------------------------------------------
+-- C# 20000
+
+-- MCQ
+
+declare @q_id int
+Execute insertMCQ 20000,
+	'Which of the following is correct about C#?', 
+	'C# is a modern, general-purpose, object-oriented programming language developed by Microsoft.', 
+	'C# was developed by Anders Hejlsberg and his team during the development of .Net Framework.',
+	'C# is designed for Common Language Infrastructure (CLI).',
+	'All of the above',
+	'd',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 20000,
+	'Which of the following defines unboxing correctly?', 
+	'When a value type is converted to object type, it is called unboxing.', 
+	'When an object type is converted to a value type, it is called unboxing.',
+	'Both of the above.',
+	'None of the above.',
+	'b',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 20000,
+	'Which of the following converts a type to a 32-bit integer in C#?', 
+	'ToDecimal', 
+	'ToDouble',
+	'ToInt16',
+	'ToInt32',
+	'd',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 20000,
+	'Which of the following operator determines whether an object is of a certain type in C#?', 
+	'?:', 
+	'is',
+	'as',
+	'*',
+	'b',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 20000,
+	'Which of the following statements is correct about encapsulation?', 
+	'Encapsulation is defined as the process of enclosing one or more items within a physical or logical package.',
+	'Encapsulation, in object oriented programming methodology, prevents access to implementation details.',
+	'Abstraction allows making relevant information visible and encapsulation enables a programmer to implement the desired level of abstraction.',
+	'All of the above.',
+	'd',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 20000,
+	'Which of the following is the correct about interfaces in C#?', 
+	'Interfaces are declared using the interface keyword.', 
+	'Interface methods are public by default.',
+	'Both of the above.',
+	'None of the above',
+	'c',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 20000,
+	'Which of the following preprocessor directive specifies the end of a conditional directive in C#?', 
+	'elif', 
+	'endif',
+	'else',
+	'if',
+	'b',
+	@q_id output
+
+go
+
+-- TFQ
+
+declare @q_id int
+Execute insertTFQ 20000,
+	'The finally block is used to execute a given set of statements, whether an exception is thrown or not thrown', 
+	'T',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 20000,
+	'Arithmetic operators are called binary operators when you use two arguments with each operator', 
+	'T',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 20000,
+	'Reference and output parameters have memory addresses that are passed to a method, allowing it to alter the original variables.', 
+	'T',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 20000,
+	'The WriteLine() method returns a string that holds the name of the class, just as GetType() does', 
+	'F',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 20000,
+	'In C#, you can use either new or out when defining a derived class member that has the same name as a base class member.', 
+	'F',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 20000,
+	'The data components of a class often are called its iteration', 
+	'F',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 20000,
+	'In C#, you can display variable values by using the variable name within a WriteLine() method call.', 
+	'T',
 	@q_id output
 
 go
