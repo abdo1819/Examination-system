@@ -231,3 +231,335 @@ Student_Take_course_with_Instructor 32, 1000,  20
 GO
 Student_Take_course_with_Instructor 33, 1100,  11
 GO
+
+
+/* ------------------------------------------------------------------------------- */
+/*                                   Question Table                                */
+/* ------------------------------------------------------------------------------- */
+
+-- CSS Topic 1600
+-- insertMCQ @top_id, @q_text, @ch_a, @ch_b, @ch_c ,@ch_d , @corr_answer , @q_id int output
+declare @q_id int
+Execute insertMCQ 16000,
+	'What does CSS stand for?', 
+	'Cascade Style Sheet', 
+	'Common Style Sheet',
+	'Cascade Separate Sheet',
+	'Nothing from the above',
+	'a',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 16000,
+	'How can you created rounded corners using CSS3?', 
+	'border[round]: 30px;', 
+	'corner-effect: round;',
+	'border-radius: 30px;',
+	'alpha-effect: round-corner;',
+	'c',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 16000,
+	'How do you add shadow to elements in CSS3?', 
+	'box-shadow: 10px 10px 5px grey;', 
+	'shadow-right: 10px shadow-bottom: 10px;',
+	'shadow-color: grey;',
+	'alpha-effect[shadow]: 10px 10px 5px grey;',
+	'a',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 16000,
+	'How to you modify a border image using CSS3?', 
+	'border: url(image.png);', 
+	'border-variable: image url(image.png);',
+	'border-image: url(border.png) 30 30 round;',
+	'None',
+	'c',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 16000,
+	'How to resize a background image using CSS3?', 
+	'background-size: 80px 60px;', 
+	'bg-dimensions: 80px 60px;',
+	'background-proportion: 80px 60px;',
+	'None',
+	'a',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 16000,
+	'How to add text shadow using CSS3?', 
+	'font: shadowed 5px 5px 5px grey;', 
+	'font-shadow: 5px 5px 5px grey;',
+	'text-shadow: 5px 5px 5px grey;',
+	'None',
+	'c',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 16000,
+	'How to force a word wrap using CSS3?', 
+	'word-wrap: break-word;', 
+	'text-wrap: break-word;',
+	'text-wrap: force;',
+	'None',
+	'a',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 16000,
+	'Which of these are valid CSS3 transformation statements', 
+	'matrix()', 
+	'modify()',
+	'skip()',
+	'simulate()',
+	'a',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 16000,
+	'How to rotate objects using CSS3?', 
+	'object-rotation: 30deg;', 
+	'transform: rotate(30deg);',
+	'rotate-object: 30deg;',
+	'transform: rotate-30deg-clockwise;',
+	'b',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 16000,
+	'How to create transition effects using CSS3?', 
+	'transition: width 2s;', 
+	'transition-duration: 2s; transition-effect: width;',
+	'alpha-effect: transition (width,2s);',
+	'None',
+	'a',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 16000,
+	'How to you modify a border image using CSS3?', 
+	'border: url(image.png);', 
+	'border: image url(image.png);',
+	'border-image: url(border.png) 30 30 round;',
+	'None',
+	'c',
+	@q_id output
+
+go
+
+-----------------------------------------
+-- Insert TFQ
+declare @q_id int
+Execute insertTFQ 16000,
+	'Linking to an external style sheet allows you to have hyperlinks from your page to the World Wide Web.', 
+	'F',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 16000,
+	'The link element should be placed at the top of the body section.', 
+	'F',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 16000,
+	'The MIME type for a CSS style sheet is "stylesheet = CSS".', 
+	'F',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 16000,
+	'The rel attribute specifies a relationship between the current document and another document, such as a style sheet.', 
+	'T',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 16000,
+	'Specifying an element position as absolute removes it from the normal flow of elements on the page.', 
+	'T',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 16000,
+	'Relative positioning removes elements from the general flow of elements on the page.', 
+	'F',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertTFQ 16000,
+	'The span element applies a class to a portion of text without the need for a new line.', 
+	'T',
+	@q_id output
+
+go
+
+------------------------------------------------
+-- Javascript 17000
+
+declare @q_id int
+Execute insertMCQ 17000,
+	'What does CSS stand for?', 
+	'Cascade Style Sheet', 
+	'Common Style Sheet',
+	'Cascade Separate Sheet',
+	'Nothing from the above',
+	'a',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 17000,
+	'How can you created rounded corners using CSS3?', 
+	'border[round]: 30px;', 
+	'corner-effect: round;',
+	'border-radius: 30px;',
+	'alpha-effect: round-corner;',
+	'c',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 17000,
+	'How do you add shadow to elements in CSS3?', 
+	'box-shadow: 10px 10px 5px grey;', 
+	'shadow-right: 10px shadow-bottom: 10px;',
+	'shadow-color: grey;',
+	'alpha-effect[shadow]: 10px 10px 5px grey;',
+	'a',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 17000,
+	'How to you modify a border image using CSS3?', 
+	'border: url(image.png);', 
+	'border-variable: image url(image.png);',
+	'border-image: url(border.png) 30 30 round;',
+	'None',
+	'c',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 17000,
+	'How to resize a background image using CSS3?', 
+	'background-size: 80px 60px;', 
+	'bg-dimensions: 80px 60px;',
+	'background-proportion: 80px 60px;',
+	'None',
+	'a',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 17000,
+	'How to add text shadow using CSS3?', 
+	'font: shadowed 5px 5px 5px grey;', 
+	'font-shadow: 5px 5px 5px grey;',
+	'text-shadow: 5px 5px 5px grey;',
+	'None',
+	'c',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 17000,
+	'How to force a word wrap using CSS3?', 
+	'word-wrap: break-word;', 
+	'text-wrap: break-word;',
+	'text-wrap: force;',
+	'None',
+	'a',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 17000,
+	'Which of these are valid CSS3 transformation statements', 
+	'matrix()', 
+	'modify()',
+	'skip()',
+	'simulate()',
+	'a',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 17000,
+	'How to rotate objects using CSS3?', 
+	'object-rotation: 30deg;', 
+	'transform: rotate(30deg);',
+	'rotate-object: 30deg;',
+	'transform: rotate-30deg-clockwise;',
+	'b',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 17000,
+	'How to create transition effects using CSS3?', 
+	'transition: width 2s;', 
+	'transition-duration: 2s; transition-effect: width;',
+	'alpha-effect: transition (width,2s);',
+	'None',
+	'a',
+	@q_id output
+
+go
+
+declare @q_id int
+Execute insertMCQ 17000,
+	'How to you modify a border image using CSS3?', 
+	'border: url(image.png);', 
+	'border: image url(image.png);',
+	'border-image: url(border.png) 30 30 round;',
+	'None',
+	'c',
+	@q_id output
+
+go
