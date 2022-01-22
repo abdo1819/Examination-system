@@ -242,4 +242,18 @@ for(i<5;i=0;i++)
 printf("%d",i);
 }
 If i is an integer and initialize to 1. What will be the output?',  '1234', '12345',
- '15',  'Nothing',  'd', @q_id OUTPUT
+ '15',  'Nothing',  'fathy', @q_id OUTPUT
+
+ GO
+
+ DECLARE @q_id INT
+
+EXEC insertMCQ 10000, 'Output for this piece of code is:
+char *ch;
+*ch= c ;
+printf("%c",*ch);',  '1234', '12345',
+ '15',  'Nothing',  'b', @q_id OUTPUT
+
+ GO
+
+
