@@ -1120,7 +1120,7 @@ go
 
 declare @q_id int
 Execute insertTFQ 19000,
-	'If background image is smaller than the screen, It’ll be repeated', 
+	'If background image is smaller than the screen, It will be repeated', 
 	'T',
 	@q_id output
 
@@ -1281,3 +1281,73 @@ Execute insertTFQ 20000,
 	@q_id output
 
 go
+--------------- TF (DB Topic) ---------------------
+
+declare @que_id int
+execute insertTFQ 13000, 'In a sub-query, the inner query executes first, and once, before the outer query', 'T', @que_id output
+GO
+declare @que_id int
+execute insertTFQ 13000, 'There are physical records corresponding to user created views.', 'F', @que_id output
+GO
+declare @que_id int
+execute insertTFQ 13000, 'Relational data base relation may accept multi-valued data items (attributes)', 'F', @que_id output
+GO
+declare @que_id int
+execute insertTFQ 13000, 'Deleting all tuples of a table is equivalent to dropping it.', 'F', @que_id output
+GO
+declare @que_id int
+execute insertTFQ 13000, 'In a table the records are ordered top to bottom.', 'F', @que_id output
+GO
+declare @que_id int
+execute insertTFQ 13000, 'SQL language has data definition statements such as INSERT, UPDATE, DELETE and data manipulation statements such as CREATE.', 'F', @que_id output
+GO
+declare @que_id int
+execute insertTFQ 13000, 'Two distinct tuples cannot have identical values in all fields that comprise a primary key', 'T', @que_id output
+GO
+
+--------------- MCQ (DB Topic) ---------------------
+
+GO
+declare @que_id int
+execute insertMCQ 13000, 'How many primary keys can a table have?', 'One', 'At least one, but not more than two', 'Between one and five', 'No limit', 'a', @que_id output
+
+GO
+declare @que_id int
+execute insertMCQ 13000, 'An attribute that can be broken down into smaller parts is called', 'simple', 'composite', 'associative', 'none of the above', 'b', @que_id output
+
+GO
+declare @que_id int
+execute insertMCQ 13000, 'To get all the rows from the students table, which of the following SQL
+Statements should be used?', 'Select * from Students where name= none group by name.', 'Select * from Students.', 'Select * from Students where name= A or B Group by name.', 'None of the above.', 'b', @que_id output
+
+GO
+declare @que_id int
+execute insertMCQ 13000, 'What does an RDBMS consist of?', 'Collection of Records', 'Collection of Keys', 'Collection of Fields', 'Collection of Tables', 'd', @que_id output
+
+GO
+declare @que_id int
+execute insertMCQ 13000, 'What is information about data called?', 'Relations', 'Hyper data', 'Meta data', 'Tera data', 'c', @que_id output
+
+GO
+declare @que_id int
+execute insertMCQ 13000, 'The ability to query data, as well as insert, delete, and alter tuples, is offered by ', 'TCL', 'DCL', 'DDL', 'DML', 'd', @que_id output
+
+GO
+declare @que_id int
+execute insertMCQ 13000, 'Which of the following is known as a set of entities of the same type that share same properties, or attributes?', 'Relation set', 'Tuples', 'Entity set', 'Entity Relation model', 'c', @que_id output
+
+GO
+declare @que_id int
+execute insertMCQ 13000, '....... is a set of one or more attributes taken collectively to uniquely identify a record', 'Super key', 'Primary Key', 'Candidate key', 'Foreign key', 'a', @que_id output
+
+GO
+declare @que_id int
+execute insertMCQ 13000, 'Which command is used to remove a relation from an SQL?', 'Drop table', 'Delete', 'Purge', 'Remove', 'a', @que_id output
+
+GO
+declare @que_id int
+execute insertMCQ 13000, 'Which of the following set should be associated with weak entity set for weak entity to be meaningful?', 'Neighbour set', 'Strong entity set', 'Owner set', 'Identifying set', 'd', @que_id output
+
+select * from Question
+
+
