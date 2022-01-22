@@ -48,7 +48,15 @@ GO
 EXEC sp_MSforeachtable 'DROP TABLE ?'
 GO
 
-
+-- create PRIVATE schema if not exist in the database
+-- PRIVATE schema is procedure not intended for end-user(developer)
+IF NOT EXISTS (SELECT *
+FROM sys.schemas
+WHERE name = 'PRIVATE')
+BEGIN
+    EXEC('CREATE SCHEMA [PRIVATE] ');
+END
+GO
 
 -- User [usr_id, user_type, f_name, l_name, address, email, password]
 
