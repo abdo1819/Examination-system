@@ -94,7 +94,7 @@ CREATE TABLE [Course]
 -- Course_Attendance [crs_id, std_id, ins_id, grade]
 -- Fathy Comment: Attempting to turn grade into a computed value
 -- getQuestionMark must be created before Course_Attendance Table is created
-
+go
 CREATE OR ALTER FUNCTION getStudentGrade(@crs_id INT, @std_id INT)
 RETURNS INT
 AS
@@ -103,7 +103,7 @@ DECLARE @result INT
 SELECT @result = (SELECT SUM(EA.std_mark) FROM Exam_Answer EA, Exam E WHERE EA.ex_id = E.ex_id AND E.crs_id = @crs_id AND EA.std_id = @std_id )
 	RETURN @result
 END
-
+go
 CREATE TABLE [Course_Attendance]
 (
     crs_id INTEGER ,
@@ -176,7 +176,7 @@ CREATE TABLE [Exam_Question]
 
 -- Fathy Comment: Attempting to add a computed column for student mark
 -- getQuestionMark must be created before Exam_Answer Table is created
-
+go
 CREATE OR ALTER FUNCTION getQuestionMark(@q_id INT)
 RETURNS INT
 AS
@@ -191,7 +191,7 @@ DECLARE @result INT, @corr_answer VARCHAR(1), @std_answer VARCHAR(1)
 
 	RETURN @result
 END
-
+go
 CREATE TABLE [Exam_Answer]
 (
     std_id INTEGER ,
