@@ -194,7 +194,7 @@ GO
 /*                                Read Student                                */
 /* -------------------------------------------------------------------------- */
 
--- Fathy Comment: Should we include views.sql in init.sql?
+
 
 CREATE OR ALTER PROCEDURE getAllStudents
 AS
@@ -235,9 +235,7 @@ GO
 /*                              Read Department                               */
 /* -------------------------------------------------------------------------- */
 
--- Fathy Comment: This procedure was missing
-
-CREATE OR ALTER PROCEDURE getDeptData
+CREATE OR ALTER PROCEDURE getDepartment
     @dept_id INT
 AS
 BEGIN
@@ -446,7 +444,7 @@ end
 GO
 
 /* -------------------------------------------------------------------------- */
-/*                    Comments to be checked later?  -- Fathy Comment         */
+/*                    Comments to be checked later?           */
 /* -------------------------------------------------------------------------- */
 
 ------------------------------------------------------------------------

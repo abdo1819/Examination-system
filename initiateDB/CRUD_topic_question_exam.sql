@@ -29,8 +29,6 @@ GO
 /*                           Update Course Name                                    */
 /* ------------------------------------------------------------------------------- */
 
--- Fathy Comment: This procedure was missing
-
 CREATE OR ALTER PROCEDURE setCourseName @crs_id INT, @crs_name VARCHAR(50)
 AS
 BEGIN
@@ -68,7 +66,7 @@ GO
 create or alter procedure Insert_Topic @top_name varchar(20), @crs_name varchar(20)
 as
 declare @id_crs int
-if not exists (select top_name from [Topic] where top_name = @top_name) -- Fathy Comment: There was a problem with this condition
+if not exists (select top_name from [Topic] where top_name = @top_name)
 	begin
 		begin try
 			select @id_crs = crs_id from [Course] where crs_name = @crs_name
@@ -87,7 +85,6 @@ GO
 /*                                 Update Topic Name                               */
 /* ------------------------------------------------------------------------------- */
 
--- Fathy Comment: This procedure was missing
 
 CREATE OR ALTER PROCEDURE setTopicName @top_id INT, @top_name VARCHAR(50)
 AS
@@ -181,9 +178,9 @@ GO
 /* ------------------------------------------------------------------------------- */
 
 create or alter procedure Student_Take_course_with_Instructor @std_id int, @crs_id int, @ins_id int
-as -- Fathy Comment: Try, Catch missing here? if we insert duplicate row it throws an error
+as 
 BEGIN TRY
-if exists (select ins_id from [Instructor] where ins_id = @ins_id)  -- Fathy Comment: There was a problem with these conditions
+if exists (select ins_id from [Instructor] where ins_id = @ins_id) 
 and exists (select std_id from [Student] where std_id = @std_id)
 	begin
 		if exists (select crs_id from [Course] where crs_id = @crs_id)

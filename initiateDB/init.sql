@@ -100,7 +100,7 @@ CREATE TABLE [Course]
 );
 
 -- Course_Attendance [crs_id, std_id, ins_id, grade]
--- Fathy Comment: Attempting to turn grade into a computed value
+
 -- getQuestionMark must be created before Course_Attendance Table is created
 go
 CREATE OR ALTER FUNCTION getStudentGrade(@crs_id INT, @std_id INT)
@@ -187,7 +187,6 @@ CREATE TABLE [Exam_Question]
 
 -- Exam_Answer [std_id, ex_id, q_id, std_answer]
 
--- Fathy Comment: Attempting to add a computed column for student mark
 -- getQuestionMark must be created before Exam_Answer Table is created
 go
 CREATE OR ALTER FUNCTION getQuestionMark(@q_id INT)
