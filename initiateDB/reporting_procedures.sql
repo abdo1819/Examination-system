@@ -81,7 +81,7 @@ GO
 /* ------------------------------------------------------------------------------- */
 
 -- Fathy Comment: It is mentioned it should be a "Freeform report", refer to this link
--- https://www2.microstrategy.com/producthelp/current/ReportDesigner/WebHelp/Lang_1033/Content/creating_a_freeform_sql_report.htm#:~:text=Unlike%20standard%20reports%20which%20can,returned%20by%20your%20SQL%20statement.
+-- https://docs.microsoft.com/en-us/sql/reporting-services/tutorial-creating-a-free-form-report-report-builder?view=sql-server-ver15
 
 create or alter procedure Get_Questions_in_Exam @ex_id int
 as
