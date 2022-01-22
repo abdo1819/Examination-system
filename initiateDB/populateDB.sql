@@ -173,3 +173,68 @@ Insert_Topic 'ASP.NET', '.NET Core'
 GO
 Insert_Topic 'ADO', '.NET Core'
 Go
+
+Assign_Course_to_Instructor 'CST', 1
+GO
+Assign_Course_to_Instructor 'CST', 2
+GO
+Assign_Course_to_Instructor 'CST', 3
+GO
+Assign_Course_to_Instructor 'CST', 4
+GO
+Assign_Course_to_Instructor 'CST', 5
+GO
+Assign_Course_to_Instructor 'Advanced CST', 6
+GO
+Assign_Course_to_Instructor 'Advanced CST', 7
+GO
+Assign_Course_to_Instructor 'Advanced CST', 8
+GO
+Assign_Course_to_Instructor 'Advanced CST', 9
+GO
+Assign_Course_to_Instructor 'Advanced CST', 10
+GO
+Assign_Course_to_Instructor 'SQL', 11
+GO
+Assign_Course_to_Instructor 'SQL', 12
+GO
+Assign_Course_to_Instructor 'SQL', 13
+GO
+Assign_Course_to_Instructor 'SQL', 14
+GO
+Assign_Course_to_Instructor 'SQL', 15
+GO
+Assign_Course_to_Instructor 'SQL', 16
+GO
+Assign_Course_to_Instructor '.NET Core', 17
+GO
+Assign_Course_to_Instructor '.NET Core', 18
+GO
+Assign_Course_to_Instructor '.NET Core', 19
+GO
+Assign_Course_to_Instructor 'Programming Basics', 20
+GO
+Assign_Course_to_Instructor 'Programming Basics', 21
+GO
+Assign_Course_to_Instructor 'Programming Basics', 22
+GO
+Assign_Course_to_Instructor 'Programming Basics', 23
+GO
+
+select * from Student
+select * from Instructor
+select * from Course
+select * from Ins_Course
+Select * from Ins_Course
+
+GO
+Student_Take_course_with_Instructor 25 ,1400 , 1
+GO
+Student_Take_course_with_Instructor 26, 1300,  6
+GO
+Student_Take_course_with_Instructor 29, 1200,  2
+GO
+Student_Take_course_with_Instructor 32, 1000,  20
+GO
+Student_Take_course_with_Instructor 33, 1100,  11
+GO
