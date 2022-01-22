@@ -191,11 +191,12 @@ GO
 /* ------------------------------------------------------------------------------- */
 
 create or alter procedure Student_Take_course_with_Instructor @std_id int, @crs_id int, @ins_id int
-as
-if not exists (select ins_id from [Instructor] where ins_id = @ins_id)
-and not exists (select std_id from [Student] where std_id = @std_id)
+as -- Fathy Comment: Try, Catch missing here? if we insert duplicate row it throws an error
+BEGIN TRY
+if exists (select ins_id from [Instructor] where ins_id = @ins_id)  -- Fathy Comment: There was a problem with these conditions
+and exists (select std_id from [Student] where std_id = @std_id)
 	begin
-		if not exists (select crs_id from [Course] where crs_id = @crs_id)
+		if exists (select crs_id from [Course] where crs_id = @crs_id)
 			begin
 				if exists (select crs_id, ins_id from [Ins_Course] 
 				where (crs_id = @crs_id and ins_id = @ins_id))
@@ -211,6 +212,10 @@ and not exists (select std_id from [Student] where std_id = @std_id)
 
 else
 	select 'Please check the Instructor and Student ID'
+END TRY
+BEGIN CATCH
+	SELECT 'Duplicate data , please check your data' AS [Error Message]
+END CATCH
 GO
 
 /* ------------------------------------------------------------------------------- */
@@ -692,12 +697,7 @@ BEGIN
 				DECLARE @std_id int, @crs_id int
 				SELECT @std_id = std_id from Exam_Answer WHERE ex_id = @ex_id 
 				SELECT @crs_id = crs_id from Exam WHERE ex_id = @ex_id
-				
-				-- Delete the grades of this student at this specific course
-				UPDATE Course_Attendance
-					SET grade = NULL
-					WHERE std_id = @std_id AND crs_id = @crs_id
-				
+						
 				-- Delete the Exam Answers
 				DELETE FROM Exam_Answer
 				WHERE ex_id = @ex_id
