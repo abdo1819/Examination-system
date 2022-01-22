@@ -12,7 +12,7 @@ cd initiateDB
 this will 
 - [x] create database `examination`
 - [x] create all required tables or update them if they already exist
-- [ ] populate tables with data 
+- [x] populate tables with data 
 
 
 
