@@ -1080,11 +1080,6 @@ BEGIN
 				SELECT @std_id = std_id from Exam_Answer WHERE ex_id = @ex_id 
 				SELECT @crs_id = crs_id from Exam WHERE ex_id = @ex_id
 				
-				-- Delete the grades of this student at this specific course
-				UPDATE Course_Attendance
-					SET grade = NULL
-					WHERE std_id = @std_id AND crs_id = @crs_id
-				
 				-- Delete the Exam Answers
 				DELETE FROM Exam_Answer
 				WHERE ex_id = @ex_id
