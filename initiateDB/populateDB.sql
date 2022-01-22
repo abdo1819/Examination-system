@@ -300,7 +300,6 @@ printf("%c",*ch);',  '1234', '12345',
  EXEC insertTFQ 10000, 'If you do not initialize an array of integers, the elements of that array will be set by zero values.',
  'F', @q_id OUTPUT
  GO
-<<<<<<< HEAD
 
 /* ------------------------------------------------------------------------------- */
 /*                                C++ OOP (top_id=11000)                           */
@@ -351,7 +350,7 @@ GO
 /* ------------------------------------------------------------------------------- */
 
 DECLARE @q_id INT
-EXEC insertTFQ 11000, 'It is not possible to achieve inheritance of structures in c++',
+EXEC insertTFQ 11000, 'It is not possible to achieve inheritance of structures in C++',
  'F', @q_id OUTPUT
 GO
 
@@ -384,6 +383,265 @@ GO
 /*                                  SWA (top_id=12000)                             */
 /* ------------------------------------------------------------------------------- */
 
+/* ------------------------------------------------------------------------------- */
+/*									       MCQ                                     */
+/* ------------------------------------------------------------------------------- */
 
-=======
->>>>>>> 72dc92d2eccfc87f9ce2cb2e2eb1c6ee39de494a
+DECLARE @q_id INT
+EXEC insertMCQ 12000, 'Which of these truly defines Software design?',  'Software design is an activity subjected to constraints', 'Software Design specifies nature and composition of software product',
+ 'Software Design satisfies client needs and desires',  'All of the mentioned',  'd', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 12000, 'What is incorrect about structural design?',  'Structural design introduced notations and heuristics', 'Structural design emphasis on procedural decomposition',
+ 'The advantage is data flow representation',  'It follows Structure chart',  'c', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 12000, 'Why does software engineering design shares many design principles?',  'Common design goal of creating high quality design', 'For expansion of product lifetime',
+ 'All of the mentioned',  'None of the mentioned',  'c', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 12000, 'Why are the design principles considered unique?',  'They are characteristic of well constructed programs', 'They are robust',
+ 'All of the mentioned',  'None of the mentioned',  'a', @q_id OUTPUT
+GO
+
+/* ------------------------------------------------------------------------------- */
+/*									       TFQ                                     */
+/* ------------------------------------------------------------------------------- */
+
+DECLARE @q_id INT
+EXEC insertTFQ 12000, 'Principle of feasibility states that a design is acceptable only when it is realized.',
+ 'T', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertTFQ 12000, 'Principle of adequacy states that Designs that make easier to change are better.',
+ 'F', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertTFQ 12000, 'A profile is a set of scenarios that are used to evaluate whether a product is likely to meet its requirements.',
+ 'T', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertTFQ 12000, 'Top down layer focuses on lower to higher abstraction.',
+ 'F', @q_id OUTPUT
+GO
+
+/* ------------------------------------------------------------------------------- */
+/*                         Advanced Database (top_id=14000)                        */
+/* ------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------- */
+/*									       MCQ                                     */
+/* ------------------------------------------------------------------------------- */
+
+DECLARE @q_id INT
+EXEC insertMCQ 14000, 'A trigger can be dropped using: ',  'DROP TRIGGER', 'ALTER TRIGGER DROP',
+ 'DEFINE DROP TRIGGER',  'DECLARE DROP TRIGGER',  'A', @q_id OUTPUT
+
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 14000, 'Which of the following is true concerning a procedure?',  'You do not create them with SQL.', 'They do not need to have a unique name.',
+ 'They include procedural and SQL statements.',  'They are the same thing as a function.',  'C', @q_id OUTPUT
+
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 14000, 'A CASE SQL statement is which of the following?',  'A way to establish an IF-THEN-ELSE in SQL.', 'A way to establish a loop in SQL.',
+ 'A way to establish a data definition in SQL.',  'All of the above.',  'A', @q_id OUTPUT
+
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 14000, 'Which of the following is true concerning triggers?',  'You do not create them with SQL.', 'They execute against only some applications that access a database.',
+ 'They have an event, condition, and action.',  'They cannot cascade (cause another trigger to fire).',  'C', @q_id OUTPUT
+
+GO
+
+/* ------------------------------------------------------------------------------- */
+/*									       TFQ                                     */
+/* ------------------------------------------------------------------------------- */
+
+DECLARE @q_id INT
+EXEC insertTFQ 14000, 'ROLLBACK command makes the updates performed by the transaction permanent in the database?',
+ 'F', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertTFQ 14000, 'Indexes are synonyms of a column in a table.',
+ 'F', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertTFQ 14000, 'Index improves the speed of data retrieval operations on a table.',
+ 'T', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertTFQ 14000, 'Group of operations that form a single logical unit of work is known as transaction',
+ 'T', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertTFQ 14000, 'Shared locks are applied while performing write operations',
+ 'F', @q_id OUTPUT
+GO
+
+/* ------------------------------------------------------------------------------- */
+/*							       HTML (top_id=15000)                             */
+/* ------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------- */
+/*									       MCQ                                     */
+/* ------------------------------------------------------------------------------- */
+
+DECLARE @q_id INT
+EXEC insertMCQ 15000, 'HTML stands for: ',  'HighText Machine Language', 'HyperText and links Markup Language',
+ 'HyperText Markup Language',  'None of these',  'C', @q_id OUTPUT
+
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 15000, 'How to create a checkbox in HTML?',  '<input type = "checkbox">', '<input type = "button">',
+ '<checkbox>',  '<input type = "check">',  'A', @q_id OUTPUT
+
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 15000, 'Which of the following element is responsible for making the text italic in HTML?',  '<i>', '<italic>',
+ '<it>',  '<pre>',  'A', @q_id OUTPUT
+
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 15000, 'Which of the following tag is used to add rows in the table?',  '<td> and </td>', '<th> and </th>',
+ '<tr> and </tr>',  'None of the above',  'C', @q_id OUTPUT
+
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 15000, 'The <hr> tag in HTML is used for -',  'new line', 'vertical ruler',
+ 'new paragraph',  'horizontal ruler',  'D', @q_id OUTPUT
+
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 15000, 'Which of the following attribute is used to provide a unique name to an element?',  'class', 'id',
+ 'type',  'None of the above',  'B', @q_id OUTPUT
+
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 15000, 'Which of the following is the container for <tr>, <th>, and <td> ?',  '<data>', '<table>',
+ '<group>',  'All of the above',  'B', @q_id OUTPUT
+
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 15000, 'How to insert a background image in HTML?',  '<body background = "img.png">', '<img background = "img.png">',
+ '<bg-image = "img.png">',  'None of the above',  'A', @q_id OUTPUT
+
+GO
+
+
+/* ------------------------------------------------------------------------------- */
+/*									       TFQ                                     */
+/* ------------------------------------------------------------------------------- */
+
+DECLARE @q_id INT
+EXEC insertTFQ 15000, 'type is an HTML attribute is used to define inline styles',
+ 'F', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertTFQ 15000, '<b> is the paragraph tag in HTML',
+ 'F', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertTFQ 15000, 'In HTML5 <!DOCTYPE html> is used to initialize the document type',
+ 'T', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertTFQ 15000, '<select> is used to create a combo box (or drop-down box)',
+ 'T', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertTFQ 15000, '<select> is used to create a combo box (or drop-down box)',
+ 'T', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertTFQ 15000, '<mail xy@y</mail> can be used to send a mail in HTML',
+ 'F', @q_id OUTPUT
+GO
+
+/* ------------------------------------------------------------------------------- */
+/*							       ADO (top_id=22000)                              */
+/* ------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------- */
+/*									       MCQ                                     */
+/* ------------------------------------------------------------------------------- */
+
+DECLARE @q_id INT
+EXEC insertMCQ 22000, 'To use the .NET Framework Data Provider for SQL Server, an application must reference the _____________ namespace.',  'System.Data.Client', 'System.Data.SqlClient',
+ 'System.Data.Sql',  'None of the mentioned',  'B', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 22000, 'Code snippet for having a named instance of SQL Server would be',  '“Server=localhost\sqlexpress”', '“Server=local\sqlexpress”',
+ '“Server=host\sqlexpress”',  '“Ser=localhost\sqlexpress”',  'A', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 22000, 'Which of the following is enumeration for ADO.net with SQL Server?',  'SqlInfo', 'SqlBulkCopyOptions',
+ 'SqlNotification',  'All of the mentioned',  'B', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 22000, 'To perform asynchronous data access, what must be added to the connection string?',  'BeginExecute=true', 'MultiThreaded=true',
+ 'MultipleActiveResultSets=true',  'Asynchronous=true',  'D', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 22000, 'Which is a property of the DataGrid control?',  'DataMember', 'DataSource',
+ 'DataQuery',  'All of the above.',  'D', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertMCQ 22000, 'In a connection string _____________ represents name of the database',  'Data Source', 'Initial Catalog',
+ 'Catalog Initial',  'Database',  'B', @q_id OUTPUT
+GO
+
+
+/* ------------------------------------------------------------------------------- */
+/*									       TFQ                                     */
+/* ------------------------------------------------------------------------------- */
+
+DECLARE @q_id INT
+EXEC insertTFQ 22000, 'The first record in a dataset has a position property of zero',
+ 'F', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertTFQ 22000, 'DataSet is a class in ADO.net class which provides a disconnected environment',
+ 'T', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertTFQ 22000, 'The ADO.NET SqlConnection object designed for MySQL',
+ 'F', @q_id OUTPUT
+GO
+
+DECLARE @q_id INT
+EXEC insertTFQ 22000, 'The first step of configuring a DataAdapter is to select a dataset object',
+ 'F', @q_id OUTPUT
+GO
