@@ -501,7 +501,7 @@ Go
 
 create or alter procedure Assign_Course_to_Instructor @crs_name varchar(20), @ins_id int
 as
-if not exists (select crs_name from [course] where crs_name = @crs_name)
+if not exists (select crs_name from [Course] where crs_name = @crs_name)
 	begin
 		if not exists (select @ins_id from [Instructor] where ins_id = @ins_id)
 			begin try
