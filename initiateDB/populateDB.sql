@@ -1,12 +1,16 @@
 
+
+/* -------------------------------------------------------------------------- */
+/*                                  POPULATE DB                               */
+/* -------------------------------------------------------------------------- */
+
 USE EXAMINATION
 
 
-/* -------------------------------------------------------------------------- */
-/*                  insert department , instructor , student                  */
-/* -------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
+/*                                 Department Table                                */
+/* ------------------------------------------------------------------------------- */
 
-/* ---------------- insert 9 departments with thier managers ---------------- */
 DECLARE @dept_id1 INTEGER, @mgr_id1 INTEGER;
 DECLARE @dept_id2 INTEGER, @mgr_id2 INTEGER;
 DECLARE @dept_id3 INTEGER, @mgr_id3 INTEGER;
@@ -27,7 +31,10 @@ EXEC Insert_Department_With_Manager @dept_name = "Business Development",@f_name 
 EXEC Insert_Department_With_Manager @dept_name = "AI",@f_name = "Andrej", @l_name="Fernley",@address="2767 Lerdahl Street",@email="afernley7@mayoclinic.com",@password="oNUdJ1",@salary=9619.06,@degree="Statistician I",@dept_id=@dept_id8 output ,@mgr_id=@mgr_id8 output;
 EXEC Insert_Department_With_Manager @dept_name = "Accounting",@f_name = "Melli", @l_name="Goolding",@address="876 Briar Crest Court",@email="mgoolding8@pinterest.com",@password="5s5eB2RLTj",@salary=9427.22,@degree="Sales Representative",@dept_id=@dept_id9 output ,@mgr_id=@mgr_id9 output;
 
-/* ------------------------- iserting 15 extra instructors ------------------------ */
+/* ------------------------------------------------------------------------------- */
+/*                                Instructors Table                                */
+/* ------------------------------------------------------------------------------- */
+
 declare @temp_ins_id int;
 EXEC Insert_Instructor @f_name="Trixie",@l_name="Lysaght",@address="11415 Harbort Junction",@email="tlysaght9@typepad.com",@password="5aggh2Pr57o",@salary=14886.31,@degree="Dental Hygienist",@dept_id=@dept_id6,@ins_id=@temp_ins_id output;
 EXEC Insert_Instructor @f_name="Alasteir",@l_name="Cassell",@address=null,@email="acassella@wiley.com",@password="O8aznOoZ",@salary=null,@degree=null,@dept_id=@dept_id9,@ins_id=@temp_ins_id output;
@@ -45,8 +52,10 @@ EXEC Insert_Instructor @f_name="Shelley",@l_name="Maymand",@address="723 Pawling
 EXEC Insert_Instructor @f_name="Kelcy",@l_name="Mattheis",@address="80061 Butternut Park",@email="kmattheism@sphinn.com",@password="nd1qBWp",@salary=12795.18,@degree="Research Nurse",@dept_id=@dept_id6,@ins_id=@temp_ins_id output;
 EXEC Insert_Instructor @f_name="Rowe",@l_name="Dewes",@address="635 Eastwood Pass",@email="rdewesn@amazonaws.com",@password="0Jy1ayRz",@salary=11888.25,@degree="Associate Professor",@dept_id=@dept_id3,@ins_id=@temp_ins_id output;
 
+/* ------------------------------------------------------------------------------- */
+/*                                    Student Table                                */
+/* ------------------------------------------------------------------------------- */
 
-/* --------------------------- inserting students --------------------------- */
 DECLARE @temp_std_id int;
 EXEC Insert_Student @f_name="Cristin",@l_name="Hutcheon",@address="88 Northwestern Center",@email="chutcheono@wunderground.com",@password="fDt7Abj5L0uU",@dept_id=@dept_id3,@stu_id=@temp_std_id output;
 EXEC Insert_Student @f_name="Camille",@l_name="Farnworth",@address="3695 Orin Crossing",@email="cfarnworthp@wired.com",@password="IKmSCbgjK5",@dept_id=@dept_id1,@stu_id=@temp_std_id output;
@@ -132,92 +141,105 @@ EXEC Insert_Student @f_name="Lorne",@l_name="Foxen",@address=null,@email="lfoxen
 USE Examination
 GO
 
-Insert_Course 'Programming Basics'
+EXEC Insert_Course @crs_name = 'Programming Basics'
 GO
-Insert_Course 'SQL'
+EXEC Insert_Course @crs_name = 'SQL'
 GO
-Insert_Course 'CST'
+EXEC Insert_Course @crs_name = 'CST'
 GO
-Insert_Course 'Advanced CST'
+EXEC Insert_Course @crs_name = 'Advanced CST'
 GO
-Insert_Course '.NET Core'
+EXEC Insert_Course @crs_name = '.NET Core'
 GO
 
 /* ------------------------------------------------------------------------------- */
 /*                                      Topic Table                                */
 /* ------------------------------------------------------------------------------- */
 
-Insert_Topic 'C Language', 'Programming Basics'
+EXEC Insert_Topic @top_name = 'C Language', @crs_name = 'Programming Basics'
 GO
-Insert_Topic 'C++ OOP', 'Programming Basics'
+EXEC Insert_Topic @top_name = 'C++ OOP', @crs_name = 'Programming Basics'
 GO
-Insert_Topic 'Software Architecture', 'Programming Basics'
+EXEC Insert_Topic @top_name = 'Software Architecture', @crs_name = 'Programming Basics'
 GO
-Insert_Topic 'Database' , 'SQL'
+EXEC Insert_Topic @top_name = 'Database' , @crs_name = 'SQL'
 GO
-Insert_Topic 'Advanced Database', 'SQL'
+EXEC Insert_Topic @top_name = 'Advanced Database', @crs_name = 'SQL'
 GO
-Insert_Topic 'HTML', 'CST'
+EXEC Insert_Topic @top_name = 'HTML', @crs_name = 'CST'
 GO
-Insert_Topic 'CSS', 'CST'
+EXEC Insert_Topic @top_name = 'CSS', @crs_name = 'CST'
 GO
-Insert_Topic 'Javascript', 'CST'
+EXEC Insert_Topic @top_name = 'Javascript', @crs_name = 'CST'
 GO
-Insert_Topic 'Advanced Javascript', 'Advanced CST'
+EXEC Insert_Topic @top_name = 'Advanced Javascript', @crs_name = 'Advanced CST'
 GO
-Insert_Topic 'HTML5', 'Advanced CST'
+EXEC Insert_Topic @top_name = 'HTML5', @crs_name = 'Advanced CST'
 GO
-Insert_Topic 'C#', '.NET Core'
-GO
-
-select * from Instructor
-select * from Course
-select * from Ins_Course
-
-Assign_Course_to_Instructor 'CST', 1
-GO
-Assign_Course_to_Instructor 'CST', 2
-GO
-Assign_Course_to_Instructor 'CST', 3
-GO
-Assign_Course_to_Instructor 'CST', 4
-GO
-Assign_Course_to_Instructor 'CST', 5
-GO
-Assign_Course_to_Instructor 'Advanced CST', 6
-GO
-Assign_Course_to_Instructor 'Advanced CST', 7
-GO
-Assign_Course_to_Instructor 'Advanced CST', 8
-GO
-Assign_Course_to_Instructor 'Advanced CST', 9
-GO
-Assign_Course_to_Instructor 'Advanced CST', 10
-GO
-Assign_Course_to_Instructor 'SQL', 11
-GO
-Assign_Course_to_Instructor 'SQL', 12
-GO
-Assign_Course_to_Instructor 'SQL', 13
-GO
-Assign_Course_to_Instructor 'SQL', 14
-GO
-Assign_Course_to_Instructor 'SQL', 15
-GO
-Assign_Course_to_Instructor 'SQL', 16
-GO
-Assign_Course_to_Instructor '.NET Core', 17
-GO
-Assign_Course_to_Instructor '.NET Core', 18
-GO
-Assign_Course_to_Instructor '.NET Core', 19
-GO
-Assign_Course_to_Instructor 'Programming Basics', 20
-GO
-Assign_Course_to_Instructor 'Programming Basics', 21
-GO
-Assign_Course_to_Instructor 'Programming Basics', 22
-GO
-Assign_Course_to_Instructor 'Programming Basics', 23
+EXEC Insert_Topic @top_name = 'C#', @crs_name = '.NET Core'
 GO
 
+/* ------------------------------------------------------------------------------- */
+/*                                 Ins_Course Table                                */
+/* ------------------------------------------------------------------------------- */
+
+EXEC Assign_Course_to_Instructor @crs_name = 'CST', @ins_id = 1
+GO
+EXEC Assign_Course_to_Instructor @crs_name = 'CST', @ins_id =  2
+GO
+EXEC Assign_Course_to_Instructor @crs_name = 'CST', @ins_id =  3
+GO
+EXEC Assign_Course_to_Instructor @crs_name = 'CST', @ins_id = 4
+GO
+EXEC Assign_Course_to_Instructor @crs_name = 'CST', @ins_id = 5
+GO
+EXEC Assign_Course_to_Instructor @crs_name = 'Advanced CST', @ins_id = 6
+GO
+EXEC Assign_Course_to_Instructor @crs_name = 'Advanced CST', @ins_id = 7
+GO
+EXEC Assign_Course_to_Instructor @crs_name = 'Advanced CST', @ins_id = 8
+GO
+EXEC Assign_Course_to_Instructor @crs_name = 'Advanced CST', @ins_id = 9
+GO
+EXEC Assign_Course_to_Instructor @crs_name = 'Advanced CST', @ins_id = 10
+GO
+EXEC Assign_Course_to_Instructor @crs_name = 'SQL', @ins_id = 11
+GO
+EXEC Assign_Course_to_Instructor @crs_name = 'SQL', @ins_id = 12
+GO
+EXEC Assign_Course_to_Instructor @crs_name = 'SQL', @ins_id = 13
+GO
+EXEC Assign_Course_to_Instructor @crs_name = 'SQL', @ins_id = 14
+GO
+EXEC Assign_Course_to_Instructor @crs_name = 'SQL', @ins_id = 15
+GO
+EXEC Assign_Course_to_Instructor @crs_name = 'SQL', @ins_id = 16
+GO
+EXEC Assign_Course_to_Instructor @crs_name = '.NET Core', @ins_id = 17
+GO
+EXEC Assign_Course_to_Instructor @crs_name = '.NET Core', @ins_id = 18
+GO
+EXEC Assign_Course_to_Instructor @crs_name = '.NET Core', @ins_id = 19
+GO
+EXEC Assign_Course_to_Instructor @crs_name = 'Programming Basics', @ins_id = 20
+GO
+EXEC Assign_Course_to_Instructor @crs_name = 'Programming Basics', @ins_id = 21
+GO
+EXEC Assign_Course_to_Instructor @crs_name = 'Programming Basics', @ins_id = 22
+GO
+EXEC Assign_Course_to_Instructor @crs_name = 'Programming Basics', @ins_id = 23
+GO
+
+/* ------------------------------------------------------------------------------- */
+/*                                 Question Table                                  */
+/* ------------------------------------------------------------------------------- */
+
+DECLARE @q_id INT
+
+EXEC insertMCQ 10000, 'Output for this piece of code is:
+for(i<5;i=0;i++)
+{
+printf("%d",i);
+}
+If i is an integer and initialize to 1. What will be the output?',  '1234', '12345',
+ '15',  'Nothing',  'd', @q_id OUTPUT
