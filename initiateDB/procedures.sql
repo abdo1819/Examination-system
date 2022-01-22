@@ -702,7 +702,7 @@ BEGIN
 	ELSE
 		BEGIN
 			BEGIN TRY
-				EXECUTE insertQuestion @top_id, 'MCQ', @q_text, @corr_answer, @q_id output
+				EXECUTE [PRIVATE].insertQuestion @top_id, 'MCQ', @q_text, @corr_answer, @q_id output
 				INSERT INTO MCQ (q_id, ch_a, ch_b, ch_c, ch_d)
 					VALUES(@q_id, @ch_a, @ch_b, @ch_c, @ch_d)
 			END TRY
@@ -728,7 +728,7 @@ BEGIN
 	ELSE
 		BEGIN
 			BEGIN TRY
-				EXECUTE insertQuestion @top_id, 'TF', @q_text, @corr_answer, @q_id output
+				EXECUTE [PRIVATE].insertQuestion @top_id, 'TF', @q_text, @corr_answer, @q_id output
 			END TRY
 			BEGIN CATCH 
 				SELECT 'Make sure data is correct'
