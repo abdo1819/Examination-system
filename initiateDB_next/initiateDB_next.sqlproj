@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>initiateDB_next</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{ed36cfd9-18c5-4346-8401-d622e155ae08}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql140DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>initiateDB_next</RootNamespace>
+    <AssemblyName>initiateDB_next</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="PRIVATE\" />
+    <Folder Include="PRIVATE\Stored Procedures\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\User.sql" />
+    <Build Include="dbo\Tables\Student.sql" />
+    <Build Include="dbo\Tables\Instructor.sql" />
+    <Build Include="dbo\Tables\Course.sql" />
+    <Build Include="dbo\Tables\Course_Attendance.sql" />
+    <Build Include="dbo\Tables\Ins_Course.sql" />
+    <Build Include="dbo\Tables\Department.sql" />
+    <Build Include="dbo\Tables\Topic.sql" />
+    <Build Include="dbo\Tables\Exam.sql" />
+    <Build Include="dbo\Tables\Exam_Question.sql" />
+    <Build Include="dbo\Tables\Exam_Answer.sql" />
+    <Build Include="dbo\Tables\Question.sql" />
+    <Build Include="dbo\Tables\MCQ.sql" />
+    <Build Include="dbo\Views\v_Students.sql" />
+    <Build Include="dbo\Views\v_Instructor.sql" />
+    <Build Include="dbo\Functions\getStudentGrade.sql" />
+    <Build Include="dbo\Functions\getQuestionMark.sql" />
+    <Build Include="PRIVATE\Stored Procedures\Insert_User.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Student.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Instructor.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Department.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Department_With_Manager.sql" />
+    <Build Include="dbo\Stored Procedures\getAllStudents.sql" />
+    <Build Include="dbo\Stored Procedures\getAllInstructors.sql" />
+    <Build Include="dbo\Stored Procedures\getInstructorsInDepartment.sql" />
+    <Build Include="dbo\Stored Procedures\getDepartment.sql" />
+    <Build Include="dbo\Stored Procedures\updateUserData.sql" />
+    <Build Include="dbo\Stored Procedures\updateStudentData.sql" />
+    <Build Include="dbo\Stored Procedures\updateInstructorData.sql" />
+    <Build Include="dbo\Stored Procedures\Update_Department_Manager.sql" />
+    <Build Include="dbo\Stored Procedures\deleteStudent.sql" />
+    <Build Include="dbo\Stored Procedures\deleteInstructor.sql" />
+    <Build Include="dbo\Stored Procedures\Delete_Department.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Course.sql" />
+    <Build Include="dbo\Stored Procedures\setCourseName.sql" />
+    <Build Include="dbo\Stored Procedures\Delete_Course.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Topic.sql" />
+    <Build Include="dbo\Stored Procedures\setTopicName.sql" />
+    <Build Include="dbo\Stored Procedures\Delete_Topic.sql" />
+    <Build Include="dbo\Stored Procedures\Assign_Course_to_Instructor.sql" />
+    <Build Include="dbo\Stored Procedures\End_Course_with_Instructor.sql" />
+    <Build Include="dbo\Stored Procedures\Student_Take_course_with_Instructor.sql" />
+    <Build Include="dbo\Stored Procedures\End_Course_for_Student.sql" />
+    <Build Include="PRIVATE\Stored Procedures\insertQuestion.sql" />
+    <Build Include="dbo\Stored Procedures\insertMCQ.sql" />
+    <Build Include="dbo\Stored Procedures\insertTFQ.sql" />
+    <Build Include="dbo\Stored Procedures\updateMCQ.sql" />
+    <Build Include="dbo\Stored Procedures\updateTFQ.sql" />
+    <Build Include="dbo\Stored Procedures\deleteQuestion.sql" />
+    <Build Include="dbo\Stored Procedures\viewTopicMCQ.sql" />
+    <Build Include="dbo\Stored Procedures\viewTopicTFQ.sql" />
+    <Build Include="dbo\Stored Procedures\viewCourseMCQ.sql" />
+    <Build Include="dbo\Stored Procedures\viewCourseTFQ.sql" />
+    <Build Include="dbo\Stored Procedures\viewMCQ.sql" />
+    <Build Include="dbo\Stored Procedures\viewTFQ.sql" />
+    <Build Include="dbo\Stored Procedures\generateExam.sql" />
+    <Build Include="dbo\Stored Procedures\deleteExam.sql" />
+    <Build Include="dbo\Stored Procedures\viewExamQuestions.sql" />
+    <Build Include="dbo\Stored Procedures\returnGrades.sql" />
+    <Build Include="dbo\Stored Procedures\Courses_and_Students_of_Instructor.sql" />
+    <Build Include="dbo\Stored Procedures\Topics_of_Course.sql" />
+    <Build Include="dbo\Stored Procedures\Get_Questions_in_Exam.sql" />
+    <Build Include="dbo\Stored Procedures\getStudentsInDepartment.sql" />
+    <Build Include="dbo\Stored Procedures\getStudentAnswer.sql" />
+    <None Include="Scripts\ScriptsIgnoredOnImport.sql" />
+    <Build Include="Schema1.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="initiateDB_next.publish.xml" />
+  </ItemGroup>
+</Project>
