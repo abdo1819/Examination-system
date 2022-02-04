@@ -1,0 +1,813 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PRIVATE_Insert_UserTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for PRIVATE.Insert_User
+DECLARE @RC AS INT, @user_type AS VARCHAR (1), @f_name AS VARCHAR (50), @l_name AS VARCHAR (50), @address AS VARCHAR (150), @email AS VARCHAR (90), @password AS VARCHAR (255), @usr_id AS INT;
+
+SELECT @RC = 0,
+       @user_type = NULL,
+       @f_name = NULL,
+       @l_name = NULL,
+       @address = NULL,
+       @email = NULL,
+       @password = NULL;
+
+EXECUTE @RC = [PRIVATE].[Insert_User] @user_type, @f_name, @l_name, @address, @email, @password, @usr_id OUTPUT;
+
+SELECT @RC AS RC,
+       @usr_id AS usr_id;
+
+</value>
+  </data>
+  <data name="PRIVATE_insertQuestionTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for PRIVATE.insertQuestion
+DECLARE @RC AS INT, @top_id AS INT, @q_type AS VARCHAR (3), @q_text AS VARCHAR (300), @corr_answer AS VARCHAR (1), @q_id AS INT;
+
+SELECT @RC = 0,
+       @top_id = 0,
+       @q_type = NULL,
+       @q_text = NULL,
+       @corr_answer = NULL;
+
+EXECUTE @RC = [PRIVATE].[insertQuestion] @top_id, @q_type, @q_text, @corr_answer, @q_id OUTPUT;
+
+SELECT @RC AS RC,
+       @q_id AS q_id;
+
+</value>
+  </data>
+  <data name="dbo_Assign_Course_to_InstructorTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.Assign_Course_to_Instructor
+DECLARE @RC AS INT, @crs_name AS VARCHAR (20), @ins_id AS INT;
+
+SELECT @RC = 0,
+       @crs_name = NULL,
+       @ins_id = 0;
+
+EXECUTE @RC = [dbo].[Assign_Course_to_Instructor] @crs_name, @ins_id;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_Courses_and_Students_of_InstructorTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.Courses_and_Students_of_Instructor
+DECLARE @RC AS INT, @ins_id AS INT;
+
+SELECT @RC = 0,
+       @ins_id = 0;
+
+EXECUTE @RC = [dbo].[Courses_and_Students_of_Instructor] @ins_id;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_Delete_CourseTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.Delete_Course
+DECLARE @RC AS INT, @crs_name AS VARCHAR (20);
+
+SELECT @RC = 0,
+       @crs_name = NULL;
+
+EXECUTE @RC = [dbo].[Delete_Course] @crs_name;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_Delete_DepartmentTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.Delete_Department
+DECLARE @RC AS INT, @dept_name AS VARCHAR (20);
+
+SELECT @RC = 0,
+       @dept_name = NULL;
+
+EXECUTE @RC = [dbo].[Delete_Department] @dept_name;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_Delete_TopicTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.Delete_Topic
+DECLARE @RC AS INT, @top_name AS VARCHAR (20);
+
+SELECT @RC = 0,
+       @top_name = NULL;
+
+EXECUTE @RC = [dbo].[Delete_Topic] @top_name;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_End_Course_for_StudentTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.End_Course_for_Student
+DECLARE @RC AS INT, @crs_name AS VARCHAR (20), @std_id AS INT;
+
+SELECT @RC = 0,
+       @crs_name = NULL,
+       @std_id = 0;
+
+EXECUTE @RC = [dbo].[End_Course_for_Student] @crs_name, @std_id;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_End_Course_with_InstructorTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.End_Course_with_Instructor
+DECLARE @RC AS INT, @crs_name AS VARCHAR (20), @ins_id AS INT;
+
+SELECT @RC = 0,
+       @crs_name = NULL,
+       @ins_id = 0;
+
+EXECUTE @RC = [dbo].[End_Course_with_Instructor] @crs_name, @ins_id;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_Get_Questions_in_ExamTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.Get_Questions_in_Exam
+DECLARE @RC AS INT, @ex_id AS INT;
+
+SELECT @RC = 0,
+       @ex_id = 0;
+
+EXECUTE @RC = [dbo].[Get_Questions_in_Exam] @ex_id;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_Insert_CourseTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.Insert_Course
+DECLARE @RC AS INT, @crs_name AS VARCHAR (20);
+
+SELECT @RC = 0,
+       @crs_name = NULL;
+
+EXECUTE @RC = [dbo].[Insert_Course] @crs_name;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_Insert_DepartmentTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.Insert_Department
+DECLARE @RC AS INT, @dept_name AS VARCHAR (20), @id_mgr AS INT, @dept_id AS INT;
+
+SELECT @RC = 0,
+       @dept_name = NULL,
+       @id_mgr = 0;
+
+EXECUTE @RC = [dbo].[Insert_Department] @dept_name, @id_mgr, @dept_id OUTPUT;
+
+SELECT @RC AS RC,
+       @dept_id AS dept_id;
+
+</value>
+  </data>
+  <data name="dbo_Insert_Department_With_ManagerTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.Insert_Department_With_Manager
+DECLARE @RC AS INT, @dept_name AS VARCHAR (100), @f_name AS VARCHAR (50), @l_name AS VARCHAR (50), @address AS VARCHAR (150), @email AS VARCHAR (90), @password AS VARCHAR (255), @salary AS MONEY, @degree AS VARCHAR (50), @dept_id AS INT, @mgr_id AS INT;
+
+SELECT @RC = 0,
+       @dept_name = 'test_dep',
+       @f_name = 'test_name',
+       @l_name = 'test_lname',
+       @address = 'sdasd',
+       @email = 'asd@dsa.com',
+       @password = 'dasd',
+       @salary = 1234,
+       @degree = NULL;
+
+EXECUTE @RC = [dbo].[Insert_Department_With_Manager] @dept_name, @f_name, @l_name, @address, @email, @password, @salary, @degree, @dept_id OUTPUT, @mgr_id OUTPUT;
+
+SELECT @RC AS RC,
+       @dept_id AS dept_id,
+       @mgr_id AS mgr_id;
+
+</value>
+  </data>
+  <data name="dbo_Insert_InstructorTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.Insert_Instructor
+DECLARE @RC AS INT, @f_name AS VARCHAR (50), @l_name AS VARCHAR (50), @address AS VARCHAR (150), @email AS VARCHAR (90), @password AS VARCHAR (255), @salary AS MONEY, @degree AS VARCHAR (50), @dept_id AS INT, @ins_id AS INT;
+
+SELECT @RC = 0,
+       @f_name = NULL,
+       @l_name = NULL,
+       @address = NULL,
+       @email = NULL,
+       @password = NULL,
+       @salary = NULL,
+       @degree = NULL,
+       @dept_id = 0;
+
+EXECUTE @RC = [dbo].[Insert_Instructor] @f_name, @l_name, @address, @email, @password, @salary, @degree, @dept_id, @ins_id OUTPUT;
+
+SELECT @RC AS RC,
+       @ins_id AS ins_id;
+
+</value>
+  </data>
+  <data name="dbo_Insert_StudentTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.Insert_Student
+DECLARE @RC AS INT, @f_name AS VARCHAR (50), @l_name AS VARCHAR (50), @address AS VARCHAR (150), @email AS VARCHAR (90), @password AS VARCHAR (255), @dept_id AS INT, @stu_id AS INT;
+
+SELECT @RC = 0,
+       @f_name = NULL,
+       @l_name = NULL,
+       @address = NULL,
+       @email = NULL,
+       @password = NULL,
+       @dept_id = 0;
+
+EXECUTE @RC = [dbo].[Insert_Student] @f_name, @l_name, @address, @email, @password, @dept_id, @stu_id OUTPUT;
+
+SELECT @RC AS RC,
+       @stu_id AS stu_id;
+
+</value>
+  </data>
+  <data name="dbo_Insert_TopicTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.Insert_Topic
+DECLARE @RC AS INT, @top_name AS VARCHAR (20), @crs_name AS VARCHAR (20);
+
+SELECT @RC = 0,
+       @top_name = NULL,
+       @crs_name = NULL;
+
+EXECUTE @RC = [dbo].[Insert_Topic] @top_name, @crs_name;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_Student_Take_course_with_InstructorTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.Student_Take_course_with_Instructor
+DECLARE @RC AS INT, @std_id AS INT, @crs_id AS INT, @ins_id AS INT;
+
+SELECT @RC = 0,
+       @std_id = 0,
+       @crs_id = 0,
+       @ins_id = 0;
+
+EXECUTE @RC = [dbo].[Student_Take_course_with_Instructor] @std_id, @crs_id, @ins_id;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_Topics_of_CourseTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.Topics_of_Course
+DECLARE @RC AS INT, @crs_name AS VARCHAR (20);
+
+SELECT @RC = 0,
+       @crs_name = NULL;
+
+EXECUTE @RC = [dbo].[Topics_of_Course] @crs_name;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_Update_Department_ManagerTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.Update_Department_Manager
+DECLARE @RC AS INT, @dept_name AS VARCHAR (20), @mgr_id AS INT;
+
+SELECT @RC = 0,
+       @dept_name = NULL,
+       @mgr_id = 0;
+
+EXECUTE @RC = [dbo].[Update_Department_Manager] @dept_name, @mgr_id;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_deleteExamTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.deleteExam
+DECLARE @RC AS INT, @ex_id AS INT;
+
+SELECT @RC = 0,
+       @ex_id = 0;
+
+EXECUTE @RC = [dbo].[deleteExam] @ex_id;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_deleteInstructorTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.deleteInstructor
+DECLARE @RC AS INT, @ins_id AS INT;
+
+SELECT @RC = 0,
+       @ins_id = 0;
+
+EXECUTE @RC = [dbo].[deleteInstructor] @ins_id;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_deleteQuestionTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.deleteQuestion
+DECLARE @RC AS INT, @q_id AS INT;
+
+SELECT @RC = 0,
+       @q_id = 0;
+
+EXECUTE @RC = [dbo].[deleteQuestion] @q_id;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_deleteStudentTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.deleteStudent
+DECLARE @RC AS INT, @std_id AS INT;
+
+SELECT @RC = 0,
+       @std_id = 0;
+
+EXECUTE @RC = [dbo].[deleteStudent] @std_id;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_generateExamTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.generateExam
+DECLARE @RC AS INT, @crs_name AS VARCHAR (100), @std_id AS INT, @ex_id AS INT;
+
+SELECT @RC = 0,
+       @crs_name = NULL,
+       @std_id = 0;
+
+EXECUTE @RC = [dbo].[generateExam] @crs_name, @std_id, @ex_id OUTPUT;
+
+SELECT @RC AS RC,
+       @ex_id AS ex_id;
+
+</value>
+  </data>
+  <data name="dbo_getAllInstructorsTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.getAllInstructors
+DECLARE @RC AS INT;
+
+SELECT @RC = 0;
+
+EXECUTE @RC = [dbo].[getAllInstructors] ;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_getAllStudentsTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.getAllStudents
+DECLARE @RC AS INT;
+
+SELECT @RC = 0;
+
+EXECUTE @RC = [dbo].[getAllStudents] ;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_getDepartmentTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.getDepartment
+DECLARE @RC AS INT, @dept_id AS INT;
+
+SELECT @RC = 0,
+       @dept_id = 0;
+
+EXECUTE @RC = [dbo].[getDepartment] @dept_id;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_getInstructorsInDepartmentTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.getInstructorsInDepartment
+DECLARE @RC AS INT, @dept_id AS INT;
+
+SELECT @RC = 0,
+       @dept_id = 0;
+
+EXECUTE @RC = [dbo].[getInstructorsInDepartment] @dept_id;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_getStudentAnswerTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.getStudentAnswer
+DECLARE @RC AS INT, @exam_id AS INT, @stduent_id AS INT;
+
+SELECT @RC = 0,
+       @exam_id = 0,
+       @stduent_id = 0;
+
+EXECUTE @RC = [dbo].[getStudentAnswer] @exam_id, @stduent_id;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_getStudentsInDepartmentTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.getStudentsInDepartment
+DECLARE @RC AS INT, @dept_id AS INT;
+
+SELECT @RC = 0,
+       @dept_id = 0;
+
+EXECUTE @RC = [dbo].[getStudentsInDepartment] @dept_id;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_insertMCQTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.insertMCQ
+DECLARE @RC AS INT, @top_id AS INT, @q_text AS VARCHAR (300), @ch_a AS VARCHAR (300), @ch_b AS VARCHAR (300), @ch_c AS VARCHAR (300), @ch_d AS VARCHAR (300), @corr_answer AS VARCHAR (1), @q_id AS INT;
+
+SELECT @RC = 0,
+       @top_id = 0,
+       @q_text = NULL,
+       @ch_a = NULL,
+       @ch_b = NULL,
+       @ch_c = NULL,
+       @ch_d = NULL,
+       @corr_answer = NULL;
+
+EXECUTE @RC = [dbo].[insertMCQ] @top_id, @q_text, @ch_a, @ch_b, @ch_c, @ch_d, @corr_answer, @q_id OUTPUT;
+
+SELECT @RC AS RC,
+       @q_id AS q_id;
+
+</value>
+  </data>
+  <data name="dbo_insertTFQTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.insertTFQ
+DECLARE @RC AS INT, @top_id AS INT, @q_text AS VARCHAR (300), @corr_answer AS VARCHAR (1), @q_id AS INT;
+
+SELECT @RC = 0,
+       @top_id = 0,
+       @q_text = NULL,
+       @corr_answer = NULL;
+
+EXECUTE @RC = [dbo].[insertTFQ] @top_id, @q_text, @corr_answer, @q_id OUTPUT;
+
+SELECT @RC AS RC,
+       @q_id AS q_id;
+
+</value>
+  </data>
+  <data name="dbo_returnGradesTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.returnGrades
+DECLARE @RC AS INT, @std_id AS INT;
+
+SELECT @RC = 0,
+       @std_id = 0;
+
+EXECUTE @RC = [dbo].[returnGrades] @std_id;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_setCourseNameTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.setCourseName
+DECLARE @RC AS INT, @crs_id AS INT, @crs_name AS VARCHAR (50);
+
+SELECT @RC = 0,
+       @crs_id = 0,
+       @crs_name = NULL;
+
+EXECUTE @RC = [dbo].[setCourseName] @crs_id, @crs_name;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_setTopicNameTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.setTopicName
+DECLARE @RC AS INT, @top_id AS INT, @top_name AS VARCHAR (50);
+
+SELECT @RC = 0,
+       @top_id = 0,
+       @top_name = NULL;
+
+EXECUTE @RC = [dbo].[setTopicName] @top_id, @top_name;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_updateInstructorDataTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.updateInstructorData
+DECLARE @RC AS INT, @f_name AS VARCHAR (50), @l_name AS VARCHAR (50), @address AS VARCHAR (150), @email AS VARCHAR (90), @salary AS MONEY, @degree AS VARCHAR (50), @dept_id AS INT, @ins_id AS INT;
+
+SELECT @RC = 0,
+       @f_name = NULL,
+       @l_name = NULL,
+       @address = NULL,
+       @email = NULL,
+       @salary = NULL,
+       @degree = NULL,
+       @dept_id = 0,
+       @ins_id = 0;
+
+EXECUTE @RC = [dbo].[updateInstructorData] @f_name, @l_name, @address, @email, @salary, @degree, @dept_id, @ins_id;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_updateMCQTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.updateMCQ
+DECLARE @RC AS INT, @q_id AS INT, @top_id AS INT, @q_text AS VARCHAR (300), @ch_a AS VARCHAR (300), @ch_b AS VARCHAR (300), @ch_c AS VARCHAR (300), @ch_d AS VARCHAR (300), @corr_answer AS VARCHAR (1);
+
+SELECT @RC = 0,
+       @q_id = 0,
+       @top_id = 0,
+       @q_text = NULL,
+       @ch_a = NULL,
+       @ch_b = NULL,
+       @ch_c = NULL,
+       @ch_d = NULL,
+       @corr_answer = NULL;
+
+EXECUTE @RC = [dbo].[updateMCQ] @q_id, @top_id, @q_text, @ch_a, @ch_b, @ch_c, @ch_d, @corr_answer;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_updateStudentDataTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.updateStudentData
+DECLARE @RC AS INT, @f_name AS VARCHAR (50), @l_name AS VARCHAR (50), @address AS VARCHAR (150), @email AS VARCHAR (90), @dept_id AS INT, @std_id AS INT;
+
+SELECT @RC = 0,
+       @f_name = NULL,
+       @l_name = NULL,
+       @address = NULL,
+       @email = NULL,
+       @dept_id = 0,
+       @std_id = 0;
+
+EXECUTE @RC = [dbo].[updateStudentData] @f_name, @l_name, @address, @email, @dept_id, @std_id;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_updateTFQTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.updateTFQ
+DECLARE @RC AS INT, @q_id AS INT, @top_id AS INT, @q_text AS VARCHAR (300), @corr_answer AS VARCHAR (1);
+
+SELECT @RC = 0,
+       @q_id = 0,
+       @top_id = 0,
+       @q_text = NULL,
+       @corr_answer = NULL;
+
+EXECUTE @RC = [dbo].[updateTFQ] @q_id, @top_id, @q_text, @corr_answer;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_updateUserDataTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.updateUserData
+DECLARE @RC AS INT, @usr_id AS INT, @f_name AS VARCHAR (50), @l_name AS VARCHAR (50), @address AS VARCHAR (150), @email AS VARCHAR (90);
+
+SELECT @RC = 0,
+       @usr_id = 0,
+       @f_name = NULL,
+       @l_name = NULL,
+       @address = NULL,
+       @email = NULL;
+
+EXECUTE @RC = [dbo].[updateUserData] @usr_id, @f_name, @l_name, @address, @email;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_viewCourseMCQTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.viewCourseMCQ
+DECLARE @RC AS INT, @crs_name AS VARCHAR (100);
+
+SELECT @RC = 0,
+       @crs_name = NULL;
+
+EXECUTE @RC = [dbo].[viewCourseMCQ] @crs_name;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_viewCourseTFQTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.viewCourseTFQ
+DECLARE @RC AS INT, @crs_name AS VARCHAR (100);
+
+SELECT @RC = 0,
+       @crs_name = NULL;
+
+EXECUTE @RC = [dbo].[viewCourseTFQ] @crs_name;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_viewExamQuestionsTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.viewExamQuestions
+DECLARE @RC AS INT, @ex_id AS INT;
+
+SELECT @RC = 0,
+       @ex_id = 0;
+
+EXECUTE @RC = [dbo].[viewExamQuestions] @ex_id;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_viewMCQTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.viewMCQ
+DECLARE @RC AS INT;
+
+SELECT @RC = 0;
+
+EXECUTE @RC = [dbo].[viewMCQ] ;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_viewTFQTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.viewTFQ
+DECLARE @RC AS INT;
+
+SELECT @RC = 0;
+
+EXECUTE @RC = [dbo].[viewTFQ] ;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_viewTopicMCQTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.viewTopicMCQ
+DECLARE @RC AS INT, @top_name AS VARCHAR (200);
+
+SELECT @RC = 0,
+       @top_name = NULL;
+
+EXECUTE @RC = [dbo].[viewTopicMCQ] @top_name;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <data name="dbo_viewTopicTFQTest_TestAction.SqlScript" xml:space="preserve">
+    <value>-- database unit test for dbo.viewTopicTFQ
+DECLARE @RC AS INT, @top_name AS VARCHAR (200);
+
+SELECT @RC = 0,
+       @top_name = NULL;
+
+EXECUTE @RC = [dbo].[viewTopicTFQ] @top_name;
+
+SELECT @RC AS RC;
+
+</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>
