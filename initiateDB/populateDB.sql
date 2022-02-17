@@ -1781,3 +1781,11 @@ execute insertMCQ 13000, 'Which of the following set should be associated with w
 
 
 
+---------------------------------- exams --------------------------------- 
+declare @exam_id int
+-- Student_Take_course_with_Instructor 25 ,1400 , 17
+EXEC generateExam "Advanced CST" , 26 , @exam_id output
+EXEC generateExam "CST" , 29 , @exam_id output
+EXEC generateExam "Programming Basics" , 32 , @exam_id output
+
+
