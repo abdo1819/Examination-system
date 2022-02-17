@@ -30,7 +30,7 @@ namespace FrmHome
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.R4CourseTopic1 = new FrmHome.R4CourseTopic();
+            this.R4CourseTopic1 = new FrmHome.Reports.R4CourseTopic();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -60,6 +60,6 @@ namespace FrmHome
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private R4CourseTopic R4CourseTopic1;
+        private Reports.R4CourseTopic R4CourseTopic1;
     }
 }

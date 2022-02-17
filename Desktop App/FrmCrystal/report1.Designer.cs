@@ -30,8 +30,8 @@ namespace FrmHome
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.crystalReport11 = new FrmHome.CrystalReport1();
-            this.crystalReport31 = new FrmHome.CrystalReport3();
+            this.crystalReport11 = new FrmHome.Reports.CrystalReport1();
+            this.crystalReport31 = new FrmHome.Reports.CrystalReport3();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -61,7 +61,7 @@ namespace FrmHome
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private CrystalReport1 crystalReport11;
-        private CrystalReport3 crystalReport31;
+        private Reports.CrystalReport1 crystalReport11;
+        private Reports.CrystalReport3 crystalReport31;
     }
 }

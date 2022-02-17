@@ -30,7 +30,7 @@ namespace FrmHome
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.ViewExamForStudent1 = new FrmHome.ViewExamForStudent();
+            this.ViewExamForStudent1 = new FrmHome.Reports.ViewExamForStudent();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -60,6 +60,6 @@ namespace FrmHome
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private ViewExamForStudent ViewExamForStudent1;
+        private Reports.ViewExamForStudent ViewExamForStudent1;
     }
 }
