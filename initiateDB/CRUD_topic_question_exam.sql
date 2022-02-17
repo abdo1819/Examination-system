@@ -752,9 +752,97 @@ GO
 
 
 
+CREATE OR ALTER PROC answerExamQuestion @std_id int, @ex_id int, @q_id int, @answer varchar(1)
+AS
+BEGIN
+	IF NOT EXISTS(select ex_id from Exam where ex_id = @ex_id)
+		SELECT 'Exam not found'
+	ELSE
+		BEGIN
+			IF NOT EXISTS(select q_id from Question where q_id = @q_id)
+				SELECT 'Question not found'
+			ELSE
+				BEGIN
+					IF NOT EXISTS(select std_id from Exam_Answer where std_id = @std_id AND ex_id = @ex_id AND q_id = @q_id)
+						SELECT 'exam is not generated for student yet'
+					ELSE
+						BEGIN
+							BEGIN TRY
+							BEGIN TRANSACTION 
+								UPDATE Exam_Answer
+								SET std_answer = @answer
+								WHERE std_id = @std_id AND ex_id = @ex_id AND q_id = @q_id
+							COMMIT
+							END TRY
+							BEGIN CATCH
+								SELECT 'Failed to answer the question'
+								ROLLBACK;
+							END CATCH
+						END
+				END
+		END
+END
+GO
+
+CREATE OR ALTER PROCEDURE answerExam @std_id int, @ex_id int, @answer1 varchar(1), 
+						@answer2 varchar(1), @answer3 varchar(1),@answer4 varchar(1),
+						 @answer5 varchar(1),@answer6 varchar(1), @answer7 varchar(1),
+						  @answer8 varchar(1), @answer9 varchar(1),@answer10 varchar(1)
+AS
+BEGIN
+	IF NOT EXISTS(select ex_id from Exam where ex_id = @ex_id)
+		SELECT 'Exam not found'
+	ELSE
+		BEGIN
+			IF NOT EXISTS(select std_id from Exam_Answer where std_id = @std_id AND ex_id = @ex_id)
+				SELECT 'exam is not generated for student yet'
+			ELSE
+				BEGIN
+					-- select the question ids from the exam_question table using cursor
+					declare q_id_cursor cursor for 
+					select eq.q_id
+					from Exam e
+					inner join Exam_Question eq
+					on e.ex_id = eq.ex_id
+					where e.ex_id = @ex_id;
+
+					-- add the answers to temp table and for answer cursor
+					DECLARE @answers_table TABLE (answer varchar(1))
+					INSERT INTO @answers_table values 
+								(@answer1), (@answer2), (@answer3),
+								(@answer4), (@answer5), (@answer6),
+								(@answer7), (@answer8), (@answer9), (@answer10);
+					
+					DECLARE answers_cursor CURSOR FOR
+						SELECT answer
+						FROM @answers_table
+
+					declare @q_counter int = 0;
+
+					-- update the answers
+					OPEN answers_cursor
+					OPEN q_id_cursor
+					declare @q_id int
+					declare @answer varchar(1)
+					FETCH NEXT FROM q_id_cursor INTO @q_id
+					WHILE @@FETCH_STATUS = 0 and @q_counter < 10
+					BEGIN
+						FETCH NEXT FROM answers_cursor INTO @answer
+						UPDATE Exam_Answer
+						SET std_answer = @answer
+						WHERE ex_id = @ex_id AND std_id = @std_id AND q_id = @q_id
+						FETCH NEXT FROM q_id_cursor INTO @q_id
+						select @q_counter = @q_counter + 1;
+					END
+					CLOSE q_id_cursor
+					CLOSE answers_cursor
+					DEALLOCATE q_id_cursor
+					DEALLOCATE answers_cursor
 
 
 
-
-
-
+					
+				END
+		END
+END
+GO
