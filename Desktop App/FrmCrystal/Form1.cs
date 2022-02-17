@@ -28,7 +28,7 @@ namespace FrmHome
 
         private void button1_Click(object sender, EventArgs e)
         {
-            report1 r = new report1();
+            ViewExam r = new ViewExam();
             r.Show();
         }
         ExaminationDataSet.getAllStudentsDataTable dt = new ExaminationDataSet.getAllStudentsDataTable();
