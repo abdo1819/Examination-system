@@ -51,5 +51,11 @@ namespace FrmHome
             //    Trace.WriteLine(row.);
             //}
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CourseTopic topics_report = new CourseTopic();
+            topics_report.Show();
+        }
     }
 }
