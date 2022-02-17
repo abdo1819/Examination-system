@@ -609,6 +609,11 @@ GO
 /*                           Generate Exam for a specific course                   */
 /* ------------------------------------------------------------------------------- */
 
+CREATE OR ALTER PROC getAllExams 
+AS
+	SELECT * from Exam;
+GO
+
 CREATE OR ALTER PROC generateExam @crs_name varchar(100), @std_id int, @ex_id int output
 AS
 BEGIN
