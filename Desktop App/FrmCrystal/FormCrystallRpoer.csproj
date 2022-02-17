@@ -197,6 +197,18 @@
       <DependentUpon>CrystalReport3.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ViewExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewExam.Designer.cs">
+      <DependentUpon>ViewExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewExamForStudent.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewExamForStudent.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="R4CourseTopic.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -236,6 +248,13 @@
     <EmbeddedResource Include="CrystalReport3.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewExam.resx">
+      <DependentUpon>ViewExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewExamForStudent.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ViewExamForStudent.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="R4CourseTopic.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
