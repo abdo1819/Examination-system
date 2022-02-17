@@ -20,8 +20,8 @@ namespace FrmHome
         private void userBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.userBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.examinationDataSet);
+            
+            
 
         }
     }
