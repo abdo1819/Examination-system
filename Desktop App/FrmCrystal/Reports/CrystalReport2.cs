@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FrmHome {
+namespace FrmHome.Reports {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -16,14 +16,14 @@ namespace FrmHome {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class R4CourseTopic : ReportClass {
+    public class CrystalReport2 : ReportClass {
         
-        public R4CourseTopic() {
+        public CrystalReport2() {
         }
         
         public override string ResourceName {
             get {
-                return "R4CourseTopic.rpt";
+                return "CrystalReport2.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace FrmHome {
         
         public override string FullResourceName {
             get {
-                return "FrmHome.R4CourseTopic.rpt";
+                return "FrmHome.Reports.CrystalReport2.rpt";
             }
             set {
                 // Do nothing
@@ -98,9 +98,9 @@ namespace FrmHome {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedR4CourseTopic : Component, ICachedReport {
+    public class CachedCrystalReport2 : Component, ICachedReport {
         
-        public CachedR4CourseTopic() {
+        public CachedCrystalReport2() {
         }
         
         [Browsable(false)]
@@ -137,7 +137,7 @@ namespace FrmHome {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            R4CourseTopic rpt = new R4CourseTopic();
+            CrystalReport2 rpt = new CrystalReport2();
             rpt.Site = this.Site;
             return rpt;
         }

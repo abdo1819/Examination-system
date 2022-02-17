@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FrmHome {
+namespace FrmHome.Reports {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -16,14 +16,14 @@ namespace FrmHome {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class ViewExamForStudent : ReportClass {
+    public class CrystalReport3 : ReportClass {
         
-        public ViewExamForStudent() {
+        public CrystalReport3() {
         }
         
         public override string ResourceName {
             get {
-                return "ViewExamForStudent.rpt";
+                return "CrystalReport3.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace FrmHome {
         
         public override string FullResourceName {
             get {
-                return "FrmHome.ViewExamForStudent.rpt";
+                return "FrmHome.Reports.CrystalReport3.rpt";
             }
             set {
                 // Do nothing
@@ -74,7 +74,7 @@ namespace FrmHome {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section DetailSection2 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
             get {
                 return this.ReportDefinition.Sections[3];
             }
@@ -82,7 +82,7 @@ namespace FrmHome {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section DetailSection4 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
             get {
                 return this.ReportDefinition.Sections[4];
             }
@@ -90,31 +90,7 @@ namespace FrmHome {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section DetailSection3 {
-            get {
-                return this.ReportDefinition.Sections[5];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
-            get {
-                return this.ReportDefinition.Sections[6];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
-            get {
-                return this.ReportDefinition.Sections[7];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_ex_id {
+        public CrystalDecisions.Shared.IParameterField Parameter_crs_name {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }
@@ -122,9 +98,9 @@ namespace FrmHome {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedViewExamForStudent : Component, ICachedReport {
+    public class CachedCrystalReport3 : Component, ICachedReport {
         
-        public CachedViewExamForStudent() {
+        public CachedCrystalReport3() {
         }
         
         [Browsable(false)]
@@ -161,7 +137,7 @@ namespace FrmHome {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            ViewExamForStudent rpt = new ViewExamForStudent();
+            CrystalReport3 rpt = new CrystalReport3();
             rpt.Site = this.Site;
             return rpt;
         }
