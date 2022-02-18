@@ -213,7 +213,7 @@ CREATE TABLE [Exam_Answer]
 	std_mark AS dbo.getQuestionMark(q_id), -- std_mark is computed based on the function
     FOREIGN KEY (std_id) REFERENCES Student(std_id) on delete cascade,
     FOREIGN KEY (ex_id) REFERENCES Exam(ex_id) on delete cascade, 
-	CONSTRAINT c_EA CHECK (std_answer IN ('a','b','c','d','T','F')), -- Possible trigger on insert 
+	CONSTRAINT c_EA CHECK (std_answer IN ('a','b','c','d','T','F','s')), -- Possible trigger on insert 
 	PRIMARY KEY (std_id,ex_id,q_id)
 );
 
