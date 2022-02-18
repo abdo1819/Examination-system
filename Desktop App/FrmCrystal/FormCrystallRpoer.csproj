@@ -181,22 +181,52 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CrystalReport1.cs">
+    <Compile Include="CourseTopic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseTopic.Designer.cs">
+      <DependentUpon>CourseTopic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewStudnetIndepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewStudnetIndepartment.Designer.cs">
+      <DependentUpon>viewStudnetIndepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\viewStudentInDepartment.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <DependentUpon>viewStudentInDepartment.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CrystalReport2.cs">
+    <Compile Include="Reports\ViewExamWithAnswers.cs">
+      <DependentUpon>ViewExamWithAnswers.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ViewExamForCorrections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewExamForCorrections.Designer.cs">
+      <DependentUpon>ViewExamForCorrections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewExam.Designer.cs">
+      <DependentUpon>ViewExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ViewExamForStudent.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <DependentUpon>ViewExamForStudent.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CrystalReport3.cs">
+    <Compile Include="Reports\R4CourseTopic.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <DependentUpon>R4CourseTopic.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExaminationDataSet.Designer.cs">
@@ -218,17 +248,33 @@
     <Compile Include="report1.Designer.cs">
       <DependentUpon>report1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CrystalReport1.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    <EmbeddedResource Include="CourseTopic.resx">
+      <DependentUpon>CourseTopic.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport2.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    <EmbeddedResource Include="viewStudnetIndepartment.resx">
+      <DependentUpon>viewStudnetIndepartment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport3.rpt">
+    <EmbeddedResource Include="Reports\viewStudentInDepartment.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport3.cs</LastGenOutput>
+      <LastGenOutput>viewStudentInDepartment.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ViewExamWithAnswers.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ViewExamWithAnswers.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewExam.resx">
+      <DependentUpon>ViewExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewExamForCorrections.resx">
+      <DependentUpon>ViewExamForCorrections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ViewExamForStudent.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ViewExamForStudent.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\R4CourseTopic.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R4CourseTopic.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

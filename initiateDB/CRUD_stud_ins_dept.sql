@@ -235,6 +235,14 @@ GO
 /*                              Read Department                               */
 /* -------------------------------------------------------------------------- */
 
+CREATE OR ALTER PROCEDURE getAllDepartments
+AS
+BEGIN
+    SELECT *
+    FROM Department;
+END
+GO
+
 CREATE OR ALTER PROCEDURE getDepartment
     @dept_id INT
 AS
