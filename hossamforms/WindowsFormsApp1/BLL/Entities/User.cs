@@ -8,7 +8,7 @@ namespace BLL
 {
 	public class User : EntityBase
     {
-		public int Usr_id { get; }
+		public int Usr_id { get; set; }
 		public string User_type { get; set; }
 		public string F_name { get; set; }
 		public string L_name { get; set; }

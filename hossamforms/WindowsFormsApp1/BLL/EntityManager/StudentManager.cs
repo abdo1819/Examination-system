@@ -82,19 +82,31 @@ namespace BLL
             return MyStudents;
 
         }
-        internal static Student DataRow2Student(DataRow std)
+        internal static Student DataRow2Student(DataRow Std)
         {
-            Student stdObj = new();
+            Student StdObj = new();
             
             try
             {
                 int Temp = 0;
 
-                if (int.TryParse(std["std_id"]?.ToString() ?? "-1", out Temp))
-                    stdObj.Std_id = Temp;
+                if (int.TryParse(Std["std_id"]?.ToString() ?? "-1", out Temp))
+                    StdObj.Std_id = Temp;
 
-                if (int.TryParse(std["dept_id"]?.ToString() ?? "-1", out Temp))
-                    stdObj.Dept_id = Temp;
+                if (int.TryParse(Std["usr_id"]?.ToString() ?? "-1", out Temp))
+                    StdObj.Usr_id = Temp;
+
+                StdObj.User_type = Std["user_type"].ToString() ?? "N/A";
+                StdObj.F_name = Std["f_name"].ToString() ?? "N/A";
+                StdObj.L_name = Std["l_name"].ToString() ?? "N/A";
+                StdObj.Address = Std["address"].ToString() ?? "N/A";
+                StdObj.Email = Std["email"].ToString() ?? "N/A";
+                StdObj.Hashed_password = Std["hashed_password"].ToString() ?? "N/A";
+
+                if (int.TryParse(Std["dept_id"]?.ToString() ?? "-1", out Temp))
+                    StdObj.Dept_id = Temp;
+
+                StdObj.State = EntityState.Unchanged;
 
             }
             catch (Exception Ex)
@@ -102,14 +114,27 @@ namespace BLL
 
             }
 
-            return stdObj;
+            return StdObj;
         }
 
+        public static DataTable getStudentAnswer(int _exam_id, int _student_id)
+        {
+            DataTable ResultTable = new();
+            try
+            {
 
-        //public static getStudentAnswer()
-        //{
+                Dictionary<string, object> parms = new() { ["exam_id"] = _exam_id, ["student_id"] = _student_id };
 
-        //}
+                ResultTable = dbManager.ExecuteDataTable("getStudentAnswer", parms);
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            return ResultTable;
+        }
 
         public static StudentList getStudentsInDepartment(int _dept_id)
         {
@@ -160,6 +185,25 @@ namespace BLL
 
             }
             return false;
+        }
+
+        public static DataTable returnGrades(int _std_id)
+        {
+            DataTable ResultTable = new();
+            try
+            {
+
+                Dictionary<string, object> parms = new() { ["std_id"] = _std_id };
+
+                ResultTable = dbManager.ExecuteDataTable("returnGrades", parms);
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            return ResultTable;
         }
 
 

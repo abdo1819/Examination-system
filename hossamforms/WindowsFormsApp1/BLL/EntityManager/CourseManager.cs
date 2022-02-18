@@ -11,7 +11,6 @@ namespace BLL
     {
         static DBManager dbManager = new();
 
-
         public static bool Delete_Course(string _crs_name)
         {
             try

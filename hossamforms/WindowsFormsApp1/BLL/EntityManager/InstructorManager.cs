@@ -68,26 +68,36 @@ namespace BLL
         }
         internal static Instructor DataRow2Instructor(DataRow ins)
         {
-            Instructor insObj = new();
+            Instructor InsObj = new();
             try
             {
                 int Temp = 0;
                 decimal TempDec = 0;
 
                 if (int.TryParse(ins["ins_id"]?.ToString() ?? "-1", out Temp))
-                    insObj.Ins_id = Temp;
+                    InsObj.Ins_id = Temp;
+
+                if (int.TryParse(ins["usr_id"]?.ToString() ?? "-1", out Temp))
+                    InsObj.Usr_id = Temp;
 
                 if (decimal.TryParse(ins["salary"]?.ToString() ?? "-1", out TempDec))
-                    insObj.Salary = Temp;
+                    InsObj.Salary = Temp;
 
-                insObj.Degree = ins["degree"]?.ToString() ?? "N/A";
+                InsObj.User_type = ins["user_type"]?.ToString() ?? "N/A";
+                InsObj.F_name = ins["f_name"]?.ToString() ?? "N/A";
+                InsObj.L_name = ins["l_name"]?.ToString() ?? "N/A";
+                InsObj.Address = ins["address"]?.ToString() ?? "N/A";
+                InsObj.Email = ins["email"]?.ToString() ?? "N/A";
+                InsObj.Hashed_password = ins["hashed_password"]?.ToString() ?? "N/A";
+                InsObj.Degree = ins["degree"]?.ToString() ?? "N/A";
 
                 if (int.TryParse(ins["dept_id"]?.ToString() ?? "-1", out Temp))
-                    insObj.Dept_id = Temp;
+                    InsObj.Dept_id = Temp;
 
-                insObj.Hire_date = (DateTime)ins["hire_date"];
+                InsObj.Hire_date = (DateTime)ins["hire_date"];
 
-                insObj.State = EntityState.Unchanged;
+
+                InsObj.State = EntityState.Unchanged;
 
             }
             catch (Exception Ex)
@@ -95,7 +105,7 @@ namespace BLL
 
             }
 
-            return insObj;
+            return InsObj;
         }
         
         public static bool deleteInstructor(int _ins_id)

@@ -65,8 +65,8 @@ namespace BLL
             TopicList TopList = new();
             try
             {
-
-                DataTable TopicsTable = dbManager.ExecuteDataTable("Topics_of_Course");
+                Dictionary<string, object> parms = new() { ["crs_name"] = _crs_name };
+                DataTable TopicsTable = dbManager.ExecuteDataTable("Topics_of_Course", parms);
 
                 TopList = DataTable2TopicList(TopicsTable);
 
@@ -113,6 +113,8 @@ namespace BLL
 
                 if (int.TryParse(T["crs_id"]?.ToString() ?? "-1", out Temp))
                     TopicObj.Crs_id = Temp;
+
+                TopicObj.State = EntityState.Unchanged;
 
             }
             catch (Exception Ex)

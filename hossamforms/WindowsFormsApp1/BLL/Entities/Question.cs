@@ -8,10 +8,10 @@ namespace BLL
 {
     public class Question : EntityBase
     {
-        public int Q_id { get; }
+        public int Q_id { get; set;}
         public string Q_type { get; set; }
         public string Q_text { get; set; }
-        public string Corr_answer { get; set; }
+        public char Corr_answer { get; set; }
         public int Top_id { get; set; }
 
     }

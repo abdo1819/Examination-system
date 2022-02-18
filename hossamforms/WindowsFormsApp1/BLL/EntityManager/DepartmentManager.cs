@@ -33,8 +33,8 @@ namespace BLL
             DepartmentList DeptList = new();
             try
             {
-
-                DataTable DepartmentsTable = dbManager.ExecuteDataTable("GetDepartment");
+                Dictionary<string, object> parms = new() { ["dept_id"] = _dept_id };
+                DataTable DepartmentsTable = dbManager.ExecuteDataTable("GetDepartment", parms);
 
                 DeptList = DataTable2DepartmentList(DepartmentsTable);
 
@@ -81,6 +81,9 @@ namespace BLL
 
                 if (int.TryParse(D["mgr_id"]?.ToString() ?? "-1", out Temp))
                     DeptObj.Mgr_id = Temp;
+
+                DeptObj.State = EntityState.Unchanged;
+
 
             }
             catch (Exception Ex)
