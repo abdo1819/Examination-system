@@ -75,5 +75,11 @@ namespace FrmHome
             ViewStudentGrades frmGrades = new ViewStudentGrades();
             frmGrades.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ViewInstructorCourses frmIns = new ViewInstructorCourses();
+            frmIns.Show();
+        }
     }
 }

@@ -212,7 +212,7 @@ CREATE OR ALTER PROCEDURE getAllInstructors
 AS
 BEGIN
     SELECT *
-    FROM v_Instructors;
+    FROM v_Instructor;
 END
 GO
 
