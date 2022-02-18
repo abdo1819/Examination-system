@@ -69,5 +69,11 @@ namespace FrmHome
             viewStudnetIndepartment frm = new viewStudnetIndepartment();
             frm.Show();
         }
+
+        private void btnViewGrades_Click(object sender, EventArgs e)
+        {
+            ViewStudentGrades frmGrades = new ViewStudentGrades();
+            frmGrades.Show();
+        }
     }
 }

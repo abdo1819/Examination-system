@@ -187,6 +187,18 @@
     <Compile Include="CourseTopic.Designer.cs">
       <DependentUpon>CourseTopic.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewStudentGrades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewStudentGrades.Designer.cs">
+      <DependentUpon>ViewStudentGrades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ViewStudentGrades.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewStudentGrades.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="viewStudnetIndepartment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +262,13 @@
     </Compile>
     <EmbeddedResource Include="CourseTopic.resx">
       <DependentUpon>CourseTopic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ViewStudentGrades.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ViewStudentGrades.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewStudentGrades.resx">
+      <DependentUpon>ViewStudentGrades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="viewStudnetIndepartment.resx">
       <DependentUpon>viewStudnetIndepartment.cs</DependentUpon>

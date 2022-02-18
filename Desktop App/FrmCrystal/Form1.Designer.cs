@@ -35,6 +35,7 @@ namespace FrmHome
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.btnViewGrades = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -85,11 +86,22 @@ namespace FrmHome
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // btnViewGrades
+            // 
+            this.btnViewGrades.Location = new System.Drawing.Point(573, 177);
+            this.btnViewGrades.Name = "btnViewGrades";
+            this.btnViewGrades.Size = new System.Drawing.Size(100, 100);
+            this.btnViewGrades.TabIndex = 4;
+            this.btnViewGrades.Text = "View Student Grades";
+            this.btnViewGrades.UseVisualStyleBackColor = true;
+            this.btnViewGrades.Click += new System.EventHandler(this.btnViewGrades_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnViewGrades);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -109,6 +121,7 @@ namespace FrmHome
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnViewGrades;
     }
 }
 
