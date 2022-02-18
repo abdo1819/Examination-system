@@ -750,8 +750,14 @@ BEGIN
 END
 GO
 
-
-
+CREATE OR ALTER PROC answerExamQuestion @std_id int, @ex_id int, @q_id int, @std_answer varchar(1)
+AS 
+BEGIN
+	Update Exam_Answer
+	SET std_answer = @std_answer
+	WHERE q_id = @q_id AND ex_id = @ex_id AND std_id = @std_id
+END
+GO
 
 
 
