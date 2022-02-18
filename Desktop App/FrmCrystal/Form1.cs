@@ -61,7 +61,13 @@ namespace FrmHome
         private void button3_Click(object sender, EventArgs e)
         {
             ViewExamForCorrections examForCorrections = new ViewExamForCorrections();
-            examForCorrections.Show();
+            examForCorrections.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            viewStudnetIndepartment frm = new viewStudnetIndepartment();
+            frm.Show();
         }
     }
 }

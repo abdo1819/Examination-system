@@ -34,6 +34,7 @@ namespace FrmHome
             this.insert_StudentTableAdapter1 = new FrmHome.ExaminationDataSetTableAdapters.Insert_StudentTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -74,11 +75,22 @@ namespace FrmHome
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(508, 78);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(203, 41);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "view student in department";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -96,6 +108,7 @@ namespace FrmHome
         private ExaminationDataSetTableAdapters.Insert_StudentTableAdapter insert_StudentTableAdapter1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
 
