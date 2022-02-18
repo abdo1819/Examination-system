@@ -57,5 +57,11 @@ namespace FrmHome
             CourseTopic topics_report = new CourseTopic();
             topics_report.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ViewExamForCorrections examForCorrections = new ViewExamForCorrections();
+            examForCorrections.Show();
+        }
     }
 }
