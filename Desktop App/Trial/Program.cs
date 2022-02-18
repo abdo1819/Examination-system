@@ -16,7 +16,9 @@ namespace Trial
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            
+            //Application.Run(new frmExam());
+            Application.Run(new frmAvailableCoursesForExam());
         }
     }
 }

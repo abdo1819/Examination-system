@@ -734,17 +734,27 @@ BEGIN
 END
 GO
 
-CREATE OR ALTER PROC answerExamQuestion @std_id int, @ex_id int, @q_id int, @std_answer varchar(1)
+CREATE OR ALTER PROC answerExamQuestion @ex_id int, @q_id int, @std_answer varchar(1)
 AS 
 BEGIN
 	Update Exam_Answer
 	SET std_answer = @std_answer
-	WHERE q_id = @q_id AND ex_id = @ex_id AND std_id = @std_id
+	WHERE q_id = @q_id AND ex_id = @ex_id
 END
 GO
 
-
-
+CREATE OR ALTER PROC getAvailableCoursesForExam @std_id int
+AS
+	BEGIN
+		select c.crs_name
+		from Course c, Course_Attendance ca, Student s
+		where c.crs_id = ca.crs_id and ca.std_id = s.std_id and s.std_id = @std_id
+		EXCEPT
+		select c.crs_name
+		from Course c, Course_Attendance ca, Exam e, Student s
+		where c.crs_id = ca.crs_id and s.std_id = ca.std_id and e.crs_id = c.crs_id and s.std_id = @std_id
+	END
+go
 
 
 
