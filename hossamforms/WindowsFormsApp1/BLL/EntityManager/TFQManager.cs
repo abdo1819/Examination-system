@@ -94,14 +94,14 @@ namespace BLL
                     TFQObj.Q_id = Temp;
 
 
-                TFQObj.Q_type = Quest["q_type"]?.ToString() ?? "N/A";
+                //TFQObj.Q_type = Quest["q_type"]?.ToString() ?? "N/A";
                 TFQObj.Q_text = Quest["q_text"]?.ToString() ?? "N/A";
 
                 if (char.TryParse(Quest["corr_answer"]?.ToString() ?? "N", out TempCh))
                     TFQObj.Corr_answer = TempCh;
 
-                if (int.TryParse(Quest["top_id"]?.ToString() ?? "-1", out Temp))
-                    TFQObj.Top_id = Temp;
+                //if (int.TryParse(Quest["top_id"]?.ToString() ?? "-1", out Temp))
+                    //TFQObj.Top_id = Temp;
 
 
                 TFQObj.State = EntityState.Unchanged;

@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj" />
-    <ProjectReference Include="..\WindowsFormsApp1\WindowsFormsApp1.csproj" />
   </ItemGroup>
 
 </Project>

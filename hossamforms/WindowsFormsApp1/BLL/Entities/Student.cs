@@ -8,8 +8,35 @@ namespace BLL
 {
     public class Student : User
     {
-        public int Std_id { get; set; }
-        public int Dept_id { get; set; }
+        private int std_id;
+        public int Std_id
+        {
+            get { return std_id; }
+            set
+            {
+                if (value != this.std_id)
+                {
+                    std_id = value;
+                    if (this.State != EntityState.Added)
+                        this.State = EntityState.Modified;
+                }
+            }
+        }
+
+        private int dept_id;
+        public int Dept_id
+        {
+            get { return dept_id; }
+            set
+            {
+                if (value != this.dept_id)
+                {
+                    dept_id = value;
+                    if (this.State != EntityState.Added)
+                        this.State = EntityState.Modified;
+                }
+            }
+        }
 
     }
 }

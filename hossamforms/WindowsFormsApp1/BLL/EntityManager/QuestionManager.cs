@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL.EntityManager
+namespace BLL
 {
     public static class QuestionManager
     {
@@ -121,20 +121,58 @@ namespace BLL.EntityManager
             return QuestList;
         }
 
-        public static bool insertQuestion(int _top_id, string _q_type, string _q_text, char _corr_answer, int _q_id)
+        //public static bool insertQuestion(int _top_id, string _q_type, string _q_text, char _corr_answer, int _q_id)
+        //{
+        //    try
+        //    {
+        //        Dictionary<string, object> parms = new() { ["top_id"] = _top_id, ["q_type"] = _q_type, ["q_text"] = _q_text, ["corr_answer"] = _corr_answer, ["q_id"] = _q_id };
+        //        if (dbManager.ExecuteNonQuery("insertQuestion", parms) > 0)
+        //            return true;
+
+        //    }
+        //    catch (Exception Ex)
+        //    {
+
+        //    }
+        //    return false;
+        //}
+
+        public static Question GetQuestionText(int _q_id)
         {
+            QuestionList QuestList = new();
+            Question QuestObj = new();
             try
             {
-                Dictionary<string, object> parms = new() { ["top_id"] = _top_id, ["q_type"] = _q_type, ["q_text"] = _q_text, ["corr_answer"] = _corr_answer, ["q_id"] = _q_id };
-                if (dbManager.ExecuteNonQuery("insertQuestion", parms) > 0)
-                    return true;
+                Dictionary<string, object> parms = new() { ["q_id"] = _q_id };
+                DataTable QuestionsTable = dbManager.ExecuteDataTable("GetQuestionText", parms);
 
+                DataRow Q = QuestionsTable.Rows[0];
+
+                int Temp = 0;
+                char TempCh = 'N';
+
+                if (int.TryParse(Q["q_id"]?.ToString() ?? "-1", out Temp))
+                    QuestObj.Q_id = Temp;
+
+                QuestObj.Q_type = Q["q_type"]?.ToString() ?? "N/A";
+
+                QuestObj.Q_text = Q["q_text"]?.ToString() ?? "N/A";
+
+                if (char.TryParse(Q["corr_answer"]?.ToString() ?? "N", out TempCh))
+                    QuestObj.Corr_answer = TempCh;
+
+                if (int.TryParse(Q["top_id"]?.ToString() ?? "-1", out Temp))
+                    QuestObj.Top_id = Temp;
+
+
+                QuestObj.State = EntityState.Unchanged;
             }
-            catch (Exception Ex)
+
+            catch (Exception ex)
             {
 
             }
-            return false;
+            return QuestObj;
         }
 
     }

@@ -8,12 +8,34 @@ namespace BLL
 {
     public class Course : EntityBase
     {
-        public int Crs_id { get; }
-        public string Crs_name { get; set; }
+        private int crs_id;
+        public int Crs_id 
+        { 
+            get { return crs_id; }
+            set {
+                if (value != this.crs_id)
+                {
+                    crs_id = value;
+                    if (this.State != EntityState.Added)
+                        this.State = EntityState.Modified;
+                }
+            }
+        
+        }
+        
+        private string crs_name;
+        public string Crs_name
+        {
+            get { return crs_name; }
+            set
+            {
+                if (value != this.crs_name)
+                {
+                    crs_name = value;
+                    if (this.State != EntityState.Added)
+                        this.State = EntityState.Modified;
+                }
+            }
+        }
     }
 }
-
-/*
- *	[crs_id] [int] IDENTITY(1000,100) NOT NULL,
-	[crs_name] [varchar](100) NOT NULL,
- */

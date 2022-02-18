@@ -1,0 +1,1 @@
+sqlcmd -s "." -i init.sql views.sql CRUD_stud_ins_dept.sql CRUD_topic_question_exam.sql reporting_procedures.sql populateDB.sql -b 

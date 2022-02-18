@@ -55,6 +55,7 @@ namespace DAL
 
             return R;
         }
+
         public object ExecuteScalar(string SPName)
         {
             object R = new();
@@ -78,6 +79,7 @@ namespace DAL
 
             return R;
         }
+
         public DataTable ExecuteDataTable(string SPName)
         {
             try
@@ -95,6 +97,7 @@ namespace DAL
             }
             return new();
         }
+
         public int ExecuteNonQuery(string SPName, Dictionary<string, object> parms)
         {
             int R = -1;
@@ -123,6 +126,7 @@ namespace DAL
 
             return R;
         }
+
         public object ExecuteScalar(string SPName, Dictionary<string, object> parms)
         {
             object R = new();
@@ -153,6 +157,7 @@ namespace DAL
 
             return R;
         }
+
         public DataTable ExecuteDataTable(string SPName, Dictionary<string, object> parms)
         {
             try
@@ -176,6 +181,7 @@ namespace DAL
             }
             return new();
         }
+
 
         public void Dispose()
         {

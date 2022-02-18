@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL.EntityManager
+namespace BLL
 {
     public static class MCQManager
     {
@@ -94,14 +94,14 @@ namespace BLL.EntityManager
                 if (int.TryParse(Quest["q_id"]?.ToString() ?? "-1", out Temp))
                     MCQObj.Q_id = Temp;
 
-                MCQObj.Q_type = Quest["q_type"]?.ToString() ?? "N/A";
-                MCQObj.Q_text = Quest["q_text"]?.ToString() ?? "N/A";
+                //MCQObj.Q_type = Quest["q_type"]?.ToString() ?? "N/A";
+                //MCQObj.Q_text = Quest["q_text"]?.ToString() ?? "N/A";
 
-                if (char.TryParse(Quest["corr_answer"]?.ToString() ?? "N", out TempCh))
-                    MCQObj.Corr_answer = TempCh;
+                //if (char.TryParse(Quest["corr_answer"]?.ToString() ?? "N", out TempCh))
+                //    MCQObj.Corr_answer = TempCh;
 
-                if (int.TryParse(Quest["top_id"]?.ToString() ?? "-1", out Temp))
-                    MCQObj.Top_id = Temp;
+                //if (int.TryParse(Quest["top_id"]?.ToString() ?? "-1", out Temp))
+                //    MCQObj.Top_id = Temp;
 
                 MCQObj.Ch_a = Quest["ch_a"]?.ToString() ?? "N/A";
                 MCQObj.Ch_b = Quest["ch_b"]?.ToString() ?? "N/A";

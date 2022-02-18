@@ -142,6 +142,22 @@ namespace BLL
             return false;
         }
 
+        public static DepartmentList GetAllDepts()
+        {
+            DepartmentList DeptList = new();
+            try
+            {
+                DataTable DepartmentsTable = dbManager.ExecuteDataTable("GetAllDepts");
 
+                DeptList = DataTable2DepartmentList(DepartmentsTable);
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            return DeptList;
+        }
     }
 }
