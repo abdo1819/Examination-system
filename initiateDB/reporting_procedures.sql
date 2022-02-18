@@ -130,12 +130,14 @@ if exists (select ex_id from [Exam] where ex_id = @exam_id)
 	begin
 		if exists (select std_id from Student where std_id = @stduent_id)
 			begin
-				select q.q_text, q.q_type, ea.std_answer, q.corr_answer
+				select q.q_text, q.q_type, ea.std_answer, q.corr_answer ,mcq.ch_a, mcq.ch_b, mcq.ch_c, mcq.ch_d
 				from Exam_Answer ea
 				inner join Exam_Question eq
-				on ea.ex_id = eq.ex_id
+				on ea.ex_id = eq.ex_id and ea.q_id = eq.q_id
 				inner join Question q
 				on eq.q_id = q.q_id
+				left join MCQ mcq
+				on q.q_id = mcq.q_id
 				where (ea.ex_id = @exam_id and ea.std_id = @stduent_id)
 			end
 		else 

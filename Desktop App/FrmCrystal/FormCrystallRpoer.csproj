@@ -187,12 +187,6 @@
     <Compile Include="CourseTopic.Designer.cs">
       <DependentUpon>CourseTopic.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\ViewExamForStudent - Copy.cs">
-      <DependentUpon>ViewExamForStudent - Copy.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="viewStudnetIndepartment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,10 +268,6 @@
     </Compile>
     <EmbeddedResource Include="CourseTopic.resx">
       <DependentUpon>CourseTopic.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\ViewExamForStudent - Copy.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ViewExamForStudent - Copy.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="viewStudnetIndepartment.resx">
       <DependentUpon>viewStudnetIndepartment.cs</DependentUpon>
