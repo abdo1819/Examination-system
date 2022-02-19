@@ -100,7 +100,7 @@ namespace Trial
             this.btnSubmit.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnSubmit.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(167, 545);
+            this.btnSubmit.Location = new System.Drawing.Point(163, 545);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(151, 49);
             this.btnSubmit.TabIndex = 6;
@@ -161,9 +161,9 @@ namespace Trial
             this.groupBox2.Controls.Add(this.lblQuestionType);
             this.groupBox2.Controls.Add(this.btnNext);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox2.Location = new System.Drawing.Point(590, 0);
+            this.groupBox2.Location = new System.Drawing.Point(583, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(776, 768);
+            this.groupBox2.Size = new System.Drawing.Size(803, 788);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             // 
@@ -184,7 +184,7 @@ namespace Trial
             this.lblQNum.AutoSize = true;
             this.lblQNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQNum.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblQNum.Location = new System.Drawing.Point(101, 79);
+            this.lblQNum.Location = new System.Drawing.Point(128, 79);
             this.lblQNum.Name = "lblQNum";
             this.lblQNum.Size = new System.Drawing.Size(32, 24);
             this.lblQNum.TabIndex = 20;
@@ -195,7 +195,7 @@ namespace Trial
             this.label111.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label111.AutoSize = true;
             this.label111.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label111.Location = new System.Drawing.Point(130, 79);
+            this.label111.Location = new System.Drawing.Point(157, 79);
             this.label111.Name = "label111";
             this.label111.Size = new System.Drawing.Size(44, 24);
             this.label111.TabIndex = 19;
@@ -210,9 +210,9 @@ namespace Trial
             this.groupBox1.Controls.Add(this.rdbtnD);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DarkRed;
-            this.groupBox1.Location = new System.Drawing.Point(33, 367);
+            this.groupBox1.Location = new System.Drawing.Point(33, 377);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(692, 290);
+            this.groupBox1.Size = new System.Drawing.Size(719, 290);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Choose the correct answer: ";
@@ -277,10 +277,10 @@ namespace Trial
             this.lblQuestionText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblQuestionText.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuestionText.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.lblQuestionText.Location = new System.Drawing.Point(33, 124);
+            this.lblQuestionText.Location = new System.Drawing.Point(33, 134);
             this.lblQuestionText.Name = "lblQuestionText";
             this.lblQuestionText.ReadOnly = true;
-            this.lblQuestionText.Size = new System.Drawing.Size(692, 216);
+            this.lblQuestionText.Size = new System.Drawing.Size(719, 216);
             this.lblQuestionText.TabIndex = 17;
             this.lblQuestionText.Text = "";
             // 
@@ -290,7 +290,7 @@ namespace Trial
             this.btnPrevious.BackColor = System.Drawing.Color.DarkRed;
             this.btnPrevious.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrevious.ForeColor = System.Drawing.Color.White;
-            this.btnPrevious.Location = new System.Drawing.Point(33, 680);
+            this.btnPrevious.Location = new System.Drawing.Point(33, 700);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(153, 49);
             this.btnPrevious.TabIndex = 16;
@@ -304,7 +304,7 @@ namespace Trial
             this.btnNext.BackColor = System.Drawing.Color.DarkRed;
             this.btnNext.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Location = new System.Drawing.Point(582, 680);
+            this.btnNext.Location = new System.Drawing.Point(609, 700);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(143, 49);
             this.btnNext.TabIndex = 15;
@@ -320,9 +320,9 @@ namespace Trial
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.DarkRed;
-            this.groupBox3.Location = new System.Drawing.Point(0, 135);
+            this.groupBox3.Location = new System.Drawing.Point(0, 155);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(590, 633);
+            this.groupBox3.Size = new System.Drawing.Size(583, 633);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dash Board";
@@ -726,7 +726,7 @@ namespace Trial
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox3);

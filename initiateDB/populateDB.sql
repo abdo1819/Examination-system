@@ -65,7 +65,7 @@ EXEC Insert_Student @f_name="Fernande",@l_name="Iveagh",@address="80 Esch Alley"
 EXEC Insert_Student @f_name="Shena",@l_name="Alenichev",@address="10829 Farragut Parkway",@email="salenichevt@wsj.com",@password="YD6HTYypp",@dept_id=@dept_id1,@stu_id=@temp_std_id output;
 EXEC Insert_Student @f_name="Ezra",@l_name="di Rocca",@address="0770 Artisan Junction",@email="ediroccau@state.tx.us",@password="j4ZkANghHoa",@dept_id=@dept_id5,@stu_id=@temp_std_id output;
 EXEC Insert_Student @f_name="Jefferey",@l_name="Lamminam",@address="98007 Northfield Hill",@email="jlamminamv@cloudflare.com",@password="oU3zz29lA",@dept_id=@dept_id5,@stu_id=@temp_std_id output;
-EXEC Insert_Student @f_name="Dinnie",@l_name="Lagen",@address="581 Manley Hill",@email="dlagenw@rediff.com",@password="ticPYREiDq",@dept_id=@dept_id5,@stu_id=@temp_std_id output;
+EXEC Insert_Student @f_name="Islam",@l_name="Mahrous",@address="581 Manley Hill",@email="test",@password="test",@dept_id=@dept_id5,@stu_id=@temp_std_id output;
 EXEC Insert_Student @f_name="Florrie",@l_name="Heeney",@address="103 Arrowood Drive",@email="fheeneyx@engadget.com",@password="QMApPBrcgMx",@dept_id=@dept_id9,@stu_id=@temp_std_id output;
 EXEC Insert_Student @f_name="Fredericka",@l_name="McAdam",@address="0 Moulton Hill",@email="fmcadamy@storify.com",@password="gQnd1OVr",@dept_id=@dept_id6,@stu_id=@temp_std_id output;
 EXEC Insert_Student @f_name="Terrel",@l_name="Goldsmith",@address="509 Steensland Lane",@email="tgoldsmithz@pen.io",@password="hHPzD2tj0u",@dept_id=@dept_id5,@stu_id=@temp_std_id output;
@@ -1806,3 +1806,7 @@ EXEC answerExam 32 , @exam_id3 , "d" , "c" , "a" , "b" , "d" ,
 execute Student_Take_course_with_Instructor 33, 1200, 2
 
 execute Student_Take_course_with_Instructor 33, 1000, 20
+
+execute Student_Take_course_with_Instructor 33, 1200, 6
+
+execute Student_Take_course_with_Instructor 33, 1400, 17

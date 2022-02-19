@@ -34,7 +34,7 @@ namespace Trial
         public List<RadioButton> radioButtons = new List<RadioButton>();
         public Dictionary<int, string> StdAnswers = new Dictionary<int, string>();
         public List<Label> ansLabels = new List<Label>();
-        TimeSpan CountDown = new TimeSpan(0, 0, 10);
+        TimeSpan CountDown = new TimeSpan(0, 0, 30);
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -210,7 +210,7 @@ namespace Trial
                 DialogResult dialogResult = MessageBox.Show("Are you sure you want to submit all the answers?", "Info", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    SubmitChanges();
+                    
                     MessageBox.Show("Answers submitted successfuly", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
@@ -219,6 +219,7 @@ namespace Trial
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            SubmitChanges();
             sqlCN.Close();
         }
 
@@ -240,7 +241,7 @@ namespace Trial
             {
                 timer1.Stop();
                 MessageBox.Show("Time's up! We hope you finished answering all the questions correctly!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                SubmitChanges();
+                
                 this.Close();
             }
             else
