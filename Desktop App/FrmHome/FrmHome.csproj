@@ -55,10 +55,58 @@
       <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Windows.Forms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Data.SqlClient, Version=4.1.0.0, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Data.SqlClient.4.1.0\lib\net461\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore, Version=3.1.22.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.3.1.22\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Abstractions, Version=3.1.22.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Abstractions.3.1.22\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Relational, Version=3.1.22.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Relational.3.1.22\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Relational.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.SqlServer, Version=3.1.22.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.SqlServer.3.1.22\lib\netstandard2.0\Microsoft.EntityFrameworkCore.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=3.1.22.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.3.1.22\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=3.1.22.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.3.1.22\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=3.1.22.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.3.1.22\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=3.1.22.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.3.1.22\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=3.1.22.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.3.1.22\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=3.1.22.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.3.1.22\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=3.1.22.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.3.1.22\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=3.1.22.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.3.1.22\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=3.1.22.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.3.1.22\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=3.1.22.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.3.1.22\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.22.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.3.1.22\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Identity.Client, Version=4.22.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Identity.Client.4.22.0\lib\net461\Microsoft.Identity.Client.dll</HintPath>
@@ -85,15 +133,22 @@
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.7.1\lib\net461\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.ConfigurationManager, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Configuration.ConfigurationManager.5.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.OracleClient" />
-    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.6.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.IdentityModel" />
     <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -117,8 +172,8 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
@@ -160,8 +215,8 @@
     <Reference Include="System.Text.Json, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Text.Json.4.6.0\lib\net461\System.Text.Json.dll</HintPath>
     </Reference>
-    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -181,21 +236,130 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\DbContextExtensions.cs" />
+    <Compile Include="Context\ExaminationContext.cs" />
+    <Compile Include="Context\ExaminationContext.Functions.cs" />
+    <Compile Include="Context\ExaminationContextProcedures.cs" />
+    <Compile Include="Entities\answerExamQuestionResult.cs" />
+    <Compile Include="Entities\answerExamQuestionV2Result.cs" />
+    <Compile Include="Entities\answerExamQuestion_uprotectedResult.cs" />
+    <Compile Include="Entities\answerExamResult.cs" />
+    <Compile Include="Entities\Assign_Course_to_InstructorResult.cs" />
+    <Compile Include="Entities\Course.cs" />
+    <Compile Include="Entities\Courses_and_Students_of_InstructorResult.cs" />
+    <Compile Include="Entities\Course_Attendance.cs" />
+    <Compile Include="Entities\deleteExamResult.cs" />
+    <Compile Include="Entities\deleteInstructorResult.cs" />
+    <Compile Include="Entities\deleteQuestionResult.cs" />
+    <Compile Include="Entities\deleteStudentResult.cs" />
+    <Compile Include="Entities\Delete_CourseResult.cs" />
+    <Compile Include="Entities\Delete_DepartmentResult.cs" />
+    <Compile Include="Entities\Delete_TopicResult.cs" />
+    <Compile Include="Entities\Department.cs" />
+    <Compile Include="Entities\End_Course_for_StudentResult.cs" />
+    <Compile Include="Entities\End_Course_with_InstructorResult.cs" />
+    <Compile Include="Entities\Exam.cs" />
+    <Compile Include="Entities\Exam_Answer.cs" />
+    <Compile Include="Entities\Exam_Question.cs" />
+    <Compile Include="Entities\generateExamResult.cs" />
+    <Compile Include="Entities\getAllCoursesResult.cs" />
+    <Compile Include="Entities\getAllDepartmentsResult.cs" />
+    <Compile Include="Entities\GetAllExamAnswersResult.cs" />
+    <Compile Include="Entities\getAllExamsResult.cs" />
+    <Compile Include="Entities\getAllInstructorsResult.cs" />
+    <Compile Include="Entities\getAllStudentsResult.cs" />
+    <Compile Include="Entities\getAvailableCoursesForExamResult.cs" />
+    <Compile Include="Entities\getDepartmentResult.cs" />
+    <Compile Include="Entities\getDeptDataResult.cs" />
+    <Compile Include="Entities\getInstructorsInDepartmentResult.cs" />
+    <Compile Include="Entities\getStudentAnswerResult.cs" />
+    <Compile Include="Entities\getStudentsInDepartmentResult.cs" />
+    <Compile Include="Entities\GetUserResult.cs" />
+    <Compile Include="Entities\GET_QUESTIONS_for_STUDENT_EXAMResult.cs" />
+    <Compile Include="Entities\Get_Questions_in_ExamResult.cs" />
+    <Compile Include="Entities\insertMCQResult.cs" />
+    <Compile Include="Entities\insertQuestionResult.cs" />
+    <Compile Include="Entities\insertTFQResult.cs" />
+    <Compile Include="Entities\Insert_CourseResult.cs" />
+    <Compile Include="Entities\Insert_DepartmentResult.cs" />
+    <Compile Include="Entities\Insert_Department_With_ManagerResult.cs" />
+    <Compile Include="Entities\Insert_InstructorResult.cs" />
+    <Compile Include="Entities\Insert_StudentResult.cs" />
+    <Compile Include="Entities\Insert_TopicResult.cs" />
+    <Compile Include="Entities\Insert_UserResult.cs" />
+    <Compile Include="Entities\Instructor.cs" />
+    <Compile Include="Entities\Ins_Course.cs" />
+    <Compile Include="Entities\MCQ.cs" />
+    <Compile Include="Entities\Question.cs" />
+    <Compile Include="Entities\returnGradesResult.cs" />
+    <Compile Include="Entities\setCourseNameResult.cs" />
+    <Compile Include="Entities\setTopicNameResult.cs" />
+    <Compile Include="Entities\sp_returngradesResult.cs" />
+    <Compile Include="Entities\Student.cs" />
+    <Compile Include="Entities\Student_Take_course_with_InstructorResult.cs" />
+    <Compile Include="Entities\Topic.cs" />
+    <Compile Include="Entities\Topics_of_CourseResult.cs" />
+    <Compile Include="Entities\updateInstructorDataResult.cs" />
+    <Compile Include="Entities\updateMCQResult.cs" />
+    <Compile Include="Entities\updateStudentDataResult.cs" />
+    <Compile Include="Entities\updateTFQResult.cs" />
+    <Compile Include="Entities\updateUserDataResult.cs" />
+    <Compile Include="Entities\Update_Department_ManagerResult.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\viewCourseMCQResult.cs" />
+    <Compile Include="Entities\viewCourseTFQResult.cs" />
+    <Compile Include="Entities\viewExamQuestionsResult.cs" />
+    <Compile Include="Entities\viewMCQResult.cs" />
+    <Compile Include="Entities\viewTFQResult.cs" />
+    <Compile Include="Entities\viewTopicMCQResult.cs" />
+    <Compile Include="Entities\viewTopicTFQResult.cs" />
+    <Compile Include="Entities\v_Instructor.cs" />
+    <Compile Include="Entities\v_Students.cs" />
     <Compile Include="ExaminationDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ExaminationDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Student_UpdateInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Student_UpdateInfo.Designer.cs">
+      <DependentUpon>Student_UpdateInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_ViewGrades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_ViewGrades.Designer.cs">
+      <DependentUpon>Student_ViewGrades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_Dashboard.Designer.cs">
+      <DependentUpon>Student_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Student_UpdateInfo.resx">
+      <DependentUpon>Student_UpdateInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_Dashboard.resx">
+      <DependentUpon>Student_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -206,6 +370,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_ViewGrades.resx">
+      <DependentUpon>Student_ViewGrades.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="efpt.config.json" />
     <None Include="ExaminationDataSet.xsc">
       <DependentUpon>ExaminationDataSet.xsd</DependentUpon>
     </None>
