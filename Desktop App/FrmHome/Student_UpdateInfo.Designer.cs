@@ -177,6 +177,7 @@ namespace FrmHome
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnUpdate);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Student_UpdateInfo";
             this.Text = "Update Student Info";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

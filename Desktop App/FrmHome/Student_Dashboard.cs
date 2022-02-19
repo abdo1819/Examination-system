@@ -87,5 +87,15 @@ namespace FrmHome
             Student_UpdateInfo frmUpdateInfo = new Student_UpdateInfo(frmLogin, this);
             frmUpdateInfo.ShowDialog();
         }
+
+        private void btnExam_Click(object sender, EventArgs e)
+        {
+            Trial.frmAvailableCoursesForExam frmAvailCourses = new Trial.frmAvailableCoursesForExam();
+            frmAvailCourses.Std_id = frmLogin.userInfo.usr_id;
+            frmAvailCourses.Dept_name = lblDept.Text;
+            frmAvailCourses.Std_name = lblName.Text;
+
+            frmAvailCourses.Show();
+        }
     }
 }

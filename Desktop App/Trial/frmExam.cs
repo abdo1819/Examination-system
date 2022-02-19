@@ -13,15 +13,21 @@ namespace Trial
 {
     public partial class frmExam : Form
     {
-        public frmExam(int? std_id, int?ex_id)
+        public frmExam(int? std_id, int?ex_id, string std_name, string dept_name, string instructor_name)
         {
             Ex_id = ex_id;
             Std_id = std_id;
+            Std_name = std_name;
+            Dept_name = dept_name;
+            Instructor_name = instructor_name;
             InitializeComponent();
         }
 
         public int? Ex_id;
         public int? Std_id;
+        public string Std_name;
+        public string Dept_name;
+        public string Instructor_name;
         public int counter;
         public ExaminationDataSet.Get_Questions_in_ExamDataTable DT;
         public ExaminationDataSet.getQuestionAndStudentAnswerDataTable ExAnsDT;
@@ -90,6 +96,11 @@ namespace Trial
             lblQID.DataBindings.Add("text", Bsourse2, "q_id");
             lblCourse.DataBindings.Add("text", Bsourse2, "crs_name");
             lblTopic.DataBindings.Add("text", Bsourse2, "top_name");
+
+            lblStdName.Text = this.Std_name;
+            lblInstructor.Text = this.Instructor_name;
+            lblDepartment.Text = this.Dept_name;
+
 
             counter = 1;
             lblQNum.Text = counter.ToString();

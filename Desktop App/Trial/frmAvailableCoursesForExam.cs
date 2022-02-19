@@ -22,6 +22,10 @@ namespace Trial
         public int? Std_id;
         public string crs_name;
         public int? Ex_id;
+        public string Std_name;
+        public string Dept_name;
+        public string Instructor_name;
+
         ExaminationDataSet.getAvailableCoursesForExamDataTable DT;
         ExaminationDataSet.generateExamDataTable DTExam;
         public SqlConnection sqlCN;
@@ -59,7 +63,7 @@ namespace Trial
                 {
                     generateExamTableAdapter1.Fill(DTExam, crs_name, Std_id, ref this.Ex_id);
 
-                    frmExam frmExam = new frmExam(Std_id, Ex_id);
+                    frmExam frmExam = new frmExam(Std_id, Ex_id, Std_name, Dept_name, "Dummy");
                     
 
                     frmExam.ShowDialog();
