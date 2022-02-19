@@ -864,3 +864,12 @@ BEGIN
 		END
 END
 GO
+CREATE OR ALTER PROC getQuestionAndStudentAnswer @ex_id int
+AS 
+BEGIN
+	select ea.*, c.crs_name, t.top_name
+	from Exam_Answer ea, Course c, Topic t, Question q, Exam e
+	where ea.ex_id = @ex_id AND ea.q_id = q.q_id AND t.top_id = q.top_id AND e.crs_id = c.crs_id AND t.crs_id = c.crs_id
+END
+
+go

@@ -30,132 +30,91 @@ namespace Trial
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmExam));
-            this.rdbtnA = new System.Windows.Forms.RadioButton();
-            this.rdbtnB = new System.Windows.Forms.RadioButton();
-            this.rdbtnC = new System.Windows.Forms.RadioButton();
-            this.rdbtnD = new System.Windows.Forms.RadioButton();
-            this.btnNext = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.btnPrevious = new System.Windows.Forms.Button();
             this.lblQuestionType = new System.Windows.Forms.Label();
-            this.lblQuestionText = new System.Windows.Forms.RichTextBox();
             this.lblStdAns = new System.Windows.Forms.Label();
             this.lblQID = new System.Windows.Forms.Label();
-            this.exam_AnswerTableAdapter1 = new Trial.ExaminationDataSetTableAdapters.Exam_AnswerTableAdapter();
-            this.get_Questions_in_ExamTableAdapter1 = new Trial.ExaminationDataSetTableAdapters.Get_Questions_in_ExamTableAdapter();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label111 = new System.Windows.Forms.Label();
-            this.lblQNum = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1.SuspendLayout();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblQNum = new System.Windows.Forms.Label();
+            this.label111 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdbtnB = new System.Windows.Forms.RadioButton();
+            this.rdbtnA = new System.Windows.Forms.RadioButton();
+            this.rdbtnC = new System.Windows.Forms.RadioButton();
+            this.rdbtnD = new System.Windows.Forms.RadioButton();
+            this.lblQuestionText = new System.Windows.Forms.RichTextBox();
+            this.btnPrevious = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.get_Questions_in_ExamTableAdapter1 = new Trial.ExaminationDataSetTableAdapters.Get_Questions_in_ExamTableAdapter();
+            this.getQuestionAndStudentAnswerTableAdapter = new Trial.ExaminationDataSetTableAdapters.getQuestionAndStudentAnswerTableAdapter();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblAns1 = new System.Windows.Forms.Label();
+            this.lblAns2 = new System.Windows.Forms.Label();
+            this.lblAns3 = new System.Windows.Forms.Label();
+            this.lblAns4 = new System.Windows.Forms.Label();
+            this.lblAns5 = new System.Windows.Forms.Label();
+            this.lblAns6 = new System.Windows.Forms.Label();
+            this.lblAns7 = new System.Windows.Forms.Label();
+            this.lblAns8 = new System.Windows.Forms.Label();
+            this.lblAns9 = new System.Windows.Forms.Label();
+            this.lblAns10 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.lblCourse = new System.Windows.Forms.Label();
+            this.lblDepartment = new System.Windows.Forms.Label();
+            this.lblStdName = new System.Windows.Forms.Label();
+            this.lblTopic = new System.Windows.Forms.Label();
+            this.lblInstructor = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // rdbtnA
-            // 
-            this.rdbtnA.AutoSize = true;
-            this.rdbtnA.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtnA.Location = new System.Drawing.Point(17, 42);
-            this.rdbtnA.Name = "rdbtnA";
-            this.rdbtnA.Size = new System.Drawing.Size(34, 22);
-            this.rdbtnA.TabIndex = 1;
-            this.rdbtnA.Tag = "a";
-            this.rdbtnA.Text = "a";
-            this.rdbtnA.UseVisualStyleBackColor = true;
-            this.rdbtnA.CheckedChanged += new System.EventHandler(this.rdbtnA_CheckedChanged);
-            // 
-            // rdbtnB
-            // 
-            this.rdbtnB.AutoSize = true;
-            this.rdbtnB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtnB.Location = new System.Drawing.Point(17, 71);
-            this.rdbtnB.Name = "rdbtnB";
-            this.rdbtnB.Size = new System.Drawing.Size(34, 22);
-            this.rdbtnB.TabIndex = 2;
-            this.rdbtnB.Tag = "b";
-            this.rdbtnB.Text = "b";
-            this.rdbtnB.UseVisualStyleBackColor = true;
-            // 
-            // rdbtnC
-            // 
-            this.rdbtnC.AutoSize = true;
-            this.rdbtnC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtnC.Location = new System.Drawing.Point(17, 100);
-            this.rdbtnC.Name = "rdbtnC";
-            this.rdbtnC.Size = new System.Drawing.Size(34, 22);
-            this.rdbtnC.TabIndex = 3;
-            this.rdbtnC.Tag = "c";
-            this.rdbtnC.Text = "c";
-            this.rdbtnC.UseVisualStyleBackColor = true;
-            // 
-            // rdbtnD
-            // 
-            this.rdbtnD.AutoSize = true;
-            this.rdbtnD.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtnD.Location = new System.Drawing.Point(16, 129);
-            this.rdbtnD.Name = "rdbtnD";
-            this.rdbtnD.Size = new System.Drawing.Size(34, 22);
-            this.rdbtnD.TabIndex = 4;
-            this.rdbtnD.Tag = "d";
-            this.rdbtnD.Text = "d";
-            this.rdbtnD.UseVisualStyleBackColor = true;
-            // 
-            // btnNext
-            // 
-            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNext.Location = new System.Drawing.Point(922, 432);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(191, 32);
-            this.btnNext.TabIndex = 5;
-            this.btnNext.Text = "Next";
-            this.btnNext.UseVisualStyleBackColor = true;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // btnSubmit
             // 
             this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnSubmit.Location = new System.Drawing.Point(468, 432);
+            this.btnSubmit.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnSubmit.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.ForeColor = System.Drawing.Color.White;
+            this.btnSubmit.Location = new System.Drawing.Point(167, 545);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(191, 32);
+            this.btnSubmit.Size = new System.Drawing.Size(151, 49);
             this.btnSubmit.TabIndex = 6;
             this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
-            // btnPrevious
-            // 
-            this.btnPrevious.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnPrevious.Location = new System.Drawing.Point(15, 432);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(191, 32);
-            this.btnPrevious.TabIndex = 7;
-            this.btnPrevious.Text = "Previous";
-            this.btnPrevious.UseVisualStyleBackColor = true;
-            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
             // lblQuestionType
             // 
             this.lblQuestionType.AutoSize = true;
-            this.lblQuestionType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestionType.Location = new System.Drawing.Point(12, 89);
+            this.lblQuestionType.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestionType.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblQuestionType.Location = new System.Drawing.Point(30, 78);
             this.lblQuestionType.Name = "lblQuestionType";
-            this.lblQuestionType.Size = new System.Drawing.Size(109, 16);
+            this.lblQuestionType.Size = new System.Drawing.Size(156, 25);
             this.lblQuestionType.TabIndex = 8;
             this.lblQuestionType.Text = "Question Type";
-            // 
-            // lblQuestionText
-            // 
-            this.lblQuestionText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblQuestionText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblQuestionText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblQuestionText.Location = new System.Drawing.Point(15, 108);
-            this.lblQuestionText.Name = "lblQuestionText";
-            this.lblQuestionText.ReadOnly = true;
-            this.lblQuestionText.Size = new System.Drawing.Size(1098, 131);
-            this.lblQuestionText.TabIndex = 9;
-            this.lblQuestionText.Text = "";
             // 
             // lblStdAns
             // 
@@ -177,112 +136,664 @@ namespace Trial
             this.lblQID.TabIndex = 11;
             this.lblQID.Text = "label1";
             // 
-            // exam_AnswerTableAdapter1
+            // pictureBox1
             // 
-            this.exam_AnswerTableAdapter1.ClearBeforeFill = true;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(26, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 103);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
             // 
-            // get_Questions_in_ExamTableAdapter1
+            // groupBox2
             // 
-            this.get_Questions_in_ExamTableAdapter1.ClearBeforeFill = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.rdbtnB);
-            this.groupBox1.Controls.Add(this.rdbtnA);
-            this.groupBox1.Controls.Add(this.rdbtnC);
-            this.groupBox1.Controls.Add(this.rdbtnD);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(15, 245);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1098, 164);
-            this.groupBox1.TabIndex = 12;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Choose the correct answer: ";
-            // 
-            // label111
-            // 
-            this.label111.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label111.AutoSize = true;
-            this.label111.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label111.Location = new System.Drawing.Point(1059, 89);
-            this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(33, 16);
-            this.label111.TabIndex = 13;
-            this.label111.Text = "10 /";
+            this.groupBox2.Controls.Add(this.lblQNum);
+            this.groupBox2.Controls.Add(this.label111);
+            this.groupBox2.Controls.Add(this.groupBox1);
+            this.groupBox2.Controls.Add(this.lblQuestionText);
+            this.groupBox2.Controls.Add(this.btnPrevious);
+            this.groupBox2.Controls.Add(this.lblQuestionType);
+            this.groupBox2.Controls.Add(this.btnNext);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox2.Location = new System.Drawing.Point(590, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(776, 768);
+            this.groupBox2.TabIndex = 16;
+            this.groupBox2.TabStop = false;
             // 
             // lblQNum
             // 
             this.lblQNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblQNum.AutoSize = true;
-            this.lblQNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQNum.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblQNum.Location = new System.Drawing.Point(1089, 89);
+            this.lblQNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQNum.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblQNum.Location = new System.Drawing.Point(652, 79);
             this.lblQNum.Name = "lblQNum";
-            this.lblQNum.Size = new System.Drawing.Size(24, 16);
-            this.lblQNum.TabIndex = 14;
+            this.lblQNum.Size = new System.Drawing.Size(32, 24);
+            this.lblQNum.TabIndex = 20;
             this.lblQNum.Text = "10";
-            this.lblQNum.Click += new System.EventHandler(this.label1_Click);
             // 
-            // pictureBox1
+            // label111
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(15, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 84);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.label111.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label111.AutoSize = true;
+            this.label111.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label111.Location = new System.Drawing.Point(681, 79);
+            this.label111.Name = "label111";
+            this.label111.Size = new System.Drawing.Size(44, 24);
+            this.label111.TabIndex = 19;
+            this.label111.Text = "/ 10";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.rdbtnB);
+            this.groupBox1.Controls.Add(this.rdbtnA);
+            this.groupBox1.Controls.Add(this.rdbtnC);
+            this.groupBox1.Controls.Add(this.rdbtnD);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.DarkRed;
+            this.groupBox1.Location = new System.Drawing.Point(33, 367);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(692, 290);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Choose the correct answer: ";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // rdbtnB
+            // 
+            this.rdbtnB.AutoSize = true;
+            this.rdbtnB.Font = new System.Drawing.Font("Century", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbtnB.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.rdbtnB.Location = new System.Drawing.Point(50, 132);
+            this.rdbtnB.Name = "rdbtnB";
+            this.rdbtnB.Size = new System.Drawing.Size(37, 25);
+            this.rdbtnB.TabIndex = 2;
+            this.rdbtnB.Tag = "b";
+            this.rdbtnB.Text = "b";
+            this.rdbtnB.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnA
+            // 
+            this.rdbtnA.AutoSize = true;
+            this.rdbtnA.Font = new System.Drawing.Font("Century", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbtnA.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.rdbtnA.Location = new System.Drawing.Point(50, 86);
+            this.rdbtnA.Name = "rdbtnA";
+            this.rdbtnA.Size = new System.Drawing.Size(37, 25);
+            this.rdbtnA.TabIndex = 1;
+            this.rdbtnA.Tag = "a";
+            this.rdbtnA.Text = "a";
+            this.rdbtnA.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnC
+            // 
+            this.rdbtnC.AutoSize = true;
+            this.rdbtnC.Font = new System.Drawing.Font("Century", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbtnC.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.rdbtnC.Location = new System.Drawing.Point(50, 178);
+            this.rdbtnC.Name = "rdbtnC";
+            this.rdbtnC.Size = new System.Drawing.Size(36, 25);
+            this.rdbtnC.TabIndex = 3;
+            this.rdbtnC.Tag = "c";
+            this.rdbtnC.Text = "c";
+            this.rdbtnC.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnD
+            // 
+            this.rdbtnD.AutoSize = true;
+            this.rdbtnD.Font = new System.Drawing.Font("Century", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbtnD.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.rdbtnD.Location = new System.Drawing.Point(50, 224);
+            this.rdbtnD.Name = "rdbtnD";
+            this.rdbtnD.Size = new System.Drawing.Size(38, 25);
+            this.rdbtnD.TabIndex = 4;
+            this.rdbtnD.Tag = "d";
+            this.rdbtnD.Text = "d";
+            this.rdbtnD.UseVisualStyleBackColor = true;
+            // 
+            // lblQuestionText
+            // 
+            this.lblQuestionText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblQuestionText.BackColor = System.Drawing.Color.White;
+            this.lblQuestionText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblQuestionText.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestionText.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.lblQuestionText.Location = new System.Drawing.Point(33, 124);
+            this.lblQuestionText.Name = "lblQuestionText";
+            this.lblQuestionText.ReadOnly = true;
+            this.lblQuestionText.Size = new System.Drawing.Size(692, 216);
+            this.lblQuestionText.TabIndex = 17;
+            this.lblQuestionText.Text = "";
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnPrevious.BackColor = System.Drawing.Color.DarkRed;
+            this.btnPrevious.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrevious.ForeColor = System.Drawing.Color.White;
+            this.btnPrevious.Location = new System.Drawing.Point(33, 680);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(153, 49);
+            this.btnPrevious.TabIndex = 16;
+            this.btnPrevious.Text = "Previous";
+            this.btnPrevious.UseVisualStyleBackColor = false;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click_1);
+            // 
+            // btnNext
+            // 
+            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNext.BackColor = System.Drawing.Color.DarkRed;
+            this.btnNext.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.Location = new System.Drawing.Point(582, 680);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(143, 49);
+            this.btnNext.TabIndex = 15;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click_1);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.groupBox5);
+            this.groupBox3.Controls.Add(this.groupBox4);
+            this.groupBox3.Controls.Add(this.btnSubmit);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.DarkRed;
+            this.groupBox3.Location = new System.Drawing.Point(0, 135);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(590, 633);
+            this.groupBox3.TabIndex = 18;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Dash Board";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label12.Location = new System.Drawing.Point(29, 157);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(31, 19);
+            this.label12.TabIndex = 17;
+            this.label12.Text = "Q6";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label11.Location = new System.Drawing.Point(138, 157);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(31, 19);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "Q7";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label10.Location = new System.Drawing.Point(356, 157);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(31, 19);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "Q9";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label9.Location = new System.Drawing.Point(246, 52);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(31, 19);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Q3";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label8.Location = new System.Drawing.Point(355, 52);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(31, 19);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Q4";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label7.Location = new System.Drawing.Point(464, 52);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 19);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Q5";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label6.Location = new System.Drawing.Point(246, 157);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(31, 19);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Q8";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label5.Location = new System.Drawing.Point(456, 157);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 19);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Q10";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label3.Location = new System.Drawing.Point(28, 52);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(31, 19);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Q1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label2.Location = new System.Drawing.Point(137, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 19);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Q2";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(124, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(380, 28);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Infromation Technology Institute";
+            // 
+            // get_Questions_in_ExamTableAdapter1
+            // 
+            this.get_Questions_in_ExamTableAdapter1.ClearBeforeFill = true;
+            // 
+            // getQuestionAndStudentAnswerTableAdapter
+            // 
+            this.getQuestionAndStudentAnswerTableAdapter.ClearBeforeFill = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label4);
+            this.groupBox4.Controls.Add(this.lblAns6);
+            this.groupBox4.Controls.Add(this.lblAns7);
+            this.groupBox4.Controls.Add(this.lblAns8);
+            this.groupBox4.Controls.Add(this.lblAns9);
+            this.groupBox4.Controls.Add(this.lblAns10);
+            this.groupBox4.Controls.Add(this.lblAns1);
+            this.groupBox4.Controls.Add(this.lblAns2);
+            this.groupBox4.Controls.Add(this.lblAns3);
+            this.groupBox4.Controls.Add(this.lblAns4);
+            this.groupBox4.Controls.Add(this.lblAns5);
+            this.groupBox4.Controls.Add(this.label3);
+            this.groupBox4.Controls.Add(this.label2);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Controls.Add(this.label5);
+            this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(37, 288);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(515, 234);
+            this.groupBox4.TabIndex = 28;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Your Answers";
+            // 
+            // lblAns1
+            // 
+            this.lblAns1.AutoSize = true;
+            this.lblAns1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAns1.Location = new System.Drawing.Point(33, 82);
+            this.lblAns1.Name = "lblAns1";
+            this.lblAns1.Size = new System.Drawing.Size(20, 22);
+            this.lblAns1.TabIndex = 19;
+            this.lblAns1.Text = "a";
+            // 
+            // lblAns2
+            // 
+            this.lblAns2.AutoSize = true;
+            this.lblAns2.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAns2.Location = new System.Drawing.Point(143, 82);
+            this.lblAns2.Name = "lblAns2";
+            this.lblAns2.Size = new System.Drawing.Size(20, 22);
+            this.lblAns2.TabIndex = 18;
+            this.lblAns2.Text = "a";
+            // 
+            // lblAns3
+            // 
+            this.lblAns3.AutoSize = true;
+            this.lblAns3.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAns3.Location = new System.Drawing.Point(252, 82);
+            this.lblAns3.Name = "lblAns3";
+            this.lblAns3.Size = new System.Drawing.Size(20, 22);
+            this.lblAns3.TabIndex = 22;
+            this.lblAns3.Text = "a";
+            // 
+            // lblAns4
+            // 
+            this.lblAns4.AutoSize = true;
+            this.lblAns4.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAns4.Location = new System.Drawing.Point(361, 82);
+            this.lblAns4.Name = "lblAns4";
+            this.lblAns4.Size = new System.Drawing.Size(20, 22);
+            this.lblAns4.TabIndex = 21;
+            this.lblAns4.Text = "a";
+            // 
+            // lblAns5
+            // 
+            this.lblAns5.AutoSize = true;
+            this.lblAns5.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAns5.Location = new System.Drawing.Point(471, 82);
+            this.lblAns5.Name = "lblAns5";
+            this.lblAns5.Size = new System.Drawing.Size(20, 22);
+            this.lblAns5.TabIndex = 20;
+            this.lblAns5.Text = "a";
+            // 
+            // lblAns6
+            // 
+            this.lblAns6.AutoSize = true;
+            this.lblAns6.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAns6.Location = new System.Drawing.Point(34, 188);
+            this.lblAns6.Name = "lblAns6";
+            this.lblAns6.Size = new System.Drawing.Size(22, 22);
+            this.lblAns6.TabIndex = 27;
+            this.lblAns6.Text = "T";
+            // 
+            // lblAns7
+            // 
+            this.lblAns7.AutoSize = true;
+            this.lblAns7.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAns7.Location = new System.Drawing.Point(143, 188);
+            this.lblAns7.Name = "lblAns7";
+            this.lblAns7.Size = new System.Drawing.Size(22, 22);
+            this.lblAns7.TabIndex = 26;
+            this.lblAns7.Text = "T";
+            // 
+            // lblAns8
+            // 
+            this.lblAns8.AutoSize = true;
+            this.lblAns8.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAns8.Location = new System.Drawing.Point(252, 188);
+            this.lblAns8.Name = "lblAns8";
+            this.lblAns8.Size = new System.Drawing.Size(22, 22);
+            this.lblAns8.TabIndex = 24;
+            this.lblAns8.Text = "T";
+            // 
+            // lblAns9
+            // 
+            this.lblAns9.AutoSize = true;
+            this.lblAns9.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAns9.Location = new System.Drawing.Point(362, 188);
+            this.lblAns9.Name = "lblAns9";
+            this.lblAns9.Size = new System.Drawing.Size(22, 22);
+            this.lblAns9.TabIndex = 25;
+            this.lblAns9.Text = "T";
+            // 
+            // lblAns10
+            // 
+            this.lblAns10.AutoSize = true;
+            this.lblAns10.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAns10.Location = new System.Drawing.Point(466, 188);
+            this.lblAns10.Name = "lblAns10";
+            this.lblAns10.Size = new System.Drawing.Size(22, 22);
+            this.lblAns10.TabIndex = 23;
+            this.lblAns10.Text = "T";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label4.Location = new System.Drawing.Point(18, 117);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(477, 17);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "___________________________________________________________________";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.lblInstructor);
+            this.groupBox5.Controls.Add(this.lblTopic);
+            this.groupBox5.Controls.Add(this.label17);
+            this.groupBox5.Controls.Add(this.lblCourse);
+            this.groupBox5.Controls.Add(this.lblDepartment);
+            this.groupBox5.Controls.Add(this.lblStdName);
+            this.groupBox5.Controls.Add(this.label16);
+            this.groupBox5.Controls.Add(this.label15);
+            this.groupBox5.Controls.Add(this.label14);
+            this.groupBox5.Controls.Add(this.label13);
+            this.groupBox5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.groupBox5.Location = new System.Drawing.Point(37, 51);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(515, 220);
+            this.groupBox5.TabIndex = 29;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Info";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(29, 108);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(72, 18);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Course : ";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(29, 144);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(60, 18);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Topic : ";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(29, 72);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(103, 18);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Department :";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(29, 36);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(65, 18);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "Name : ";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(29, 180);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(74, 18);
+            this.label17.TabIndex = 7;
+            this.label17.Text = "Instructor";
+            // 
+            // lblCourse
+            // 
+            this.lblCourse.AutoSize = true;
+            this.lblCourse.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCourse.Location = new System.Drawing.Point(165, 108);
+            this.lblCourse.Name = "lblCourse";
+            this.lblCourse.Size = new System.Drawing.Size(62, 18);
+            this.lblCourse.TabIndex = 6;
+            this.lblCourse.Text = "label18";
+            // 
+            // lblDepartment
+            // 
+            this.lblDepartment.AutoSize = true;
+            this.lblDepartment.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepartment.Location = new System.Drawing.Point(165, 72);
+            this.lblDepartment.Name = "lblDepartment";
+            this.lblDepartment.Size = new System.Drawing.Size(62, 18);
+            this.lblDepartment.TabIndex = 5;
+            this.lblDepartment.Text = "label19";
+            // 
+            // lblStdName
+            // 
+            this.lblStdName.AutoSize = true;
+            this.lblStdName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStdName.Location = new System.Drawing.Point(165, 36);
+            this.lblStdName.Name = "lblStdName";
+            this.lblStdName.Size = new System.Drawing.Size(62, 18);
+            this.lblStdName.TabIndex = 4;
+            this.lblStdName.Text = "label20";
+            // 
+            // lblTopic
+            // 
+            this.lblTopic.AutoSize = true;
+            this.lblTopic.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTopic.Location = new System.Drawing.Point(165, 144);
+            this.lblTopic.Name = "lblTopic";
+            this.lblTopic.Size = new System.Drawing.Size(62, 18);
+            this.lblTopic.TabIndex = 8;
+            this.lblTopic.Text = "label21";
+            // 
+            // lblInstructor
+            // 
+            this.lblInstructor.AutoSize = true;
+            this.lblInstructor.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstructor.Location = new System.Drawing.Point(165, 180);
+            this.lblInstructor.Name = "lblInstructor";
+            this.lblInstructor.Size = new System.Drawing.Size(62, 18);
+            this.lblInstructor.TabIndex = 9;
+            this.lblInstructor.Text = "label22";
             // 
             // frmExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1125, 476);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.lblQNum);
-            this.Controls.Add(this.label111);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.lblQID);
             this.Controls.Add(this.lblStdAns);
-            this.Controls.Add(this.lblQuestionText);
-            this.Controls.Add(this.lblQuestionType);
-            this.Controls.Add(this.btnPrevious);
-            this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.btnNext);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmExam";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Exam Form";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.RadioButton rdbtnA;
-        private System.Windows.Forms.RadioButton rdbtnB;
-        private System.Windows.Forms.RadioButton rdbtnC;
-        private System.Windows.Forms.RadioButton rdbtnD;
-        private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.Button btnPrevious;
 
         private System.Windows.Forms.Label lblQuestionType;
-        private System.Windows.Forms.RichTextBox lblQuestionText;
-        private ExaminationDataSetTableAdapters.Exam_AnswerTableAdapter exam_AnswerTableAdapter1;
         private System.Windows.Forms.Label lblStdAns;
         private System.Windows.Forms.Label lblQID;
         private ExaminationDataSetTableAdapters.Get_Questions_in_ExamTableAdapter get_Questions_in_ExamTableAdapter1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label111;
-        private System.Windows.Forms.Label lblQNum;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label lblQNum;
+        private System.Windows.Forms.Label label111;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rdbtnB;
+        private System.Windows.Forms.RadioButton rdbtnA;
+        private System.Windows.Forms.RadioButton rdbtnC;
+        private System.Windows.Forms.RadioButton rdbtnD;
+        private System.Windows.Forms.RichTextBox lblQuestionText;
+        private System.Windows.Forms.Button btnPrevious;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private ExaminationDataSetTableAdapters.getQuestionAndStudentAnswerTableAdapter getQuestionAndStudentAnswerTableAdapter;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label lblAns6;
+        private System.Windows.Forms.Label lblAns7;
+        private System.Windows.Forms.Label lblAns8;
+        private System.Windows.Forms.Label lblAns9;
+        private System.Windows.Forms.Label lblAns10;
+        private System.Windows.Forms.Label lblAns1;
+        private System.Windows.Forms.Label lblAns2;
+        private System.Windows.Forms.Label lblAns3;
+        private System.Windows.Forms.Label lblAns4;
+        private System.Windows.Forms.Label lblAns5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label lblInstructor;
+        private System.Windows.Forms.Label lblTopic;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblCourse;
+        private System.Windows.Forms.Label lblDepartment;
+        private System.Windows.Forms.Label lblStdName;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
     }
 }

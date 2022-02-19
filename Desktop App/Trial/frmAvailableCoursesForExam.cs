@@ -16,7 +16,7 @@ namespace Trial
         public frmAvailableCoursesForExam()
         {
             InitializeComponent();
-            Std_id = 32;
+            Std_id = 33;
         }
 
         public int? Std_id;
@@ -54,14 +54,17 @@ namespace Trial
             }
             else
             {
-                generateExamTableAdapter1.Fill(DTExam, crs_name, Std_id, ref this.Ex_id);
+                DialogResult dialogResult = MessageBox.Show("You can take the exam only once, are you ready?!", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if(dialogResult == DialogResult.Yes)
+                {
+                    generateExamTableAdapter1.Fill(DTExam, crs_name, Std_id, ref this.Ex_id);
 
-                frmExam frmExam = new frmExam();
-                frmExam.Ex_id = Ex_id;
-                frmExam.Std_id = Std_id;
+                    frmExam frmExam = new frmExam(Std_id, Ex_id);
+                    
 
-                frmExam.ShowDialog();
-                this.Close();
+                    frmExam.ShowDialog();
+                    this.Close();
+                }
             }
         }
     }

@@ -13,8 +13,10 @@ namespace Trial
 {
     public partial class frmExam : Form
     {
-        public frmExam()
+        public frmExam(int? std_id, int?ex_id)
         {
+            Ex_id = ex_id;
+            Std_id = std_id;
             InitializeComponent();
         }
 
@@ -22,16 +24,16 @@ namespace Trial
         public int? Std_id;
         public int counter;
         public ExaminationDataSet.Get_Questions_in_ExamDataTable DT;
-        public ExaminationDataSet.Exam_AnswerDataTable ExAnsDT;
+        public ExaminationDataSet.getQuestionAndStudentAnswerDataTable ExAnsDT;
         public BindingSource Bsourse;
         public BindingSource Bsourse2;
         public BindingSource Bsource3;
         public SqlConnection sqlCN;
         public SqlDataAdapter DA;
         public SqlCommand sqlCMD;
-        public Dictionary<string, object> Params = new Dictionary<string, object>();
         public List<RadioButton> radioButtons = new List<RadioButton>();
         public Dictionary<int, string> StdAnswers = new Dictionary<int, string>();
+        public List<Label> ansLabels = new List<Label>();
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -49,12 +51,28 @@ namespace Trial
             radioButtons.Add(rdbtnC);
             radioButtons.Add(rdbtnD);
 
+            ansLabels.Add(lblAns1);
+            ansLabels.Add(lblAns2);
+            ansLabels.Add(lblAns3);
+            ansLabels.Add(lblAns4);
+            ansLabels.Add(lblAns5);
+            ansLabels.Add(lblAns6);
+            ansLabels.Add(lblAns7);
+            ansLabels.Add(lblAns8);
+            ansLabels.Add(lblAns9);
+            ansLabels.Add(lblAns10);
+
+            foreach(var item in ansLabels)
+            {
+                item.Text = "";
+                item.ForeColor = Color.DarkRed;
+            }
 
             DT = new ExaminationDataSet.Get_Questions_in_ExamDataTable();
-            ExAnsDT = new ExaminationDataSet.Exam_AnswerDataTable();
+            ExAnsDT = new ExaminationDataSet.getQuestionAndStudentAnswerDataTable();
 
             get_Questions_in_ExamTableAdapter1.Fill(DT, Ex_id);
-            exam_AnswerTableAdapter1.Fill(ExAnsDT);
+            getQuestionAndStudentAnswerTableAdapter.Fill(ExAnsDT, Ex_id);
             
 
             Bsourse = new BindingSource(DT, "");
@@ -70,13 +88,11 @@ namespace Trial
 
             lblStdAns.DataBindings.Add("text", Bsourse2, "std_answer");
             lblQID.DataBindings.Add("text", Bsourse2, "q_id");
+            lblCourse.DataBindings.Add("text", Bsourse2, "crs_name");
+            lblTopic.DataBindings.Add("text", Bsourse2, "top_name");
 
             counter = 1;
             lblQNum.Text = counter.ToString();
-
-            Params["@ex_id"] = Ex_id;
-            Params["@q_id"] = int.Parse(lblQID.Text);
-
 
             RadioButtonsClear();
         }
@@ -86,9 +102,9 @@ namespace Trial
             foreach(var item in StdAnswers)
             {
                 sqlCMD.Parameters.Clear();
+                sqlCMD.Parameters.Add(new SqlParameter("@ex_id", Ex_id));
                 sqlCMD.Parameters.Add(new SqlParameter("@q_id", item.Key));
                 sqlCMD.Parameters.Add(new SqlParameter("@std_answer", item.Value));
-                sqlCMD.Parameters.Add(new SqlParameter("@ex_id", Ex_id));
                 sqlCMD.ExecuteNonQuery();
             }
         }
@@ -112,13 +128,7 @@ namespace Trial
             }
             foreach(var btn in radioButtons)
             {
-                btn.Checked = false;
-                
-            }
-            
-            foreach(var btn in radioButtons)
-            {
-                if(StdAnswers.ContainsKey(int.Parse(lblQID.Text)))
+                if (StdAnswers.ContainsKey(int.Parse(lblQID.Text)))
                 {
                     if (btn.Tag.ToString() == StdAnswers[int.Parse(lblQID.Text)])
                     {
@@ -129,53 +139,45 @@ namespace Trial
                 {
                     btn.Checked = false;
                 }
-                
             }
+            
         }
-        private void btnNext_Click(object sender, EventArgs e)
+        private void btnNext_Click_1(object sender, EventArgs e)
         {
             foreach (var btn in radioButtons)
             {
                 if (btn.Checked)
                 {
                     StdAnswers[int.Parse(lblQID.Text)] = btn.Tag.ToString();
+                    ansLabels[counter-1].Text = btn.Tag.ToString().ToUpper();
                 }
             }
-            //sqlCMD.Parameters.Clear();
-            //foreach(var item in Params)
-            //{
-            //    sqlCMD.Parameters.AddWithValue(item.Key, item.Value);
-            //}
-            //sqlCMD.ExecuteNonQuery();
             
             Bsourse.MoveNext();
             Bsourse2.MoveNext();
+            
             counter++;
             if (counter >= 10)
             {
                 counter = 10;
             }
+            
             lblQNum.Text = counter.ToString();
+            
             this.RadioButtonsClear();
 
         }
 
-        private void btnPrevious_Click(object sender, EventArgs e)
+        private void btnPrevious_Click_1(object sender, EventArgs e)
         {
             foreach (var btn in radioButtons)
             {
                 if (btn.Checked)
                 {
                     StdAnswers[int.Parse(lblQID.Text)] = btn.Tag.ToString();
+                    ansLabels[counter-1].Text = btn.Tag.ToString().ToUpper();
                 }
             }
-
-            //sqlCMD.Parameters.Clear();
-            //foreach (var item in Params)
-            //{
-            //    sqlCMD.Parameters.AddWithValue(item.Key, item.Value);
-            //}
-            //sqlCMD.ExecuteNonQuery();
             
             Bsourse.MovePrevious();
             Bsourse2.MovePrevious();
@@ -203,10 +205,11 @@ namespace Trial
             }
             else
             {
-                DialogResult dialogResult = MessageBox.Show("Are you sure you want to sumbit all the answers?", "Info", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to submit all the answers?", "Info", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     SubmitChanges();
+                    MessageBox.Show("Answers submitted successfuly", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
             }
@@ -218,6 +221,11 @@ namespace Trial
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
