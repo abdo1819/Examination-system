@@ -777,17 +777,19 @@
 </value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>- The exam consists of 10 questions and you should answer 
-    all of them!
+    <value>① The exam consists of 10 questions and you should answer 
+      all of them!
 
-- You can only take one exam per course
+② You can only take one exam per course
 
-- Once you started the exam, you are not allowed to switch 
-   to another window or close it! If you did so your exam is 
-   cancelled and you will fail this course
+③ Once you started the exam, you are not allowed to switch 
+      to another window or close it! If you did so your exam is 
+      cancelled and you will fail this course
 
-- You are allowed to use paper and pencil, nothing more!
+④ You are allowed to use paper and pencil, nothing more!
 
-- The exam duration is 30 minutes, keep an eye on the timer.</value>
+⑤ The exam duration is 30 minutes, keep an eye on the timer.
+
+⑥ Feel free to ask for your course instructor calrifications.</value>
   </data>
 </root>

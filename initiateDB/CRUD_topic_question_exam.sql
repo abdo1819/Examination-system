@@ -774,11 +774,7 @@ AS
 	BEGIN
 		select c.crs_name
 		from Course c, Course_Attendance ca, Student s
-		where c.crs_id = ca.crs_id and ca.std_id = s.std_id and s.std_id = @std_id
-		EXCEPT
-		select c.crs_name
-		from Course c, Course_Attendance ca, Exam e, Student s
-		where c.crs_id = ca.crs_id and s.std_id = ca.std_id and e.crs_id = c.crs_id and s.std_id = @std_id
+		where c.crs_id = ca.crs_id and ca.std_id = s.std_id and s.std_id = @std_id AND ca.grade IS NULL
 	END
 go
 
@@ -879,7 +875,7 @@ AS
 BEGIN
 	select ea.*, c.crs_name, t.top_name
 	from Exam_Answer ea, Course c, Topic t, Question q, Exam e
-	where ea.ex_id = @ex_id AND ea.q_id = q.q_id AND t.top_id = q.top_id AND e.crs_id = c.crs_id AND t.crs_id = c.crs_id
+	where ea.ex_id = @ex_id AND ea.q_id = q.q_id AND t.top_id = q.top_id AND e.crs_id = c.crs_id AND t.crs_id = c.crs_id AND e.ex_id = @ex_id
 END
 
 go

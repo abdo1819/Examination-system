@@ -29,6 +29,7 @@ namespace Trial
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmExam));
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblQuestionType = new System.Windows.Forms.Label();
@@ -36,6 +37,7 @@ namespace Trial
             this.lblQID = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblTimer = new System.Windows.Forms.Label();
             this.lblQNum = new System.Windows.Forms.Label();
             this.label111 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -83,6 +85,7 @@ namespace Trial
             this.label1 = new System.Windows.Forms.Label();
             this.get_Questions_in_ExamTableAdapter1 = new Trial.ExaminationDataSetTableAdapters.Get_Questions_in_ExamTableAdapter();
             this.getQuestionAndStudentAnswerTableAdapter = new Trial.ExaminationDataSetTableAdapters.getQuestionAndStudentAnswerTableAdapter();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -112,9 +115,9 @@ namespace Trial
             this.lblQuestionType.ForeColor = System.Drawing.Color.DarkRed;
             this.lblQuestionType.Location = new System.Drawing.Point(30, 78);
             this.lblQuestionType.Name = "lblQuestionType";
-            this.lblQuestionType.Size = new System.Drawing.Size(156, 25);
+            this.lblQuestionType.Size = new System.Drawing.Size(65, 25);
             this.lblQuestionType.TabIndex = 8;
-            this.lblQuestionType.Text = "Question Type";
+            this.lblQuestionType.Text = "MCQ";
             // 
             // lblStdAns
             // 
@@ -149,6 +152,7 @@ namespace Trial
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblTimer);
             this.groupBox2.Controls.Add(this.lblQNum);
             this.groupBox2.Controls.Add(this.label111);
             this.groupBox2.Controls.Add(this.groupBox1);
@@ -163,13 +167,24 @@ namespace Trial
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             // 
+            // lblTimer
+            // 
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimer.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblTimer.Location = new System.Drawing.Point(629, 78);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(96, 25);
+            this.lblTimer.TabIndex = 21;
+            this.lblTimer.Text = "00:30:00";
+            // 
             // lblQNum
             // 
             this.lblQNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblQNum.AutoSize = true;
             this.lblQNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQNum.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblQNum.Location = new System.Drawing.Point(652, 79);
+            this.lblQNum.Location = new System.Drawing.Point(101, 79);
             this.lblQNum.Name = "lblQNum";
             this.lblQNum.Size = new System.Drawing.Size(32, 24);
             this.lblQNum.TabIndex = 20;
@@ -180,7 +195,7 @@ namespace Trial
             this.label111.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label111.AutoSize = true;
             this.label111.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label111.Location = new System.Drawing.Point(681, 79);
+            this.label111.Location = new System.Drawing.Point(130, 79);
             this.label111.Name = "label111";
             this.label111.Size = new System.Drawing.Size(44, 24);
             this.label111.TabIndex = 19;
@@ -324,7 +339,7 @@ namespace Trial
             this.groupBox5.Controls.Add(this.label15);
             this.groupBox5.Controls.Add(this.label14);
             this.groupBox5.Controls.Add(this.label13);
-            this.groupBox5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.ForeColor = System.Drawing.SystemColors.WindowText;
             this.groupBox5.Location = new System.Drawing.Point(37, 51);
             this.groupBox5.Name = "groupBox5";
@@ -339,9 +354,8 @@ namespace Trial
             this.lblInstructor.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInstructor.Location = new System.Drawing.Point(165, 180);
             this.lblInstructor.Name = "lblInstructor";
-            this.lblInstructor.Size = new System.Drawing.Size(62, 18);
+            this.lblInstructor.Size = new System.Drawing.Size(0, 18);
             this.lblInstructor.TabIndex = 9;
-            this.lblInstructor.Text = "label22";
             // 
             // lblTopic
             // 
@@ -349,17 +363,16 @@ namespace Trial
             this.lblTopic.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTopic.Location = new System.Drawing.Point(165, 144);
             this.lblTopic.Name = "lblTopic";
-            this.lblTopic.Size = new System.Drawing.Size(62, 18);
+            this.lblTopic.Size = new System.Drawing.Size(0, 18);
             this.lblTopic.TabIndex = 8;
-            this.lblTopic.Text = "label21";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(29, 180);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(74, 18);
+            this.label17.Size = new System.Drawing.Size(78, 20);
             this.label17.TabIndex = 7;
             this.label17.Text = "Instructor";
             // 
@@ -369,9 +382,8 @@ namespace Trial
             this.lblCourse.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCourse.Location = new System.Drawing.Point(165, 108);
             this.lblCourse.Name = "lblCourse";
-            this.lblCourse.Size = new System.Drawing.Size(62, 18);
+            this.lblCourse.Size = new System.Drawing.Size(0, 18);
             this.lblCourse.TabIndex = 6;
-            this.lblCourse.Text = "label18";
             // 
             // lblDepartment
             // 
@@ -379,9 +391,8 @@ namespace Trial
             this.lblDepartment.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDepartment.Location = new System.Drawing.Point(165, 72);
             this.lblDepartment.Name = "lblDepartment";
-            this.lblDepartment.Size = new System.Drawing.Size(62, 18);
+            this.lblDepartment.Size = new System.Drawing.Size(0, 18);
             this.lblDepartment.TabIndex = 5;
-            this.lblDepartment.Text = "label19";
             // 
             // lblStdName
             // 
@@ -389,47 +400,46 @@ namespace Trial
             this.lblStdName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStdName.Location = new System.Drawing.Point(165, 36);
             this.lblStdName.Name = "lblStdName";
-            this.lblStdName.Size = new System.Drawing.Size(62, 18);
+            this.lblStdName.Size = new System.Drawing.Size(0, 18);
             this.lblStdName.TabIndex = 4;
-            this.lblStdName.Text = "label20";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(29, 36);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(65, 18);
+            this.label16.Size = new System.Drawing.Size(65, 20);
             this.label16.TabIndex = 3;
             this.label16.Text = "Name : ";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(29, 72);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(103, 18);
+            this.label15.Size = new System.Drawing.Size(105, 20);
             this.label15.TabIndex = 2;
             this.label15.Text = "Department :";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(29, 144);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(60, 18);
+            this.label14.Size = new System.Drawing.Size(59, 20);
             this.label14.TabIndex = 1;
             this.label14.Text = "Topic : ";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(29, 108);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(72, 18);
+            this.label13.Size = new System.Drawing.Size(73, 20);
             this.label13.TabIndex = 0;
             this.label13.Text = "Course : ";
             // 
@@ -456,7 +466,7 @@ namespace Trial
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(37, 288);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(515, 234);
@@ -705,6 +715,12 @@ namespace Trial
             // 
             this.getQuestionAndStudentAnswerTableAdapter.ClearBeforeFill = true;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -722,6 +738,7 @@ namespace Trial
             this.Name = "frmExam";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Exam Form";
+            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -795,5 +812,7 @@ namespace Trial
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblTimer;
+        public System.Windows.Forms.Timer timer1;
     }
 }
