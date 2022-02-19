@@ -72,7 +72,6 @@ namespace Trial
             foreach(var item in ansLabels)
             {
                 item.Text = "";
-                item.ForeColor = Color.DarkRed;
             }
 
             DT = new ExaminationDataSet.Get_Questions_in_ExamDataTable();
@@ -221,7 +220,7 @@ namespace Trial
                 DialogResult dialogResult = MessageBox.Show("Are you sure you want to submit all the answers?", "Info", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    SubmitChanges();
+                    timer1.Stop();
                     MessageBox.Show("Answers submitted successfuly", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
@@ -230,6 +229,8 @@ namespace Trial
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            timer1.Stop();
+            SubmitChanges();
             sqlCN.Close();
         }
 
@@ -251,7 +252,6 @@ namespace Trial
             {
                 timer1.Stop();
                 MessageBox.Show("Time's up! We hope you finished answering all the questions correctly!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                SubmitChanges();
                 this.Close();
             }
             else
