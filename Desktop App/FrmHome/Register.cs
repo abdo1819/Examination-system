@@ -30,9 +30,9 @@ namespace FrmHome
         protected override void OnPaint(PaintEventArgs e)
         {
             var str = "Enter your data";
-            var font = new Font(FontFamily.GenericSansSerif, 10f, FontStyle.Bold);
+            var font = new Font(FontFamily.GenericSansSerif, 15f, FontStyle.Bold);
             var strSize = e.Graphics.MeasureString(str, font);
-            e.Graphics.DrawString(str, font, Brushes.DarkBlue, (this.ClientSize.Width - strSize.Width) / 2, 20);
+            e.Graphics.DrawString(str, font, Brushes.DarkRed, (this.ClientSize.Width - strSize.Width) / 2, 20);
             base.OnPaint(e);
         }
 
@@ -77,6 +77,9 @@ namespace FrmHome
             }
         }
 
-     
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+           ControlPaint.DrawBorder(e.Graphics, this.panel1.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);          
+        }
     }
 }
