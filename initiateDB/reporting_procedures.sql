@@ -11,7 +11,6 @@ GO
 
 CREATE OR ALTER PROCEDURE dbo.returnGrades
 @std_id INT
-
 AS
 BEGIN
 	DECLARE @t TABLE
