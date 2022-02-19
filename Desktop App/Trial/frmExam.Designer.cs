@@ -100,9 +100,10 @@ namespace Trial
             this.btnSubmit.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnSubmit.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(167, 545);
+            this.btnSubmit.Location = new System.Drawing.Point(226, 671);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(151, 49);
+            this.btnSubmit.Size = new System.Drawing.Size(201, 60);
             this.btnSubmit.TabIndex = 6;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
@@ -113,9 +114,10 @@ namespace Trial
             this.lblQuestionType.AutoSize = true;
             this.lblQuestionType.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuestionType.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblQuestionType.Location = new System.Drawing.Point(30, 78);
+            this.lblQuestionType.Location = new System.Drawing.Point(40, 96);
+            this.lblQuestionType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuestionType.Name = "lblQuestionType";
-            this.lblQuestionType.Size = new System.Drawing.Size(65, 25);
+            this.lblQuestionType.Size = new System.Drawing.Size(83, 32);
             this.lblQuestionType.TabIndex = 8;
             this.lblQuestionType.Text = "MCQ";
             // 
@@ -123,9 +125,10 @@ namespace Trial
             // 
             this.lblStdAns.AutoSize = true;
             this.lblStdAns.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblStdAns.Location = new System.Drawing.Point(171, 27);
+            this.lblStdAns.Location = new System.Drawing.Point(228, 33);
+            this.lblStdAns.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStdAns.Name = "lblStdAns";
-            this.lblStdAns.Size = new System.Drawing.Size(35, 13);
+            this.lblStdAns.Size = new System.Drawing.Size(46, 17);
             this.lblStdAns.TabIndex = 10;
             this.lblStdAns.Text = "label1";
             // 
@@ -133,9 +136,10 @@ namespace Trial
             // 
             this.lblQID.AutoSize = true;
             this.lblQID.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblQID.Location = new System.Drawing.Point(126, 27);
+            this.lblQID.Location = new System.Drawing.Point(168, 33);
+            this.lblQID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQID.Name = "lblQID";
-            this.lblQID.Size = new System.Drawing.Size(35, 13);
+            this.lblQID.Size = new System.Drawing.Size(46, 17);
             this.lblQID.TabIndex = 11;
             this.lblQID.Text = "label1";
             // 
@@ -143,9 +147,10 @@ namespace Trial
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 103);
+            this.pictureBox1.Size = new System.Drawing.Size(85, 127);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
@@ -161,9 +166,11 @@ namespace Trial
             this.groupBox2.Controls.Add(this.lblQuestionType);
             this.groupBox2.Controls.Add(this.btnNext);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox2.Location = new System.Drawing.Point(590, 0);
+            this.groupBox2.Location = new System.Drawing.Point(793, 0);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(776, 768);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(1127, 1080);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             // 
@@ -172,9 +179,10 @@ namespace Trial
             this.lblTimer.AutoSize = true;
             this.lblTimer.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimer.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblTimer.Location = new System.Drawing.Point(629, 78);
+            this.lblTimer.Location = new System.Drawing.Point(839, 96);
+            this.lblTimer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(96, 25);
+            this.lblTimer.Size = new System.Drawing.Size(121, 32);
             this.lblTimer.TabIndex = 21;
             this.lblTimer.Text = "00:30:00";
             // 
@@ -184,9 +192,10 @@ namespace Trial
             this.lblQNum.AutoSize = true;
             this.lblQNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQNum.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblQNum.Location = new System.Drawing.Point(101, 79);
+            this.lblQNum.Location = new System.Drawing.Point(227, 97);
+            this.lblQNum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQNum.Name = "lblQNum";
-            this.lblQNum.Size = new System.Drawing.Size(32, 24);
+            this.lblQNum.Size = new System.Drawing.Size(41, 29);
             this.lblQNum.TabIndex = 20;
             this.lblQNum.Text = "10";
             // 
@@ -195,9 +204,10 @@ namespace Trial
             this.label111.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label111.AutoSize = true;
             this.label111.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label111.Location = new System.Drawing.Point(130, 79);
+            this.label111.Location = new System.Drawing.Point(265, 97);
+            this.label111.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(44, 24);
+            this.label111.Size = new System.Drawing.Size(56, 29);
             this.label111.TabIndex = 19;
             this.label111.Text = "/ 10";
             // 
@@ -210,9 +220,11 @@ namespace Trial
             this.groupBox1.Controls.Add(this.rdbtnD);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DarkRed;
-            this.groupBox1.Location = new System.Drawing.Point(33, 367);
+            this.groupBox1.Location = new System.Drawing.Point(44, 519);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(692, 290);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1015, 357);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Choose the correct answer: ";
@@ -223,9 +235,10 @@ namespace Trial
             this.rdbtnB.AutoSize = true;
             this.rdbtnB.Font = new System.Drawing.Font("Century", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbtnB.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.rdbtnB.Location = new System.Drawing.Point(50, 132);
+            this.rdbtnB.Location = new System.Drawing.Point(67, 162);
+            this.rdbtnB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbtnB.Name = "rdbtnB";
-            this.rdbtnB.Size = new System.Drawing.Size(37, 25);
+            this.rdbtnB.Size = new System.Drawing.Size(45, 31);
             this.rdbtnB.TabIndex = 2;
             this.rdbtnB.Tag = "b";
             this.rdbtnB.Text = "b";
@@ -236,9 +249,10 @@ namespace Trial
             this.rdbtnA.AutoSize = true;
             this.rdbtnA.Font = new System.Drawing.Font("Century", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbtnA.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.rdbtnA.Location = new System.Drawing.Point(50, 86);
+            this.rdbtnA.Location = new System.Drawing.Point(67, 106);
+            this.rdbtnA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbtnA.Name = "rdbtnA";
-            this.rdbtnA.Size = new System.Drawing.Size(37, 25);
+            this.rdbtnA.Size = new System.Drawing.Size(45, 31);
             this.rdbtnA.TabIndex = 1;
             this.rdbtnA.Tag = "a";
             this.rdbtnA.Text = "a";
@@ -249,9 +263,10 @@ namespace Trial
             this.rdbtnC.AutoSize = true;
             this.rdbtnC.Font = new System.Drawing.Font("Century", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbtnC.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.rdbtnC.Location = new System.Drawing.Point(50, 178);
+            this.rdbtnC.Location = new System.Drawing.Point(67, 219);
+            this.rdbtnC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbtnC.Name = "rdbtnC";
-            this.rdbtnC.Size = new System.Drawing.Size(36, 25);
+            this.rdbtnC.Size = new System.Drawing.Size(43, 31);
             this.rdbtnC.TabIndex = 3;
             this.rdbtnC.Tag = "c";
             this.rdbtnC.Text = "c";
@@ -262,9 +277,10 @@ namespace Trial
             this.rdbtnD.AutoSize = true;
             this.rdbtnD.Font = new System.Drawing.Font("Century", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbtnD.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.rdbtnD.Location = new System.Drawing.Point(50, 224);
+            this.rdbtnD.Location = new System.Drawing.Point(67, 276);
+            this.rdbtnD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbtnD.Name = "rdbtnD";
-            this.rdbtnD.Size = new System.Drawing.Size(38, 25);
+            this.rdbtnD.Size = new System.Drawing.Size(46, 31);
             this.rdbtnD.TabIndex = 4;
             this.rdbtnD.Tag = "d";
             this.rdbtnD.Text = "d";
@@ -277,10 +293,11 @@ namespace Trial
             this.lblQuestionText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblQuestionText.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuestionText.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.lblQuestionText.Location = new System.Drawing.Point(33, 124);
+            this.lblQuestionText.Location = new System.Drawing.Point(44, 220);
+            this.lblQuestionText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblQuestionText.Name = "lblQuestionText";
             this.lblQuestionText.ReadOnly = true;
-            this.lblQuestionText.Size = new System.Drawing.Size(692, 216);
+            this.lblQuestionText.Size = new System.Drawing.Size(1013, 265);
             this.lblQuestionText.TabIndex = 17;
             this.lblQuestionText.Text = "";
             // 
@@ -290,9 +307,10 @@ namespace Trial
             this.btnPrevious.BackColor = System.Drawing.Color.DarkRed;
             this.btnPrevious.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrevious.ForeColor = System.Drawing.Color.White;
-            this.btnPrevious.Location = new System.Drawing.Point(33, 680);
+            this.btnPrevious.Location = new System.Drawing.Point(44, 972);
+            this.btnPrevious.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(153, 49);
+            this.btnPrevious.Size = new System.Drawing.Size(204, 60);
             this.btnPrevious.TabIndex = 16;
             this.btnPrevious.Text = "Previous";
             this.btnPrevious.UseVisualStyleBackColor = false;
@@ -304,9 +322,10 @@ namespace Trial
             this.btnNext.BackColor = System.Drawing.Color.DarkRed;
             this.btnNext.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Location = new System.Drawing.Point(582, 680);
+            this.btnNext.Location = new System.Drawing.Point(868, 972);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(143, 49);
+            this.btnNext.Size = new System.Drawing.Size(191, 60);
             this.btnNext.TabIndex = 15;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = false;
@@ -320,9 +339,11 @@ namespace Trial
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.DarkRed;
-            this.groupBox3.Location = new System.Drawing.Point(0, 135);
+            this.groupBox3.Location = new System.Drawing.Point(0, 301);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(590, 633);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(793, 779);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dash Board";
@@ -341,9 +362,11 @@ namespace Trial
             this.groupBox5.Controls.Add(this.label13);
             this.groupBox5.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.groupBox5.Location = new System.Drawing.Point(37, 51);
+            this.groupBox5.Location = new System.Drawing.Point(49, 63);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(515, 220);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Size = new System.Drawing.Size(687, 271);
             this.groupBox5.TabIndex = 29;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Info";
@@ -352,27 +375,30 @@ namespace Trial
             // 
             this.lblInstructor.AutoSize = true;
             this.lblInstructor.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstructor.Location = new System.Drawing.Point(165, 180);
+            this.lblInstructor.Location = new System.Drawing.Point(220, 222);
+            this.lblInstructor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInstructor.Name = "lblInstructor";
-            this.lblInstructor.Size = new System.Drawing.Size(0, 18);
+            this.lblInstructor.Size = new System.Drawing.Size(0, 23);
             this.lblInstructor.TabIndex = 9;
             // 
             // lblTopic
             // 
             this.lblTopic.AutoSize = true;
             this.lblTopic.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTopic.Location = new System.Drawing.Point(165, 144);
+            this.lblTopic.Location = new System.Drawing.Point(220, 177);
+            this.lblTopic.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTopic.Name = "lblTopic";
-            this.lblTopic.Size = new System.Drawing.Size(0, 18);
+            this.lblTopic.Size = new System.Drawing.Size(0, 23);
             this.lblTopic.TabIndex = 8;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(29, 180);
+            this.label17.Location = new System.Drawing.Point(39, 222);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(78, 20);
+            this.label17.Size = new System.Drawing.Size(96, 22);
             this.label17.TabIndex = 7;
             this.label17.Text = "Instructor";
             // 
@@ -380,36 +406,40 @@ namespace Trial
             // 
             this.lblCourse.AutoSize = true;
             this.lblCourse.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCourse.Location = new System.Drawing.Point(165, 108);
+            this.lblCourse.Location = new System.Drawing.Point(220, 133);
+            this.lblCourse.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCourse.Name = "lblCourse";
-            this.lblCourse.Size = new System.Drawing.Size(0, 18);
+            this.lblCourse.Size = new System.Drawing.Size(0, 23);
             this.lblCourse.TabIndex = 6;
             // 
             // lblDepartment
             // 
             this.lblDepartment.AutoSize = true;
             this.lblDepartment.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartment.Location = new System.Drawing.Point(165, 72);
+            this.lblDepartment.Location = new System.Drawing.Point(220, 89);
+            this.lblDepartment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDepartment.Name = "lblDepartment";
-            this.lblDepartment.Size = new System.Drawing.Size(0, 18);
+            this.lblDepartment.Size = new System.Drawing.Size(0, 23);
             this.lblDepartment.TabIndex = 5;
             // 
             // lblStdName
             // 
             this.lblStdName.AutoSize = true;
             this.lblStdName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStdName.Location = new System.Drawing.Point(165, 36);
+            this.lblStdName.Location = new System.Drawing.Point(220, 44);
+            this.lblStdName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStdName.Name = "lblStdName";
-            this.lblStdName.Size = new System.Drawing.Size(0, 18);
+            this.lblStdName.Size = new System.Drawing.Size(0, 23);
             this.lblStdName.TabIndex = 4;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(29, 36);
+            this.label16.Location = new System.Drawing.Point(39, 44);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(65, 20);
+            this.label16.Size = new System.Drawing.Size(81, 22);
             this.label16.TabIndex = 3;
             this.label16.Text = "Name : ";
             // 
@@ -417,9 +447,10 @@ namespace Trial
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(29, 72);
+            this.label15.Location = new System.Drawing.Point(39, 89);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(105, 20);
+            this.label15.Size = new System.Drawing.Size(133, 22);
             this.label15.TabIndex = 2;
             this.label15.Text = "Department :";
             // 
@@ -427,9 +458,10 @@ namespace Trial
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(29, 144);
+            this.label14.Location = new System.Drawing.Point(39, 177);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(59, 20);
+            this.label14.Size = new System.Drawing.Size(73, 22);
             this.label14.TabIndex = 1;
             this.label14.Text = "Topic : ";
             // 
@@ -437,9 +469,10 @@ namespace Trial
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(29, 108);
+            this.label13.Location = new System.Drawing.Point(39, 133);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(73, 20);
+            this.label13.Size = new System.Drawing.Size(89, 22);
             this.label13.TabIndex = 0;
             this.label13.Text = "Course : ";
             // 
@@ -467,9 +500,11 @@ namespace Trial
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(37, 288);
+            this.groupBox4.Location = new System.Drawing.Point(49, 354);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(515, 234);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Size = new System.Drawing.Size(687, 288);
             this.groupBox4.TabIndex = 28;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Your Answers";
@@ -479,9 +514,10 @@ namespace Trial
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label4.Location = new System.Drawing.Point(18, 117);
+            this.label4.Location = new System.Drawing.Point(24, 144);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(477, 17);
+            this.label4.Size = new System.Drawing.Size(613, 21);
             this.label4.TabIndex = 28;
             this.label4.Text = "___________________________________________________________________";
             // 
@@ -489,9 +525,10 @@ namespace Trial
             // 
             this.lblAns6.AutoSize = true;
             this.lblAns6.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAns6.Location = new System.Drawing.Point(34, 188);
+            this.lblAns6.Location = new System.Drawing.Point(45, 231);
+            this.lblAns6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAns6.Name = "lblAns6";
-            this.lblAns6.Size = new System.Drawing.Size(22, 22);
+            this.lblAns6.Size = new System.Drawing.Size(27, 28);
             this.lblAns6.TabIndex = 27;
             this.lblAns6.Text = "T";
             // 
@@ -499,9 +536,10 @@ namespace Trial
             // 
             this.lblAns7.AutoSize = true;
             this.lblAns7.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAns7.Location = new System.Drawing.Point(143, 188);
+            this.lblAns7.Location = new System.Drawing.Point(191, 231);
+            this.lblAns7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAns7.Name = "lblAns7";
-            this.lblAns7.Size = new System.Drawing.Size(22, 22);
+            this.lblAns7.Size = new System.Drawing.Size(27, 28);
             this.lblAns7.TabIndex = 26;
             this.lblAns7.Text = "T";
             // 
@@ -509,9 +547,10 @@ namespace Trial
             // 
             this.lblAns8.AutoSize = true;
             this.lblAns8.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAns8.Location = new System.Drawing.Point(252, 188);
+            this.lblAns8.Location = new System.Drawing.Point(336, 231);
+            this.lblAns8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAns8.Name = "lblAns8";
-            this.lblAns8.Size = new System.Drawing.Size(22, 22);
+            this.lblAns8.Size = new System.Drawing.Size(27, 28);
             this.lblAns8.TabIndex = 24;
             this.lblAns8.Text = "T";
             // 
@@ -519,9 +558,10 @@ namespace Trial
             // 
             this.lblAns9.AutoSize = true;
             this.lblAns9.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAns9.Location = new System.Drawing.Point(362, 188);
+            this.lblAns9.Location = new System.Drawing.Point(483, 231);
+            this.lblAns9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAns9.Name = "lblAns9";
-            this.lblAns9.Size = new System.Drawing.Size(22, 22);
+            this.lblAns9.Size = new System.Drawing.Size(27, 28);
             this.lblAns9.TabIndex = 25;
             this.lblAns9.Text = "T";
             // 
@@ -529,9 +569,10 @@ namespace Trial
             // 
             this.lblAns10.AutoSize = true;
             this.lblAns10.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAns10.Location = new System.Drawing.Point(466, 188);
+            this.lblAns10.Location = new System.Drawing.Point(621, 231);
+            this.lblAns10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAns10.Name = "lblAns10";
-            this.lblAns10.Size = new System.Drawing.Size(22, 22);
+            this.lblAns10.Size = new System.Drawing.Size(27, 28);
             this.lblAns10.TabIndex = 23;
             this.lblAns10.Text = "T";
             // 
@@ -539,9 +580,10 @@ namespace Trial
             // 
             this.lblAns1.AutoSize = true;
             this.lblAns1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAns1.Location = new System.Drawing.Point(33, 82);
+            this.lblAns1.Location = new System.Drawing.Point(44, 101);
+            this.lblAns1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAns1.Name = "lblAns1";
-            this.lblAns1.Size = new System.Drawing.Size(20, 22);
+            this.lblAns1.Size = new System.Drawing.Size(25, 28);
             this.lblAns1.TabIndex = 19;
             this.lblAns1.Text = "a";
             // 
@@ -549,9 +591,10 @@ namespace Trial
             // 
             this.lblAns2.AutoSize = true;
             this.lblAns2.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAns2.Location = new System.Drawing.Point(143, 82);
+            this.lblAns2.Location = new System.Drawing.Point(191, 101);
+            this.lblAns2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAns2.Name = "lblAns2";
-            this.lblAns2.Size = new System.Drawing.Size(20, 22);
+            this.lblAns2.Size = new System.Drawing.Size(25, 28);
             this.lblAns2.TabIndex = 18;
             this.lblAns2.Text = "a";
             // 
@@ -559,9 +602,10 @@ namespace Trial
             // 
             this.lblAns3.AutoSize = true;
             this.lblAns3.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAns3.Location = new System.Drawing.Point(252, 82);
+            this.lblAns3.Location = new System.Drawing.Point(336, 101);
+            this.lblAns3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAns3.Name = "lblAns3";
-            this.lblAns3.Size = new System.Drawing.Size(20, 22);
+            this.lblAns3.Size = new System.Drawing.Size(25, 28);
             this.lblAns3.TabIndex = 22;
             this.lblAns3.Text = "a";
             // 
@@ -569,9 +613,10 @@ namespace Trial
             // 
             this.lblAns4.AutoSize = true;
             this.lblAns4.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAns4.Location = new System.Drawing.Point(361, 82);
+            this.lblAns4.Location = new System.Drawing.Point(481, 101);
+            this.lblAns4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAns4.Name = "lblAns4";
-            this.lblAns4.Size = new System.Drawing.Size(20, 22);
+            this.lblAns4.Size = new System.Drawing.Size(25, 28);
             this.lblAns4.TabIndex = 21;
             this.lblAns4.Text = "a";
             // 
@@ -579,9 +624,10 @@ namespace Trial
             // 
             this.lblAns5.AutoSize = true;
             this.lblAns5.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAns5.Location = new System.Drawing.Point(471, 82);
+            this.lblAns5.Location = new System.Drawing.Point(628, 101);
+            this.lblAns5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAns5.Name = "lblAns5";
-            this.lblAns5.Size = new System.Drawing.Size(20, 22);
+            this.lblAns5.Size = new System.Drawing.Size(25, 28);
             this.lblAns5.TabIndex = 20;
             this.lblAns5.Text = "a";
             // 
@@ -590,9 +636,10 @@ namespace Trial
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label3.Location = new System.Drawing.Point(28, 52);
+            this.label3.Location = new System.Drawing.Point(37, 64);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 19);
+            this.label3.Size = new System.Drawing.Size(38, 23);
             this.label3.TabIndex = 8;
             this.label3.Text = "Q1";
             // 
@@ -601,9 +648,10 @@ namespace Trial
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label2.Location = new System.Drawing.Point(137, 52);
+            this.label2.Location = new System.Drawing.Point(183, 64);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 19);
+            this.label2.Size = new System.Drawing.Size(38, 23);
             this.label2.TabIndex = 7;
             this.label2.Text = "Q2";
             // 
@@ -612,9 +660,10 @@ namespace Trial
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label9.Location = new System.Drawing.Point(246, 52);
+            this.label9.Location = new System.Drawing.Point(328, 64);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(31, 19);
+            this.label9.Size = new System.Drawing.Size(38, 23);
             this.label9.TabIndex = 14;
             this.label9.Text = "Q3";
             // 
@@ -623,9 +672,10 @@ namespace Trial
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label8.Location = new System.Drawing.Point(355, 52);
+            this.label8.Location = new System.Drawing.Point(473, 64);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 19);
+            this.label8.Size = new System.Drawing.Size(38, 23);
             this.label8.TabIndex = 13;
             this.label8.Text = "Q4";
             // 
@@ -634,9 +684,10 @@ namespace Trial
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label7.Location = new System.Drawing.Point(464, 52);
+            this.label7.Location = new System.Drawing.Point(619, 64);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 19);
+            this.label7.Size = new System.Drawing.Size(38, 23);
             this.label7.TabIndex = 12;
             this.label7.Text = "Q5";
             // 
@@ -645,9 +696,10 @@ namespace Trial
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label12.Location = new System.Drawing.Point(29, 157);
+            this.label12.Location = new System.Drawing.Point(39, 193);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(31, 19);
+            this.label12.Size = new System.Drawing.Size(38, 23);
             this.label12.TabIndex = 17;
             this.label12.Text = "Q6";
             // 
@@ -656,9 +708,10 @@ namespace Trial
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label11.Location = new System.Drawing.Point(138, 157);
+            this.label11.Location = new System.Drawing.Point(184, 193);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(31, 19);
+            this.label11.Size = new System.Drawing.Size(38, 23);
             this.label11.TabIndex = 16;
             this.label11.Text = "Q7";
             // 
@@ -667,9 +720,10 @@ namespace Trial
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label6.Location = new System.Drawing.Point(246, 157);
+            this.label6.Location = new System.Drawing.Point(328, 193);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 19);
+            this.label6.Size = new System.Drawing.Size(38, 23);
             this.label6.TabIndex = 11;
             this.label6.Text = "Q8";
             // 
@@ -678,9 +732,10 @@ namespace Trial
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label10.Location = new System.Drawing.Point(356, 157);
+            this.label10.Location = new System.Drawing.Point(475, 193);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(31, 19);
+            this.label10.Size = new System.Drawing.Size(38, 23);
             this.label10.TabIndex = 15;
             this.label10.Text = "Q9";
             // 
@@ -689,9 +744,10 @@ namespace Trial
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label5.Location = new System.Drawing.Point(456, 157);
+            this.label5.Location = new System.Drawing.Point(608, 193);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 19);
+            this.label5.Size = new System.Drawing.Size(49, 23);
             this.label5.TabIndex = 10;
             this.label5.Text = "Q10";
             // 
@@ -701,9 +757,10 @@ namespace Trial
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(110, 62);
+            this.label1.Location = new System.Drawing.Point(147, 76);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(380, 28);
+            this.label1.Size = new System.Drawing.Size(476, 37);
             this.label1.TabIndex = 19;
             this.label1.Text = "Infromation Technology Institute";
             // 
@@ -723,10 +780,10 @@ namespace Trial
             // 
             // frmExam
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox3);
@@ -735,6 +792,7 @@ namespace Trial
             this.Controls.Add(this.lblStdAns);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmExam";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Exam Form";
