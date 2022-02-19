@@ -744,7 +744,7 @@ namespace Trial
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(335, 25);
             this.label1.TabIndex = 19;
-            this.label1.Text = "Infromation Technology Institute";
+            this.label1.Text = "Information Technology Institute";
             // 
             // get_Questions_in_ExamTableAdapter1
             // 
