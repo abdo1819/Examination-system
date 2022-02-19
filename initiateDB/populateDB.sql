@@ -1803,10 +1803,9 @@ EXEC answerExam 32 , @exam_id3 , "d" , "c" , "a" , "b" , "d" ,
 							 	 "c" , "b" , "d" , "a" , "c"
 
 
-execute Student_Take_course_with_Instructor 33, 1200, 2
 
 execute Student_Take_course_with_Instructor 33, 1000, 20
 
-execute Student_Take_course_with_Instructor 33, 1200, 6
+execute Student_Take_course_with_Instructor 33, 1200, 5
 
 execute Student_Take_course_with_Instructor 33, 1400, 17
