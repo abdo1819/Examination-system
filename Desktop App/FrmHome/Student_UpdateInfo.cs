@@ -15,16 +15,13 @@ namespace FrmHome
     public partial class Student_UpdateInfo : Form
     {
         private readonly Login frmLogin;
-
-        public Student_UpdateInfo(Login _frmLogin)
+        private readonly Student_Dashboard frmStdDashboard;
+        public Student_UpdateInfo(Login _frmLogin, Student_Dashboard _frmStd)
         {
             InitializeComponent();
             this.Resize += (sender, e) => Invalidate();
             frmLogin = _frmLogin;
-
-            //frmLogin.Ctx.Student.Load();
-
-
+            frmStdDashboard = _frmStd;
         }
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -52,6 +49,8 @@ namespace FrmHome
                 MessageBox.Show($"Your information was updated successfully.", "Success",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+                var Name = $"{txtFname.Text} {txtLname.Text}";
+                frmStdDashboard.UpdateUserInfo(frmStdDashboard.DeptID, frmLogin.userInfo.usr_id.ToString(), Name, txtEmail.Text, txtAddress.Text);
                 this.Close();
             }
             else

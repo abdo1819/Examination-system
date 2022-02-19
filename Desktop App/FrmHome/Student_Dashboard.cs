@@ -14,11 +14,21 @@ namespace FrmHome
     public partial class Student_Dashboard : Form
     {
         private readonly Login frmLogin;
+        public string DeptID { get; set; }
         public Student_Dashboard(Login _frmLogin)
         {
             InitializeComponent();
             this.Resize += (sender, e) => Invalidate();
             this.frmLogin = _frmLogin;
+        }
+        public void UpdateUserInfo(string Dept, string UsrID, string Name, string Email, string Address )
+        {
+            lblDept.Text = Dept;
+            lblStdID.Text = UsrID;
+            lblName.Text = Name;
+            lblEmail.Text = Email;
+            lblAddress.Text = Address;
+            DeptID = Dept;
         }
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -32,15 +42,19 @@ namespace FrmHome
         {
             frmLogin.Ctx.Department.Load();
             frmLogin.Ctx.Student.Load();
-            lblDept.Text = (from D in frmLogin.Ctx.Department
+            string Dept = (from D in frmLogin.Ctx.Department
                            join S in frmLogin.Ctx.Student on D.dept_id equals S.dept_id
                            select D.dept_name).FirstOrDefault();
-            lblStdID.Text = $"{frmLogin.userInfo.usr_id}";
-            lblName.Text = $"{frmLogin.userInfo.f_name} {frmLogin.userInfo.l_name}";
-            lblEmail.Text = $"{frmLogin.userInfo.email}";
-            lblAddress.Text = $"{frmLogin.userInfo.address}";
+            string UsrID = $"{frmLogin.userInfo.usr_id}";
+            string Name = $"{frmLogin.userInfo.f_name} {frmLogin.userInfo.l_name}";
+            string Email = $"{frmLogin.userInfo.email}";
+            string Address = $"{frmLogin.userInfo.address}";
+
+            UpdateUserInfo(Dept, UsrID, Name, Email, Address);
+
             base.OnLoad(e);
         }
+    
         protected override void OnFormClosing(FormClosingEventArgs e)
         {   
              frmLogin.Close();
@@ -70,7 +84,7 @@ namespace FrmHome
 
         private void btnUpdateInfo_Click(object sender, EventArgs e)
         {
-            Student_UpdateInfo frmUpdateInfo = new Student_UpdateInfo(frmLogin);
+            Student_UpdateInfo frmUpdateInfo = new Student_UpdateInfo(frmLogin, this);
             frmUpdateInfo.ShowDialog();
         }
     }
