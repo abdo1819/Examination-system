@@ -1,7 +1,7 @@
 ﻿
 namespace FrmHome
 {
-    partial class ViewExamForCorrections
+    partial class ViewInstructorCourses
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace FrmHome
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.CrystalReport11 = new FrmHome.Reports.CrystalReport1();
+            this.report11 = new FrmHome.Reports.ViewInstructorCourses();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -41,17 +41,17 @@ namespace FrmHome
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.CrystalReport11;
+            this.crystalReportViewer1.ReportSource = this.report11;
             this.crystalReportViewer1.Size = new System.Drawing.Size(800, 450);
             this.crystalReportViewer1.TabIndex = 0;
             // 
-            // ViewExamForCorrections
+            // ViewInstructorCourses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "ViewExamForCorrections";
+            this.Name = "ViewInstructorCourses";
             this.Text = "Form2";
             this.ResumeLayout(false);
 
@@ -60,6 +60,6 @@ namespace FrmHome
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private Reports.CrystalReport1 CrystalReport11;
+        private Reports.ViewInstructorCourses report11;
     }
 }

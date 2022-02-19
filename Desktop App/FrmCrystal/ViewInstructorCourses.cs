@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FrmHome
 {
-    public partial class ViewExamForCorrections : Form
+    public partial class ViewInstructorCourses : Form
     {
-        public ViewExamForCorrections()
+        public ViewInstructorCourses()
         {
             InitializeComponent();
         }

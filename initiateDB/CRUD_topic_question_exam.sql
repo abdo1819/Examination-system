@@ -720,6 +720,16 @@ BEGIN
 		END
 END
 GO
+/* ------------------------------------------------------------------------------- */
+/*                                Get All Exam Answers                             */
+/* ------------------------------------------------------------------------------- */
+
+CREATE OR ALTER PROC GetAllExamAnswers
+AS
+BEGIN
+SELECT * FROM Exam_Answer
+END
+RETURN
 
 /* ------------------------------------------------------------------------------- */
 /*                           Display Exam without Answers                          */
