@@ -99,7 +99,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(476, 37);
             this.label3.TabIndex = 21;
-            this.label3.Text = "Infromation Technology Institute";
+            this.label3.Text = "Information Technology Institute";
             // 
             // pictureBox1
             // 

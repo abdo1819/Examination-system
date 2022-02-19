@@ -22,16 +22,22 @@ namespace FrmHome
             Ctx = new ExaminationContext();
             Procedures = new ExaminationContextProcedures(Ctx);
             InitializeComponent();
-            this.Resize += (sender, e) => Invalidate();
+            this.Resize += (sender, e) => Trace.WriteLine(this.Size);
             this.FormClosed += (sender, e) => Ctx?.Dispose();
         }
-
+        protected override void OnLoad(EventArgs e)
+        {
+            panel1.Left = (panel1.Parent.Width - panel1.Width) / 2;
+            panel1.Top = (panel1.Parent.Height - panel1.Height) / 2;
+            base.OnLoad(e);
+        }
+    
         protected override void OnPaint(PaintEventArgs e)
         {
-            var str = "Welcome to ITI Examination System, please Login to Continue";
-            var font = new Font(FontFamily.GenericSansSerif, 10f, FontStyle.Bold);
+            var str = "Welcome to ITI Examination System";
+            var font = new Font(FontFamily.GenericSansSerif, 25f, FontStyle.Bold);
             var strSize = e.Graphics.MeasureString(str, font );
-            e.Graphics.DrawString(str, font, Brushes.DarkBlue, (this.ClientSize.Width - strSize.Width) / 2, 20);
+            e.Graphics.DrawString(str, font, Brushes.DarkRed, (this.ClientSize.Width - strSize.Width) / 2, 120);
             base.OnPaint(e);
         }
 
@@ -73,8 +79,7 @@ namespace FrmHome
                 {
                     // Open Instructor Dashboard
                 }
-                    
-                 
+                                    
             }
                 
         }
@@ -83,6 +88,16 @@ namespace FrmHome
         {
             Register frmRegister = new Register(this);
             frmRegister.ShowDialog();   
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

@@ -33,9 +33,9 @@ namespace FrmHome
         protected override void OnPaint(PaintEventArgs e)
         {
             var str = "Student Dashboard";
-            var font = new Font(FontFamily.GenericSansSerif, 10f, FontStyle.Bold);
+            var font = new Font(FontFamily.GenericSansSerif, 25f, FontStyle.Bold);
             var strSize = e.Graphics.MeasureString(str, font);
-            e.Graphics.DrawString(str, font, Brushes.DarkBlue, (this.ClientSize.Width - strSize.Width) / 3, 20);
+            e.Graphics.DrawString(str, font, Brushes.DarkRed, (this.ClientSize.Width - strSize.Width) / 2,120);
             base.OnPaint(e);
         }
         protected override void OnLoad(EventArgs e)
@@ -96,6 +96,16 @@ namespace FrmHome
             frmAvailCourses.Std_name = lblName.Text;
 
             frmAvailCourses.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmLogin.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
