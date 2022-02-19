@@ -127,6 +127,7 @@ namespace FrmHome
             this.Controls.Add(this.comboBoxCourses);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Student_ViewGrades";
             this.Text = "View Grades";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

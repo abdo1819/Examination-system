@@ -220,6 +220,7 @@ namespace FrmHome
             this.btnExam.TabIndex = 22;
             this.btnExam.Text = "Take an Exam";
             this.btnExam.UseVisualStyleBackColor = true;
+            this.btnExam.Click += new System.EventHandler(this.btnExam_Click);
             // 
             // Student_Dashboard
             // 
@@ -232,6 +233,7 @@ namespace FrmHome
             this.Controls.Add(this.groupInfo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnLogout);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Student_Dashboard";
             this.Text = "Student Dashboard";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
