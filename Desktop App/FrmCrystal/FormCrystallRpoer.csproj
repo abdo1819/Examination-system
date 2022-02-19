@@ -187,6 +187,12 @@
     <Compile Include="CourseTopic.Designer.cs">
       <DependentUpon>CourseTopic.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\ViewExamWithAnswers.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewExamWithAnswers.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ViewExamForCorrections.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +284,10 @@
     <EmbeddedResource Include="Reports\CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ViewExamWithAnswers.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ViewExamWithAnswers.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\ViewInstructorCourses.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
