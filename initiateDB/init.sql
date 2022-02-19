@@ -189,13 +189,13 @@ CREATE TABLE [Exam_Question]
 
 -- getQuestionMark must be created before Exam_Answer Table is created
 go
-CREATE OR ALTER FUNCTION getQuestionMark(@q_id INT)
+CREATE OR ALTER FUNCTION getQuestionMark(@q_id INT, @ex_id int)
 RETURNS INT
 AS
 BEGIN
 DECLARE @result INT, @corr_answer VARCHAR(1), @std_answer VARCHAR(1)
 	SELECT @corr_answer = (SELECT corr_answer FROM Question WHERE q_id = @q_id)
-	SELECT @std_answer = (SELECT std_answer FROM Exam_Answer WHERE q_id = @q_id)
+	SELECT @std_answer = (SELECT std_answer FROM Exam_Answer WHERE q_id = @q_id AND ex_id = @ex_id)
 	IF (@corr_answer = @std_answer)
 		SET @result = 1
 	ELSE
@@ -210,7 +210,7 @@ CREATE TABLE [Exam_Answer]
     ex_id INTEGER ,
     q_id INTEGER ,
     std_answer VARCHAR(1),
-	std_mark AS dbo.getQuestionMark(q_id), -- std_mark is computed based on the function
+	std_mark AS dbo.getQuestionMark(q_id, ex_id), -- std_mark is computed based on the function
     FOREIGN KEY (std_id) REFERENCES Student(std_id) on delete cascade,
     FOREIGN KEY (ex_id) REFERENCES Exam(ex_id) on delete cascade, 
 	CONSTRAINT c_EA CHECK (std_answer IN ('a','b','c','d','T','F','s')), -- Possible trigger on insert 

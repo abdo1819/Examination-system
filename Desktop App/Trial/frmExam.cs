@@ -34,6 +34,7 @@ namespace Trial
         public List<RadioButton> radioButtons = new List<RadioButton>();
         public Dictionary<int, string> StdAnswers = new Dictionary<int, string>();
         public List<Label> ansLabels = new List<Label>();
+        TimeSpan CountDown = new TimeSpan(0, 0, 10);
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -74,7 +75,6 @@ namespace Trial
             get_Questions_in_ExamTableAdapter1.Fill(DT, Ex_id);
             getQuestionAndStudentAnswerTableAdapter.Fill(ExAnsDT, Ex_id);
             
-
             Bsourse = new BindingSource(DT, "");
             Bsourse2 = new BindingSource(ExAnsDT, "");
             Bsource3 = new BindingSource(StdAnswers, "");
@@ -95,6 +95,8 @@ namespace Trial
             lblQNum.Text = counter.ToString();
 
             RadioButtonsClear();
+            lblTimer.Text = CountDown.ToString();
+            timer1.Start();
         }
         public void SubmitChanges()
         {
@@ -228,6 +230,24 @@ namespace Trial
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+            
+            if(CountDown == TimeSpan.Zero)
+            {
+                timer1.Stop();
+                MessageBox.Show("Time's up! We hope you finished answering all the questions correctly!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                SubmitChanges();
+                this.Close();
+            }
+            else
+            {
+                CountDown -= TimeSpan.FromSeconds(1);
+                lblTimer.Text = CountDown.ToString();
+            }
         }
     }
 }

@@ -1782,6 +1782,7 @@ execute insertMCQ 13000, 'Which of the following set should be associated with w
 
 
 ---------------------------------- exams --------------------------------- 
+
 declare @exam_id1 int
 declare @exam_id2 int
 declare @exam_id3 int
@@ -1800,3 +1801,8 @@ EXEC answerExam 29 , @exam_id2 , "b" , "c" , "a" , "d" , "d" ,
 
 EXEC answerExam 32 , @exam_id3 , "d" , "c" , "a" , "b" , "d" ,
 							 	 "c" , "b" , "d" , "a" , "c"
+
+
+execute Student_Take_course_with_Instructor 33, 1200, 2
+
+execute Student_Take_course_with_Instructor 33, 1000, 20
