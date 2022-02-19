@@ -43,6 +43,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.getInsForStdCourseTableAdapter1 = new Trial.ExaminationDataSetTableAdapters.getInsForStdCourseTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -129,7 +130,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Location = new System.Drawing.Point(617, 19);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 43);
             this.button2.TabIndex = 6;
@@ -199,6 +200,10 @@
             this.label2.TabIndex = 0;
             this.label2.Text = resources.GetString("label2.Text");
             // 
+            // getInsForStdCourseTableAdapter1
+            // 
+            this.getInsForStdCourseTableAdapter1.ClearBeforeFill = true;
+            // 
             // frmAvailableCoursesForExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,5 +246,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
+        private ExaminationDataSetTableAdapters.getInsForStdCourseTableAdapter getInsForStdCourseTableAdapter1;
     }
 }

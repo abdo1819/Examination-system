@@ -480,6 +480,15 @@ end
 
 GO
 
+CREATE OR ALTER PROC getInsForStdCourse @std_id int, @crs_name varchar(40)
+AS
+BEGIN
+	select u.f_name+' '+u.l_name as[full_name]
+	from Ins_Course i, Course_Attendance ca, [User] u, Student s, Course c
+	where u.usr_id = i.ins_id and ca.ins_id = i.ins_id and s.std_id = ca.std_id and c.crs_id = ca.crs_id
+			and s.std_id = @std_id and c.crs_name =@crs_name
+END
+GO
 /* -------------------------------------------------------------------------- */
 /*                    Comments to be checked later?           */
 /* -------------------------------------------------------------------------- */

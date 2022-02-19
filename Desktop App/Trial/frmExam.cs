@@ -31,9 +31,11 @@ namespace Trial
         public int counter;
         public ExaminationDataSet.Get_Questions_in_ExamDataTable DT;
         public ExaminationDataSet.getQuestionAndStudentAnswerDataTable ExAnsDT;
+
         public BindingSource Bsourse;
         public BindingSource Bsourse2;
         public BindingSource Bsource3;
+
         public SqlConnection sqlCN;
         public SqlDataAdapter DA;
         public SqlCommand sqlCMD;
@@ -77,6 +79,7 @@ namespace Trial
             DT = new ExaminationDataSet.Get_Questions_in_ExamDataTable();
             ExAnsDT = new ExaminationDataSet.getQuestionAndStudentAnswerDataTable();
 
+
             get_Questions_in_ExamTableAdapter1.Fill(DT, Ex_id);
             getQuestionAndStudentAnswerTableAdapter.Fill(ExAnsDT, Ex_id);
             
@@ -96,11 +99,12 @@ namespace Trial
             lblCourse.DataBindings.Add("text", Bsourse2, "crs_name");
             lblTopic.DataBindings.Add("text", Bsourse2, "top_name");
 
+
+
             lblStdName.Text = this.Std_name;
             lblInstructor.Text = this.Instructor_name;
             lblDepartment.Text = this.Dept_name;
-
-
+            
             counter = 1;
             lblQNum.Text = counter.ToString();
 
@@ -264,6 +268,11 @@ namespace Trial
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
