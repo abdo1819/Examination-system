@@ -89,6 +89,7 @@ namespace Trial
 
             lblQuestionText.DataBindings.Add("text", Bsourse, "q_text");
             lblQuestionType.DataBindings.Add("text", Bsourse, "q_type");
+            
             rdbtnA.DataBindings.Add("text", Bsourse, "ch_a");
             rdbtnB.DataBindings.Add("text", Bsourse, "ch_b");
             rdbtnC.DataBindings.Add("text", Bsourse, "ch_c");
