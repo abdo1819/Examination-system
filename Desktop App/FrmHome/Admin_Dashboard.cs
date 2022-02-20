@@ -13,6 +13,7 @@ namespace FrmHome
     public partial class Admin_Dashboard : Form
     {
         private readonly Login frmLogin;
+        public string DeptID { get; set; }
         public Admin_Dashboard(Login _frmLogin)
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace FrmHome
             lblEmail.Text = Email;
             lblAddress.Text = Address;
             lblDept.Text = Dept;
+            DeptID = Dept;
         }
         protected override void OnLoad(EventArgs e)
         {
