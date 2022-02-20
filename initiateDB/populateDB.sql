@@ -36,7 +36,7 @@ EXEC Insert_Department_With_Manager @dept_name = "Accounting",@f_name = "Melli",
 /* ------------------------------------------------------------------------------- */
 
 declare @temp_ins_id int;
-EXEC Insert_Instructor @f_name="Trixie",@l_name="Lysaght",@address="11415 Harbort Junction",@email="tlysaght9@typepad.com",@password="5aggh2Pr57o",@salary=14886.31,@degree="Dental Hygienist",@dept_id=@dept_id6,@ins_id=@temp_ins_id output;
+EXEC Insert_Instructor @f_name="Trixie",@l_name="Lysaght",@address="11415 Harbort Junction",@email="admin",@password="admin",@salary=14886.31,@degree="Dental Hygienist",@dept_id=@dept_id6,@ins_id=@temp_ins_id output;
 EXEC Insert_Instructor @f_name="Alasteir",@l_name="Cassell",@address=null,@email="acassella@wiley.com",@password="O8aznOoZ",@salary=null,@degree=null,@dept_id=@dept_id9,@ins_id=@temp_ins_id output;
 EXEC Insert_Instructor @f_name="Gard",@l_name="MacElroy",@address="50172 Sauthoff Court",@email="gmacelroyb@wunderground.com",@password="uARdwqQq6T",@salary=13262.15,@degree="Help Desk Technician",@dept_id=@dept_id5,@ins_id=@temp_ins_id output;
 EXEC Insert_Instructor @f_name="Darryl",@l_name="Thyer",@address="399 Bobwhite Avenue",@email="dthyerc@loc.gov",@password="7qffhuNxhS",@salary=12296.11,@degree="Teacher",@dept_id=@dept_id1,@ins_id=@temp_ins_id output;

@@ -60,7 +60,6 @@ namespace FrmHome
             else
             {
                 userInfo = users[0];
-                //Trace.WriteLine(Encoding.ASCII.GetBytes(userInfo.hashed_password).);
                 MessageBox.Show($"Welcome {userInfo.f_name}", "Success",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
@@ -72,7 +71,9 @@ namespace FrmHome
                 }
                 else
                 {
-                    // Open Instructor Dashboard
+                    Admin_Dashboard adminDash = new Admin_Dashboard(this);
+                    this.Hide();
+                    adminDash.Show();                
                 }
                                     
             }
