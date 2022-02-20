@@ -271,7 +271,9 @@
     <Compile Include="Entities\getAvailableCoursesForExamResult.cs" />
     <Compile Include="Entities\getDepartmentResult.cs" />
     <Compile Include="Entities\getDeptDataResult.cs" />
+    <Compile Include="Entities\getInsForStdCourseResult.cs" />
     <Compile Include="Entities\getInstructorsInDepartmentResult.cs" />
+    <Compile Include="Entities\getQuestionAndStudentAnswerResult.cs" />
     <Compile Include="Entities\getStudentAnswerResult.cs" />
     <Compile Include="Entities\getStudentsInDepartmentResult.cs" />
     <Compile Include="Entities\GetUserResult.cs" />

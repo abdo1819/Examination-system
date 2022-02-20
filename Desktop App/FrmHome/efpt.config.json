@@ -182,7 +182,15 @@
          "ObjectType": 1
       },
       {
+         "Name": "[dbo].[getInsForStdCourse]",
+         "ObjectType": 1
+      },
+      {
          "Name": "[dbo].[getInstructorsInDepartment]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[getQuestionAndStudentAnswer]",
          "ObjectType": 1
       },
       {
