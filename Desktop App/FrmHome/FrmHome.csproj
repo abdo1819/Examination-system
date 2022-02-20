@@ -320,6 +320,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ExaminationDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Admin_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Dashboard.Designer.cs">
+      <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ManageCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ManageCourses.Designer.cs">
+      <DependentUpon>Admin_ManageCourses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student_UpdateInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -352,6 +364,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin_Dashboard.resx">
+      <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ManageCourses.resx">
+      <DependentUpon>Admin_ManageCourses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Student_UpdateInfo.resx">
       <DependentUpon>Student_UpdateInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -406,6 +424,10 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FrmCrystal\FormCrystallRpoer.csproj">
+      <Project>{72216eba-9cc5-4b56-b7a1-ff6525880448}</Project>
+      <Name>FormCrystallRpoer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Trial\Trial.csproj">
       <Project>{c1e88680-ef50-4481-8c46-5c5835b527e3}</Project>
       <Name>Trial</Name>
