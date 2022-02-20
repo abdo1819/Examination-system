@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FrmHome
+namespace ReportsForm
 {
     public partial class ViewExam : Form
     {

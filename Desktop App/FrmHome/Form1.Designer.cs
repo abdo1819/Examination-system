@@ -1,5 +1,5 @@
 ﻿
-namespace FrmHome
+namespace ReportsForm
 {
     partial class Form1
     {
@@ -30,8 +30,8 @@ namespace FrmHome
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.getAllStudentsTableAdapter1 = new FrmHome.ExaminationDataSetTableAdapters.getAllStudentsTableAdapter();
-            this.insert_StudentTableAdapter1 = new FrmHome.ExaminationDataSetTableAdapters.Insert_StudentTableAdapter();
+            this.getAllStudentsTableAdapter1 = new ReportsForm.ExaminationDataSetTableAdapters.getAllStudentsTableAdapter();
+            this.insert_StudentTableAdapter1 = new ReportsForm.ExaminationDataSetTableAdapters.Insert_StudentTableAdapter();
             this.SuspendLayout();
             // 
             // button1

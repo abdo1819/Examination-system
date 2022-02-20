@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FrmHome
+namespace ReportsForm
 {
     public partial class Form1 : Form
     {
@@ -28,7 +28,8 @@ namespace FrmHome
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            reportsForm frm = new reportsForm();
+            frm.Show();
         }
         ExaminationDataSet.getAllStudentsDataTable dt = new ExaminationDataSet.getAllStudentsDataTable();
         ExaminationDataSet.Insert_StudentDataTable dtIns = new ExaminationDataSet.Insert_StudentDataTable();

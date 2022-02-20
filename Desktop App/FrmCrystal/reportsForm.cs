@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FrmHome
+namespace ReportsForm
 {
-    public partial class Form1 : Form
+    public partial class reportsForm : Form
     {
-        public Form1()
+        public reportsForm()
         {
             InitializeComponent();
         }
@@ -30,6 +30,8 @@ namespace FrmHome
         {
             ViewExam r = new ViewExam();
             r.Show();
+            //Form1 frm = new Form1();
+            //frm.Show();
         }
         ExaminationDataSet.getAllStudentsDataTable dt = new ExaminationDataSet.getAllStudentsDataTable();
         ExaminationDataSet.Insert_StudentDataTable dtIns = new ExaminationDataSet.Insert_StudentDataTable();
@@ -60,8 +62,8 @@ namespace FrmHome
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ViewExamForCorrections examForCorrections = new ViewExamForCorrections();
-            examForCorrections.ShowDialog();
+            customSelectionUserExam frm = new customSelectionUserExam();
+            frm.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
