@@ -75,20 +75,19 @@
             this.cmbAvailableCourses.FormattingEnabled = true;
             this.cmbAvailableCourses.Location = new System.Drawing.Point(87, 157);
             this.cmbAvailableCourses.Name = "cmbAvailableCourses";
-            this.cmbAvailableCourses.Size = new System.Drawing.Size(377, 21);
+            this.cmbAvailableCourses.Size = new System.Drawing.Size(407, 21);
             this.cmbAvailableCourses.TabIndex = 1;
             // 
             // btnGenerateExam
             // 
-            this.btnGenerateExam.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnGenerateExam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenerateExam.BackColor = System.Drawing.Color.DarkRed;
             this.btnGenerateExam.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerateExam.ForeColor = System.Drawing.Color.White;
             this.btnGenerateExam.Location = new System.Drawing.Point(198, 214);
             this.btnGenerateExam.Name = "btnGenerateExam";
-            this.btnGenerateExam.Size = new System.Drawing.Size(149, 53);
+            this.btnGenerateExam.Size = new System.Drawing.Size(179, 53);
             this.btnGenerateExam.TabIndex = 3;
             this.btnGenerateExam.Text = "Start Exam";
             this.btnGenerateExam.UseVisualStyleBackColor = false;
@@ -127,9 +126,9 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox1.Location = new System.Drawing.Point(601, 0);
+            this.groupBox1.Location = new System.Drawing.Point(571, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(765, 768);
+            this.groupBox1.Size = new System.Drawing.Size(795, 768);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             // 
@@ -139,7 +138,7 @@
             this.button2.BackColor = System.Drawing.Color.DarkRed;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(648, 18);
+            this.button2.Location = new System.Drawing.Point(678, 18);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 43);
@@ -154,7 +153,7 @@
             this.button1.BackColor = System.Drawing.Color.DarkRed;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(703, 19);
+            this.button1.Location = new System.Drawing.Point(733, 19);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 43);
             this.button1.TabIndex = 5;
@@ -173,7 +172,7 @@
             this.groupBox3.Controls.Add(this.cmbAvailableCourses);
             this.groupBox3.Location = new System.Drawing.Point(106, 196);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(538, 342);
+            this.groupBox3.Size = new System.Drawing.Size(568, 342);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             // 
@@ -186,7 +185,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(0, 159);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(601, 609);
+            this.groupBox2.Size = new System.Drawing.Size(571, 609);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Read the following notes carefully";
