@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ReportsForm;
 
 namespace FrmHome
 {
@@ -57,8 +58,8 @@ namespace FrmHome
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-           // Form1 frmReports = new Form1();
-            // frmReports.ShowDialog();
+            reportsForm frmReports = new reportsForm();
+            frmReports.ShowDialog();
             // There is an issue with opening this form
         }
 
