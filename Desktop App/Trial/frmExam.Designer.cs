@@ -96,7 +96,8 @@ namespace Trial
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSubmit.BackColor = System.Drawing.Color.SeaGreen;
             this.btnSubmit.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
@@ -173,6 +174,7 @@ namespace Trial
             this.groupBox2.Size = new System.Drawing.Size(904, 768);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // lblTimer
             // 
@@ -332,7 +334,6 @@ namespace Trial
             this.groupBox3.Controls.Add(this.groupBox5);
             this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Controls.Add(this.btnSubmit);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(0, 161);
@@ -346,6 +347,8 @@ namespace Trial
             // 
             // groupBox5
             // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.Controls.Add(this.lblInstructor);
             this.groupBox5.Controls.Add(this.lblTopic);
             this.groupBox5.Controls.Add(this.label17);
@@ -467,6 +470,8 @@ namespace Trial
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.lblAns6);
             this.groupBox4.Controls.Add(this.lblAns7);
@@ -739,7 +744,7 @@ namespace Trial
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(335, 25);
             this.label1.TabIndex = 19;
-            this.label1.Text = "Infromation Technology Institute";
+            this.label1.Text = "Information Technology Institute";
             // 
             // get_Questions_in_ExamTableAdapter1
             // 

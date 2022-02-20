@@ -260,5 +260,10 @@ namespace Trial
                 lblTimer.Text = CountDown.ToString();
             }
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
