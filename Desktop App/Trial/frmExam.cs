@@ -275,5 +275,17 @@ namespace Trial
         {
             this.Close();
         }
+
+        private void frmExam_SizeChanged(object sender, EventArgs e)
+        {
+            CenterControlInParent(groupBox3);
+            CenterControlInParent(groupBox4);
+
+        }
+        private void CenterControlInParent(Control ctrlToCenter)
+        {
+            ctrlToCenter.Left = (ctrlToCenter.Parent.Width - ctrlToCenter.Width) / 2;
+            ctrlToCenter.Top = (ctrlToCenter.Parent.Height - ctrlToCenter.Height) / 2;
+        }
     }
 }
