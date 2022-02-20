@@ -370,8 +370,7 @@ namespace Trial
             // 
             // groupBox5
             // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox5.Controls.Add(this.lblInstructor);
             this.groupBox5.Controls.Add(this.lblTopic);
             this.groupBox5.Controls.Add(this.label17);
@@ -513,8 +512,7 @@ namespace Trial
             // 
             // groupBox4
             // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.lblAns6);
             this.groupBox4.Controls.Add(this.lblAns7);
