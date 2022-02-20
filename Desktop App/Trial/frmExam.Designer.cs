@@ -553,6 +553,7 @@ namespace Trial
             this.label4.Size = new System.Drawing.Size(316, 17);
             this.label4.TabIndex = 28;
             this.label4.Text = "____________________________________________";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblAns6
             // 
@@ -566,6 +567,7 @@ namespace Trial
             this.lblAns6.Size = new System.Drawing.Size(22, 22);
             this.lblAns6.TabIndex = 27;
             this.lblAns6.Text = "T";
+            this.lblAns6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblAns7
             // 
@@ -579,6 +581,7 @@ namespace Trial
             this.lblAns7.Size = new System.Drawing.Size(22, 22);
             this.lblAns7.TabIndex = 26;
             this.lblAns7.Text = "T";
+            this.lblAns7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblAns8
             // 
@@ -592,6 +595,7 @@ namespace Trial
             this.lblAns8.Size = new System.Drawing.Size(22, 22);
             this.lblAns8.TabIndex = 24;
             this.lblAns8.Text = "T";
+            this.lblAns8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblAns9
             // 
@@ -605,6 +609,7 @@ namespace Trial
             this.lblAns9.Size = new System.Drawing.Size(22, 22);
             this.lblAns9.TabIndex = 25;
             this.lblAns9.Text = "T";
+            this.lblAns9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblAns10
             // 
@@ -618,6 +623,7 @@ namespace Trial
             this.lblAns10.Size = new System.Drawing.Size(22, 22);
             this.lblAns10.TabIndex = 23;
             this.lblAns10.Text = "T";
+            this.lblAns10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblAns1
             // 
@@ -631,6 +637,7 @@ namespace Trial
             this.lblAns1.Size = new System.Drawing.Size(20, 22);
             this.lblAns1.TabIndex = 19;
             this.lblAns1.Text = "a";
+            this.lblAns1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblAns2
             // 
@@ -644,6 +651,7 @@ namespace Trial
             this.lblAns2.Size = new System.Drawing.Size(20, 22);
             this.lblAns2.TabIndex = 18;
             this.lblAns2.Text = "a";
+            this.lblAns2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblAns3
             // 
@@ -657,6 +665,7 @@ namespace Trial
             this.lblAns3.Size = new System.Drawing.Size(20, 22);
             this.lblAns3.TabIndex = 22;
             this.lblAns3.Text = "a";
+            this.lblAns3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblAns4
             // 
@@ -670,6 +679,7 @@ namespace Trial
             this.lblAns4.Size = new System.Drawing.Size(20, 22);
             this.lblAns4.TabIndex = 21;
             this.lblAns4.Text = "a";
+            this.lblAns4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblAns5
             // 
@@ -683,6 +693,7 @@ namespace Trial
             this.lblAns5.Size = new System.Drawing.Size(20, 22);
             this.lblAns5.TabIndex = 20;
             this.lblAns5.Text = "a";
+            this.lblAns5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -696,6 +707,7 @@ namespace Trial
             this.label3.Size = new System.Drawing.Size(31, 19);
             this.label3.TabIndex = 8;
             this.label3.Text = "Q1";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -709,6 +721,7 @@ namespace Trial
             this.label2.Size = new System.Drawing.Size(31, 19);
             this.label2.TabIndex = 7;
             this.label2.Text = "Q2";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
@@ -722,6 +735,7 @@ namespace Trial
             this.label9.Size = new System.Drawing.Size(31, 19);
             this.label9.TabIndex = 14;
             this.label9.Text = "Q3";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
@@ -735,6 +749,7 @@ namespace Trial
             this.label8.Size = new System.Drawing.Size(31, 19);
             this.label8.TabIndex = 13;
             this.label8.Text = "Q4";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
@@ -748,6 +763,7 @@ namespace Trial
             this.label7.Size = new System.Drawing.Size(31, 19);
             this.label7.TabIndex = 12;
             this.label7.Text = "Q5";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
             // 
@@ -761,6 +777,7 @@ namespace Trial
             this.label12.Size = new System.Drawing.Size(31, 19);
             this.label12.TabIndex = 17;
             this.label12.Text = "Q6";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
             // 
@@ -774,6 +791,7 @@ namespace Trial
             this.label11.Size = new System.Drawing.Size(31, 19);
             this.label11.TabIndex = 16;
             this.label11.Text = "Q7";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
@@ -787,6 +805,7 @@ namespace Trial
             this.label6.Size = new System.Drawing.Size(31, 19);
             this.label6.TabIndex = 11;
             this.label6.Text = "Q8";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
             // 
@@ -800,6 +819,7 @@ namespace Trial
             this.label10.Size = new System.Drawing.Size(31, 19);
             this.label10.TabIndex = 15;
             this.label10.Text = "Q9";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
@@ -813,6 +833,7 @@ namespace Trial
             this.label5.Size = new System.Drawing.Size(40, 19);
             this.label5.TabIndex = 10;
             this.label5.Text = "Q10";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
