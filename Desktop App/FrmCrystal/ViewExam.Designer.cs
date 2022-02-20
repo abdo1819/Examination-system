@@ -1,5 +1,5 @@
 ﻿
-namespace FrmHome
+namespace ReportsForm
 {
     partial class ViewExam
     {
@@ -30,7 +30,7 @@ namespace FrmHome
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.ViewExamForStudent1 = new FrmHome.Reports.ViewExamForStudent();
+            this.ViewExamForStudent1 = new ReportsForm.Reports.ViewExamForStudent();
             this.SuspendLayout();
             // 
             // crystalReportViewer1

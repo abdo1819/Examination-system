@@ -1,5 +1,5 @@
 ﻿
-namespace FrmHome
+namespace ReportsForm
 {
     partial class report1
     {

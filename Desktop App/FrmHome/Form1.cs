@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FrmHome
+namespace ReportsForm
 {
     public partial class Form1 : Form
     {
@@ -28,8 +28,8 @@ namespace FrmHome
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ViewExam r = new ViewExam();
-            r.Show();
+            reportsForm frm = new reportsForm();
+            frm.Show();
         }
         ExaminationDataSet.getAllStudentsDataTable dt = new ExaminationDataSet.getAllStudentsDataTable();
         ExaminationDataSet.Insert_StudentDataTable dtIns = new ExaminationDataSet.Insert_StudentDataTable();
@@ -50,36 +50,6 @@ namespace FrmHome
             //{
             //    Trace.WriteLine(row.);
             //}
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            CourseTopic topics_report = new CourseTopic();
-            topics_report.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            ViewExamForCorrections examForCorrections = new ViewExamForCorrections();
-            examForCorrections.ShowDialog();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            viewStudnetIndepartment frm = new viewStudnetIndepartment();
-            frm.Show();
-        }
-
-        private void btnViewGrades_Click(object sender, EventArgs e)
-        {
-            ViewStudentGrades frmGrades = new ViewStudentGrades();
-            frmGrades.Show();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            ViewInstructorCourses frmIns = new ViewInstructorCourses();
-            frmIns.Show();
         }
     }
 }
