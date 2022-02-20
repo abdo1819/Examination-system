@@ -13,27 +13,36 @@ namespace Trial
 {
     public partial class frmExam : Form
     {
-        public frmExam(int? std_id, int?ex_id)
+        public frmExam(int? std_id, int?ex_id, string std_name, string dept_name, string instructor_name)
         {
             Ex_id = ex_id;
             Std_id = std_id;
+            Std_name = std_name;
+            Dept_name = dept_name;
+            Instructor_name = instructor_name;
             InitializeComponent();
         }
 
         public int? Ex_id;
         public int? Std_id;
+        public string Std_name;
+        public string Dept_name;
+        public string Instructor_name;
         public int counter;
         public ExaminationDataSet.Get_Questions_in_ExamDataTable DT;
         public ExaminationDataSet.getQuestionAndStudentAnswerDataTable ExAnsDT;
+
         public BindingSource Bsourse;
         public BindingSource Bsourse2;
         public BindingSource Bsource3;
+
         public SqlConnection sqlCN;
         public SqlDataAdapter DA;
         public SqlCommand sqlCMD;
         public List<RadioButton> radioButtons = new List<RadioButton>();
         public Dictionary<int, string> StdAnswers = new Dictionary<int, string>();
         public List<Label> ansLabels = new List<Label>();
+        TimeSpan CountDown = new TimeSpan(0, 0, 30);
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -65,22 +74,22 @@ namespace Trial
             foreach(var item in ansLabels)
             {
                 item.Text = "";
-                item.ForeColor = Color.DarkRed;
             }
 
             DT = new ExaminationDataSet.Get_Questions_in_ExamDataTable();
             ExAnsDT = new ExaminationDataSet.getQuestionAndStudentAnswerDataTable();
 
+
             get_Questions_in_ExamTableAdapter1.Fill(DT, Ex_id);
             getQuestionAndStudentAnswerTableAdapter.Fill(ExAnsDT, Ex_id);
             
-
             Bsourse = new BindingSource(DT, "");
             Bsourse2 = new BindingSource(ExAnsDT, "");
             Bsource3 = new BindingSource(StdAnswers, "");
 
             lblQuestionText.DataBindings.Add("text", Bsourse, "q_text");
             lblQuestionType.DataBindings.Add("text", Bsourse, "q_type");
+            
             rdbtnA.DataBindings.Add("text", Bsourse, "ch_a");
             rdbtnB.DataBindings.Add("text", Bsourse, "ch_b");
             rdbtnC.DataBindings.Add("text", Bsourse, "ch_c");
@@ -91,10 +100,18 @@ namespace Trial
             lblCourse.DataBindings.Add("text", Bsourse2, "crs_name");
             lblTopic.DataBindings.Add("text", Bsourse2, "top_name");
 
+
+
+            lblStdName.Text = this.Std_name;
+            lblInstructor.Text = this.Instructor_name;
+            lblDepartment.Text = this.Dept_name;
+            
             counter = 1;
             lblQNum.Text = counter.ToString();
 
             RadioButtonsClear();
+            lblTimer.Text = CountDown.ToString();
+            timer1.Start();
         }
         public void SubmitChanges()
         {
@@ -208,7 +225,7 @@ namespace Trial
                 DialogResult dialogResult = MessageBox.Show("Are you sure you want to submit all the answers?", "Info", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    SubmitChanges();
+                    timer1.Stop();
                     MessageBox.Show("Answers submitted successfuly", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
@@ -217,6 +234,8 @@ namespace Trial
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            timer1.Stop();
+            SubmitChanges();
             sqlCN.Close();
         }
 
@@ -228,6 +247,44 @@ namespace Trial
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+            
+            if(CountDown == TimeSpan.Zero)
+            {
+                timer1.Stop();
+                MessageBox.Show("Time's up! We hope you finished answering all the questions correctly!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                CountDown -= TimeSpan.FromSeconds(1);
+                lblTimer.Text = CountDown.ToString();
+            }
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmExam_SizeChanged(object sender, EventArgs e)
+        {
+            CenterControlInParent(groupBox4);
+            CenterControlInParent(groupBox5);
+        }
+        private void CenterControlInParent(Control ctrlToCenter)
+        {
+            ctrlToCenter.Left = (ctrlToCenter.Parent.Width - ctrlToCenter.Width) / 2;
+            ctrlToCenter.Top = (ctrlToCenter.Parent.Height - ctrlToCenter.Height) / 2;
         }
     }
 }

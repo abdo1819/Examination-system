@@ -22,8 +22,13 @@ namespace Trial
         public int? Std_id;
         public string crs_name;
         public int? Ex_id;
+        public string Std_name;
+        public string Dept_name;
+        public string Instructor_name;
+
         ExaminationDataSet.getAvailableCoursesForExamDataTable DT;
         ExaminationDataSet.generateExamDataTable DTExam;
+        ExaminationDataSet.getInsForStdCourseDataTable InsDT;
         public SqlConnection sqlCN;
         public SqlDataAdapter DA;
         public SqlCommand sqlCMD;
@@ -32,7 +37,8 @@ namespace Trial
         {
             DT = new ExaminationDataSet.getAvailableCoursesForExamDataTable();
             DTExam = new ExaminationDataSet.generateExamDataTable();
-
+            InsDT = new ExaminationDataSet.getInsForStdCourseDataTable();
+            
             getAvailableCoursesForExamTableAdapter.Fill(DT, Std_id);
             
             cmbAvailableCourses.DataSource = DT;
@@ -43,6 +49,7 @@ namespace Trial
         private void button1_Click(object sender, EventArgs e)
         {
             crs_name = cmbAvailableCourses.Text;
+            
 
             if (crs_name.Length < 1)
             {
@@ -58,14 +65,25 @@ namespace Trial
                 if(dialogResult == DialogResult.Yes)
                 {
                     generateExamTableAdapter1.Fill(DTExam, crs_name, Std_id, ref this.Ex_id);
-
-                    frmExam frmExam = new frmExam(Std_id, Ex_id);
+                    getInsForStdCourseTableAdapter1.Fill(InsDT, Std_id, crs_name);
+                    Instructor_name = InsDT.Rows[0][0].ToString();
+                    frmExam frmExam = new frmExam(Std_id, Ex_id, Std_name, Dept_name, Instructor_name);
                     
 
                     frmExam.ShowDialog();
                     this.Close();
                 }
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

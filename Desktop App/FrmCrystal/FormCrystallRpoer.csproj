@@ -288,6 +288,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ViewExamWithAnswers.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ViewExamWithAnswers.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\ViewInstructorCourses.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ViewInstructorCourses.cs</LastGenOutput>

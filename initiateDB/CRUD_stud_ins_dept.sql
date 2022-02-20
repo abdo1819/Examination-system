@@ -43,23 +43,24 @@ BEGIN
     );
     
     SELECT @usr_id = scope_identity();
+	RETURN 1;
     /* NOTE scope_identity() may give wrong result when queries run in parrallel
     ref:[1]:https://blog.sqlauthority.com/2009/03/24/sql-server-2008-scope_identity-bug-with-multi-processor-parallel-plan-and-solution/
     [2]:https://stackoverflow.com/questions/42648/sql-server-best-way-to-get-identity-of-inserted-row
     */
     END TRY
     BEGIN CATCH
-    
+    RETURN 0;
     -- select ERROR_MESSAGE() 'Error Message'
 	-- , ERROR_NUMBER() 'Error Number'
 	-- , ERROR_LINE () 'Error Line Number'
 	-- , ERROR_SEVERITY () 'Error Severity Level'
 	-- , ERROR_PROCEDURE() 'Error Procedure'
 	-- , ERROR_STATE () 'Error State';
-    IF (ERROR_NUMBER() = 2627)
-        SELECT 'User already exists' as [Error Message];
-    ELSE
-        SELECT ERROR_NUMBER() 'Error Number', ERROR_MESSAGE() 'Error Message';
+    -- IF (ERROR_NUMBER() = 2627)
+        -- SELECT 'User already exists' as [Error Message];
+   --  ELSE
+       -- SELECT ERROR_NUMBER() 'Error Number', ERROR_MESSAGE() 'Error Message';
     END CATCH
 END
 GO
@@ -90,9 +91,10 @@ BEGIN
             @stu_id,
             @dept_id
     );
+	RETURN 1;
     END TRY
     BEGIN CATCH
-        SELECT 'failed to insert student' as [Error Message];
+        RETURN 0;
     END CATCH
 END
 GO
@@ -189,11 +191,24 @@ BEGIN
 END
 GO
 
+/* -------------------------------------------------------------------------- */
+/*         Get User according to E-mail and password (used in login form)     */
+/* -------------------------------------------------------------------------- */
+
+CREATE OR ALTER PROC GetUser @email VARCHAR(90), @password VARCHAR(255)
+AS
+BEGIN
+DECLARE @hashed_password AS VARCHAR(255)
+SELECT @hashed_password = HASHBYTES('SHA2_256', @password+'seed');
+SELECT * 
+FROM [User] U
+WHERE U.email = @email AND @hashed_password = U.hashed_password
+END
+GO
 
 /* -------------------------------------------------------------------------- */
 /*                                Read Student                                */
 /* -------------------------------------------------------------------------- */
-
 
 
 CREATE OR ALTER PROCEDURE getAllStudents
@@ -262,26 +277,40 @@ GO
 /*                              update user data                              */
 /* -------------------------------------------------------------------------- */
 
-CREATE OR ALTER PROCEDURE updateUserData
+-- Fathy Comment Needed to add functionality to update password for desktop application
+
+	CREATE OR ALTER PROCEDURE updateUserData
     @usr_id INTEGER,
     @f_name varChar(50),
     @l_name varChar(50),
     @address varChar(150),
-    @email varChar(90)
+    @email varChar(90),
+    @password VARCHAR(255)
 AS
 BEGIN
+
+    DECLARE @hashed_password varChar(255);
+    SELECT @hashed_password = HASHBYTES('SHA2_256', @password+'seed');
     BEGIN TRY
     UPDATE [User]
     SET
         f_name = @f_name,
         l_name = @l_name,
-        address = @address,
-        email = @email
+        [address] = @address,
+        hashed_password = @hashed_password
     WHERE usr_id = @usr_id;
+		IF NOT EXISTS (SELECT *  FROM [User] U WHERE U.usr_id = @usr_id AND U.email = @email)
+		BEGIN
+			UPDATE [USER]
+			SET
+			email = @email
+			WHERE usr_id = @usr_id
+		END
+		RETURN 1;
     END TRY
     BEGIN CATCH
         -- TODO send specific error message when email is already in database
-        SELECT 'failed to update user' as [Error Message];
+        RETURN 0;
     END CATCH
 END
 
@@ -451,6 +480,15 @@ end
 
 GO
 
+CREATE OR ALTER PROC getInsForStdCourse @std_id int, @crs_name varchar(40)
+AS
+BEGIN
+	select u.f_name+' '+u.l_name as[full_name]
+	from Ins_Course i, Course_Attendance ca, [User] u, Student s, Course c
+	where u.usr_id = i.ins_id and ca.ins_id = i.ins_id and s.std_id = ca.std_id and c.crs_id = ca.crs_id
+			and s.std_id = @std_id and c.crs_name =@crs_name
+END
+GO
 /* -------------------------------------------------------------------------- */
 /*                    Comments to be checked later?           */
 /* -------------------------------------------------------------------------- */

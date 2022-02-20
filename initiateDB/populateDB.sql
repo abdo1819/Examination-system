@@ -36,7 +36,7 @@ EXEC Insert_Department_With_Manager @dept_name = "Accounting",@f_name = "Melli",
 /* ------------------------------------------------------------------------------- */
 
 declare @temp_ins_id int;
-EXEC Insert_Instructor @f_name="Trixie",@l_name="Lysaght",@address="11415 Harbort Junction",@email="tlysaght9@typepad.com",@password="5aggh2Pr57o",@salary=14886.31,@degree="Dental Hygienist",@dept_id=@dept_id6,@ins_id=@temp_ins_id output;
+EXEC Insert_Instructor @f_name="Trixie",@l_name="Lysaght",@address="11415 Harbort Junction",@email="admin",@password="admin",@salary=14886.31,@degree="Dental Hygienist",@dept_id=@dept_id6,@ins_id=@temp_ins_id output;
 EXEC Insert_Instructor @f_name="Alasteir",@l_name="Cassell",@address=null,@email="acassella@wiley.com",@password="O8aznOoZ",@salary=null,@degree=null,@dept_id=@dept_id9,@ins_id=@temp_ins_id output;
 EXEC Insert_Instructor @f_name="Gard",@l_name="MacElroy",@address="50172 Sauthoff Court",@email="gmacelroyb@wunderground.com",@password="uARdwqQq6T",@salary=13262.15,@degree="Help Desk Technician",@dept_id=@dept_id5,@ins_id=@temp_ins_id output;
 EXEC Insert_Instructor @f_name="Darryl",@l_name="Thyer",@address="399 Bobwhite Avenue",@email="dthyerc@loc.gov",@password="7qffhuNxhS",@salary=12296.11,@degree="Teacher",@dept_id=@dept_id1,@ins_id=@temp_ins_id output;
@@ -65,7 +65,7 @@ EXEC Insert_Student @f_name="Fernande",@l_name="Iveagh",@address="80 Esch Alley"
 EXEC Insert_Student @f_name="Shena",@l_name="Alenichev",@address="10829 Farragut Parkway",@email="salenichevt@wsj.com",@password="YD6HTYypp",@dept_id=@dept_id1,@stu_id=@temp_std_id output;
 EXEC Insert_Student @f_name="Ezra",@l_name="di Rocca",@address="0770 Artisan Junction",@email="ediroccau@state.tx.us",@password="j4ZkANghHoa",@dept_id=@dept_id5,@stu_id=@temp_std_id output;
 EXEC Insert_Student @f_name="Jefferey",@l_name="Lamminam",@address="98007 Northfield Hill",@email="jlamminamv@cloudflare.com",@password="oU3zz29lA",@dept_id=@dept_id5,@stu_id=@temp_std_id output;
-EXEC Insert_Student @f_name="Dinnie",@l_name="Lagen",@address="581 Manley Hill",@email="dlagenw@rediff.com",@password="ticPYREiDq",@dept_id=@dept_id5,@stu_id=@temp_std_id output;
+EXEC Insert_Student @f_name="Islam",@l_name="Mahrous",@address="581 Manley Hill",@email="test",@password="test",@dept_id=@dept_id5,@stu_id=@temp_std_id output;
 EXEC Insert_Student @f_name="Florrie",@l_name="Heeney",@address="103 Arrowood Drive",@email="fheeneyx@engadget.com",@password="QMApPBrcgMx",@dept_id=@dept_id9,@stu_id=@temp_std_id output;
 EXEC Insert_Student @f_name="Fredericka",@l_name="McAdam",@address="0 Moulton Hill",@email="fmcadamy@storify.com",@password="gQnd1OVr",@dept_id=@dept_id6,@stu_id=@temp_std_id output;
 EXEC Insert_Student @f_name="Terrel",@l_name="Goldsmith",@address="509 Steensland Lane",@email="tgoldsmithz@pen.io",@password="hHPzD2tj0u",@dept_id=@dept_id5,@stu_id=@temp_std_id output;
@@ -1782,6 +1782,7 @@ execute insertMCQ 13000, 'Which of the following set should be associated with w
 
 
 ---------------------------------- exams --------------------------------- 
+
 declare @exam_id1 int
 declare @exam_id2 int
 declare @exam_id3 int
@@ -1800,3 +1801,11 @@ EXEC answerExam 29 , @exam_id2 , "b" , "c" , "a" , "d" , "d" ,
 
 EXEC answerExam 32 , @exam_id3 , "d" , "c" , "a" , "b" , "d" ,
 							 	 "c" , "b" , "d" , "a" , "c"
+
+
+
+execute Student_Take_course_with_Instructor 33, 1000, 20
+
+execute Student_Take_course_with_Instructor 33, 1200, 5
+
+execute Student_Take_course_with_Instructor 33, 1400, 17
