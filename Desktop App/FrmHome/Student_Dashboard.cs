@@ -39,9 +39,7 @@ namespace FrmHome
             base.OnPaint(e);
         }
         protected override void OnLoad(EventArgs e)
-        {
-            frmLogin.Ctx.Department.Load();
-            frmLogin.Ctx.Student.Load();
+        {          
             string Dept = (from D in frmLogin.Ctx.Department
                            join S in frmLogin.Ctx.Student on D.dept_id equals S.dept_id
                            select D.dept_name).FirstOrDefault();

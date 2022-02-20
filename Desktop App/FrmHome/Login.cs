@@ -28,7 +28,7 @@ namespace FrmHome
         protected override void OnLoad(EventArgs e)
         {
             panel1.Left = (panel1.Parent.Width - panel1.Width) / 2;
-            panel1.Top = (panel1.Parent.Height - panel1.Height) / 2;
+            panel1.Top = ((panel1.Parent.Height - panel1.Height) / 2) + 50;
             base.OnLoad(e);
         }
     
@@ -37,7 +37,7 @@ namespace FrmHome
             var str = "Welcome to ITI Examination System";
             var font = new Font(FontFamily.GenericSansSerif, 25f, FontStyle.Bold);
             var strSize = e.Graphics.MeasureString(str, font );
-            e.Graphics.DrawString(str, font, Brushes.DarkRed, (this.ClientSize.Width - strSize.Width) / 2, 120);
+            e.Graphics.DrawString(str, font, Brushes.DarkRed, (this.ClientSize.Width - strSize.Width) / 2, 150);
             base.OnPaint(e);
         }
 
@@ -55,10 +55,9 @@ namespace FrmHome
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
-            Ctx.User.Load();
-
+            
             var users = await Procedures.GetUserAsync(txtEmail.Text, txtPassword.Text, new OutputParameter<int>());
-
+            
             if (users.Count == 0)
                 MessageBox.Show("Incorrect E-mail or password, please try again", "Error",
                                     MessageBoxButtons.OK,
@@ -66,6 +65,7 @@ namespace FrmHome
             else
             {
                 userInfo = users[0];
+                //Trace.WriteLine(Encoding.ASCII.GetBytes(userInfo.hashed_password).);
                 MessageBox.Show($"Welcome {userInfo.f_name}", "Success",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);

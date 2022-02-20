@@ -21,8 +21,7 @@ namespace FrmHome
             InitializeComponent();
             this.Resize += (sender, e) => Invalidate();
             frmLogin = _frmLogin;
-            frmLogin.Ctx.Student.Load();
-            var Depts = frmLogin.Ctx.Department.ToList();
+            var Depts = frmLogin.Ctx.Department.Select(d => new { d.dept_id, d.dept_name }).ToList();
             comboDepts.DataSource = Depts;
             comboDepts.DisplayMember = "dept_name";
             comboDepts.ValueMember = "dept_id";
