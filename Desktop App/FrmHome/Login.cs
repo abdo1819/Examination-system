@@ -27,18 +27,13 @@ namespace FrmHome
         }
         protected override void OnLoad(EventArgs e)
         {
-            panel1.Left = (panel1.Parent.Width - panel1.Width) / 2;
-            panel1.Top = ((panel1.Parent.Height - panel1.Height) / 2) + 50;
+            
             base.OnLoad(e);
         }
     
         protected override void OnPaint(PaintEventArgs e)
         {
-            var str = "Welcome to ITI Examination System";
-            var font = new Font(FontFamily.GenericSansSerif, 25f, FontStyle.Bold);
-            var strSize = e.Graphics.MeasureString(str, font );
-            e.Graphics.DrawString(str, font, Brushes.DarkRed, (this.ClientSize.Width - strSize.Width) / 2, 150);
-            base.OnPaint(e);
+           
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -99,6 +94,31 @@ namespace FrmHome
         private void button2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private bool dragging = false;
+        private Point dragCursorPoint;
+        private Point dragFormPoint;
+
+        private void Login_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            dragCursorPoint = Cursor.Position;
+            dragFormPoint = this.Location;
+        }
+
+        private void Login_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point dif = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
+                this.Location = Point.Add(dragFormPoint, new Size(dif));
+            }
+        }
+
+        private void Login_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
         }
     }
 }
