@@ -278,9 +278,8 @@ namespace Trial
 
         private void frmExam_SizeChanged(object sender, EventArgs e)
         {
-            CenterControlInParent(groupBox3);
             CenterControlInParent(groupBox4);
-
+            CenterControlInParent(groupBox5);
         }
         private void CenterControlInParent(Control ctrlToCenter)
         {
