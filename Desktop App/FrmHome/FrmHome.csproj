@@ -317,11 +317,6 @@
     <Compile Include="Entities\viewTopicTFQResult.cs" />
     <Compile Include="Entities\v_Instructor.cs" />
     <Compile Include="Entities\v_Students.cs" />
-    <Compile Include="ExaminationDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ExaminationDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Admin_Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -397,17 +392,6 @@
       <DependentUpon>Student_ViewGrades.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="efpt.config.json" />
-    <None Include="ExaminationDataSet.xsc">
-      <DependentUpon>ExaminationDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ExaminationDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ExaminationDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ExaminationDataSet.xss">
-      <DependentUpon>ExaminationDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
