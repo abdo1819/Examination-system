@@ -14,29 +14,42 @@ namespace FrmHome
     public partial class Admin_Dashboard : Form
     {
         private readonly Login frmLogin;
+        public string Dept { get; set; }
+        public string UsrID { get; set; }
+        public string EmpName { get; set; }
+        public string Email { get; set; }
+        public string Address { get; set; }
+        public string DeptID { get; set; }
         public Admin_Dashboard(Login _frmLogin)
         {
             InitializeComponent();
             frmLogin = _frmLogin;
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            frmLogin.Close();
+            if (frmLogin.IsDisposed == false)
+                e.Cancel = true;
+        }
         public void UpdateUserInfo(string Dept, string UsrID, string Name, string Email, string Address)
         {
             lblDept.Text = Dept;
             lblStdID.Text = UsrID;
-            lblName.Text = Name;
+            lblName.Text = EmpName;
             lblEmail.Text = Email;
             lblAddress.Text = Address;
             lblDept.Text = Dept;
+            DeptID = Dept;
         }
         protected override void OnLoad(EventArgs e)
         {
-            string Dept = (from D in frmLogin.Ctx.Department
+            Dept = (from D in frmLogin.Ctx.Department
                            join S in frmLogin.Ctx.Student on D.dept_id equals S.dept_id
                            select D.dept_name).FirstOrDefault();
-            string UsrID = $"{frmLogin.userInfo.usr_id}";
-            string Name = $"{frmLogin.userInfo.f_name} {frmLogin.userInfo.l_name}";
-            string Email = $"{frmLogin.userInfo.email}";
-            string Address = $"{frmLogin.userInfo.address}";
+            UsrID = $"{frmLogin.userInfo.usr_id}";
+            EmpName = $"{frmLogin.userInfo.f_name} {frmLogin.userInfo.l_name}";
+            Email = $"{frmLogin.userInfo.email}";
+            Address = $"{frmLogin.userInfo.address}";
             UpdateUserInfo(Dept, UsrID, Name, Email, Address);
             base.OnLoad(e);
         }
@@ -58,14 +71,16 @@ namespace FrmHome
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            reportsForm frmReports = new reportsForm();
+            ReportsForm.reportsForm frmReports = new reportsForm();
             frmReports.ShowDialog();
             // There is an issue with opening this form
         }
 
         private void btnCourses_Click(object sender, EventArgs e)
         {
-
+            Admin_ManageCourses frmManageCourses = new Admin_ManageCourses(frmLogin, this);
+            frmManageCourses.Show();
+            this.Hide();
         }
     }
 }

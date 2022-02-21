@@ -475,7 +475,7 @@ CREATE OR ALTER PROC viewTopicMCQ @top_name varchar(200)
 AS
 BEGIN
 	IF NOT EXISTS(select top_id from Topic where top_name = @top_name)
-		SELECT 'Topic not found'
+		RETURN 0;
 	ELSE
 	BEGIN
 		Select q.q_id AS QID,
@@ -489,6 +489,7 @@ BEGIN
 		q.corr_answer AS [Correct Answer]
 		from Question q, MCQ m, Topic t, Course c
 		where q.q_id = m.q_id and t.top_id = q.top_id and c.crs_id = t.crs_id and t.top_name = @top_name
+		RETURN 1;
 	END
 END
 GO
@@ -501,7 +502,7 @@ CREATE OR ALTER PROC viewTopicTFQ @top_name varchar(200)
 AS
 BEGIN
 	IF NOT EXISTS(select top_id from Topic where top_name = @top_name)
-		SELECT 'Topic not found'
+		RETURN 0;
 	ELSE
 	BEGIN
 		Select q.q_id AS QID,
@@ -511,6 +512,7 @@ BEGIN
 		q.corr_answer AS [Correct Answer]
 		from Question q, Topic t, Course c
 		where t.top_id = q.top_id and c.crs_id = t.crs_id and t.top_name = @top_name and q.q_type = 'TF';
+		RETURN 1;
 	END
 END
 GO

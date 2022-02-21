@@ -47,10 +47,10 @@ namespace FrmHome
             modelBuilder.Entity<Course>(entity =>
             {
                 entity.HasKey(e => e.crs_id)
-                    .HasName("PK__Course__ECAF5375746860D8");
+                    .HasName("PK__Course__ECAF5375C992DD2E");
 
                 entity.HasIndex(e => e.crs_name)
-                    .HasName("UQ__Course__775BF42761524E02")
+                    .HasName("UQ__Course__775BF427FE3B898B")
                     .IsUnique();
 
                 entity.Property(e => e.crs_name).IsUnicode(false);
@@ -59,34 +59,34 @@ namespace FrmHome
             modelBuilder.Entity<Course_Attendance>(entity =>
             {
                 entity.HasKey(e => new { e.crs_id, e.std_id, e.ins_id })
-                    .HasName("PK__Course_A__7D83C003EA09893F");
+                    .HasName("PK__Course_A__7D83C003535CF486");
 
                 entity.Property(e => e.grade).HasComputedColumnSql("([dbo].[getStudentGrade]([crs_id],[std_id]))");
 
                 entity.HasOne(d => d.crs_)
                     .WithMany(p => p.Course_Attendances)
                     .HasForeignKey(d => d.crs_id)
-                    .HasConstraintName("FK__Course_At__crs_i__666B225D");
+                    .HasConstraintName("FK__Course_At__crs_i__456A2145");
 
                 entity.HasOne(d => d.ins_)
                     .WithMany(p => p.Course_Attendances)
                     .HasForeignKey(d => d.ins_id)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Course_At__ins_i__68536ACF");
+                    .HasConstraintName("FK__Course_At__ins_i__475269B7");
 
                 entity.HasOne(d => d.std_)
                     .WithMany(p => p.Course_Attendances)
                     .HasForeignKey(d => d.std_id)
-                    .HasConstraintName("FK__Course_At__std_i__675F4696");
+                    .HasConstraintName("FK__Course_At__std_i__465E457E");
             });
 
             modelBuilder.Entity<Department>(entity =>
             {
                 entity.HasKey(e => e.dept_id)
-                    .HasName("PK__Departme__DCA65974B1E11817");
+                    .HasName("PK__Departme__DCA6597496515059");
 
                 entity.HasIndex(e => e.dept_name)
-                    .HasName("UQ__Departme__C7D39AE17FDDD08F")
+                    .HasName("UQ__Departme__C7D39AE1B463FEAC")
                     .IsUnique();
 
                 entity.Property(e => e.dept_name).IsUnicode(false);
@@ -95,13 +95,13 @@ namespace FrmHome
                     .WithMany(p => p.Departments)
                     .HasForeignKey(d => d.mgr_id)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Departmen__mgr_i__70E8B0D0");
+                    .HasConstraintName("FK__Departmen__mgr_i__4FE7AFB8");
             });
 
             modelBuilder.Entity<Exam>(entity =>
             {
                 entity.HasKey(e => e.ex_id)
-                    .HasName("PK__Exam__F6D3E489B059F567");
+                    .HasName("PK__Exam__F6D3E4897CBDCC4A");
 
                 entity.Property(e => e.date).HasDefaultValueSql("(getdate())");
 
@@ -109,22 +109,22 @@ namespace FrmHome
                     .WithMany(p => p.Exams)
                     .HasForeignKey(d => d.crs_id)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Exam__crs_id__7A721B0A");
+                    .HasConstraintName("FK__Exam__crs_id__597119F2");
             });
 
             modelBuilder.Entity<Exam_Answer>(entity =>
             {
                 entity.HasKey(e => new { e.std_id, e.ex_id, e.q_id })
-                    .HasName("PK__Exam_Ans__95522241B53BBFC8");
+                    .HasName("PK__Exam_Ans__955222416F2D5E83");
 
                 entity.Property(e => e.std_answer).IsUnicode(false);
 
-                entity.Property(e => e.std_mark).HasComputedColumnSql("([dbo].[getQuestionMark]([q_id]))");
+                entity.Property(e => e.std_mark).HasComputedColumnSql("([dbo].[getQuestionMark]([q_id],[ex_id]))");
 
                 entity.HasOne(d => d.ex_)
                     .WithMany(p => p.Exam_Answers)
                     .HasForeignKey(d => d.ex_id)
-                    .HasConstraintName("FK__Exam_Answ__ex_id__011F1899");
+                    .HasConstraintName("FK__Exam_Answ__ex_id__601E1781");
 
                 entity.HasOne(d => d.q_)
                     .WithMany(p => p.Exam_Answers)
@@ -135,19 +135,19 @@ namespace FrmHome
                 entity.HasOne(d => d.std_)
                     .WithMany(p => p.Exam_Answers)
                     .HasForeignKey(d => d.std_id)
-                    .HasConstraintName("FK__Exam_Answ__std_i__002AF460");
+                    .HasConstraintName("FK__Exam_Answ__std_i__5F29F348");
             });
 
             modelBuilder.Entity<Exam_Question>(entity =>
             {
                 entity.HasKey(e => new { e.ex_id, e.q_id })
-                    .HasName("PK__Exam_Que__E5067FB831771416");
+                    .HasName("PK__Exam_Que__E5067FB882A51AFA");
 
                 entity.HasOne(d => d.ex_)
                     .WithMany(p => p.Exam_Questions)
                     .HasForeignKey(d => d.ex_id)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Exam_Ques__ex_id__7D4E87B5");
+                    .HasConstraintName("FK__Exam_Ques__ex_id__5C4D869D");
 
                 entity.HasOne(d => d.q_)
                     .WithMany(p => p.Exam_Questions)
@@ -164,18 +164,18 @@ namespace FrmHome
                 entity.HasOne(d => d.crs_)
                     .WithMany(p => p.Ins_Courses)
                     .HasForeignKey(d => d.crs_id)
-                    .HasConstraintName("FK__Ins_Cours__crs_i__6B2FD77A");
+                    .HasConstraintName("FK__Ins_Cours__crs_i__4A2ED662");
 
                 entity.HasOne(d => d.ins_)
                     .WithMany(p => p.Ins_Courses)
                     .HasForeignKey(d => d.ins_id)
-                    .HasConstraintName("FK__Ins_Cours__ins_i__6C23FBB3");
+                    .HasConstraintName("FK__Ins_Cours__ins_i__4B22FA9B");
             });
 
             modelBuilder.Entity<Instructor>(entity =>
             {
                 entity.HasKey(e => e.ins_id)
-                    .HasName("PK__Instruct__9CB72D2091D5ACC1");
+                    .HasName("PK__Instruct__9CB72D20B905F7A6");
 
                 entity.Property(e => e.ins_id).ValueGeneratedNever();
 
@@ -192,13 +192,13 @@ namespace FrmHome
                 entity.HasOne(d => d.ins_)
                     .WithOne(p => p.Instructor)
                     .HasForeignKey<Instructor>(d => d.ins_id)
-                    .HasConstraintName("FK__Instructo__ins_i__60B24907");
+                    .HasConstraintName("FK__Instructo__ins_i__3FB147EF");
             });
 
             modelBuilder.Entity<MCQ>(entity =>
             {
                 entity.HasKey(e => e.q_id)
-                    .HasName("PK__MCQ__3D59B310AFE17D6D");
+                    .HasName("PK__MCQ__3D59B310CF63646A");
 
                 entity.Property(e => e.q_id).ValueGeneratedNever();
 
@@ -213,13 +213,13 @@ namespace FrmHome
                 entity.HasOne(d => d.q_)
                     .WithOne(p => p.MCQ)
                     .HasForeignKey<MCQ>(d => d.q_id)
-                    .HasConstraintName("FK__MCQ__q_id__0B9CA70C");
+                    .HasConstraintName("FK__MCQ__q_id__6A9BA5F4");
             });
 
             modelBuilder.Entity<Question>(entity =>
             {
                 entity.HasKey(e => e.q_id)
-                    .HasName("PK__Question__3D59B31056ECBA14");
+                    .HasName("PK__Question__3D59B31040796FA9");
 
                 entity.Property(e => e.corr_answer).IsUnicode(false);
 
@@ -230,13 +230,13 @@ namespace FrmHome
                 entity.HasOne(d => d.top_)
                     .WithMany(p => p.Questions)
                     .HasForeignKey(d => d.top_id)
-                    .HasConstraintName("FK__Question__top_id__04EFA97D");
+                    .HasConstraintName("FK__Question__top_id__63EEA865");
             });
 
             modelBuilder.Entity<Student>(entity =>
             {
                 entity.HasKey(e => e.std_id)
-                    .HasName("PK__Student__0B0245BA78D2D886");
+                    .HasName("PK__Student__0B0245BA41C789B7");
 
                 entity.Property(e => e.std_id).ValueGeneratedNever();
 
@@ -249,16 +249,16 @@ namespace FrmHome
                 entity.HasOne(d => d.std_)
                     .WithOne(p => p.Student)
                     .HasForeignKey<Student>(d => d.std_id)
-                    .HasConstraintName("FK__Student__std_id__5CE1B823");
+                    .HasConstraintName("FK__Student__std_id__3BE0B70B");
             });
 
             modelBuilder.Entity<Topic>(entity =>
             {
                 entity.HasKey(e => e.top_id)
-                    .HasName("PK__Topic__B582A63D7383152C");
+                    .HasName("PK__Topic__B582A63DE9553A0C");
 
                 entity.HasIndex(e => e.top_name)
-                    .HasName("UQ__Topic__A87EDAD6923193FF")
+                    .HasName("UQ__Topic__A87EDAD63993765A")
                     .IsUnique();
 
                 entity.Property(e => e.top_name).IsUnicode(false);
@@ -266,16 +266,16 @@ namespace FrmHome
                 entity.HasOne(d => d.crs_)
                     .WithMany(p => p.Topics)
                     .HasForeignKey(d => d.crs_id)
-                    .HasConstraintName("FK__Topic__crs_id__76A18A26");
+                    .HasConstraintName("FK__Topic__crs_id__55A0890E");
             });
 
             modelBuilder.Entity<User>(entity =>
             {
                 entity.HasKey(e => e.usr_id)
-                    .HasName("PK__User__60621ABC8AAD2FF5");
+                    .HasName("PK__User__60621ABCAEDF4C91");
 
                 entity.HasIndex(e => e.email)
-                    .HasName("UQ__User__AB6E6164A3D7DAB5")
+                    .HasName("UQ__User__AB6E61640B323CF4")
                     .IsUnique();
 
                 entity.Property(e => e.address).IsUnicode(false);

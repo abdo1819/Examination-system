@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FrmHome;
 
-namespace ReportsForm
+namespace FrmHome
 {
     static class Program
     {

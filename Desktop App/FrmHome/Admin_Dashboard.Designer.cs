@@ -123,7 +123,7 @@ namespace FrmHome
             this.groupInfo.ForeColor = System.Drawing.Color.DarkRed;
             this.groupInfo.Location = new System.Drawing.Point(12, 40);
             this.groupInfo.Name = "groupInfo";
-            this.groupInfo.Size = new System.Drawing.Size(312, 353);
+            this.groupInfo.Size = new System.Drawing.Size(358, 362);
             this.groupInfo.TabIndex = 21;
             this.groupInfo.TabStop = false;
             this.groupInfo.Text = "Instructor Information";
