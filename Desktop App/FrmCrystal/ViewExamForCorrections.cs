@@ -19,23 +19,15 @@ namespace ReportsForm
         }
         private ExaminationDataSetTableAdapters.GetAllExamAnswersTableAdapter getAllExamStudents;
         private ExaminationDataSet.GetAllExamAnswersDataTable examsStudetns;
-        
 
-        private Reports.CrystalReport1 report;
+        public int Exam_id { get; set;}
+        public int Student_id { get; set; }
+        private Reports.ViewExamWithAnswers report;
         private void ViewExamForCorrections_Load(object sender, EventArgs e)
         {
-            
-
-
-            //TODO show a dialog to select the student and his exam
-            getAllExamStudents = new ExaminationDataSetTableAdapters.GetAllExamAnswersTableAdapter();
-            examsStudetns = new ExaminationDataSet.GetAllExamAnswersDataTable();
-            getAllExamStudents.Fill(examsStudetns);
-                        
-
-            report = new ReportsForm.Reports.CrystalReport1();
-            report.SetParameterValue("@stduent_id", 26); 
-            report.SetParameterValue("@exam_id", 10);
+            report = new Reports.ViewExamWithAnswers();
+            report.SetParameterValue("@stduent_id", Student_id); 
+            report.SetParameterValue("@exam_id", Exam_id);
 
             crystalReportViewer1.ReportSource = report;
         }

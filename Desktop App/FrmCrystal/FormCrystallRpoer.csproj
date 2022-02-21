@@ -193,6 +193,12 @@
     <Compile Include="customSelectionUserExam.Designer.cs">
       <DependentUpon>customSelectionUserExam.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\ViewExamWithAnswers.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewExamWithAnswers.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ViewExamForCorrections.cs">
       <SubType>Form</SubType>
     </Compile>
