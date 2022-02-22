@@ -61,7 +61,9 @@ namespace FrmHome
             modelBuilder.Entity<getAvailableCoursesForExamResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<getDepartmentResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<getDeptDataResult>().HasNoKey().ToView(null);
+            modelBuilder.Entity<getInsForStdCourseResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<getInstructorsInDepartmentResult>().HasNoKey().ToView(null);
+            modelBuilder.Entity<getQuestionAndStudentAnswerResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<getStudentAnswerResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<getStudentsInDepartmentResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<GetUserResult>().HasNoKey().ToView(null);
@@ -126,7 +128,9 @@ namespace FrmHome
         Task<List<getAvailableCoursesForExamResult>> getAvailableCoursesForExamAsync(int? std_id, CancellationToken cancellationToken = default);
         Task<List<getDepartmentResult>> getDepartmentAsync(int? dept_id, CancellationToken cancellationToken = default);
         Task<List<getDeptDataResult>> getDeptDataAsync(int? dept_id, CancellationToken cancellationToken = default);
+        Task<List<getInsForStdCourseResult>> getInsForStdCourseAsync(int? std_id, string crs_name, CancellationToken cancellationToken = default);
         Task<List<getInstructorsInDepartmentResult>> getInstructorsInDepartmentAsync(int? dept_id, CancellationToken cancellationToken = default);
+        Task<List<getQuestionAndStudentAnswerResult>> getQuestionAndStudentAnswerAsync(int? ex_id, CancellationToken cancellationToken = default);
         Task<List<getStudentAnswerResult>> getStudentAnswerAsync(int? exam_id, int? stduent_id, CancellationToken cancellationToken = default);
         Task<List<getStudentsInDepartmentResult>> getStudentsInDepartmentAsync(int? dept_id, CancellationToken cancellationToken = default);
         Task<List<GetUserResult>> GetUserAsync(string email, string password, CancellationToken cancellationToken = default);
@@ -1009,6 +1013,39 @@ namespace FrmHome
             return _;
         }
 
+        public virtual async Task<List<getInsForStdCourseResult>> getInsForStdCourseAsync(int? std_id, string crs_name, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        {
+            var parameterreturnValue = new SqlParameter
+            {
+                ParameterName = "returnValue",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+
+            var sqlParameters = new []
+            {
+                new SqlParameter
+                {
+                    ParameterName = "std_id",
+                    Value = std_id ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "crs_name",
+                    Size = 40,
+                    Value = crs_name ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                parameterreturnValue,
+            };
+            var _ = await _context.SqlQueryAsync<getInsForStdCourseResult>("EXEC @returnValue = [dbo].[getInsForStdCourse] @std_id, @crs_name", sqlParameters, cancellationToken);
+
+            returnValue?.SetValue(parameterreturnValue.Value);
+
+            return _;
+        }
+
         public virtual async Task<List<getInstructorsInDepartmentResult>> getInstructorsInDepartmentAsync(int? dept_id, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterreturnValue = new SqlParameter
@@ -1029,6 +1066,32 @@ namespace FrmHome
                 parameterreturnValue,
             };
             var _ = await _context.SqlQueryAsync<getInstructorsInDepartmentResult>("EXEC @returnValue = [dbo].[getInstructorsInDepartment] @dept_id", sqlParameters, cancellationToken);
+
+            returnValue?.SetValue(parameterreturnValue.Value);
+
+            return _;
+        }
+
+        public virtual async Task<List<getQuestionAndStudentAnswerResult>> getQuestionAndStudentAnswerAsync(int? ex_id, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        {
+            var parameterreturnValue = new SqlParameter
+            {
+                ParameterName = "returnValue",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+
+            var sqlParameters = new []
+            {
+                new SqlParameter
+                {
+                    ParameterName = "ex_id",
+                    Value = ex_id ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                parameterreturnValue,
+            };
+            var _ = await _context.SqlQueryAsync<getQuestionAndStudentAnswerResult>("EXEC @returnValue = [dbo].[getQuestionAndStudentAnswer] @ex_id", sqlParameters, cancellationToken);
 
             returnValue?.SetValue(parameterreturnValue.Value);
 

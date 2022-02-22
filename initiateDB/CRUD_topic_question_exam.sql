@@ -475,7 +475,7 @@ CREATE OR ALTER PROC viewTopicMCQ @top_name varchar(200)
 AS
 BEGIN
 	IF NOT EXISTS(select top_id from Topic where top_name = @top_name)
-		SELECT 'Topic not found'
+		RETURN 0;
 	ELSE
 	BEGIN
 		Select q.q_id AS QID,
@@ -489,6 +489,7 @@ BEGIN
 		q.corr_answer AS [Correct Answer]
 		from Question q, MCQ m, Topic t, Course c
 		where q.q_id = m.q_id and t.top_id = q.top_id and c.crs_id = t.crs_id and t.top_name = @top_name
+		RETURN 1;
 	END
 END
 GO
@@ -501,7 +502,7 @@ CREATE OR ALTER PROC viewTopicTFQ @top_name varchar(200)
 AS
 BEGIN
 	IF NOT EXISTS(select top_id from Topic where top_name = @top_name)
-		SELECT 'Topic not found'
+		RETURN 0;
 	ELSE
 	BEGIN
 		Select q.q_id AS QID,
@@ -511,6 +512,7 @@ BEGIN
 		q.corr_answer AS [Correct Answer]
 		from Question q, Topic t, Course c
 		where t.top_id = q.top_id and c.crs_id = t.crs_id and t.top_name = @top_name and q.q_type = 'TF';
+		RETURN 1;
 	END
 END
 GO
@@ -879,3 +881,39 @@ BEGIN
 END
 
 go
+
+CREATE OR ALTER FUNCTION getStudentsWhoSolvedExams ()
+RETURNS TABLE 
+RETURN
+	SELECT distinct s.usr_id , f_name, l_name ,dept_id,dept_name from exam_answer ea
+	inner JOIN v_Students s
+	on ea.std_id = s.usr_id
+	where std_answer is not null
+GO
+
+CREATE OR ALTER FUNCTION getSolvedExamsForStudents (@std_id int)
+RETURNS TABLE
+RETURN
+	SELECT distinct ex_id from exam_answer where std_id = @std_id
+GO
+
+create OR ALTER   PROC [dbo].[getAvailableCoursesForExam] @std_id int
+AS
+    BEGIN
+        select c.crs_name
+        from Course c, Course_Attendance ca, Student s
+        where c.crs_id = ca.crs_id and ca.std_id = s.std_id and s.std_id = @std_id
+        EXCEPT
+		select c.crs_name
+		from Course c
+		INNER JOIN Course_Attendance ca
+		ON c.crs_id = ca.crs_id
+		INNER JOIN Student s
+		ON ca.std_id = s.std_id
+		INNER JOIN Exam e
+		ON c.crs_id = e.crs_id 
+		and e.ex_id in (select ex_id from getSolvedExamsForStudents(@std_id))
+		where s.std_id = @std_id
+	END
+	
+GO

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FrmHome.Reports {
+namespace ReportsForm.Reports {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace FrmHome.Reports {
         
         public override string FullResourceName {
             get {
-                return "FrmHome.Reports.ViewExamWithAnswers.rpt";
+                return "ReportsForm.Reports.ViewExamWithAnswers.rpt";
             }
             set {
                 // Do nothing
@@ -122,7 +122,7 @@ namespace FrmHome.Reports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_ex_id {
+        public CrystalDecisions.Shared.IParameterField Parameter_exam_id {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }
@@ -130,25 +130,9 @@ namespace FrmHome.Reports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_exam_id {
-            get {
-                return this.DataDefinition.ParameterFields[1];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public CrystalDecisions.Shared.IParameterField Parameter_stduent_id {
             get {
-                return this.DataDefinition.ParameterFields[2];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_My_Parameter {
-            get {
-                return this.DataDefinition.ParameterFields[3];
+                return this.DataDefinition.ParameterFields[1];
             }
         }
     }

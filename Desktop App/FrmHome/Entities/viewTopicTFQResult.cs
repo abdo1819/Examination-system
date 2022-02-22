@@ -7,5 +7,11 @@ namespace FrmHome.Entities
 {
     public partial class viewTopicTFQResult
     {
+        public int QID { get; set; }
+        public string Course { get; set; }
+        public string Topic { get; set; }
+        public string Question { get; set; }
+        [Column("Correct Answer")]
+        public string CorrectAnswer { get; set; }
     }
 }

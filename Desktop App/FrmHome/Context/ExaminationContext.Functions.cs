@@ -11,7 +11,7 @@ namespace FrmHome
     {
 
         [DbFunction("getQuestionMark", "dbo")]
-        public static int? getQuestionMark(int? q_id)
+        public static int? getQuestionMark(int? q_id, int? ex_id)
         {
             throw new NotSupportedException("This method can only be called from Entity Framework Core queries");
         }

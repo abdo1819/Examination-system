@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FrmHome.Reports {
+namespace ReportsForm.Reports {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace FrmHome.Reports {
         
         public override string FullResourceName {
             get {
-                return "FrmHome.Reports.viewStudentInDepartment.rpt";
+                return "ReportsForm.Reports.viewStudentInDepartment.rpt";
             }
             set {
                 // Do nothing

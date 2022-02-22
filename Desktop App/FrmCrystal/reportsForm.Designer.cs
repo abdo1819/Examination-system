@@ -1,7 +1,7 @@
 ﻿
-namespace FrmHome
+namespace ReportsForm
 {
-    partial class Form1
+    partial class reportsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,8 +30,8 @@ namespace FrmHome
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.getAllStudentsTableAdapter1 = new FrmHome.ExaminationDataSetTableAdapters.getAllStudentsTableAdapter();
-            this.insert_StudentTableAdapter1 = new FrmHome.ExaminationDataSetTableAdapters.Insert_StudentTableAdapter();
+            this.getAllStudentsTableAdapter1 = new ReportsForm.ExaminationDataSetTableAdapters.getAllStudentsTableAdapter();
+            this.insert_StudentTableAdapter1 = new ReportsForm.ExaminationDataSetTableAdapters.Insert_StudentTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
