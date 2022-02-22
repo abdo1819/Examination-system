@@ -82,5 +82,17 @@ namespace FrmHome
             frmManageCourses.Show();
             this.Hide();
         }
+
+        private void btnQuestions_Click(object sender, EventArgs e)
+        {
+            var frm = new frmManageQuestions();
+            frm.Show();
+        }
+
+        private void btnDepts_Click(object sender, EventArgs e)
+        {
+            var frm = new frmDept();
+            frm.Show();
+        }
     }
 }

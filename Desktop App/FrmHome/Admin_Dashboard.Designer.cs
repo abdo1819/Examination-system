@@ -67,6 +67,7 @@ namespace FrmHome
             this.btnQuestions.TabIndex = 1;
             this.btnQuestions.Text = "Manage Questions";
             this.btnQuestions.UseVisualStyleBackColor = true;
+            this.btnQuestions.Click += new System.EventHandler(this.btnQuestions_Click);
             // 
             // btnReport
             // 
@@ -105,6 +106,7 @@ namespace FrmHome
             this.btnDepts.TabIndex = 5;
             this.btnDepts.Text = "Manage Departments";
             this.btnDepts.UseVisualStyleBackColor = true;
+            this.btnDepts.Click += new System.EventHandler(this.btnDepts_Click);
             // 
             // groupInfo
             // 
