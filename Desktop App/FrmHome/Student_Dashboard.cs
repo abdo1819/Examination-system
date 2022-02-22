@@ -32,11 +32,6 @@ namespace FrmHome
         }
         protected override void OnPaint(PaintEventArgs e)
         {
-            var str = "Student Dashboard";
-            var font = new Font(FontFamily.GenericSansSerif, 25f, FontStyle.Bold);
-            var strSize = e.Graphics.MeasureString(str, font);
-            e.Graphics.DrawString(str, font, Brushes.DarkRed, (this.ClientSize.Width - strSize.Width) / 2,120);
-            base.OnPaint(e);
         }
         protected override void OnLoad(EventArgs e)
         {          

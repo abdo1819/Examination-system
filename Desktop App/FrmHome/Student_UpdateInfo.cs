@@ -23,14 +23,6 @@ namespace FrmHome
             frmLogin = _frmLogin;
             frmStdDashboard = _frmStd;
         }
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            var str = "Update your information in the fields below";
-            var font = new Font(FontFamily.GenericSansSerif, 10f, FontStyle.Bold);
-            var strSize = e.Graphics.MeasureString(str, font);
-            e.Graphics.DrawString(str, font, Brushes.DarkBlue, (this.ClientSize.Width - strSize.Width) / 2, 20);
-            base.OnPaint(e);
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {     
@@ -59,6 +51,6 @@ namespace FrmHome
             }
         }
 
-
+    
     }
 }

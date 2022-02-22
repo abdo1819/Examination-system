@@ -25,11 +25,7 @@ namespace FrmHome
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            var str = "View your Grades";
-            var font = new Font(FontFamily.GenericSansSerif, 10f, FontStyle.Bold);
-            var strSize = e.Graphics.MeasureString(str, font);
-            e.Graphics.DrawString(str, font, Brushes.DarkBlue, (this.ClientSize.Width - strSize.Width) / 2, 20);
-            base.OnPaint(e);
+            
         }
   
         private void btnBack_Click(object sender, EventArgs e)
@@ -82,7 +78,14 @@ namespace FrmHome
                            .Where(g => g.grade != null).Where(s => s.std_id == frmLogin.userInfo.usr_id).ToList();
 
             lblStdGradeValue.Text = $"{Courses[comboBoxCourses.SelectedIndex]?.grade.ToString()} / 10";
-            lblStdGrade.Text = $"Your grade in {Courses[comboBoxCourses.SelectedIndex].crs_name} :";
+            if (Courses[comboBoxCourses.SelectedIndex]?.grade >= 5)
+            {
+                lblStdGradeValue.ForeColor = Color.SeaGreen;
+            }
+            else
+            {
+                lblStdGradeValue.ForeColor = Color.Red;
+            }
 
         }
         

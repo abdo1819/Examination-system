@@ -120,5 +120,10 @@ namespace FrmHome
         {
             dragging = false;
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
