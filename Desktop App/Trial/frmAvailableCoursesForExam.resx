@@ -123,6 +123,25 @@
   <metadata name="generateExamTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>343, 14</value>
   </metadata>
+  <metadata name="getInsForStdCourseTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>552, 14</value>
+  </metadata>
+  <data name="label2.Text" xml:space="preserve">
+    <value>① The exam consists of 10 questions and you should answer 
+      all of them!
+
+② You can only take one exam per course
+
+③ Once you started the exam, you are not allowed to switch 
+      to another window or close it! If you did so your exam is 
+      cancelled and you will fail this course
+
+④ You are allowed to use paper and pencil, nothing more!
+
+⑤ The exam duration is 30 minutes, keep an eye on the timer.
+
+⑥ Feel free to ask for your course instructor calrifications.</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1012,25 +1031,6 @@
         WzeuDX/TQujm3R10P0gI7c37f+j/B5Srtb9B+JMrAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>① The exam consists of 10 questions and you should answer 
-      all of them!
-
-② You can only take one exam per course
-
-③ Once you started the exam, you are not allowed to switch 
-      to another window or close it! If you did so your exam is 
-      cancelled and you will fail this course
-
-④ You are allowed to use paper and pencil, nothing more!
-
-⑤ The exam duration is 30 minutes, keep an eye on the timer.
-
-⑥ Feel free to ask for your course instructor calrifications.</value>
-  </data>
-  <metadata name="getInsForStdCourseTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>552, 14</value>
-  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>77</value>
   </metadata>
