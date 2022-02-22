@@ -32,6 +32,8 @@
             this.lblChooseCourse = new System.Windows.Forms.Label();
             this.lblMCQ = new System.Windows.Forms.Label();
             this.grpBoxMCQ = new System.Windows.Forms.GroupBox();
+            this.txtAnsMCQ = new System.Windows.Forms.TextBox();
+            this.lblAnsMCQ = new System.Windows.Forms.Label();
             this.btnUpdateMCQ = new System.Windows.Forms.Button();
             this.lblMCQID = new System.Windows.Forms.Label();
             this.lblSearchMCQ = new System.Windows.Forms.Label();
@@ -51,6 +53,8 @@
             this.richTextBoxMCQBody = new System.Windows.Forms.RichTextBox();
             this.lblMCQBody = new System.Windows.Forms.Label();
             this.grpBoxTFQ = new System.Windows.Forms.GroupBox();
+            this.txtAnsTFQ = new System.Windows.Forms.TextBox();
+            this.lblAnsTFQ = new System.Windows.Forms.Label();
             this.lblTFQID = new System.Windows.Forms.Label();
             this.lblSearchTFQ = new System.Windows.Forms.Label();
             this.btnUpdateTFQ = new System.Windows.Forms.Button();
@@ -65,10 +69,6 @@
             this.btnTFQPrevious = new System.Windows.Forms.Button();
             this.btnAddTFQ = new System.Windows.Forms.Button();
             this.lblTFQ = new System.Windows.Forms.Label();
-            this.lblAnsMCQ = new System.Windows.Forms.Label();
-            this.lblAnsTFQ = new System.Windows.Forms.Label();
-            this.txtAnsMCQ = new System.Windows.Forms.TextBox();
-            this.txtAnsTFQ = new System.Windows.Forms.TextBox();
             this.grpBoxMCQ.SuspendLayout();
             this.grpBoxTFQ.SuspendLayout();
             this.SuspendLayout();
@@ -80,13 +80,14 @@
             this.comboBoxCourse.Name = "comboBoxCourse";
             this.comboBoxCourse.Size = new System.Drawing.Size(365, 24);
             this.comboBoxCourse.TabIndex = 0;
+            this.comboBoxCourse.SelectedIndexChanged += new System.EventHandler(this.comboBoxCourse_SelectedIndexChanged);
             // 
             // lblChooseCourse
             // 
             this.lblChooseCourse.AutoSize = true;
             this.lblChooseCourse.Location = new System.Drawing.Point(481, 27);
             this.lblChooseCourse.Name = "lblChooseCourse";
-            this.lblChooseCourse.Size = new System.Drawing.Size(226, 16);
+            this.lblChooseCourse.Size = new System.Drawing.Size(242, 17);
             this.lblChooseCourse.TabIndex = 1;
             this.lblChooseCourse.Text = "Select Course to review its Questions";
             // 
@@ -95,7 +96,7 @@
             this.lblMCQ.AutoSize = true;
             this.lblMCQ.Location = new System.Drawing.Point(18, 105);
             this.lblMCQ.Name = "lblMCQ";
-            this.lblMCQ.Size = new System.Drawing.Size(161, 16);
+            this.lblMCQ.Size = new System.Drawing.Size(171, 17);
             this.lblMCQ.TabIndex = 2;
             this.lblMCQ.Text = "Multiple Choice Questions";
             // 
@@ -127,6 +128,22 @@
             this.grpBoxMCQ.TabIndex = 6;
             this.grpBoxMCQ.TabStop = false;
             // 
+            // txtAnsMCQ
+            // 
+            this.txtAnsMCQ.Location = new System.Drawing.Point(525, 15);
+            this.txtAnsMCQ.Name = "txtAnsMCQ";
+            this.txtAnsMCQ.Size = new System.Drawing.Size(33, 22);
+            this.txtAnsMCQ.TabIndex = 33;
+            // 
+            // lblAnsMCQ
+            // 
+            this.lblAnsMCQ.AutoSize = true;
+            this.lblAnsMCQ.Location = new System.Drawing.Point(422, 18);
+            this.lblAnsMCQ.Name = "lblAnsMCQ";
+            this.lblAnsMCQ.Size = new System.Drawing.Size(104, 17);
+            this.lblAnsMCQ.TabIndex = 31;
+            this.lblAnsMCQ.Text = "Correct Answer";
+            // 
             // btnUpdateMCQ
             // 
             this.btnUpdateMCQ.Location = new System.Drawing.Point(9, 246);
@@ -142,7 +159,7 @@
             this.lblMCQID.AutoSize = true;
             this.lblMCQID.Location = new System.Drawing.Point(6, 225);
             this.lblMCQID.Name = "lblMCQID";
-            this.lblMCQID.Size = new System.Drawing.Size(20, 16);
+            this.lblMCQID.Size = new System.Drawing.Size(21, 17);
             this.lblMCQID.TabIndex = 9;
             this.lblMCQID.Text = "ID";
             // 
@@ -151,7 +168,7 @@
             this.lblSearchMCQ.AutoSize = true;
             this.lblSearchMCQ.Location = new System.Drawing.Point(267, 317);
             this.lblSearchMCQ.Name = "lblSearchMCQ";
-            this.lblSearchMCQ.Size = new System.Drawing.Size(20, 16);
+            this.lblSearchMCQ.Size = new System.Drawing.Size(21, 17);
             this.lblSearchMCQ.TabIndex = 25;
             this.lblSearchMCQ.Text = "ID";
             // 
@@ -192,7 +209,7 @@
             this.lblChoices.AutoSize = true;
             this.lblChoices.Location = new System.Drawing.Point(188, 18);
             this.lblChoices.Name = "lblChoices";
-            this.lblChoices.Size = new System.Drawing.Size(115, 16);
+            this.lblChoices.Size = new System.Drawing.Size(123, 17);
             this.lblChoices.TabIndex = 20;
             this.lblChoices.Text = "Question Choices:";
             // 
@@ -201,7 +218,7 @@
             this.lblExists.AutoSize = true;
             this.lblExists.Location = new System.Drawing.Point(319, 246);
             this.lblExists.Name = "lblExists";
-            this.lblExists.Size = new System.Drawing.Size(0, 16);
+            this.lblExists.Size = new System.Drawing.Size(0, 17);
             this.lblExists.TabIndex = 18;
             // 
             // txtBoxSearchMCQ
@@ -267,7 +284,7 @@
             this.btnViewMCQQuestions.Name = "btnViewMCQQuestions";
             this.btnViewMCQQuestions.Size = new System.Drawing.Size(156, 33);
             this.btnViewMCQQuestions.TabIndex = 11;
-            this.btnViewMCQQuestions.Text = "View Questions";
+            this.btnViewMCQQuestions.Text = "Refresh Questions";
             this.btnViewMCQQuestions.UseVisualStyleBackColor = true;
             this.btnViewMCQQuestions.Click += new System.EventHandler(this.btnViewMCQQuestions_Click);
             // 
@@ -284,7 +301,7 @@
             this.lblMCQBody.AutoSize = true;
             this.lblMCQBody.Location = new System.Drawing.Point(17, 18);
             this.lblMCQBody.Name = "lblMCQBody";
-            this.lblMCQBody.Size = new System.Drawing.Size(98, 16);
+            this.lblMCQBody.Size = new System.Drawing.Size(105, 17);
             this.lblMCQBody.TabIndex = 9;
             this.lblMCQBody.Text = "Question Body:";
             // 
@@ -311,12 +328,28 @@
             this.grpBoxTFQ.TabIndex = 7;
             this.grpBoxTFQ.TabStop = false;
             // 
+            // txtAnsTFQ
+            // 
+            this.txtAnsTFQ.Location = new System.Drawing.Point(522, 15);
+            this.txtAnsTFQ.Name = "txtAnsTFQ";
+            this.txtAnsTFQ.Size = new System.Drawing.Size(31, 22);
+            this.txtAnsTFQ.TabIndex = 34;
+            // 
+            // lblAnsTFQ
+            // 
+            this.lblAnsTFQ.AutoSize = true;
+            this.lblAnsTFQ.Location = new System.Drawing.Point(419, 19);
+            this.lblAnsTFQ.Name = "lblAnsTFQ";
+            this.lblAnsTFQ.Size = new System.Drawing.Size(104, 17);
+            this.lblAnsTFQ.TabIndex = 32;
+            this.lblAnsTFQ.Text = "Correct Answer";
+            // 
             // lblTFQID
             // 
             this.lblTFQID.AutoSize = true;
             this.lblTFQID.Location = new System.Drawing.Point(6, 225);
             this.lblTFQID.Name = "lblTFQID";
-            this.lblTFQID.Size = new System.Drawing.Size(20, 16);
+            this.lblTFQID.Size = new System.Drawing.Size(21, 17);
             this.lblTFQID.TabIndex = 26;
             this.lblTFQID.Text = "ID";
             // 
@@ -325,7 +358,7 @@
             this.lblSearchTFQ.AutoSize = true;
             this.lblSearchTFQ.Location = new System.Drawing.Point(277, 307);
             this.lblSearchTFQ.Name = "lblSearchTFQ";
-            this.lblSearchTFQ.Size = new System.Drawing.Size(20, 16);
+            this.lblSearchTFQ.Size = new System.Drawing.Size(21, 17);
             this.lblSearchTFQ.TabIndex = 26;
             this.lblSearchTFQ.Text = "ID";
             // 
@@ -344,7 +377,7 @@
             this.lblTFQbody.AutoSize = true;
             this.lblTFQbody.Location = new System.Drawing.Point(28, 18);
             this.lblTFQbody.Name = "lblTFQbody";
-            this.lblTFQbody.Size = new System.Drawing.Size(98, 16);
+            this.lblTFQbody.Size = new System.Drawing.Size(105, 17);
             this.lblTFQbody.TabIndex = 22;
             this.lblTFQbody.Text = "Question Body:";
             // 
@@ -353,7 +386,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(326, 246);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 16);
+            this.label2.Size = new System.Drawing.Size(0, 17);
             this.label2.TabIndex = 30;
             // 
             // richTextBoxTFQbody
@@ -377,7 +410,7 @@
             this.btnVieqTFQQuestions.Name = "btnVieqTFQQuestions";
             this.btnVieqTFQQuestions.Size = new System.Drawing.Size(145, 33);
             this.btnVieqTFQQuestions.TabIndex = 23;
-            this.btnVieqTFQQuestions.Text = "View Questions";
+            this.btnVieqTFQQuestions.Text = "Refresh Questions";
             this.btnVieqTFQQuestions.UseVisualStyleBackColor = true;
             this.btnVieqTFQQuestions.Click += new System.EventHandler(this.btnVieqTFQQuestions_Click);
             // 
@@ -436,41 +469,9 @@
             this.lblTFQ.AutoSize = true;
             this.lblTFQ.Location = new System.Drawing.Point(581, 105);
             this.lblTFQ.Name = "lblTFQ";
-            this.lblTFQ.Size = new System.Drawing.Size(142, 16);
+            this.lblTFQ.Size = new System.Drawing.Size(152, 17);
             this.lblTFQ.TabIndex = 8;
             this.lblTFQ.Text = "True / False Questions";
-            // 
-            // lblAnsMCQ
-            // 
-            this.lblAnsMCQ.AutoSize = true;
-            this.lblAnsMCQ.Location = new System.Drawing.Point(422, 18);
-            this.lblAnsMCQ.Name = "lblAnsMCQ";
-            this.lblAnsMCQ.Size = new System.Drawing.Size(97, 16);
-            this.lblAnsMCQ.TabIndex = 31;
-            this.lblAnsMCQ.Text = "Correct Answer";
-            // 
-            // lblAnsTFQ
-            // 
-            this.lblAnsTFQ.AutoSize = true;
-            this.lblAnsTFQ.Location = new System.Drawing.Point(419, 19);
-            this.lblAnsTFQ.Name = "lblAnsTFQ";
-            this.lblAnsTFQ.Size = new System.Drawing.Size(97, 16);
-            this.lblAnsTFQ.TabIndex = 32;
-            this.lblAnsTFQ.Text = "Correct Answer";
-            // 
-            // txtAnsMCQ
-            // 
-            this.txtAnsMCQ.Location = new System.Drawing.Point(525, 15);
-            this.txtAnsMCQ.Name = "txtAnsMCQ";
-            this.txtAnsMCQ.Size = new System.Drawing.Size(33, 22);
-            this.txtAnsMCQ.TabIndex = 33;
-            // 
-            // txtAnsTFQ
-            // 
-            this.txtAnsTFQ.Location = new System.Drawing.Point(522, 15);
-            this.txtAnsTFQ.Name = "txtAnsTFQ";
-            this.txtAnsTFQ.Size = new System.Drawing.Size(31, 22);
-            this.txtAnsTFQ.TabIndex = 34;
             // 
             // frmManageQuestions
             // 
