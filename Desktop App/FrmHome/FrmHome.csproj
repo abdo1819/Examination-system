@@ -240,13 +240,21 @@
     <Compile Include="Context\ExaminationContext.cs" />
     <Compile Include="Context\ExaminationContext.Functions.cs" />
     <Compile Include="Context\ExaminationContextProcedures.cs" />
+    <Compile Include="Dept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dept.Designer.cs">
+      <DependentUpon>Dept.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entities\answerExamQuestionResult.cs" />
     <Compile Include="Entities\answerExamQuestionV2Result.cs" />
     <Compile Include="Entities\answerExamQuestion_uprotectedResult.cs" />
     <Compile Include="Entities\answerExamResult.cs" />
     <Compile Include="Entities\Assign_Course_to_InstructorResult.cs" />
     <Compile Include="Entities\Course.cs" />
+    <Compile Include="Entities\CourseMCQ.cs" />
     <Compile Include="Entities\Courses_and_Students_of_InstructorResult.cs" />
+    <Compile Include="Entities\CourseTFQ.cs" />
     <Compile Include="Entities\Course_Attendance.cs" />
     <Compile Include="Entities\deleteExamResult.cs" />
     <Compile Include="Entities\deleteInstructorResult.cs" />
@@ -329,6 +337,30 @@
     <Compile Include="Admin_ManageCourses.Designer.cs">
       <DependentUpon>Admin_ManageCourses.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNewMCQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewMCQ.Designer.cs">
+      <DependentUpon>frmNewMCQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewTFQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewTFQ.Designer.cs">
+      <DependentUpon>frmNewTFQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageQuestions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageQuestions.Designer.cs">
+      <DependentUpon>ManageQuestions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewDept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewDept.Designer.cs">
+      <DependentUpon>NewDept.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student_UpdateInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -366,6 +398,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_ManageCourses.resx">
       <DependentUpon>Admin_ManageCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dept.resx">
+      <DependentUpon>Dept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewMCQ.resx">
+      <DependentUpon>frmNewMCQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewTFQ.resx">
+      <DependentUpon>frmNewTFQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageQuestions.resx">
+      <DependentUpon>ManageQuestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewDept.resx">
+      <DependentUpon>NewDept.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student_UpdateInfo.resx">
       <DependentUpon>Student_UpdateInfo.cs</DependentUpon>

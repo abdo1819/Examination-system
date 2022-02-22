@@ -1,0 +1,351 @@
+﻿{
+   "CodeGenerationMode": 1,
+   "ContextClassName": "ExaminationContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": true,
+   "ModelNamespace": null,
+   "OutputContextPath": "Context",
+   "OutputPath": "Entities",
+   "ProjectRootNamespace": "FrmHome",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[Course]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Course_Attendance]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Department]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Exam]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Exam_Answer]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Exam_Question]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Ins_Course]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Instructor]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MCQ]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Question]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Student]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Topic]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[User]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[v_Instructor]",
+         "ObjectType": 3
+      },
+      {
+         "Name": "[dbo].[v_Students]",
+         "ObjectType": 3
+      },
+      {
+         "Name": "[dbo].[answerExam]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[answerExamQuestion]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[answerExamQuestion_uprotected]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[answerExamQuestionV2]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[Assign_Course_to_Instructor]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[Courses_and_Students_of_Instructor]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[Delete_Course]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[Delete_Department]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[Delete_Topic]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[deleteExam]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[deleteInstructor]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[deleteQuestion]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[deleteStudent]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[End_Course_for_Student]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[End_Course_with_Instructor]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[generateExam]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GET_QUESTIONS_for_STUDENT_EXAM]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[Get_Questions_in_Exam]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[getAllCourses]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[getAllDepartments]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllExamAnswers]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[getAllExams]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[getAllInstructors]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[getAllStudents]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[getAvailableCoursesForExam]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[getDepartment]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[getDeptData]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[getInsForStdCourse]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[getInstructorsInDepartment]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[getQuestionAndStudentAnswer]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[getStudentAnswer]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[getStudentsInDepartment]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetUser]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[Insert_Course]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[Insert_Department]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[Insert_Department_With_Manager]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[Insert_Instructor]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[Insert_Student]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[Insert_Topic]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[insertMCQ]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[insertTFQ]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[returnGrades]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[setCourseName]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[setTopicName]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[sp_returngrades]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[Student_Take_course_with_Instructor]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[Topics_of_Course]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[Update_Department_Manager]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[updateInstructorData]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[updateMCQ]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[updateStudentData]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[updateTFQ]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[updateUserData]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[viewCourseMCQ]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[viewCourseTFQ]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[viewExamQuestions]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[viewMCQ]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[viewTFQ]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[viewTopicMCQ]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[viewTopicTFQ]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[PRIVATE].[Insert_User]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[PRIVATE].[insertQuestion]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[getQuestionMark]",
+         "ObjectType": 2
+      },
+      {
+         "Name": "[dbo].[getStudentGrade]",
+         "ObjectType": 2
+      }
+   ],
+   "UiHint": "desktop-c6f8e6t.Examination.dbo",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": true,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoConstructor": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false
+}
