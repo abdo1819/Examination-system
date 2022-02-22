@@ -32,7 +32,9 @@ namespace FrmHome
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<v_Instructor> v_Instructor { get; set; }
         public virtual DbSet<v_Students> v_Students { get; set; }
+        public virtual DbSet<CourseMCQ> CourseMCQs { get; set; }
 
+        public virtual DbSet<CourseTFQ> CourseTFQs { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -325,6 +327,32 @@ namespace FrmHome
                 entity.Property(e => e.f_name).IsUnicode(false);
 
                 entity.Property(e => e.l_name).IsUnicode(false);
+            });
+
+            modelBuilder.Entity<CourseMCQ>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.Property(e => e.q_id);
+                entity.Property(e => e.crs_name);
+                entity.Property(e => e.top_name);
+                entity.Property(e => e.q_text);
+                entity.Property(e => e.ch_a);
+                entity.Property(e => e.ch_b);
+                entity.Property(e => e.ch_c);
+                entity.Property(e => e.ch_d);
+                entity.Property(e => e.corr_answer);
+            });
+
+            modelBuilder.Entity<CourseTFQ>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.Property(e => e.q_id);
+                entity.Property(e => e.crs_name);
+                entity.Property(e => e.top_name);
+                entity.Property(e => e.q_text);
+                entity.Property(e => e.corr_answer);
             });
 
             OnModelCreatingGeneratedProcedures(modelBuilder);
