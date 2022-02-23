@@ -76,6 +76,7 @@
             // 
             // comboBoxCourse
             // 
+            this.comboBoxCourse.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxCourse.BackColor = System.Drawing.SystemColors.Control;
             this.comboBoxCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCourse.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -87,6 +88,7 @@
             // 
             // lblChooseCourse
             // 
+            this.lblChooseCourse.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblChooseCourse.AutoSize = true;
             this.lblChooseCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChooseCourse.ForeColor = System.Drawing.SystemColors.Menu;
@@ -98,6 +100,7 @@
             // 
             // grpBoxMCQ
             // 
+            this.grpBoxMCQ.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grpBoxMCQ.Controls.Add(this.txtAnsMCQ);
             this.grpBoxMCQ.Controls.Add(this.lblAnsMCQ);
             this.grpBoxMCQ.Controls.Add(this.btnUpdateMCQ);
@@ -330,6 +333,7 @@
             // 
             // grpBoxTFQ
             // 
+            this.grpBoxTFQ.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grpBoxTFQ.Controls.Add(this.txtAnsTFQ);
             this.grpBoxTFQ.Controls.Add(this.lblAnsTFQ);
             this.grpBoxTFQ.Controls.Add(this.lblTFQID);
@@ -511,6 +515,7 @@
             // 
             // rdbtnTFQ
             // 
+            this.rdbtnTFQ.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rdbtnTFQ.AutoSize = true;
             this.rdbtnTFQ.Checked = true;
             this.rdbtnTFQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -526,6 +531,7 @@
             // 
             // rdbtnMCQ
             // 
+            this.rdbtnMCQ.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rdbtnMCQ.AutoSize = true;
             this.rdbtnMCQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbtnMCQ.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -543,7 +549,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Brown;
             this.BackgroundImage = global::FrmHome.Properties.Resources.c9cc119b_01d8_416a_8ec6_3409711df3b2_cover_1__2_;
-            this.ClientSize = new System.Drawing.Size(879, 707);
+            this.ClientSize = new System.Drawing.Size(878, 647);
             this.Controls.Add(this.rdbtnMCQ);
             this.Controls.Add(this.grpBoxTFQ);
             this.Controls.Add(this.rdbtnTFQ);
@@ -551,6 +557,8 @@
             this.Controls.Add(this.lblChooseCourse);
             this.Controls.Add(this.comboBoxCourse);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1033, 823);
+            this.MinimumSize = new System.Drawing.Size(896, 694);
             this.Name = "frmManageQuestions";
             this.Text = "Manage Questions";
             this.Load += new System.EventHandler(this.ManageQuestions_Load);

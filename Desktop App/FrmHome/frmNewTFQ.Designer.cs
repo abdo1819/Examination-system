@@ -42,9 +42,9 @@
             // comboBoxTopic
             // 
             this.comboBoxTopic.FormattingEnabled = true;
-            this.comboBoxTopic.Location = new System.Drawing.Point(166, 193);
+            this.comboBoxTopic.Location = new System.Drawing.Point(434, 167);
             this.comboBoxTopic.Name = "comboBoxTopic";
-            this.comboBoxTopic.Size = new System.Drawing.Size(592, 24);
+            this.comboBoxTopic.Size = new System.Drawing.Size(152, 24);
             this.comboBoxTopic.TabIndex = 31;
             // 
             // lblTopic
@@ -52,7 +52,7 @@
             this.lblTopic.AutoSize = true;
             this.lblTopic.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTopic.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblTopic.Location = new System.Drawing.Point(103, 193);
+            this.lblTopic.Location = new System.Drawing.Point(370, 167);
             this.lblTopic.Name = "lblTopic";
             this.lblTopic.Size = new System.Drawing.Size(55, 20);
             this.lblTopic.TabIndex = 30;
@@ -60,17 +60,20 @@
             // 
             // richTextBoxText
             // 
-            this.richTextBoxText.Location = new System.Drawing.Point(166, 32);
+            this.richTextBoxText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxText.Location = new System.Drawing.Point(47, 46);
             this.richTextBoxText.Name = "richTextBoxText";
-            this.richTextBoxText.Size = new System.Drawing.Size(592, 84);
+            this.richTextBoxText.Size = new System.Drawing.Size(749, 84);
             this.richTextBoxText.TabIndex = 29;
             this.richTextBoxText.Text = "";
             // 
             // btnOk
             // 
+            this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnOk.Location = new System.Drawing.Point(166, 258);
+            this.btnOk.Location = new System.Drawing.Point(49, 252);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(159, 53);
             this.btnOk.TabIndex = 24;
@@ -80,9 +83,10 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnCancel.Location = new System.Drawing.Point(594, 258);
+            this.btnCancel.Location = new System.Drawing.Point(632, 252);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(164, 53);
             this.btnCancel.TabIndex = 23;
@@ -92,9 +96,9 @@
             // 
             // textBoxAns
             // 
-            this.textBoxAns.Location = new System.Drawing.Point(166, 147);
+            this.textBoxAns.Location = new System.Drawing.Point(194, 167);
             this.textBoxAns.Name = "textBoxAns";
-            this.textBoxAns.Size = new System.Drawing.Size(592, 22);
+            this.textBoxAns.Size = new System.Drawing.Size(152, 22);
             this.textBoxAns.TabIndex = 20;
             // 
             // lblAns
@@ -102,7 +106,7 @@
             this.lblAns.AutoSize = true;
             this.lblAns.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAns.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblAns.Location = new System.Drawing.Point(18, 149);
+            this.lblAns.Location = new System.Drawing.Point(45, 169);
             this.lblAns.Name = "lblAns";
             this.lblAns.Size = new System.Drawing.Size(140, 20);
             this.lblAns.TabIndex = 17;
@@ -113,7 +117,7 @@
             this.lblText.AutoSize = true;
             this.lblText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblText.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblText.Location = new System.Drawing.Point(32, 63);
+            this.lblText.Location = new System.Drawing.Point(45, 23);
             this.lblText.Name = "lblText";
             this.lblText.Size = new System.Drawing.Size(126, 20);
             this.lblText.TabIndex = 16;
@@ -124,7 +128,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Brown;
-            this.ClientSize = new System.Drawing.Size(800, 344);
+            this.ClientSize = new System.Drawing.Size(838, 348);
             this.Controls.Add(this.comboBoxTopic);
             this.Controls.Add(this.lblTopic);
             this.Controls.Add(this.richTextBoxText);
@@ -134,6 +138,8 @@
             this.Controls.Add(this.lblAns);
             this.Controls.Add(this.lblText);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1074, 603);
+            this.MinimumSize = new System.Drawing.Size(856, 395);
             this.Name = "frmNewTFQ";
             this.Text = "Add New True/False Question";
             this.Load += new System.EventHandler(this.frmNewTFQ_Load);

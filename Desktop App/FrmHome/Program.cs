@@ -17,9 +17,9 @@ namespace FrmHome
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new frmManageQuestions());
+            //Application.Run(new frmManageQuestions());
 
-            //Application.Run(new frmDept());
+            Application.Run(new frmDept());
 
             //Application.Run(new Login());
 

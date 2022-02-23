@@ -93,6 +93,8 @@
             // 
             // textBoxA
             // 
+            this.textBoxA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxA.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBoxA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxA.Location = new System.Drawing.Point(176, 130);
@@ -102,6 +104,8 @@
             // 
             // textBoxAns
             // 
+            this.textBoxAns.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxAns.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBoxAns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxAns.Location = new System.Drawing.Point(174, 315);
@@ -111,6 +115,8 @@
             // 
             // textBoxC
             // 
+            this.textBoxC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxC.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBoxC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxC.Location = new System.Drawing.Point(176, 223);
@@ -120,6 +126,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.BackColor = System.Drawing.Color.Transparent;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(602, 459);
@@ -132,6 +139,7 @@
             // 
             // btnOk
             // 
+            this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnOk.BackColor = System.Drawing.Color.Transparent;
             this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.Location = new System.Drawing.Point(176, 459);
@@ -144,6 +152,8 @@
             // 
             // textBoxD
             // 
+            this.textBoxD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxD.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBoxD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxD.Location = new System.Drawing.Point(176, 274);
@@ -153,6 +163,8 @@
             // 
             // textBoxB
             // 
+            this.textBoxB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxB.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBoxB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxB.Location = new System.Drawing.Point(176, 175);
@@ -184,6 +196,8 @@
             // 
             // richTextBoxText
             // 
+            this.richTextBoxText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxText.BackColor = System.Drawing.SystemColors.HighlightText;
             this.richTextBoxText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBoxText.Location = new System.Drawing.Point(174, 28);
@@ -205,6 +219,8 @@
             // 
             // comboBoxTopic
             // 
+            this.comboBoxTopic.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxTopic.BackColor = System.Drawing.SystemColors.HighlightText;
             this.comboBoxTopic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTopic.ForeColor = System.Drawing.SystemColors.MenuText;
@@ -237,6 +253,8 @@
             this.Controls.Add(this.lblAns);
             this.Controls.Add(this.lblText);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1063, 721);
+            this.MinimumSize = new System.Drawing.Size(860, 595);
             this.Name = "frmNewMCQ";
             this.Text = "Add New Multiple Choice Question";
             this.Load += new System.EventHandler(this.frmNewMCQ_Load);

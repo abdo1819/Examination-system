@@ -106,9 +106,17 @@ namespace FrmHome
 
                 var result = QuestionsContext.CourseMCQs.FromSqlInterpolated<CourseMCQ>($"Select q.q_id,c.crs_name,T.top_name,q.q_text,m.ch_a,m.ch_b,m.ch_c,m.ch_d,q.corr_answer from Question q, MCQ m, Topic t, Course c where q.q_id = m.q_id and t.top_id = q.top_id and c.crs_id = t.crs_id and c.crs_name = {comboBoxCourse.Text}").ToList();
 
-                if (result.Any(ele => ele.q_id == int.Parse(txtBoxSearchMCQ.Text)))
-                    lblSearchMCQ.Text = $"Question with this ID {txtBoxSearchMCQ.Text} exists";
+                var index = result.FindIndex(ele => ele.q_id == int.Parse(txtBoxSearchMCQ.Text));
 
+                if (index > 0)
+                {
+                    bindingSourceMCQ.MoveFirst();
+
+                    for (int i = 0; i < index; i++)
+                        bindingSourceMCQ.MoveNext();
+
+                    lblSearchMCQ.Text = $"Question with this ID {txtBoxSearchMCQ.Text} exists";
+                }
                 else
                     lblSearchMCQ.Text = $"Question with this ID {txtBoxSearchMCQ.Text} doesn't exist";
 
@@ -245,10 +253,14 @@ namespace FrmHome
             {
 
                 var result = QuestionsContext.CourseTFQs.FromSqlInterpolated<CourseTFQ>($"Select q.q_id, c.crs_name, T.top_name, q.q_text, q.corr_answer from Question q, Topic t, Course c where t.top_id = q.top_id and c.crs_id = t.crs_id and c.crs_name = {comboBoxCourse.Text} and q.q_type = 'TF'").ToList();
-
-                if (result.Any(ele => ele.q_id == int.Parse(txtBoxSearchTFQ.Text)))
+                var index = result.FindIndex(ele => ele.q_id == int.Parse(txtBoxSearchTFQ.Text));
+                if (index > 0)
+                {
                     lblSearchTFQ.Text = $"Question with this ID {txtBoxSearchTFQ.Text} exists";
-
+                    bindingSourceTFQ.MoveFirst();
+                    for (int i = 0; i < index; i++)
+                        bindingSourceTFQ.MoveNext();
+                }
                 else
                     lblSearchTFQ.Text = $"Question with this ID {txtBoxSearchTFQ.Text} doesn't exist";
 
