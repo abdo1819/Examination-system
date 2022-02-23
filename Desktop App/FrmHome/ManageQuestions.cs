@@ -43,6 +43,11 @@ namespace FrmHome
         private void btnViewMCQQuestions_Click(object sender, EventArgs e)
         {
             btnViewMCQuetions_Clicked = true;
+            ReloadMCQ();
+        }
+
+        private void ReloadMCQ()
+        {
             using (ExaminationContext QuestionsContext = new ExaminationContext())
             {
                 //CourseMCQ MyCourseMCQ = new CourseMCQ();
@@ -117,8 +122,10 @@ namespace FrmHome
 
             C_id = (int)comboBoxCourse.SelectedValue;
 
-            new frmNewMCQ(C_id).Show();
+            var NewAdded = new frmNewMCQ(C_id);
 
+            if(NewAdded.ShowDialog() == DialogResult.OK)
+                ReloadMCQ();
         }
 
         private void btnDeleteMCQ_Click(object sender, EventArgs e)
@@ -137,8 +144,8 @@ namespace FrmHome
                 MCQ currMCQ = QuestionContext.MCQ.Find(qq);
                 QuestionContext.MCQ.Remove(currMCQ);
                 QuestionContext.SaveChanges();
-
             }
+            ReloadMCQ();
         }
 
         private void btnUpdateMCQ_Click(object sender, EventArgs e)
@@ -179,12 +186,17 @@ namespace FrmHome
 
                 QuestionContext.SaveChanges();
             }
-
+            ReloadMCQ();
         }
 
         private void btnVieqTFQQuestions_Click(object sender, EventArgs e)
         {
             btnViewTFQuetions_Clicked = true;
+            ReloadTFQ();
+        }
+
+        private void ReloadTFQ()
+        {
             using (ExaminationContext QuestionsContext = new ExaminationContext())
             {
 
@@ -250,7 +262,10 @@ namespace FrmHome
 
             C_id = (int)comboBoxCourse.SelectedValue;
 
-            new frmNewTFQ(C_id).Show();
+            var NewAdded = new frmNewTFQ(C_id);
+
+            if (NewAdded.ShowDialog() == DialogResult.OK)
+                ReloadTFQ();
         }
 
         private void btnDeleteTFQ_Click(object sender, EventArgs e)
@@ -265,8 +280,8 @@ namespace FrmHome
                 QuestionContext.Question.Remove(cuurentQ);
 
                 QuestionContext.SaveChanges();
-
             }
+            ReloadTFQ();
         }
 
         private void btnUpdateTFQ_Click(object sender, EventArgs e)
@@ -295,6 +310,7 @@ namespace FrmHome
 
                 QuestionContext.SaveChanges();
             }
+            ReloadTFQ();
         }
 
         private void rdbtnMCQ_CheckedChanged(object sender, EventArgs e)

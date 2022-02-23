@@ -69,5 +69,15 @@ namespace FrmHome.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap c9cc119b_01d8_416a_8ec6_3409711df3b2_cover_1__2_1 {
+            get {
+                object obj = ResourceManager.GetObject("c9cc119b-01d8-416a-8ec6-3409711df3b2-cover(1)(2)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

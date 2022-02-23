@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNewMCQ));
             this.lblText = new System.Windows.Forms.Label();
             this.lblAns = new System.Windows.Forms.Label();
             this.lblchA = new System.Windows.Forms.Label();
@@ -49,115 +50,143 @@
             // lblText
             // 
             this.lblText.AutoSize = true;
-            this.lblText.Location = new System.Drawing.Point(52, 58);
+            this.lblText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblText.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblText.Location = new System.Drawing.Point(30, 58);
             this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(89, 16);
+            this.lblText.Size = new System.Drawing.Size(126, 20);
             this.lblText.TabIndex = 0;
             this.lblText.Text = "Question Text";
             // 
             // lblAns
             // 
             this.lblAns.AutoSize = true;
-            this.lblAns.Location = new System.Drawing.Point(44, 318);
+            this.lblAns.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAns.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblAns.Location = new System.Drawing.Point(22, 318);
             this.lblAns.Name = "lblAns";
-            this.lblAns.Size = new System.Drawing.Size(97, 16);
+            this.lblAns.Size = new System.Drawing.Size(140, 20);
             this.lblAns.TabIndex = 1;
             this.lblAns.Text = "Correct Answer";
             // 
             // lblchA
             // 
             this.lblchA.AutoSize = true;
-            this.lblchA.Location = new System.Drawing.Point(82, 133);
+            this.lblchA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblchA.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblchA.Location = new System.Drawing.Point(60, 133);
             this.lblchA.Name = "lblchA";
-            this.lblchA.Size = new System.Drawing.Size(61, 16);
+            this.lblchA.Size = new System.Drawing.Size(85, 20);
             this.lblchA.TabIndex = 2;
             this.lblchA.Text = "Choice A";
             // 
             // lblchC
             // 
             this.lblchC.AutoSize = true;
-            this.lblchC.Location = new System.Drawing.Point(82, 229);
+            this.lblchC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblchC.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblchC.Location = new System.Drawing.Point(60, 229);
             this.lblchC.Name = "lblchC";
-            this.lblchC.Size = new System.Drawing.Size(61, 16);
+            this.lblchC.Size = new System.Drawing.Size(86, 20);
             this.lblchC.TabIndex = 3;
             this.lblchC.Text = "Choice C";
             // 
             // textBoxA
             // 
-            this.textBoxA.Location = new System.Drawing.Point(153, 130);
+            this.textBoxA.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.textBoxA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxA.Location = new System.Drawing.Point(176, 130);
             this.textBoxA.Name = "textBoxA";
-            this.textBoxA.Size = new System.Drawing.Size(590, 22);
+            this.textBoxA.Size = new System.Drawing.Size(590, 24);
             this.textBoxA.TabIndex = 5;
             // 
             // textBoxAns
             // 
-            this.textBoxAns.Location = new System.Drawing.Point(151, 315);
+            this.textBoxAns.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.textBoxAns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAns.Location = new System.Drawing.Point(174, 315);
             this.textBoxAns.Name = "textBoxAns";
-            this.textBoxAns.Size = new System.Drawing.Size(592, 22);
+            this.textBoxAns.Size = new System.Drawing.Size(592, 24);
             this.textBoxAns.TabIndex = 5;
             // 
             // textBoxC
             // 
-            this.textBoxC.Location = new System.Drawing.Point(153, 223);
+            this.textBoxC.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.textBoxC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxC.Location = new System.Drawing.Point(176, 223);
             this.textBoxC.Name = "textBoxC";
-            this.textBoxC.Size = new System.Drawing.Size(590, 22);
+            this.textBoxC.Size = new System.Drawing.Size(590, 24);
             this.textBoxC.TabIndex = 6;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(579, 426);
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(602, 459);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(164, 53);
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(153, 426);
+            this.btnOk.BackColor = System.Drawing.Color.Transparent;
+            this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOk.Location = new System.Drawing.Point(176, 459);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(159, 53);
             this.btnOk.TabIndex = 8;
             this.btnOk.Text = "Ok";
-            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.UseVisualStyleBackColor = false;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // textBoxD
             // 
-            this.textBoxD.Location = new System.Drawing.Point(153, 274);
+            this.textBoxD.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.textBoxD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxD.Location = new System.Drawing.Point(176, 274);
             this.textBoxD.Name = "textBoxD";
-            this.textBoxD.Size = new System.Drawing.Size(590, 22);
+            this.textBoxD.Size = new System.Drawing.Size(590, 24);
             this.textBoxD.TabIndex = 12;
             // 
             // textBoxB
             // 
-            this.textBoxB.Location = new System.Drawing.Point(153, 175);
+            this.textBoxB.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.textBoxB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxB.Location = new System.Drawing.Point(176, 175);
             this.textBoxB.Name = "textBoxB";
-            this.textBoxB.Size = new System.Drawing.Size(590, 22);
+            this.textBoxB.Size = new System.Drawing.Size(590, 24);
             this.textBoxB.TabIndex = 11;
             // 
             // lblchD
             // 
             this.lblchD.AutoSize = true;
-            this.lblchD.Location = new System.Drawing.Point(82, 277);
+            this.lblchD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblchD.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblchD.Location = new System.Drawing.Point(60, 277);
             this.lblchD.Name = "lblchD";
-            this.lblchD.Size = new System.Drawing.Size(62, 16);
+            this.lblchD.Size = new System.Drawing.Size(87, 20);
             this.lblchD.TabIndex = 10;
             this.lblchD.Text = "Choice D";
             // 
             // lblchB
             // 
             this.lblchB.AutoSize = true;
-            this.lblchB.Location = new System.Drawing.Point(82, 178);
+            this.lblchB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblchB.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblchB.Location = new System.Drawing.Point(60, 178);
             this.lblchB.Name = "lblchB";
-            this.lblchB.Size = new System.Drawing.Size(61, 16);
+            this.lblchB.Size = new System.Drawing.Size(86, 20);
             this.lblchB.TabIndex = 9;
             this.lblchB.Text = "Choice B";
             // 
             // richTextBoxText
             // 
-            this.richTextBoxText.Location = new System.Drawing.Point(151, 28);
+            this.richTextBoxText.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.richTextBoxText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxText.Location = new System.Drawing.Point(174, 28);
             this.richTextBoxText.Name = "richTextBoxText";
             this.richTextBoxText.Size = new System.Drawing.Size(592, 84);
             this.richTextBoxText.TabIndex = 13;
@@ -166,25 +195,31 @@
             // lblTopic
             // 
             this.lblTopic.AutoSize = true;
-            this.lblTopic.Location = new System.Drawing.Point(99, 364);
+            this.lblTopic.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTopic.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTopic.Location = new System.Drawing.Point(77, 364);
             this.lblTopic.Name = "lblTopic";
-            this.lblTopic.Size = new System.Drawing.Size(42, 16);
+            this.lblTopic.Size = new System.Drawing.Size(55, 20);
             this.lblTopic.TabIndex = 14;
             this.lblTopic.Text = "Topic";
             // 
             // comboBoxTopic
             // 
+            this.comboBoxTopic.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.comboBoxTopic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxTopic.ForeColor = System.Drawing.SystemColors.MenuText;
             this.comboBoxTopic.FormattingEnabled = true;
-            this.comboBoxTopic.Location = new System.Drawing.Point(151, 361);
+            this.comboBoxTopic.Location = new System.Drawing.Point(176, 361);
             this.comboBoxTopic.Name = "comboBoxTopic";
-            this.comboBoxTopic.Size = new System.Drawing.Size(592, 24);
+            this.comboBoxTopic.Size = new System.Drawing.Size(590, 26);
             this.comboBoxTopic.TabIndex = 15;
             // 
             // frmNewMCQ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 503);
+            this.BackColor = System.Drawing.Color.Brown;
+            this.ClientSize = new System.Drawing.Size(842, 548);
             this.Controls.Add(this.comboBoxTopic);
             this.Controls.Add(this.lblTopic);
             this.Controls.Add(this.richTextBoxText);
@@ -201,8 +236,9 @@
             this.Controls.Add(this.lblchA);
             this.Controls.Add(this.lblAns);
             this.Controls.Add(this.lblText);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmNewMCQ";
-            this.Text = "frmNewMCQ";
+            this.Text = "Add New Multiple Choice Question";
             this.Load += new System.EventHandler(this.frmNewMCQ_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
