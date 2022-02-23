@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.EntityFrameworkCore.Design.3.1.22\build\net461\Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('..\packages\Microsoft.EntityFrameworkCore.Design.3.1.22\build\net461\Microsoft.EntityFrameworkCore.Design.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7B4128C8-E033-4426-A623-A9BCD4C17D6E}</ProjectGuid>
+    <ProjectGuid>{09857A1E-EB12-48E7-A71A-CC2F4A432957}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>FrmHome</RootNamespace>
     <AssemblyName>FrmHome</AssemblyName>
@@ -68,6 +69,9 @@
     </Reference>
     <Reference Include="Microsoft.EntityFrameworkCore.Abstractions, Version=3.1.22.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.EntityFrameworkCore.Abstractions.3.1.22\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Design, Version=3.1.22.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Design.3.1.22\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Design.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.EntityFrameworkCore.Relational, Version=3.1.22.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.EntityFrameworkCore.Relational.3.1.22\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Relational.dll</HintPath>
@@ -240,6 +244,7 @@
     <Compile Include="Context\ExaminationContext.cs" />
     <Compile Include="Context\ExaminationContext.Functions.cs" />
     <Compile Include="Context\ExaminationContextProcedures.cs" />
+    <Compile Include="CourseTFQ.cs" />
     <Compile Include="Dept.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,7 +259,6 @@
     <Compile Include="Entities\Course.cs" />
     <Compile Include="Entities\CourseMCQ.cs" />
     <Compile Include="Entities\Courses_and_Students_of_InstructorResult.cs" />
-    <Compile Include="Entities\CourseTFQ.cs" />
     <Compile Include="Entities\Course_Attendance.cs" />
     <Compile Include="Entities\deleteExamResult.cs" />
     <Compile Include="Entities\deleteInstructorResult.cs" />
@@ -457,20 +461,10 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FrmCrystal\FormCrystallRpoer.csproj">
-      <Project>{72216eba-9cc5-4b56-b7a1-ff6525880448}</Project>
-      <Name>FormCrystallRpoer</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Trial\Trial.csproj">
       <Project>{c1e88680-ef50-4481-8c46-5c5835b527e3}</Project>
       <Name>Trial</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\c9cc119b-01d8-416a-8ec6-3409711df3b2-cover%281%29%282%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\c9cc119b-01d8-416a-8ec6-3409711df3b2-cover%281%29%282%291.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.4.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.4.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
@@ -479,5 +473,6 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.Data.SqlClient.SNI.4.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Data.SqlClient.SNI.4.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.EntityFrameworkCore.Design.3.1.22\build\net461\Microsoft.EntityFrameworkCore.Design.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.EntityFrameworkCore.Design.3.1.22\build\net461\Microsoft.EntityFrameworkCore.Design.props'))" />
   </Target>
 </Project>

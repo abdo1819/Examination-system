@@ -23,11 +23,14 @@ namespace FrmHome
         bool btnViewDept_Clicked = false;
         private void btnViewDept_Click(object sender, EventArgs e)
         {
-            //if (btnViewDept_Clicked)
-            //    return;
 
             btnViewDept_Clicked = true;
 
+            ReloadDepts();
+        }
+
+        private void ReloadDepts()
+        {
             using (ExaminationContext DeptContext = new ExaminationContext())
             {
                 DeptContext.Department.Load();
@@ -39,8 +42,10 @@ namespace FrmHome
                 bindingSource.DataSource = depts;
 
                 txtDeptName.DataBindings.Clear();
+                lblDeptID.DataBindings.Clear();
+
                 txtDeptName.DataBindings.Add("Text", bindingSource, "dept_name");
-                
+                lblDeptID.DataBindings.Add("Text", bindingSource, "dept_id");
             }
         }
 
@@ -64,9 +69,10 @@ namespace FrmHome
             using (ExaminationContext DeptContext = new ExaminationContext())
             {
                
-                frmNewDept NewDept = new frmNewDept();
-                NewDept.Show();
-                                
+                var NewDept = new frmNewDept();
+                
+                if(NewDept.ShowDialog() == DialogResult.OK)
+                    ReloadDepts();
             }
         }
 
@@ -80,25 +86,50 @@ namespace FrmHome
                 Department cuurentDept = (Department)bindingSource.Current;
                 DeptContext.Department.Remove(cuurentDept);
                 DeptContext.SaveChanges();
-
             }
+            ReloadDepts();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            if (txtSrchDept.Text == "")
+                return;
+
             using (ExaminationContext DeptContext = new ExaminationContext())
             {
                 var result = (from D in DeptContext.Department
-                             where D.dept_name.ToLower() == txtSrchDept.Text.ToLower()
                              select D).ToList();
 
-                if (result.Count > 0)
-                   lblExists.Text = $"{txtSrchDept.Text} Department exists";
+                var index = result.FindIndex(D => D.dept_name.ToLower() == txtSrchDept.Text.ToLower());
+                if (index > 0)
+                {
+                    bindingSource.MoveFirst();
+                    for(int i = 0; i < index; i++)
+                    {
+                        bindingSource.MoveNext();
+                    }
+                    lblExists.Text = $"{txtSrchDept.Text} Department exists";
+                }
 
                 else
                     lblExists.Text = $"{txtSrchDept.Text} Department doesn't exist";
 
             }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            using(ExaminationContext DeptContext = new ExaminationContext())
+            {
+
+                var NewDeptName = txtDeptName.Text;
+                var OldDept = DeptContext.Department.Find(int.Parse(lblDeptID.Text));
+
+                OldDept.dept_name = NewDeptName;
+                DeptContext.SaveChanges();
+           
+            }
+            ReloadDepts();
         }
     }
 }

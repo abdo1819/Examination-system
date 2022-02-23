@@ -28,6 +28,10 @@ namespace FrmHome
                 MCQ MyMCQ = new MCQ();
 
                 MyQuestion.q_text = richTextBoxText.Text;
+
+                if (textBoxAns.Text.ToLower() != "a" && textBoxAns.Text.ToLower() != "b" && textBoxAns.Text.ToLower() != "c" && textBoxAns.Text.ToLower() != "d")
+                    textBoxAns.Text = "A";
+
                 MyQuestion.corr_answer = textBoxAns.Text;
                 MyQuestion.top_id = (int)comboBoxTopic.SelectedValue;
                 MyQuestion.q_type = "MCQ";
