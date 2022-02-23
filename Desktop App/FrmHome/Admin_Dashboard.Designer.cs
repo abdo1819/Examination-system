@@ -121,7 +121,7 @@ namespace FrmHome
             this.groupInfo.Controls.Add(this.lblName);
             this.groupInfo.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Bold);
             this.groupInfo.ForeColor = System.Drawing.Color.DarkRed;
-            this.groupInfo.Location = new System.Drawing.Point(12, 40);
+            this.groupInfo.Location = new System.Drawing.Point(6, 40);
             this.groupInfo.Name = "groupInfo";
             this.groupInfo.Size = new System.Drawing.Size(358, 362);
             this.groupInfo.TabIndex = 21;
@@ -135,7 +135,7 @@ namespace FrmHome
             this.label4.ForeColor = System.Drawing.Color.DarkRed;
             this.label4.Location = new System.Drawing.Point(27, 289);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 24);
+            this.label4.Size = new System.Drawing.Size(119, 22);
             this.label4.TabIndex = 28;
             this.label4.Text = "Department:";
             // 
@@ -157,7 +157,7 @@ namespace FrmHome
             this.label2.ForeColor = System.Drawing.Color.DarkRed;
             this.label2.Location = new System.Drawing.Point(27, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 24);
+            this.label2.Size = new System.Drawing.Size(125, 22);
             this.label2.TabIndex = 26;
             this.label2.Text = "Instructor ID:";
             // 
@@ -179,7 +179,7 @@ namespace FrmHome
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
             this.label1.Location = new System.Drawing.Point(27, 227);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 24);
+            this.label1.Size = new System.Drawing.Size(65, 22);
             this.label1.TabIndex = 20;
             this.label1.Text = "Email:";
             // 
@@ -201,7 +201,7 @@ namespace FrmHome
             this.label3.ForeColor = System.Drawing.Color.DarkRed;
             this.label3.Location = new System.Drawing.Point(27, 169);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 24);
+            this.label3.Size = new System.Drawing.Size(89, 22);
             this.label3.TabIndex = 22;
             this.label3.Text = "Address:";
             // 
@@ -223,7 +223,7 @@ namespace FrmHome
             this.label5.ForeColor = System.Drawing.Color.DarkRed;
             this.label5.Location = new System.Drawing.Point(27, 119);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 24);
+            this.label5.Size = new System.Drawing.Size(67, 22);
             this.label5.TabIndex = 24;
             this.label5.Text = "Name:";
             // 
@@ -252,7 +252,7 @@ namespace FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(794, 450);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.groupInfo);
             this.Controls.Add(this.btnDepts);

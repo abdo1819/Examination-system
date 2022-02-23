@@ -16,7 +16,13 @@ namespace FrmHome
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+
+            Application.Run(new frmManageQuestions());
+
+            //Application.Run(new frmDept());
+
+            //Application.Run(new Login());
+
         }
     }
 }

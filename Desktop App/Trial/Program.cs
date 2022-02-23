@@ -18,7 +18,8 @@ namespace Trial
             Application.SetCompatibleTextRenderingDefault(false);
             
             //Application.Run(new frmExam());
-            Application.Run(new frmAvailableCoursesForExam());
+            //Application.Run(new frmAvailableCoursesForExam());
+
         }
     }
 }

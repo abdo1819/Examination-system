@@ -71,8 +71,8 @@ namespace FrmHome
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            ReportsForm.reportsForm frmReports = new reportsForm();
-            frmReports.ShowDialog();
+            //ReportsForm.reportsForm frmReports = new reportsForm();
+            //frmReports.ShowDialog();
             // There is an issue with opening this form
         }
 

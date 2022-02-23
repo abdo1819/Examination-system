@@ -31,6 +31,7 @@ namespace FrmHome.Entities
         [InverseProperty(nameof(Topic.Questions))]
         public virtual Topic top_ { get; set; }
         [InverseProperty("q_")]
+
         public virtual MCQ MCQ { get; set; }
         [InverseProperty(nameof(Exam_Answer.q_))]
         public virtual ICollection<Exam_Answer> Exam_Answers { get; set; }
