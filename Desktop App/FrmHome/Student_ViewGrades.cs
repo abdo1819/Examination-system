@@ -39,12 +39,7 @@ namespace FrmHome
 
             if (result == null || result?.Count == 0)
             {
-                var grfx = this.CreateGraphics();
-                var str = "You are currently not enlisted in any courses or haven't taken any exams yet.";
-                var font = new Font(FontFamily.GenericSansSerif, 10f, FontStyle.Bold);
-                var strSize = grfx.MeasureString(str, font);
-                grfx.DrawString(str, font, Brushes.Crimson, (this.ClientSize.Width - strSize.Width) / 2
-                    , (this.ClientSize.Height - strSize.Height) / 2);
+                lblNoCourse.Visible = true;
             }
             else
             {

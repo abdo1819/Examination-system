@@ -37,6 +37,7 @@ namespace FrmHome
             this.lblStdGrade = new System.Windows.Forms.Label();
             this.lblStdGradeValue = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblNoCourse = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,10 +46,10 @@ namespace FrmHome
             this.btnBack.BackColor = System.Drawing.Color.DarkRed;
             this.btnBack.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnBack.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnBack.Location = new System.Drawing.Point(26, 325);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Location = new System.Drawing.Point(35, 400);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(128, 55);
+            this.btnBack.Size = new System.Drawing.Size(171, 68);
             this.btnBack.TabIndex = 20;
             this.btnBack.Text = "Go Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -58,10 +59,10 @@ namespace FrmHome
             // 
             this.comboBoxCourses.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCourses.FormattingEnabled = true;
-            this.comboBoxCourses.Location = new System.Drawing.Point(68, 134);
-            this.comboBoxCourses.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCourses.Location = new System.Drawing.Point(91, 165);
+            this.comboBoxCourses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxCourses.Name = "comboBoxCourses";
-            this.comboBoxCourses.Size = new System.Drawing.Size(426, 31);
+            this.comboBoxCourses.Size = new System.Drawing.Size(567, 36);
             this.comboBoxCourses.TabIndex = 21;
             this.comboBoxCourses.Visible = false;
             this.comboBoxCourses.SelectedIndexChanged += new System.EventHandler(this.comboBoxCourses_SelectedIndexChanged);
@@ -70,10 +71,9 @@ namespace FrmHome
             // 
             this.lblSelectCourse.AutoSize = true;
             this.lblSelectCourse.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
-            this.lblSelectCourse.Location = new System.Drawing.Point(89, 83);
-            this.lblSelectCourse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSelectCourse.Location = new System.Drawing.Point(119, 102);
             this.lblSelectCourse.Name = "lblSelectCourse";
-            this.lblSelectCourse.Size = new System.Drawing.Size(386, 25);
+            this.lblSelectCourse.Size = new System.Drawing.Size(500, 32);
             this.lblSelectCourse.TabIndex = 22;
             this.lblSelectCourse.Text = "Select a Course to view your Grades:";
             this.lblSelectCourse.Visible = false;
@@ -83,10 +83,10 @@ namespace FrmHome
             this.btnShow.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnShow.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShow.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnShow.Location = new System.Drawing.Point(403, 325);
-            this.btnShow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnShow.Location = new System.Drawing.Point(537, 400);
+            this.btnShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(128, 55);
+            this.btnShow.Size = new System.Drawing.Size(171, 68);
             this.btnShow.TabIndex = 23;
             this.btnShow.Text = "Show Courses";
             this.btnShow.UseVisualStyleBackColor = false;
@@ -96,10 +96,9 @@ namespace FrmHome
             // 
             this.lblStdGrade.AutoSize = true;
             this.lblStdGrade.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStdGrade.Location = new System.Drawing.Point(207, 201);
-            this.lblStdGrade.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStdGrade.Location = new System.Drawing.Point(276, 247);
             this.lblStdGrade.Name = "lblStdGrade";
-            this.lblStdGrade.Size = new System.Drawing.Size(130, 25);
+            this.lblStdGrade.Size = new System.Drawing.Size(167, 32);
             this.lblStdGrade.TabIndex = 24;
             this.lblStdGrade.Text = "Your Grade";
             this.lblStdGrade.Visible = false;
@@ -108,10 +107,9 @@ namespace FrmHome
             // 
             this.lblStdGradeValue.AutoSize = true;
             this.lblStdGradeValue.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStdGradeValue.Location = new System.Drawing.Point(238, 251);
-            this.lblStdGradeValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStdGradeValue.Location = new System.Drawing.Point(317, 309);
             this.lblStdGradeValue.Name = "lblStdGradeValue";
-            this.lblStdGradeValue.Size = new System.Drawing.Size(60, 19);
+            this.lblStdGradeValue.Size = new System.Drawing.Size(75, 23);
             this.lblStdGradeValue.TabIndex = 25;
             this.lblStdGradeValue.Text = "10 / 10";
             this.lblStdGradeValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -123,28 +121,43 @@ namespace FrmHome
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblNoCourse);
             this.panel1.Controls.Add(this.lblSelectCourse);
             this.panel1.Controls.Add(this.lblStdGradeValue);
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.lblStdGrade);
             this.panel1.Controls.Add(this.comboBoxCourses);
             this.panel1.Controls.Add(this.btnShow);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(16, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(554, 427);
+            this.panel1.Size = new System.Drawing.Size(739, 526);
             this.panel1.TabIndex = 26;
+            // 
+            // lblNoCourse
+            // 
+            this.lblNoCourse.AutoSize = true;
+            this.lblNoCourse.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoCourse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblNoCourse.Location = new System.Drawing.Point(138, 165);
+            this.lblNoCourse.Name = "lblNoCourse";
+            this.lblNoCourse.Size = new System.Drawing.Size(472, 32);
+            this.lblNoCourse.TabIndex = 26;
+            this.lblNoCourse.Text = "You are not enrolled in any course.";
+            this.lblNoCourse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNoCourse.Visible = false;
             // 
             // Student_ViewGrades
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
-            this.ClientSize = new System.Drawing.Size(578, 451);
+            this.ClientSize = new System.Drawing.Size(771, 555);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(603, 175);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Student_ViewGrades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "View Grades";
@@ -162,5 +175,6 @@ namespace FrmHome
         private System.Windows.Forms.Label lblStdGrade;
         private System.Windows.Forms.Label lblStdGradeValue;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblNoCourse;
     }
 }

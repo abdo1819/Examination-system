@@ -15,41 +15,27 @@ namespace FrmHome
     {
         Login frmLogin;
         Admin_Dashboard frmAdmin;
-        Entities.Course selectedCourse;
-        List<Entities.Topic> topics;
+        List<Entities.getAllStudentsResult> Students;
+
         public Admin_ManageCourses(Login _frmLogin, Admin_Dashboard _frmAdmin)
         {
+            InitializeComponent();
             frmLogin = _frmLogin;
             frmAdmin = _frmAdmin;
-            InitializeComponent();
         }
-        public void ChangeTopic()
-        {
-            var MCQs = frmLogin.Ctx.Question
-                .Where(q => q.q_type == "MCQ" && q.top_id == topics[comboTopics.SelectedIndex].top_id).ToList().Count;
-            var TFQs = frmLogin.Ctx.Question
-                .Where(q => q.q_type == "TF" && q.top_id == topics[comboTopics.SelectedIndex].top_id).ToList().Count;
-            lblTName.Text = topics[comboTopics.SelectedIndex].top_name;
-            lblMCQs.Text = MCQs.ToString();
-            lblTFQs.Text = TFQs.ToString();
-        }
+
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            frmLogin.Close();
-            if (frmLogin.IsDisposed == false)
-                e.Cancel = true;
+            frmAdmin.Show();
         }
-        protected override void OnLoad(EventArgs e)
+        protected override async void OnLoad(EventArgs e)
         {
             lblStdID.Text = frmAdmin.UsrID;
             lblName.Text = frmAdmin.EmpName;
             lblDept.Text = frmAdmin.Dept;
             lblEmail.Text = frmAdmin.Email;
             lblAddress.Text = frmAdmin.Address;
-
-            var courses = frmLogin.Ctx.Course.ToList();
-            comboCourses.DataSource = courses;
-            comboCourses.DisplayMember = "crs_name";
+            Students = await frmLogin.Procedures.getAllStudentsAsync(new OutputParameter<int>());
             base.OnLoad(e);
         }
 
@@ -58,32 +44,44 @@ namespace FrmHome
             frmAdmin.Show();
             this.Close();
         }
-
-        private void comboCourses_SelectedIndexChanged(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            selectedCourse = (Entities.Course)comboCourses.SelectedItem;
-            topics = frmLogin.Ctx.Topic.Where(t => t.crs_id == selectedCourse.crs_id).ToList();
-            comboTopics.DataSource = topics;
-            comboTopics.DisplayMember = "top_id";
-            ChangeTopic();
+            groupActions.Visible = false;
+            Admin_AssignStudentToCourse frmAssignCourse = new Admin_AssignStudentToCourse(frmLogin, Students);
+            frmAssignCourse.ShowDialog();
+            groupActions.Visible = true;
         }
 
-        private void comboTopics_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnEndCourse_Click(object sender, EventArgs e)
         {
-            lblTName.Text = topics[comboTopics.SelectedIndex].top_name;
-            ChangeTopic();
+            groupActions.Visible = false;
+            Admin_EndCourseForStudent frmRemoveCourse = new Admin_EndCourseForStudent(frmLogin, Students);
+            frmRemoveCourse.ShowDialog();
+            groupActions.Visible = true;
         }
 
-        private async void btnViewQuestions_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            var result = await frmLogin.Procedures.viewTopicMCQAsync(topics[comboTopics.SelectedIndex].top_name, new OutputParameter<int>());
-            dataGridQuestions.DataSource = result;
+            groupActions.Visible = false;
+            Admin_AddNewCourse frmAddCourse = new Admin_AddNewCourse(frmLogin);
+            frmAddCourse.ShowDialog();
+            groupActions.Visible = true;
         }
 
-        private async void btnViewTFQ_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            var result = await frmLogin.Procedures.viewTopicTFQAsync(topics[comboTopics.SelectedIndex].top_name, new OutputParameter<int>());
-            dataGridQuestions.DataSource = result;
+            groupActions.Visible = false;
+            Admin_AddTopic frmAddTopic = new Admin_AddTopic(frmLogin);
+            frmAddTopic.ShowDialog();
+            groupActions.Visible = true;
+        }
+
+        private void btnCoursesQuestions_Click(object sender, EventArgs e)
+        {
+            Admin_FormViewQuestions frmViewQuestions = new Admin_FormViewQuestions(frmLogin);
+            groupActions.Visible = false;
+            frmViewQuestions.ShowDialog();
+            groupActions.Visible = true;
         }
     }
 }

@@ -85,7 +85,7 @@ namespace FrmHome
 
         private void btnQuestions_Click(object sender, EventArgs e)
         {
-            var frm = new frmManageQuestions();
+            var frm = new frmManageQuestions(this.frmLogin);
             frm.Show();
         }
 

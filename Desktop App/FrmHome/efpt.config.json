@@ -310,7 +310,15 @@
          "ObjectType": 1
       },
       {
+         "Name": "[dbo].[viewTopicMCQV2]",
+         "ObjectType": 1
+      },
+      {
          "Name": "[dbo].[viewTopicTFQ]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[viewTopicTFQV2]",
          "ObjectType": 1
       },
       {

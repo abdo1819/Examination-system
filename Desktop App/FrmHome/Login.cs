@@ -25,16 +25,6 @@ namespace FrmHome
             this.Resize += (sender, e) => Trace.WriteLine(this.Size);
             this.FormClosed += (sender, e) => Ctx?.Dispose();
         }
-        protected override void OnLoad(EventArgs e)
-        {
-            
-            base.OnLoad(e);
-        }
-    
-        protected override void OnPaint(PaintEventArgs e)
-        {
-           
-        }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
@@ -50,7 +40,7 @@ namespace FrmHome
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
-            
+            btnLogin.Enabled = false;
             var users = await Procedures.GetUserAsync(txtEmail.Text, txtPassword.Text, new OutputParameter<int>());
             
             if (users.Count == 0)
@@ -77,6 +67,7 @@ namespace FrmHome
                 }
                                     
             }
+            btnLogin.Enabled = true;
                 
         }
 
@@ -119,11 +110,6 @@ namespace FrmHome
         private void Login_MouseUp(object sender, MouseEventArgs e)
         {
             dragging = false;
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

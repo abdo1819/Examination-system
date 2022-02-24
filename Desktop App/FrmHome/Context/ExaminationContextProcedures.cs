@@ -95,7 +95,9 @@ namespace FrmHome
             modelBuilder.Entity<viewMCQResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<viewTFQResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<viewTopicMCQResult>().HasNoKey().ToView(null);
+            modelBuilder.Entity<viewTopicMCQV2Result>().HasNoKey().ToView(null);
             modelBuilder.Entity<viewTopicTFQResult>().HasNoKey().ToView(null);
+            modelBuilder.Entity<viewTopicTFQV2Result>().HasNoKey().ToView(null);
         }
     }
 
@@ -134,7 +136,7 @@ namespace FrmHome
         Task<List<getStudentAnswerResult>> getStudentAnswerAsync(int? exam_id, int? stduent_id, CancellationToken cancellationToken = default);
         Task<List<getStudentsInDepartmentResult>> getStudentsInDepartmentAsync(int? dept_id, CancellationToken cancellationToken = default);
         Task<List<GetUserResult>> GetUserAsync(string email, string password, CancellationToken cancellationToken = default);
-        Task<List<Insert_CourseResult>> Insert_CourseAsync(string crs_name, CancellationToken cancellationToken = default);
+        Task<int> Insert_CourseAsync(string crs_name, CancellationToken cancellationToken = default);
         Task<int> Insert_DepartmentAsync(string dept_name, int? id_mgr, CancellationToken cancellationToken = default);
         Task<int> Insert_Department_With_ManagerAsync(string dept_name, string f_name, string l_name, string address, string email, string password, decimal? salary, string degree, CancellationToken cancellationToken = default);
         Task<List<Insert_InstructorResult>> Insert_InstructorAsync(string f_name, string l_name, string address, string email, string password, decimal? salary, string degree, int? dept_id, CancellationToken cancellationToken = default);
@@ -162,7 +164,9 @@ namespace FrmHome
         Task<List<viewMCQResult>> viewMCQAsync(CancellationToken cancellationToken = default);
         Task<List<viewTFQResult>> viewTFQAsync(CancellationToken cancellationToken = default);
         Task<List<viewTopicMCQResult>> viewTopicMCQAsync(string top_name, CancellationToken cancellationToken = default);
+        Task<List<viewTopicMCQV2Result>> viewTopicMCQV2Async(string top_name, CancellationToken cancellationToken = default);
         Task<List<viewTopicTFQResult>> viewTopicTFQAsync(string top_name, CancellationToken cancellationToken = default);
+        Task<List<viewTopicTFQV2Result>> viewTopicTFQV2Async(string top_name, CancellationToken cancellationToken = default);
     }
 
     public partial class ExaminationContextProcedures
@@ -1190,7 +1194,7 @@ namespace FrmHome
             return _;
         }
 
-        public virtual async Task<List<Insert_CourseResult>> Insert_CourseAsync(string crs_name, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        public virtual async Task<int> Insert_CourseAsync(string crs_name, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterreturnValue = new SqlParameter
             {
@@ -1210,7 +1214,7 @@ namespace FrmHome
                 },
                 parameterreturnValue,
             };
-            var _ = await _context.SqlQueryAsync<Insert_CourseResult>("EXEC @returnValue = [dbo].[Insert_Course] @crs_name", sqlParameters, cancellationToken);
+            var _ = await _context.Database.ExecuteSqlRawAsync("EXEC @returnValue = [dbo].[Insert_Course] @crs_name", sqlParameters, cancellationToken);
 
             returnValue?.SetValue(parameterreturnValue.Value);
 
@@ -2475,6 +2479,33 @@ namespace FrmHome
             return _;
         }
 
+        public virtual async Task<List<viewTopicMCQV2Result>> viewTopicMCQV2Async(string top_name, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        {
+            var parameterreturnValue = new SqlParameter
+            {
+                ParameterName = "returnValue",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+
+            var sqlParameters = new []
+            {
+                new SqlParameter
+                {
+                    ParameterName = "top_name",
+                    Size = 200,
+                    Value = top_name ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                parameterreturnValue,
+            };
+            var _ = await _context.SqlQueryAsync<viewTopicMCQV2Result>("EXEC @returnValue = [dbo].[viewTopicMCQV2] @top_name", sqlParameters, cancellationToken);
+
+            returnValue?.SetValue(parameterreturnValue.Value);
+
+            return _;
+        }
+
         public virtual async Task<List<viewTopicTFQResult>> viewTopicTFQAsync(string top_name, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterreturnValue = new SqlParameter
@@ -2496,6 +2527,33 @@ namespace FrmHome
                 parameterreturnValue,
             };
             var _ = await _context.SqlQueryAsync<viewTopicTFQResult>("EXEC @returnValue = [dbo].[viewTopicTFQ] @top_name", sqlParameters, cancellationToken);
+
+            returnValue?.SetValue(parameterreturnValue.Value);
+
+            return _;
+        }
+
+        public virtual async Task<List<viewTopicTFQV2Result>> viewTopicTFQV2Async(string top_name, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        {
+            var parameterreturnValue = new SqlParameter
+            {
+                ParameterName = "returnValue",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+
+            var sqlParameters = new []
+            {
+                new SqlParameter
+                {
+                    ParameterName = "top_name",
+                    Size = 200,
+                    Value = top_name ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                parameterreturnValue,
+            };
+            var _ = await _context.SqlQueryAsync<viewTopicTFQV2Result>("EXEC @returnValue = [dbo].[viewTopicTFQV2] @top_name", sqlParameters, cancellationToken);
 
             returnValue?.SetValue(parameterreturnValue.Value);
 

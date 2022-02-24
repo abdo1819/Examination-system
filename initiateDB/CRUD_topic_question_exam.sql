@@ -31,11 +31,14 @@ GO
 
 create or alter procedure Insert_Course @crs_name varchar(20)
 as
+BEGIN
 if not exists (select @crs_name from [Course] where crs_name = @crs_name)
 	insert into [course] values(@crs_name)
 else
-	select 'This course already exists' as [Error Message]
+	RETURN 0;
 
+RETURN 1;
+END
 GO
 
 /* ------------------------------------------------------------------------------- */
@@ -78,6 +81,7 @@ GO
 
 create or alter procedure Insert_Topic @top_name varchar(20), @crs_name varchar(20)
 as
+BEGIN
 declare @id_crs int
 if not exists (select top_name from [Topic] where top_name = @top_name)
 	begin
@@ -86,11 +90,13 @@ if not exists (select top_name from [Topic] where top_name = @top_name)
 			insert into Topic values (@top_name, @id_crs)
 		end try
 		begin catch
-			select 'There is no course named ' + @crs_name
+			RETURN 0;
 		end catch
 	end
 else 
-	select 'This Topic already exists'
+	RETURN 0;
+RETURN 1;
+END
 
 GO
 
@@ -204,18 +210,19 @@ and exists (select std_id from [Student] where std_id = @std_id)
 				values(@crs_id, @std_id, @ins_id)
 				
 				else
-					select 'This course is not assgined to this instructor'
+					RETURN 0;
 			end 
 		else
-			select 'There is no course with this ID'
+			RETURN 0;
 	end
 
 else
-	select 'Please check the Instructor and Student ID'
+	RETURN 0;
 END TRY
 BEGIN CATCH
-	SELECT 'Duplicate data , please check your data' AS [Error Message]
+	RETURN 0;
 END CATCH
+RETURN 1;
 GO
 
 /* ------------------------------------------------------------------------------- */
@@ -224,6 +231,7 @@ GO
 
 create or alter procedure End_Course_for_Student @crs_name varchar(20), @std_id int
 as
+BEGIN
 if exists (select crs_name from [course] where crs_name = @crs_name)
 	begin
 		if exists (select std_id from [Student] where std_id = @std_id)
@@ -237,14 +245,16 @@ if exists (select crs_name from [course] where crs_name = @crs_name)
 							where (crs_id = @id_course and std_id = @std_id)
 						end
 					else
-						select 'This student does not take this course'
+						RETURN 0;
 			end
 		else
-			select 'There is no Course with this ID'
+			RETURN 0;
 	end
 else 
-	select 'There is no Course named ' + @crs_name
+	RETURN 0;
 
+	RETURN 1;
+	END
 GO
 
 /* ------------------------------------------------------------------------------- */

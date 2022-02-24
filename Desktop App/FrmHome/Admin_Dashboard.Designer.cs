@@ -32,7 +32,6 @@ namespace FrmHome
             this.btnStudents = new System.Windows.Forms.Button();
             this.btnQuestions = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
-            this.btnExams = new System.Windows.Forms.Button();
             this.btnCourses = new System.Windows.Forms.Button();
             this.btnDepts = new System.Windows.Forms.Button();
             this.groupInfo = new System.Windows.Forms.GroupBox();
@@ -52,18 +51,18 @@ namespace FrmHome
             // 
             // btnStudents
             // 
-            this.btnStudents.Location = new System.Drawing.Point(407, 187);
+            this.btnStudents.Location = new System.Drawing.Point(511, 119);
             this.btnStudents.Name = "btnStudents";
             this.btnStudents.Size = new System.Drawing.Size(94, 46);
             this.btnStudents.TabIndex = 0;
-            this.btnStudents.Text = "Manage Students";
+            this.btnStudents.Text = "Manage Users";
             this.btnStudents.UseVisualStyleBackColor = true;
             // 
             // btnQuestions
             // 
-            this.btnQuestions.Location = new System.Drawing.Point(589, 174);
+            this.btnQuestions.Location = new System.Drawing.Point(511, 52);
             this.btnQuestions.Name = "btnQuestions";
-            this.btnQuestions.Size = new System.Drawing.Size(116, 62);
+            this.btnQuestions.Size = new System.Drawing.Size(99, 54);
             this.btnQuestions.TabIndex = 1;
             this.btnQuestions.Text = "Manage Questions";
             this.btnQuestions.UseVisualStyleBackColor = true;
@@ -71,28 +70,19 @@ namespace FrmHome
             // 
             // btnReport
             // 
-            this.btnReport.Location = new System.Drawing.Point(397, 51);
+            this.btnReport.Location = new System.Drawing.Point(511, 315);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(104, 55);
+            this.btnReport.Size = new System.Drawing.Size(99, 47);
             this.btnReport.TabIndex = 2;
             this.btnReport.Text = "Reports Dashboard";
             this.btnReport.UseVisualStyleBackColor = true;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
-            // btnExams
-            // 
-            this.btnExams.Location = new System.Drawing.Point(397, 310);
-            this.btnExams.Name = "btnExams";
-            this.btnExams.Size = new System.Drawing.Size(106, 43);
-            this.btnExams.TabIndex = 3;
-            this.btnExams.Text = "Manage Exams";
-            this.btnExams.UseVisualStyleBackColor = true;
-            // 
             // btnCourses
             // 
-            this.btnCourses.Location = new System.Drawing.Point(589, 310);
+            this.btnCourses.Location = new System.Drawing.Point(511, 248);
             this.btnCourses.Name = "btnCourses";
-            this.btnCourses.Size = new System.Drawing.Size(126, 46);
+            this.btnCourses.Size = new System.Drawing.Size(99, 46);
             this.btnCourses.TabIndex = 4;
             this.btnCourses.Text = "Manage Courses";
             this.btnCourses.UseVisualStyleBackColor = true;
@@ -100,7 +90,7 @@ namespace FrmHome
             // 
             // btnDepts
             // 
-            this.btnDepts.Location = new System.Drawing.Point(589, 51);
+            this.btnDepts.Location = new System.Drawing.Point(511, 178);
             this.btnDepts.Name = "btnDepts";
             this.btnDepts.Size = new System.Drawing.Size(99, 55);
             this.btnDepts.TabIndex = 5;
@@ -259,7 +249,6 @@ namespace FrmHome
             this.Controls.Add(this.groupInfo);
             this.Controls.Add(this.btnDepts);
             this.Controls.Add(this.btnCourses);
-            this.Controls.Add(this.btnExams);
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnQuestions);
             this.Controls.Add(this.btnStudents);
@@ -276,7 +265,6 @@ namespace FrmHome
         private System.Windows.Forms.Button btnStudents;
         private System.Windows.Forms.Button btnQuestions;
         private System.Windows.Forms.Button btnReport;
-        private System.Windows.Forms.Button btnExams;
         private System.Windows.Forms.Button btnCourses;
         private System.Windows.Forms.Button btnDepts;
         private System.Windows.Forms.GroupBox groupInfo;

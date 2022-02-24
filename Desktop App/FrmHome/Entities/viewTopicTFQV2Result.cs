@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FrmHome.Entities
 {
-    public partial class Insert_CourseResult
+    public partial class viewTopicTFQV2Result
     {
     }
 }

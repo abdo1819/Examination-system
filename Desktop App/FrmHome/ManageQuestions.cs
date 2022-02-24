@@ -25,9 +25,10 @@ namespace FrmHome
         bool btnViewTFQuetions_Clicked = false;
 
         int C_id = 0;
-        public frmManageQuestions()
+        public frmManageQuestions(Login frmLogin)
         {
             InitializeComponent();
+            this.ExaminationContext = frmLogin.Ctx;
         }
 
         private void ManageQuestions_Load(object sender, EventArgs e)
@@ -244,8 +245,8 @@ namespace FrmHome
             new frmNewTFQ(C_id).Show();
             refreshQuestion();
         }
-        #warning handle disposing
-        ExaminationContext ExaminationContext = new ExaminationContext();
+
+        ExaminationContext ExaminationContext;
         private void btnDeleteTFQ_Click(object sender, EventArgs e)
         {
             if (!btnViewTFQuetions_Clicked)
