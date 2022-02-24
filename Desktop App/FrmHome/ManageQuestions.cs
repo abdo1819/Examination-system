@@ -17,10 +17,11 @@ namespace FrmHome
     {
         BindingSource bindingSourceMCQ;
         BindingSource bindingSourceTFQ;
+        ExaminationContext ExaminationContext;
 
-        bool btnViewMCQuetions_Clicked = false;
+        //bool btnViewMCQuetions_Clicked = false;
 
-        bool btnViewTFQuetions_Clicked = false;
+        //bool btnViewTFQuetions_Clicked = false;
 
         int C_id = 0;
         public frmManageQuestions(Login frmLogin)
@@ -37,14 +38,8 @@ namespace FrmHome
                 comboBoxCourse.DataSource = CoursesContext.Course.Local.ToBindingList();
                 comboBoxCourse.DisplayMember = "crs_name";
                 comboBoxCourse.ValueMember = "crs_id";
-
+                ReloadMCQ();
             }
-        }
-
-        private void btnViewMCQQuestions_Click(object sender, EventArgs e)
-        {
-            btnViewMCQuetions_Clicked = true;
-            ReloadMCQ();
         }
 
         private void ReloadMCQ()
@@ -79,23 +74,23 @@ namespace FrmHome
 
         private void btnMCQNext_Click(object sender, EventArgs e)
         {
-            if (!btnViewMCQuetions_Clicked)
-                return;
+            //if (!btnViewMCQuetions_Clicked)
+            //    return;
 
             bindingSourceMCQ.MoveNext();
         }
 
         private void btnMCQPrevious_Click(object sender, EventArgs e)
         {
-            if (!btnViewMCQuetions_Clicked)
-                return;
+            //if (!btnViewMCQuetions_Clicked)
+            //    return;
 
             bindingSourceMCQ.MovePrevious();
         }
 
         private void btnSearchMCQ_Click(object sender, EventArgs e)
         {
-            if (!btnViewMCQuetions_Clicked || txtBoxSearchMCQ.Text == "")
+            if (/*!btnViewMCQuetions_Clicked ||*/ txtBoxSearchMCQ.Text == "")
                 return;
 
             if (!int.TryParse(txtBoxSearchMCQ.Text, out _))
@@ -126,8 +121,8 @@ namespace FrmHome
 
         private void btnAddMCQ_Click(object sender, EventArgs e)
         {
-            if (!btnViewMCQuetions_Clicked)
-                return;
+            //if (!btnViewMCQuetions_Clicked)
+            //    return;
 
             C_id = (int)comboBoxCourse.SelectedValue;
 
@@ -139,8 +134,8 @@ namespace FrmHome
 
         private void btnDeleteMCQ_Click(object sender, EventArgs e)
         {
-            if (!btnViewMCQuetions_Clicked)
-                return;
+            //if (!btnViewMCQuetions_Clicked)
+            //    return;
 
             using (ExaminationContext QuestionContext = new ExaminationContext())
             {
@@ -161,8 +156,8 @@ namespace FrmHome
         {
             using (ExaminationContext QuestionContext = new ExaminationContext())
             {
-                if (!btnViewMCQuetions_Clicked)
-                    return;
+                //if (!btnViewMCQuetions_Clicked)
+                //    return;
 
                 C_id = (int)comboBoxCourse.SelectedValue;
 
@@ -181,12 +176,12 @@ namespace FrmHome
 
                 var question_ID = int.Parse(lblMCQID.Text);
 
-                //QuestionContext.Question.FromSqlRaw<Question>($"update Question set q_text = {q_text} where q_id = {question_ID}");
+                
                 var QQQ = QuestionContext.Question.Find(question_ID);
                 QQQ.q_text = q_Text;
                 QQQ.corr_answer = Corr_Ans;
 
-                //QuestionContext.MCQ.FromSqlRaw<MCQ>($"update MCQ set ch_a = {choose_A}, ch_b = {choose_B}, ch_c = {choose_C}, ch_d = {choose_D} where q_id = {question_ID}");
+                
                 var qqq = QuestionContext.MCQ.Find(question_ID);
                 qqq.ch_a = choose_A;
                 qqq.ch_b = choose_B;
@@ -196,12 +191,6 @@ namespace FrmHome
                 QuestionContext.SaveChanges();
             }
             ReloadMCQ();
-        }
-
-        private void btnVieqTFQQuestions_Click(object sender, EventArgs e)
-        {
-            btnViewTFQuetions_Clicked = true;
-            ReloadTFQ();
         }
 
         private void ReloadTFQ()
@@ -228,23 +217,23 @@ namespace FrmHome
 
         private void btnTFQNext_Click(object sender, EventArgs e)
         {
-            if (!btnViewTFQuetions_Clicked)
-                return;
+            //if (!btnViewTFQuetions_Clicked)
+            //    return;
 
             bindingSourceTFQ.MoveNext();
         }
 
         private void btnTFQPrevious_Click(object sender, EventArgs e)
         {
-            if (!btnViewTFQuetions_Clicked)
-                return;
+            //if (!btnViewTFQuetions_Clicked)
+            //    return;
 
             bindingSourceTFQ.MovePrevious();
         }
 
         private void btnSearchTFQ_Click(object sender, EventArgs e)
         {
-            if (!btnViewTFQuetions_Clicked || txtBoxSearchTFQ.Text == "")
+            if (/*!btnViewTFQuetions_Clicked ||*/ txtBoxSearchTFQ.Text == "")
                 return;
 
             if(!int.TryParse(txtBoxSearchTFQ.Text, out _))
@@ -270,8 +259,8 @@ namespace FrmHome
 
         private void btnAddTFQ_Click(object sender, EventArgs e)
         {
-            if (!btnViewTFQuetions_Clicked)
-                return;
+            //if (!btnViewTFQuetions_Clicked)
+            //    return;
 
             C_id = (int)comboBoxCourse.SelectedValue;
 
@@ -281,11 +270,11 @@ namespace FrmHome
                 ReloadTFQ();
         }
 
-        ExaminationContext ExaminationContext;
+        
         private void btnDeleteTFQ_Click(object sender, EventArgs e)
         {
-            if (!btnViewTFQuetions_Clicked)
-                return;
+            //if (!btnViewTFQuetions_Clicked)
+            //    return;
 
             using (ExaminationContext QuestionContext = new ExaminationContext())
             {
@@ -302,8 +291,8 @@ namespace FrmHome
         {
             using (ExaminationContext QuestionContext = new ExaminationContext())
             {
-                if (!btnViewTFQuetions_Clicked)
-                    return;
+                //if (!btnViewTFQuetions_Clicked)
+                //    return;
 
                 C_id = (int)comboBoxCourse.SelectedValue;
 
@@ -331,6 +320,7 @@ namespace FrmHome
         {
             grpBoxMCQ.Visible = true;
             grpBoxTFQ.Visible = false;
+            ReloadMCQ();
         }
 
         private void rdbtnTFQ_CheckedChanged(object sender, EventArgs e)
@@ -342,6 +332,14 @@ namespace FrmHome
         private void btnGoBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void comboBoxCourse_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (rdbtnMCQ.Checked)
+                ReloadMCQ();
+            else
+                ReloadTFQ();
         }
     }
 }

@@ -51,7 +51,6 @@
             this.btnMCQNext = new System.Windows.Forms.Button();
             this.richTextBoxMCQBody = new System.Windows.Forms.RichTextBox();
             this.lblMCQBody = new System.Windows.Forms.Label();
-            this.btnViewMCQQuestions = new System.Windows.Forms.Button();
             this.grpBoxTFQ = new System.Windows.Forms.GroupBox();
             this.txtAnsTFQ = new System.Windows.Forms.TextBox();
             this.lblAnsTFQ = new System.Windows.Forms.Label();
@@ -67,7 +66,6 @@
             this.btnDeleteTFQ = new System.Windows.Forms.Button();
             this.btnTFQPrevious = new System.Windows.Forms.Button();
             this.btnAddTFQ = new System.Windows.Forms.Button();
-            this.btnVieqTFQQuestions = new System.Windows.Forms.Button();
             this.rdbtnTFQ = new System.Windows.Forms.RadioButton();
             this.rdbtnMCQ = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -84,11 +82,12 @@
             this.comboBoxCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCourse.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.comboBoxCourse.FormattingEnabled = true;
-            this.comboBoxCourse.Location = new System.Drawing.Point(159, 101);
-            this.comboBoxCourse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCourse.Location = new System.Drawing.Point(212, 124);
+            this.comboBoxCourse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxCourse.Name = "comboBoxCourse";
-            this.comboBoxCourse.Size = new System.Drawing.Size(275, 25);
+            this.comboBoxCourse.Size = new System.Drawing.Size(365, 28);
             this.comboBoxCourse.TabIndex = 0;
+            this.comboBoxCourse.SelectedIndexChanged += new System.EventHandler(this.comboBoxCourse_SelectedIndexChanged);
             // 
             // lblChooseCourse
             // 
@@ -96,10 +95,9 @@
             this.lblChooseCourse.AutoSize = true;
             this.lblChooseCourse.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
             this.lblChooseCourse.ForeColor = System.Drawing.Color.Black;
-            this.lblChooseCourse.Location = new System.Drawing.Point(118, 43);
-            this.lblChooseCourse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblChooseCourse.Location = new System.Drawing.Point(157, 53);
             this.lblChooseCourse.Name = "lblChooseCourse";
-            this.lblChooseCourse.Size = new System.Drawing.Size(379, 25);
+            this.lblChooseCourse.Size = new System.Drawing.Size(489, 32);
             this.lblChooseCourse.TabIndex = 1;
             this.lblChooseCourse.Text = "Select Course to review its Questions";
             // 
@@ -126,21 +124,21 @@
             this.grpBoxMCQ.Controls.Add(this.richTextBoxMCQBody);
             this.grpBoxMCQ.Controls.Add(this.lblMCQBody);
             this.grpBoxMCQ.ForeColor = System.Drawing.Color.Black;
-            this.grpBoxMCQ.Location = new System.Drawing.Point(77, 171);
-            this.grpBoxMCQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpBoxMCQ.Location = new System.Drawing.Point(103, 210);
+            this.grpBoxMCQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpBoxMCQ.Name = "grpBoxMCQ";
-            this.grpBoxMCQ.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grpBoxMCQ.Size = new System.Drawing.Size(424, 334);
+            this.grpBoxMCQ.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpBoxMCQ.Size = new System.Drawing.Size(565, 411);
             this.grpBoxMCQ.TabIndex = 6;
             this.grpBoxMCQ.TabStop = false;
             // 
             // txtAnsMCQ
             // 
             this.txtAnsMCQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnsMCQ.Location = new System.Drawing.Point(394, 12);
-            this.txtAnsMCQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAnsMCQ.Location = new System.Drawing.Point(525, 15);
+            this.txtAnsMCQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAnsMCQ.Name = "txtAnsMCQ";
-            this.txtAnsMCQ.Size = new System.Drawing.Size(26, 21);
+            this.txtAnsMCQ.Size = new System.Drawing.Size(33, 24);
             this.txtAnsMCQ.TabIndex = 33;
             // 
             // lblAnsMCQ
@@ -148,22 +146,21 @@
             this.lblAnsMCQ.AutoSize = true;
             this.lblAnsMCQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnsMCQ.ForeColor = System.Drawing.Color.Black;
-            this.lblAnsMCQ.Location = new System.Drawing.Point(306, 15);
-            this.lblAnsMCQ.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAnsMCQ.Location = new System.Drawing.Point(408, 18);
             this.lblAnsMCQ.Name = "lblAnsMCQ";
-            this.lblAnsMCQ.Size = new System.Drawing.Size(93, 13);
+            this.lblAnsMCQ.Size = new System.Drawing.Size(111, 16);
             this.lblAnsMCQ.TabIndex = 31;
             this.lblAnsMCQ.Text = "Correct Answer";
             // 
             // btnUpdateMCQ
             // 
-            this.btnUpdateMCQ.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnUpdateMCQ.BackColor = System.Drawing.Color.DarkRed;
             this.btnUpdateMCQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateMCQ.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateMCQ.Location = new System.Drawing.Point(4, 200);
-            this.btnUpdateMCQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateMCQ.Location = new System.Drawing.Point(5, 246);
+            this.btnUpdateMCQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdateMCQ.Name = "btnUpdateMCQ";
-            this.btnUpdateMCQ.Size = new System.Drawing.Size(134, 26);
+            this.btnUpdateMCQ.Size = new System.Drawing.Size(179, 32);
             this.btnUpdateMCQ.TabIndex = 9;
             this.btnUpdateMCQ.Text = "Update Question";
             this.btnUpdateMCQ.UseVisualStyleBackColor = false;
@@ -174,10 +171,9 @@
             this.lblMCQID.AutoSize = true;
             this.lblMCQID.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMCQID.ForeColor = System.Drawing.Color.Black;
-            this.lblMCQID.Location = new System.Drawing.Point(4, 183);
-            this.lblMCQID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMCQID.Location = new System.Drawing.Point(5, 225);
             this.lblMCQID.Name = "lblMCQID";
-            this.lblMCQID.Size = new System.Drawing.Size(20, 13);
+            this.lblMCQID.Size = new System.Drawing.Size(22, 16);
             this.lblMCQID.TabIndex = 9;
             this.lblMCQID.Text = "ID";
             // 
@@ -186,50 +182,49 @@
             this.lblSearchMCQ.AutoSize = true;
             this.lblSearchMCQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearchMCQ.ForeColor = System.Drawing.Color.Black;
-            this.lblSearchMCQ.Location = new System.Drawing.Point(208, 254);
-            this.lblSearchMCQ.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSearchMCQ.Location = new System.Drawing.Point(277, 313);
             this.lblSearchMCQ.Name = "lblSearchMCQ";
-            this.lblSearchMCQ.Size = new System.Drawing.Size(20, 13);
+            this.lblSearchMCQ.Size = new System.Drawing.Size(22, 16);
             this.lblSearchMCQ.TabIndex = 25;
             this.lblSearchMCQ.Text = "ID";
             // 
             // richTextBoxD
             // 
             this.richTextBoxD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxD.Location = new System.Drawing.Point(142, 145);
-            this.richTextBoxD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBoxD.Location = new System.Drawing.Point(189, 178);
+            this.richTextBoxD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBoxD.Name = "richTextBoxD";
-            this.richTextBoxD.Size = new System.Drawing.Size(278, 36);
+            this.richTextBoxD.Size = new System.Drawing.Size(369, 43);
             this.richTextBoxD.TabIndex = 24;
             this.richTextBoxD.Text = "";
             // 
             // richTextBoxC
             // 
             this.richTextBoxC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxC.Location = new System.Drawing.Point(142, 107);
-            this.richTextBoxC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBoxC.Location = new System.Drawing.Point(189, 132);
+            this.richTextBoxC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBoxC.Name = "richTextBoxC";
-            this.richTextBoxC.Size = new System.Drawing.Size(278, 36);
+            this.richTextBoxC.Size = new System.Drawing.Size(369, 43);
             this.richTextBoxC.TabIndex = 23;
             this.richTextBoxC.Text = "";
             // 
             // richTextBoxB
             // 
             this.richTextBoxB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxB.Location = new System.Drawing.Point(143, 69);
-            this.richTextBoxB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBoxB.Location = new System.Drawing.Point(191, 85);
+            this.richTextBoxB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBoxB.Name = "richTextBoxB";
-            this.richTextBoxB.Size = new System.Drawing.Size(278, 36);
+            this.richTextBoxB.Size = new System.Drawing.Size(369, 43);
             this.richTextBoxB.TabIndex = 22;
             this.richTextBoxB.Text = "";
             // 
             // richTextBoxA
             // 
             this.richTextBoxA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxA.Location = new System.Drawing.Point(143, 31);
-            this.richTextBoxA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBoxA.Location = new System.Drawing.Point(191, 38);
+            this.richTextBoxA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBoxA.Name = "richTextBoxA";
-            this.richTextBoxA.Size = new System.Drawing.Size(278, 36);
+            this.richTextBoxA.Size = new System.Drawing.Size(369, 43);
             this.richTextBoxA.TabIndex = 21;
             this.richTextBoxA.Text = "";
             // 
@@ -237,41 +232,39 @@
             // 
             this.lblChoices.AutoSize = true;
             this.lblChoices.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblChoices.Location = new System.Drawing.Point(141, 15);
-            this.lblChoices.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblChoices.Location = new System.Drawing.Point(188, 18);
             this.lblChoices.Name = "lblChoices";
-            this.lblChoices.Size = new System.Drawing.Size(93, 13);
+            this.lblChoices.Size = new System.Drawing.Size(115, 16);
             this.lblChoices.TabIndex = 20;
             this.lblChoices.Text = "Question Choices:";
             // 
             // lblExists
             // 
             this.lblExists.AutoSize = true;
-            this.lblExists.Location = new System.Drawing.Point(239, 200);
-            this.lblExists.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblExists.Location = new System.Drawing.Point(319, 246);
             this.lblExists.Name = "lblExists";
-            this.lblExists.Size = new System.Drawing.Size(0, 13);
+            this.lblExists.Size = new System.Drawing.Size(0, 16);
             this.lblExists.TabIndex = 18;
             // 
             // txtBoxSearchMCQ
             // 
             this.txtBoxSearchMCQ.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtBoxSearchMCQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxSearchMCQ.Location = new System.Drawing.Point(164, 252);
-            this.txtBoxSearchMCQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxSearchMCQ.Location = new System.Drawing.Point(219, 310);
+            this.txtBoxSearchMCQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBoxSearchMCQ.Name = "txtBoxSearchMCQ";
-            this.txtBoxSearchMCQ.Size = new System.Drawing.Size(30, 21);
+            this.txtBoxSearchMCQ.Size = new System.Drawing.Size(39, 24);
             this.txtBoxSearchMCQ.TabIndex = 17;
             // 
             // btnSearchMCQ
             // 
-            this.btnSearchMCQ.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnSearchMCQ.BackColor = System.Drawing.Color.DarkRed;
             this.btnSearchMCQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchMCQ.ForeColor = System.Drawing.Color.White;
-            this.btnSearchMCQ.Location = new System.Drawing.Point(4, 249);
-            this.btnSearchMCQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearchMCQ.Location = new System.Drawing.Point(5, 306);
+            this.btnSearchMCQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearchMCQ.Name = "btnSearchMCQ";
-            this.btnSearchMCQ.Size = new System.Drawing.Size(134, 26);
+            this.btnSearchMCQ.Size = new System.Drawing.Size(179, 32);
             this.btnSearchMCQ.TabIndex = 16;
             this.btnSearchMCQ.Text = "Search Question with ID";
             this.btnSearchMCQ.UseVisualStyleBackColor = false;
@@ -279,13 +272,13 @@
             // 
             // btnDeleteMCQ
             // 
-            this.btnDeleteMCQ.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnDeleteMCQ.BackColor = System.Drawing.Color.DarkRed;
             this.btnDeleteMCQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteMCQ.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteMCQ.Location = new System.Drawing.Point(302, 302);
-            this.btnDeleteMCQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteMCQ.Location = new System.Drawing.Point(403, 372);
+            this.btnDeleteMCQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeleteMCQ.Name = "btnDeleteMCQ";
-            this.btnDeleteMCQ.Size = new System.Drawing.Size(118, 27);
+            this.btnDeleteMCQ.Size = new System.Drawing.Size(157, 33);
             this.btnDeleteMCQ.TabIndex = 15;
             this.btnDeleteMCQ.Text = "Delete Question";
             this.btnDeleteMCQ.UseVisualStyleBackColor = false;
@@ -293,13 +286,13 @@
             // 
             // btnAddMCQ
             // 
-            this.btnAddMCQ.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnAddMCQ.BackColor = System.Drawing.Color.DarkRed;
             this.btnAddMCQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMCQ.ForeColor = System.Drawing.Color.White;
-            this.btnAddMCQ.Location = new System.Drawing.Point(4, 302);
-            this.btnAddMCQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddMCQ.Location = new System.Drawing.Point(5, 372);
+            this.btnAddMCQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddMCQ.Name = "btnAddMCQ";
-            this.btnAddMCQ.Size = new System.Drawing.Size(131, 27);
+            this.btnAddMCQ.Size = new System.Drawing.Size(175, 33);
             this.btnAddMCQ.TabIndex = 14;
             this.btnAddMCQ.Text = "Add Question";
             this.btnAddMCQ.UseVisualStyleBackColor = false;
@@ -307,13 +300,13 @@
             // 
             // btnMCQPrevious
             // 
-            this.btnMCQPrevious.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnMCQPrevious.BackColor = System.Drawing.Color.DarkRed;
             this.btnMCQPrevious.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMCQPrevious.ForeColor = System.Drawing.Color.White;
-            this.btnMCQPrevious.Location = new System.Drawing.Point(238, 199);
-            this.btnMCQPrevious.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMCQPrevious.Location = new System.Drawing.Point(317, 245);
+            this.btnMCQPrevious.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMCQPrevious.Name = "btnMCQPrevious";
-            this.btnMCQPrevious.Size = new System.Drawing.Size(42, 26);
+            this.btnMCQPrevious.Size = new System.Drawing.Size(56, 32);
             this.btnMCQPrevious.TabIndex = 13;
             this.btnMCQPrevious.Text = "<";
             this.btnMCQPrevious.UseVisualStyleBackColor = false;
@@ -321,13 +314,13 @@
             // 
             // btnMCQNext
             // 
-            this.btnMCQNext.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnMCQNext.BackColor = System.Drawing.Color.DarkRed;
             this.btnMCQNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMCQNext.ForeColor = System.Drawing.Color.White;
-            this.btnMCQNext.Location = new System.Drawing.Point(290, 199);
-            this.btnMCQNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMCQNext.Location = new System.Drawing.Point(387, 245);
+            this.btnMCQNext.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMCQNext.Name = "btnMCQNext";
-            this.btnMCQNext.Size = new System.Drawing.Size(42, 26);
+            this.btnMCQNext.Size = new System.Drawing.Size(56, 32);
             this.btnMCQNext.TabIndex = 12;
             this.btnMCQNext.Text = ">";
             this.btnMCQNext.UseVisualStyleBackColor = false;
@@ -336,10 +329,10 @@
             // richTextBoxMCQBody
             // 
             this.richTextBoxMCQBody.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxMCQBody.Location = new System.Drawing.Point(4, 30);
-            this.richTextBoxMCQBody.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBoxMCQBody.Location = new System.Drawing.Point(5, 37);
+            this.richTextBoxMCQBody.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBoxMCQBody.Name = "richTextBoxMCQBody";
-            this.richTextBoxMCQBody.Size = new System.Drawing.Size(134, 151);
+            this.richTextBoxMCQBody.Size = new System.Drawing.Size(177, 185);
             this.richTextBoxMCQBody.TabIndex = 9;
             this.richTextBoxMCQBody.Text = "";
             // 
@@ -348,26 +341,11 @@
             this.lblMCQBody.AutoSize = true;
             this.lblMCQBody.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMCQBody.ForeColor = System.Drawing.Color.Black;
-            this.lblMCQBody.Location = new System.Drawing.Point(13, 15);
-            this.lblMCQBody.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMCQBody.Location = new System.Drawing.Point(17, 18);
             this.lblMCQBody.Name = "lblMCQBody";
-            this.lblMCQBody.Size = new System.Drawing.Size(93, 13);
+            this.lblMCQBody.Size = new System.Drawing.Size(112, 16);
             this.lblMCQBody.TabIndex = 9;
             this.lblMCQBody.Text = "Question Body:";
-            // 
-            // btnViewMCQQuestions
-            // 
-            this.btnViewMCQQuestions.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnViewMCQQuestions.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewMCQQuestions.ForeColor = System.Drawing.Color.White;
-            this.btnViewMCQQuestions.Location = new System.Drawing.Point(458, 134);
-            this.btnViewMCQQuestions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnViewMCQQuestions.Name = "btnViewMCQQuestions";
-            this.btnViewMCQQuestions.Size = new System.Drawing.Size(118, 27);
-            this.btnViewMCQQuestions.TabIndex = 11;
-            this.btnViewMCQQuestions.Text = "View Questions";
-            this.btnViewMCQQuestions.UseVisualStyleBackColor = false;
-            this.btnViewMCQQuestions.Click += new System.EventHandler(this.btnViewMCQQuestions_Click);
             // 
             // grpBoxTFQ
             // 
@@ -387,21 +365,21 @@
             this.grpBoxTFQ.Controls.Add(this.btnTFQPrevious);
             this.grpBoxTFQ.Controls.Add(this.btnAddTFQ);
             this.grpBoxTFQ.ForeColor = System.Drawing.Color.Black;
-            this.grpBoxTFQ.Location = new System.Drawing.Point(77, 171);
-            this.grpBoxTFQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpBoxTFQ.Location = new System.Drawing.Point(103, 210);
+            this.grpBoxTFQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpBoxTFQ.Name = "grpBoxTFQ";
-            this.grpBoxTFQ.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grpBoxTFQ.Size = new System.Drawing.Size(424, 334);
+            this.grpBoxTFQ.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpBoxTFQ.Size = new System.Drawing.Size(565, 411);
             this.grpBoxTFQ.TabIndex = 7;
             this.grpBoxTFQ.TabStop = false;
             // 
             // txtAnsTFQ
             // 
             this.txtAnsTFQ.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.txtAnsTFQ.Location = new System.Drawing.Point(394, 9);
-            this.txtAnsTFQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAnsTFQ.Location = new System.Drawing.Point(525, 11);
+            this.txtAnsTFQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAnsTFQ.Name = "txtAnsTFQ";
-            this.txtAnsTFQ.Size = new System.Drawing.Size(26, 20);
+            this.txtAnsTFQ.Size = new System.Drawing.Size(33, 22);
             this.txtAnsTFQ.TabIndex = 34;
             // 
             // lblAnsTFQ
@@ -410,10 +388,9 @@
             this.lblAnsTFQ.BackColor = System.Drawing.Color.Transparent;
             this.lblAnsTFQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.lblAnsTFQ.ForeColor = System.Drawing.Color.Black;
-            this.lblAnsTFQ.Location = new System.Drawing.Point(296, 12);
-            this.lblAnsTFQ.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAnsTFQ.Location = new System.Drawing.Point(395, 15);
             this.lblAnsTFQ.Name = "lblAnsTFQ";
-            this.lblAnsTFQ.Size = new System.Drawing.Size(93, 13);
+            this.lblAnsTFQ.Size = new System.Drawing.Size(111, 16);
             this.lblAnsTFQ.TabIndex = 32;
             this.lblAnsTFQ.Text = "Correct Answer";
             // 
@@ -423,10 +400,9 @@
             this.lblTFQID.BackColor = System.Drawing.Color.Transparent;
             this.lblTFQID.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.lblTFQID.ForeColor = System.Drawing.Color.Black;
-            this.lblTFQID.Location = new System.Drawing.Point(4, 183);
-            this.lblTFQID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTFQID.Location = new System.Drawing.Point(5, 225);
             this.lblTFQID.Name = "lblTFQID";
-            this.lblTFQID.Size = new System.Drawing.Size(20, 13);
+            this.lblTFQID.Size = new System.Drawing.Size(22, 16);
             this.lblTFQID.TabIndex = 26;
             this.lblTFQID.Text = "ID";
             // 
@@ -435,22 +411,21 @@
             this.lblSearchTFQ.AutoSize = true;
             this.lblSearchTFQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearchTFQ.ForeColor = System.Drawing.Color.Black;
-            this.lblSearchTFQ.Location = new System.Drawing.Point(208, 251);
-            this.lblSearchTFQ.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSearchTFQ.Location = new System.Drawing.Point(277, 309);
             this.lblSearchTFQ.Name = "lblSearchTFQ";
-            this.lblSearchTFQ.Size = new System.Drawing.Size(20, 13);
+            this.lblSearchTFQ.Size = new System.Drawing.Size(22, 16);
             this.lblSearchTFQ.TabIndex = 26;
             this.lblSearchTFQ.Text = "ID";
             // 
             // btnUpdateTFQ
             // 
-            this.btnUpdateTFQ.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnUpdateTFQ.BackColor = System.Drawing.Color.DarkRed;
             this.btnUpdateTFQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateTFQ.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateTFQ.Location = new System.Drawing.Point(4, 199);
-            this.btnUpdateTFQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateTFQ.Location = new System.Drawing.Point(5, 245);
+            this.btnUpdateTFQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdateTFQ.Name = "btnUpdateTFQ";
-            this.btnUpdateTFQ.Size = new System.Drawing.Size(134, 26);
+            this.btnUpdateTFQ.Size = new System.Drawing.Size(179, 32);
             this.btnUpdateTFQ.TabIndex = 26;
             this.btnUpdateTFQ.Text = "Update Question";
             this.btnUpdateTFQ.UseVisualStyleBackColor = false;
@@ -462,51 +437,49 @@
             this.lblTFQbody.BackColor = System.Drawing.Color.Transparent;
             this.lblTFQbody.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.lblTFQbody.ForeColor = System.Drawing.Color.Black;
-            this.lblTFQbody.Location = new System.Drawing.Point(13, 13);
-            this.lblTFQbody.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTFQbody.Location = new System.Drawing.Point(17, 16);
             this.lblTFQbody.Name = "lblTFQbody";
-            this.lblTFQbody.Size = new System.Drawing.Size(93, 13);
+            this.lblTFQbody.Size = new System.Drawing.Size(112, 16);
             this.lblTFQbody.TabIndex = 22;
             this.lblTFQbody.Text = "Question Body:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(244, 199);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(325, 245);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.Size = new System.Drawing.Size(0, 16);
             this.label2.TabIndex = 30;
             // 
             // richTextBoxTFQbody
             // 
             this.richTextBoxTFQbody.BackColor = System.Drawing.SystemColors.HighlightText;
             this.richTextBoxTFQbody.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxTFQbody.Location = new System.Drawing.Point(4, 28);
-            this.richTextBoxTFQbody.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBoxTFQbody.Location = new System.Drawing.Point(5, 34);
+            this.richTextBoxTFQbody.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBoxTFQbody.Name = "richTextBoxTFQbody";
-            this.richTextBoxTFQbody.Size = new System.Drawing.Size(416, 151);
+            this.richTextBoxTFQbody.Size = new System.Drawing.Size(553, 185);
             this.richTextBoxTFQbody.TabIndex = 21;
             this.richTextBoxTFQbody.Text = "";
             // 
             // txtBoxSearchTFQ
             // 
             this.txtBoxSearchTFQ.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.txtBoxSearchTFQ.Location = new System.Drawing.Point(164, 249);
-            this.txtBoxSearchTFQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxSearchTFQ.Location = new System.Drawing.Point(219, 306);
+            this.txtBoxSearchTFQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBoxSearchTFQ.Name = "txtBoxSearchTFQ";
-            this.txtBoxSearchTFQ.Size = new System.Drawing.Size(30, 20);
+            this.txtBoxSearchTFQ.Size = new System.Drawing.Size(39, 22);
             this.txtBoxSearchTFQ.TabIndex = 29;
             // 
             // btnSearchTFQ
             // 
-            this.btnSearchTFQ.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnSearchTFQ.BackColor = System.Drawing.Color.DarkRed;
             this.btnSearchTFQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchTFQ.ForeColor = System.Drawing.Color.White;
-            this.btnSearchTFQ.Location = new System.Drawing.Point(4, 247);
-            this.btnSearchTFQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearchTFQ.Location = new System.Drawing.Point(5, 304);
+            this.btnSearchTFQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearchTFQ.Name = "btnSearchTFQ";
-            this.btnSearchTFQ.Size = new System.Drawing.Size(134, 26);
+            this.btnSearchTFQ.Size = new System.Drawing.Size(179, 32);
             this.btnSearchTFQ.TabIndex = 28;
             this.btnSearchTFQ.Text = "Search Question with ID";
             this.btnSearchTFQ.UseVisualStyleBackColor = false;
@@ -514,13 +487,13 @@
             // 
             // btnTFQNext
             // 
-            this.btnTFQNext.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnTFQNext.BackColor = System.Drawing.Color.DarkRed;
             this.btnTFQNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTFQNext.ForeColor = System.Drawing.Color.White;
-            this.btnTFQNext.Location = new System.Drawing.Point(290, 199);
-            this.btnTFQNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTFQNext.Location = new System.Drawing.Point(387, 245);
+            this.btnTFQNext.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTFQNext.Name = "btnTFQNext";
-            this.btnTFQNext.Size = new System.Drawing.Size(42, 26);
+            this.btnTFQNext.Size = new System.Drawing.Size(56, 32);
             this.btnTFQNext.TabIndex = 24;
             this.btnTFQNext.Text = ">";
             this.btnTFQNext.UseVisualStyleBackColor = false;
@@ -528,13 +501,13 @@
             // 
             // btnDeleteTFQ
             // 
-            this.btnDeleteTFQ.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnDeleteTFQ.BackColor = System.Drawing.Color.DarkRed;
             this.btnDeleteTFQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteTFQ.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteTFQ.Location = new System.Drawing.Point(302, 302);
-            this.btnDeleteTFQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteTFQ.Location = new System.Drawing.Point(403, 372);
+            this.btnDeleteTFQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeleteTFQ.Name = "btnDeleteTFQ";
-            this.btnDeleteTFQ.Size = new System.Drawing.Size(118, 27);
+            this.btnDeleteTFQ.Size = new System.Drawing.Size(157, 33);
             this.btnDeleteTFQ.TabIndex = 27;
             this.btnDeleteTFQ.Text = "Delete Question";
             this.btnDeleteTFQ.UseVisualStyleBackColor = false;
@@ -542,13 +515,13 @@
             // 
             // btnTFQPrevious
             // 
-            this.btnTFQPrevious.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnTFQPrevious.BackColor = System.Drawing.Color.DarkRed;
             this.btnTFQPrevious.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTFQPrevious.ForeColor = System.Drawing.Color.White;
-            this.btnTFQPrevious.Location = new System.Drawing.Point(238, 199);
-            this.btnTFQPrevious.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTFQPrevious.Location = new System.Drawing.Point(317, 245);
+            this.btnTFQPrevious.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTFQPrevious.Name = "btnTFQPrevious";
-            this.btnTFQPrevious.Size = new System.Drawing.Size(42, 26);
+            this.btnTFQPrevious.Size = new System.Drawing.Size(56, 32);
             this.btnTFQPrevious.TabIndex = 25;
             this.btnTFQPrevious.Text = "<";
             this.btnTFQPrevious.UseVisualStyleBackColor = false;
@@ -556,31 +529,17 @@
             // 
             // btnAddTFQ
             // 
-            this.btnAddTFQ.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnAddTFQ.BackColor = System.Drawing.Color.DarkRed;
             this.btnAddTFQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTFQ.ForeColor = System.Drawing.Color.White;
-            this.btnAddTFQ.Location = new System.Drawing.Point(4, 303);
-            this.btnAddTFQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddTFQ.Location = new System.Drawing.Point(5, 373);
+            this.btnAddTFQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddTFQ.Name = "btnAddTFQ";
-            this.btnAddTFQ.Size = new System.Drawing.Size(134, 26);
+            this.btnAddTFQ.Size = new System.Drawing.Size(179, 32);
             this.btnAddTFQ.TabIndex = 26;
             this.btnAddTFQ.Text = "Add Question";
             this.btnAddTFQ.UseVisualStyleBackColor = false;
             this.btnAddTFQ.Click += new System.EventHandler(this.btnAddTFQ_Click);
-            // 
-            // btnVieqTFQQuestions
-            // 
-            this.btnVieqTFQQuestions.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnVieqTFQQuestions.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVieqTFQQuestions.ForeColor = System.Drawing.Color.White;
-            this.btnVieqTFQQuestions.Location = new System.Drawing.Point(458, 134);
-            this.btnVieqTFQQuestions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnVieqTFQQuestions.Name = "btnVieqTFQQuestions";
-            this.btnVieqTFQQuestions.Size = new System.Drawing.Size(118, 27);
-            this.btnVieqTFQQuestions.TabIndex = 23;
-            this.btnVieqTFQQuestions.Text = "View Questions";
-            this.btnVieqTFQQuestions.UseVisualStyleBackColor = false;
-            this.btnVieqTFQQuestions.Click += new System.EventHandler(this.btnVieqTFQQuestions_Click);
             // 
             // rdbtnTFQ
             // 
@@ -589,10 +548,10 @@
             this.rdbtnTFQ.Checked = true;
             this.rdbtnTFQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbtnTFQ.ForeColor = System.Drawing.Color.Black;
-            this.rdbtnTFQ.Location = new System.Drawing.Point(315, 139);
-            this.rdbtnTFQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdbtnTFQ.Location = new System.Drawing.Point(420, 171);
+            this.rdbtnTFQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbtnTFQ.Name = "rdbtnTFQ";
-            this.rdbtnTFQ.Size = new System.Drawing.Size(49, 17);
+            this.rdbtnTFQ.Size = new System.Drawing.Size(58, 20);
             this.rdbtnTFQ.TabIndex = 9;
             this.rdbtnTFQ.TabStop = true;
             this.rdbtnTFQ.Text = "TFQ";
@@ -605,10 +564,10 @@
             this.rdbtnMCQ.AutoSize = true;
             this.rdbtnMCQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbtnMCQ.ForeColor = System.Drawing.Color.Black;
-            this.rdbtnMCQ.Location = new System.Drawing.Point(220, 139);
-            this.rdbtnMCQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdbtnMCQ.Location = new System.Drawing.Point(293, 171);
+            this.rdbtnMCQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbtnMCQ.Name = "rdbtnMCQ";
-            this.rdbtnMCQ.Size = new System.Drawing.Size(52, 17);
+            this.rdbtnMCQ.Size = new System.Drawing.Size(61, 20);
             this.rdbtnMCQ.TabIndex = 10;
             this.rdbtnMCQ.Text = "MCQ";
             this.rdbtnMCQ.UseVisualStyleBackColor = true;
@@ -627,12 +586,10 @@
             this.panel1.Controls.Add(this.grpBoxTFQ);
             this.panel1.Controls.Add(this.grpBoxMCQ);
             this.panel1.Controls.Add(this.rdbtnTFQ);
-            this.panel1.Controls.Add(this.btnVieqTFQQuestions);
-            this.panel1.Controls.Add(this.btnViewMCQQuestions);
-            this.panel1.Location = new System.Drawing.Point(11, 11);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(15, 14);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(596, 598);
+            this.panel1.Size = new System.Drawing.Size(795, 736);
             this.panel1.TabIndex = 11;
             // 
             // btnGoBack
@@ -640,10 +597,10 @@
             this.btnGoBack.BackColor = System.Drawing.Color.DarkRed;
             this.btnGoBack.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnGoBack.ForeColor = System.Drawing.Color.White;
-            this.btnGoBack.Location = new System.Drawing.Point(12, 536);
-            this.btnGoBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGoBack.Location = new System.Drawing.Point(16, 660);
+            this.btnGoBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGoBack.Name = "btnGoBack";
-            this.btnGoBack.Size = new System.Drawing.Size(117, 50);
+            this.btnGoBack.Size = new System.Drawing.Size(156, 62);
             this.btnGoBack.TabIndex = 12;
             this.btnGoBack.Text = "Go Back";
             this.btnGoBack.UseVisualStyleBackColor = false;
@@ -651,17 +608,17 @@
             // 
             // frmManageQuestions
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
-            this.ClientSize = new System.Drawing.Size(620, 619);
+            this.ClientSize = new System.Drawing.Size(827, 762);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(650, 125);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MinimumSize = new System.Drawing.Size(620, 619);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(827, 762);
             this.Name = "frmManageQuestions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Manage Questions";
@@ -691,13 +648,11 @@
         private System.Windows.Forms.Button btnAddMCQ;
         private System.Windows.Forms.Button btnMCQPrevious;
         private System.Windows.Forms.Button btnMCQNext;
-        private System.Windows.Forms.Button btnViewMCQQuestions;
         private System.Windows.Forms.Label lblChoices;
         private System.Windows.Forms.Label lblTFQbody;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox richTextBoxTFQbody;
         private System.Windows.Forms.TextBox txtBoxSearchTFQ;
-        private System.Windows.Forms.Button btnVieqTFQQuestions;
         private System.Windows.Forms.Button btnSearchTFQ;
         private System.Windows.Forms.Button btnTFQNext;
         private System.Windows.Forms.Button btnDeleteTFQ;

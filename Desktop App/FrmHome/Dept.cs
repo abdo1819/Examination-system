@@ -18,16 +18,17 @@ namespace FrmHome
         public frmDept()
         {
             InitializeComponent();
-        }
-
-        bool btnViewDept_Clicked = false;
-        private void btnViewDept_Click(object sender, EventArgs e)
-        {
-
-            btnViewDept_Clicked = true;
-
             ReloadDepts();
         }
+
+        //bool btnViewDept_Clicked = false;
+        //private void btnViewDept_Click(object sender, EventArgs e)
+        //{
+
+        //    btnViewDept_Clicked = true;
+
+            
+        //}
 
         private void ReloadDepts()
         {
@@ -51,20 +52,20 @@ namespace FrmHome
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if(btnViewDept_Clicked)
+            //if(btnViewDept_Clicked)
                 bindingSource.MoveNext();
         }
 
         private void btnPrevious_Click(object sender, EventArgs e)
         {
-            if (btnViewDept_Clicked)
+            //if (btnViewDept_Clicked)
                 bindingSource.MovePrevious();
         }
 
         private void btnAddDept_Click(object sender, EventArgs e)
         {
-            if (!btnViewDept_Clicked)
-                return;
+            //if (!btnViewDept_Clicked)
+                //return;
             
             using (ExaminationContext DeptContext = new ExaminationContext())
             {
@@ -78,8 +79,8 @@ namespace FrmHome
 
         private void btnDeleteDept_Click(object sender, EventArgs e)
         {
-            if (!btnViewDept_Clicked)
-                return;
+            //if (!btnViewDept_Clicked)
+                //return;
 
             using (ExaminationContext DeptContext = new ExaminationContext())
             {

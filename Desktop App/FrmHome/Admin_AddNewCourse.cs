@@ -35,24 +35,29 @@ namespace FrmHome
 
         private async void btnConfirm_Click(object sender, EventArgs e)
         {
-            try
+            if (txtCrsName.Text == "")
+                MessageBox.Show("Please enter a valid course name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
             {
-                var resultCode = await frmLogin.Procedures.Insert_CourseAsync(txtCrsName.Text, new OutputParameter<int>());
-                if (resultCode == 1)
+                try
                 {
-                    var insID = ((Entities.getAllInstructorsResult)comboInstructors.SelectedItem).usr_id;
-                    await frmLogin.Procedures.Assign_Course_to_InstructorAsync(txtCrsName.Text, insID, new OutputParameter<int>());
-                    MessageBox.Show($"Successfully added {txtCrsName.Text} under Instructor No. {insID} to the system.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }                
-                else
+                    var resultCode = await frmLogin.Procedures.Insert_CourseAsync(txtCrsName.Text, new OutputParameter<int>());
+                    if (resultCode == 1)
+                    {
+                        var insID = ((Entities.getAllInstructorsResult)comboInstructors.SelectedItem).usr_id;
+                        await frmLogin.Procedures.Assign_Course_to_InstructorAsync(txtCrsName.Text, insID, new OutputParameter<int>());
+                        MessageBox.Show($"Successfully added {txtCrsName.Text} under Instructor No. {insID} to the system.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                        MessageBox.Show("An error occurred, course already exists on the system", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Close();
+                }
+                catch
+                {
                     MessageBox.Show("An error occurred, course already exists on the system", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Close();
-            }
-            catch
-            {
-                MessageBox.Show("An error occurred, course already exists on the system", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Close();
-            }                   
+                    this.Close();
+                }
+            }              
         }
     }
 }
