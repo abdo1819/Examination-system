@@ -74,7 +74,6 @@ namespace FrmHome
         {
             ReportsForm.reportsForm frmReports = new reportsForm();
             frmReports.ShowDialog();
-            // There is an issue with opening this form
         }
 
         private void btnCourses_Click(object sender, EventArgs e)
@@ -87,7 +86,9 @@ namespace FrmHome
         private void btnQuestions_Click(object sender, EventArgs e)
         {
             var frm = new frmManageQuestions(this.frmLogin);
-            frm.Show();
+            groupActions.Visible = false;
+            frm.ShowDialog();
+            groupActions.Visible = true;
         }
 
         private void btnDepts_Click(object sender, EventArgs e)
@@ -96,9 +97,5 @@ namespace FrmHome
             frm.Show();
         }
 
-        private void btnStudents_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

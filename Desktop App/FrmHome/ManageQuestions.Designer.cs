@@ -70,8 +70,11 @@
             this.btnAddTFQ = new System.Windows.Forms.Button();
             this.rdbtnTFQ = new System.Windows.Forms.RadioButton();
             this.rdbtnMCQ = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGoBack = new System.Windows.Forms.Button();
             this.grpBoxMCQ.SuspendLayout();
             this.grpBoxTFQ.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBoxCourse
@@ -81,7 +84,7 @@
             this.comboBoxCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCourse.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.comboBoxCourse.FormattingEnabled = true;
-            this.comboBoxCourse.Location = new System.Drawing.Point(265, 77);
+            this.comboBoxCourse.Location = new System.Drawing.Point(212, 124);
             this.comboBoxCourse.Name = "comboBoxCourse";
             this.comboBoxCourse.Size = new System.Drawing.Size(365, 28);
             this.comboBoxCourse.TabIndex = 0;
@@ -90,11 +93,11 @@
             // 
             this.lblChooseCourse.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblChooseCourse.AutoSize = true;
-            this.lblChooseCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChooseCourse.ForeColor = System.Drawing.SystemColors.Menu;
-            this.lblChooseCourse.Location = new System.Drawing.Point(260, 47);
+            this.lblChooseCourse.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lblChooseCourse.ForeColor = System.Drawing.Color.Black;
+            this.lblChooseCourse.Location = new System.Drawing.Point(157, 53);
             this.lblChooseCourse.Name = "lblChooseCourse";
-            this.lblChooseCourse.Size = new System.Drawing.Size(373, 25);
+            this.lblChooseCourse.Size = new System.Drawing.Size(489, 32);
             this.lblChooseCourse.TabIndex = 1;
             this.lblChooseCourse.Text = "Select Course to review its Questions";
             // 
@@ -118,10 +121,10 @@
             this.grpBoxMCQ.Controls.Add(this.btnAddMCQ);
             this.grpBoxMCQ.Controls.Add(this.btnMCQPrevious);
             this.grpBoxMCQ.Controls.Add(this.btnMCQNext);
-            this.grpBoxMCQ.Controls.Add(this.btnViewMCQQuestions);
             this.grpBoxMCQ.Controls.Add(this.richTextBoxMCQBody);
             this.grpBoxMCQ.Controls.Add(this.lblMCQBody);
-            this.grpBoxMCQ.Location = new System.Drawing.Point(156, 163);
+            this.grpBoxMCQ.ForeColor = System.Drawing.Color.Black;
+            this.grpBoxMCQ.Location = new System.Drawing.Point(103, 210);
             this.grpBoxMCQ.Name = "grpBoxMCQ";
             this.grpBoxMCQ.Size = new System.Drawing.Size(566, 411);
             this.grpBoxMCQ.TabIndex = 6;
@@ -138,20 +141,22 @@
             // lblAnsMCQ
             // 
             this.lblAnsMCQ.AutoSize = true;
-            this.lblAnsMCQ.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblAnsMCQ.Location = new System.Drawing.Point(422, 18);
+            this.lblAnsMCQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnsMCQ.ForeColor = System.Drawing.Color.Black;
+            this.lblAnsMCQ.Location = new System.Drawing.Point(408, 18);
             this.lblAnsMCQ.Name = "lblAnsMCQ";
-            this.lblAnsMCQ.Size = new System.Drawing.Size(97, 16);
+            this.lblAnsMCQ.Size = new System.Drawing.Size(111, 16);
             this.lblAnsMCQ.TabIndex = 31;
             this.lblAnsMCQ.Text = "Correct Answer";
             // 
             // btnUpdateMCQ
             // 
-            this.btnUpdateMCQ.BackColor = System.Drawing.Color.Snow;
+            this.btnUpdateMCQ.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnUpdateMCQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateMCQ.ForeColor = System.Drawing.Color.White;
             this.btnUpdateMCQ.Location = new System.Drawing.Point(6, 246);
             this.btnUpdateMCQ.Name = "btnUpdateMCQ";
-            this.btnUpdateMCQ.Size = new System.Drawing.Size(175, 37);
+            this.btnUpdateMCQ.Size = new System.Drawing.Size(178, 32);
             this.btnUpdateMCQ.TabIndex = 9;
             this.btnUpdateMCQ.Text = "Update Question";
             this.btnUpdateMCQ.UseVisualStyleBackColor = false;
@@ -160,20 +165,22 @@
             // lblMCQID
             // 
             this.lblMCQID.AutoSize = true;
-            this.lblMCQID.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.lblMCQID.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMCQID.ForeColor = System.Drawing.Color.Black;
             this.lblMCQID.Location = new System.Drawing.Point(6, 225);
             this.lblMCQID.Name = "lblMCQID";
-            this.lblMCQID.Size = new System.Drawing.Size(20, 16);
+            this.lblMCQID.Size = new System.Drawing.Size(22, 16);
             this.lblMCQID.TabIndex = 9;
             this.lblMCQID.Text = "ID";
             // 
             // lblSearchMCQ
             // 
             this.lblSearchMCQ.AutoSize = true;
-            this.lblSearchMCQ.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.lblSearchMCQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchMCQ.ForeColor = System.Drawing.Color.Black;
             this.lblSearchMCQ.Location = new System.Drawing.Point(277, 313);
             this.lblSearchMCQ.Name = "lblSearchMCQ";
-            this.lblSearchMCQ.Size = new System.Drawing.Size(20, 16);
+            this.lblSearchMCQ.Size = new System.Drawing.Size(22, 16);
             this.lblSearchMCQ.TabIndex = 25;
             this.lblSearchMCQ.Text = "ID";
             // 
@@ -242,11 +249,12 @@
             // 
             // btnSearchMCQ
             // 
-            this.btnSearchMCQ.BackColor = System.Drawing.Color.Snow;
+            this.btnSearchMCQ.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnSearchMCQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchMCQ.ForeColor = System.Drawing.Color.White;
             this.btnSearchMCQ.Location = new System.Drawing.Point(6, 307);
             this.btnSearchMCQ.Name = "btnSearchMCQ";
-            this.btnSearchMCQ.Size = new System.Drawing.Size(175, 29);
+            this.btnSearchMCQ.Size = new System.Drawing.Size(178, 32);
             this.btnSearchMCQ.TabIndex = 16;
             this.btnSearchMCQ.Text = "Search Question with ID";
             this.btnSearchMCQ.UseVisualStyleBackColor = false;
@@ -254,9 +262,10 @@
             // 
             // btnDeleteMCQ
             // 
-            this.btnDeleteMCQ.BackColor = System.Drawing.Color.Snow;
+            this.btnDeleteMCQ.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnDeleteMCQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteMCQ.Location = new System.Drawing.Point(219, 358);
+            this.btnDeleteMCQ.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteMCQ.Location = new System.Drawing.Point(402, 372);
             this.btnDeleteMCQ.Name = "btnDeleteMCQ";
             this.btnDeleteMCQ.Size = new System.Drawing.Size(157, 33);
             this.btnDeleteMCQ.TabIndex = 15;
@@ -266,9 +275,10 @@
             // 
             // btnAddMCQ
             // 
-            this.btnAddMCQ.BackColor = System.Drawing.Color.Snow;
+            this.btnAddMCQ.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnAddMCQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddMCQ.Location = new System.Drawing.Point(6, 358);
+            this.btnAddMCQ.ForeColor = System.Drawing.Color.White;
+            this.btnAddMCQ.Location = new System.Drawing.Point(6, 372);
             this.btnAddMCQ.Name = "btnAddMCQ";
             this.btnAddMCQ.Size = new System.Drawing.Size(175, 33);
             this.btnAddMCQ.TabIndex = 14;
@@ -278,35 +288,38 @@
             // 
             // btnMCQPrevious
             // 
-            this.btnMCQPrevious.BackColor = System.Drawing.Color.Snow;
+            this.btnMCQPrevious.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnMCQPrevious.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMCQPrevious.Location = new System.Drawing.Point(219, 246);
+            this.btnMCQPrevious.ForeColor = System.Drawing.Color.White;
+            this.btnMCQPrevious.Location = new System.Drawing.Point(317, 245);
             this.btnMCQPrevious.Name = "btnMCQPrevious";
-            this.btnMCQPrevious.Size = new System.Drawing.Size(78, 37);
+            this.btnMCQPrevious.Size = new System.Drawing.Size(56, 32);
             this.btnMCQPrevious.TabIndex = 13;
-            this.btnMCQPrevious.Text = "Previous";
+            this.btnMCQPrevious.Text = "<";
             this.btnMCQPrevious.UseVisualStyleBackColor = false;
             this.btnMCQPrevious.Click += new System.EventHandler(this.btnMCQPrevious_Click);
             // 
             // btnMCQNext
             // 
-            this.btnMCQNext.BackColor = System.Drawing.Color.Snow;
+            this.btnMCQNext.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnMCQNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMCQNext.Location = new System.Drawing.Point(335, 246);
+            this.btnMCQNext.ForeColor = System.Drawing.Color.White;
+            this.btnMCQNext.Location = new System.Drawing.Point(386, 245);
             this.btnMCQNext.Name = "btnMCQNext";
-            this.btnMCQNext.Size = new System.Drawing.Size(78, 37);
+            this.btnMCQNext.Size = new System.Drawing.Size(56, 32);
             this.btnMCQNext.TabIndex = 12;
-            this.btnMCQNext.Text = "Next";
+            this.btnMCQNext.Text = ">";
             this.btnMCQNext.UseVisualStyleBackColor = false;
             this.btnMCQNext.Click += new System.EventHandler(this.btnMCQNext_Click);
             // 
             // btnViewMCQQuestions
             // 
-            this.btnViewMCQQuestions.BackColor = System.Drawing.Color.Snow;
+            this.btnViewMCQQuestions.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnViewMCQQuestions.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewMCQQuestions.Location = new System.Drawing.Point(411, 358);
+            this.btnViewMCQQuestions.ForeColor = System.Drawing.Color.White;
+            this.btnViewMCQQuestions.Location = new System.Drawing.Point(610, 165);
             this.btnViewMCQQuestions.Name = "btnViewMCQQuestions";
-            this.btnViewMCQQuestions.Size = new System.Drawing.Size(149, 33);
+            this.btnViewMCQQuestions.Size = new System.Drawing.Size(157, 33);
             this.btnViewMCQQuestions.TabIndex = 11;
             this.btnViewMCQQuestions.Text = "View Questions";
             this.btnViewMCQQuestions.UseVisualStyleBackColor = false;
@@ -324,10 +337,11 @@
             // lblMCQBody
             // 
             this.lblMCQBody.AutoSize = true;
-            this.lblMCQBody.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.lblMCQBody.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMCQBody.ForeColor = System.Drawing.Color.Black;
             this.lblMCQBody.Location = new System.Drawing.Point(17, 18);
             this.lblMCQBody.Name = "lblMCQBody";
-            this.lblMCQBody.Size = new System.Drawing.Size(98, 16);
+            this.lblMCQBody.Size = new System.Drawing.Size(112, 16);
             this.lblMCQBody.TabIndex = 9;
             this.lblMCQBody.Text = "Question Body:";
             // 
@@ -343,13 +357,13 @@
             this.grpBoxTFQ.Controls.Add(this.label2);
             this.grpBoxTFQ.Controls.Add(this.richTextBoxTFQbody);
             this.grpBoxTFQ.Controls.Add(this.txtBoxSearchTFQ);
-            this.grpBoxTFQ.Controls.Add(this.btnVieqTFQQuestions);
             this.grpBoxTFQ.Controls.Add(this.btnSearchTFQ);
             this.grpBoxTFQ.Controls.Add(this.btnTFQNext);
             this.grpBoxTFQ.Controls.Add(this.btnDeleteTFQ);
             this.grpBoxTFQ.Controls.Add(this.btnTFQPrevious);
             this.grpBoxTFQ.Controls.Add(this.btnAddTFQ);
-            this.grpBoxTFQ.Location = new System.Drawing.Point(156, 163);
+            this.grpBoxTFQ.ForeColor = System.Drawing.Color.Black;
+            this.grpBoxTFQ.Location = new System.Drawing.Point(103, 210);
             this.grpBoxTFQ.Name = "grpBoxTFQ";
             this.grpBoxTFQ.Size = new System.Drawing.Size(566, 411);
             this.grpBoxTFQ.TabIndex = 7;
@@ -366,40 +380,46 @@
             // lblAnsTFQ
             // 
             this.lblAnsTFQ.AutoSize = true;
-            this.lblAnsTFQ.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblAnsTFQ.Location = new System.Drawing.Point(420, 16);
+            this.lblAnsTFQ.BackColor = System.Drawing.Color.Transparent;
+            this.lblAnsTFQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.lblAnsTFQ.ForeColor = System.Drawing.Color.Black;
+            this.lblAnsTFQ.Location = new System.Drawing.Point(394, 15);
             this.lblAnsTFQ.Name = "lblAnsTFQ";
-            this.lblAnsTFQ.Size = new System.Drawing.Size(97, 16);
+            this.lblAnsTFQ.Size = new System.Drawing.Size(111, 16);
             this.lblAnsTFQ.TabIndex = 32;
             this.lblAnsTFQ.Text = "Correct Answer";
             // 
             // lblTFQID
             // 
             this.lblTFQID.AutoSize = true;
-            this.lblTFQID.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.lblTFQID.BackColor = System.Drawing.Color.Transparent;
+            this.lblTFQID.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.lblTFQID.ForeColor = System.Drawing.Color.Black;
             this.lblTFQID.Location = new System.Drawing.Point(6, 225);
             this.lblTFQID.Name = "lblTFQID";
-            this.lblTFQID.Size = new System.Drawing.Size(20, 16);
+            this.lblTFQID.Size = new System.Drawing.Size(22, 16);
             this.lblTFQID.TabIndex = 26;
             this.lblTFQID.Text = "ID";
             // 
             // lblSearchTFQ
             // 
             this.lblSearchTFQ.AutoSize = true;
-            this.lblSearchTFQ.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.lblSearchTFQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchTFQ.ForeColor = System.Drawing.Color.Black;
             this.lblSearchTFQ.Location = new System.Drawing.Point(277, 309);
             this.lblSearchTFQ.Name = "lblSearchTFQ";
-            this.lblSearchTFQ.Size = new System.Drawing.Size(20, 16);
+            this.lblSearchTFQ.Size = new System.Drawing.Size(22, 16);
             this.lblSearchTFQ.TabIndex = 26;
             this.lblSearchTFQ.Text = "ID";
             // 
             // btnUpdateTFQ
             // 
-            this.btnUpdateTFQ.BackColor = System.Drawing.Color.Snow;
+            this.btnUpdateTFQ.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnUpdateTFQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateTFQ.ForeColor = System.Drawing.Color.White;
             this.btnUpdateTFQ.Location = new System.Drawing.Point(6, 245);
             this.btnUpdateTFQ.Name = "btnUpdateTFQ";
-            this.btnUpdateTFQ.Size = new System.Drawing.Size(175, 37);
+            this.btnUpdateTFQ.Size = new System.Drawing.Size(178, 32);
             this.btnUpdateTFQ.TabIndex = 26;
             this.btnUpdateTFQ.Text = "Update Question";
             this.btnUpdateTFQ.UseVisualStyleBackColor = false;
@@ -408,10 +428,12 @@
             // lblTFQbody
             // 
             this.lblTFQbody.AutoSize = true;
-            this.lblTFQbody.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.lblTFQbody.BackColor = System.Drawing.Color.Transparent;
+            this.lblTFQbody.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.lblTFQbody.ForeColor = System.Drawing.Color.Black;
             this.lblTFQbody.Location = new System.Drawing.Point(17, 16);
             this.lblTFQbody.Name = "lblTFQbody";
-            this.lblTFQbody.Size = new System.Drawing.Size(98, 16);
+            this.lblTFQbody.Size = new System.Drawing.Size(112, 16);
             this.lblTFQbody.TabIndex = 22;
             this.lblTFQbody.Text = "Question Body:";
             // 
@@ -443,11 +465,12 @@
             // 
             // btnVieqTFQQuestions
             // 
-            this.btnVieqTFQQuestions.BackColor = System.Drawing.Color.Snow;
+            this.btnVieqTFQQuestions.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnVieqTFQQuestions.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVieqTFQQuestions.Location = new System.Drawing.Point(411, 358);
+            this.btnVieqTFQQuestions.ForeColor = System.Drawing.Color.White;
+            this.btnVieqTFQQuestions.Location = new System.Drawing.Point(610, 165);
             this.btnVieqTFQQuestions.Name = "btnVieqTFQQuestions";
-            this.btnVieqTFQQuestions.Size = new System.Drawing.Size(149, 33);
+            this.btnVieqTFQQuestions.Size = new System.Drawing.Size(157, 33);
             this.btnVieqTFQQuestions.TabIndex = 23;
             this.btnVieqTFQQuestions.Text = "View Questions";
             this.btnVieqTFQQuestions.UseVisualStyleBackColor = false;
@@ -455,11 +478,12 @@
             // 
             // btnSearchTFQ
             // 
-            this.btnSearchTFQ.BackColor = System.Drawing.Color.Snow;
+            this.btnSearchTFQ.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnSearchTFQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchTFQ.ForeColor = System.Drawing.Color.White;
             this.btnSearchTFQ.Location = new System.Drawing.Point(6, 304);
             this.btnSearchTFQ.Name = "btnSearchTFQ";
-            this.btnSearchTFQ.Size = new System.Drawing.Size(175, 29);
+            this.btnSearchTFQ.Size = new System.Drawing.Size(178, 32);
             this.btnSearchTFQ.TabIndex = 28;
             this.btnSearchTFQ.Text = "Search Question with ID";
             this.btnSearchTFQ.UseVisualStyleBackColor = false;
@@ -467,21 +491,23 @@
             // 
             // btnTFQNext
             // 
-            this.btnTFQNext.BackColor = System.Drawing.Color.Snow;
+            this.btnTFQNext.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnTFQNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTFQNext.Location = new System.Drawing.Point(332, 245);
+            this.btnTFQNext.ForeColor = System.Drawing.Color.White;
+            this.btnTFQNext.Location = new System.Drawing.Point(386, 245);
             this.btnTFQNext.Name = "btnTFQNext";
-            this.btnTFQNext.Size = new System.Drawing.Size(78, 37);
+            this.btnTFQNext.Size = new System.Drawing.Size(56, 32);
             this.btnTFQNext.TabIndex = 24;
-            this.btnTFQNext.Text = "Next";
+            this.btnTFQNext.Text = ">";
             this.btnTFQNext.UseVisualStyleBackColor = false;
             this.btnTFQNext.Click += new System.EventHandler(this.btnTFQNext_Click);
             // 
             // btnDeleteTFQ
             // 
-            this.btnDeleteTFQ.BackColor = System.Drawing.Color.Snow;
+            this.btnDeleteTFQ.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnDeleteTFQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteTFQ.Location = new System.Drawing.Point(219, 358);
+            this.btnDeleteTFQ.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteTFQ.Location = new System.Drawing.Point(403, 372);
             this.btnDeleteTFQ.Name = "btnDeleteTFQ";
             this.btnDeleteTFQ.Size = new System.Drawing.Size(157, 33);
             this.btnDeleteTFQ.TabIndex = 27;
@@ -491,23 +517,25 @@
             // 
             // btnTFQPrevious
             // 
-            this.btnTFQPrevious.BackColor = System.Drawing.Color.Snow;
+            this.btnTFQPrevious.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnTFQPrevious.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTFQPrevious.Location = new System.Drawing.Point(219, 245);
+            this.btnTFQPrevious.ForeColor = System.Drawing.Color.White;
+            this.btnTFQPrevious.Location = new System.Drawing.Point(317, 245);
             this.btnTFQPrevious.Name = "btnTFQPrevious";
-            this.btnTFQPrevious.Size = new System.Drawing.Size(78, 37);
+            this.btnTFQPrevious.Size = new System.Drawing.Size(56, 32);
             this.btnTFQPrevious.TabIndex = 25;
-            this.btnTFQPrevious.Text = "Previous";
+            this.btnTFQPrevious.Text = "<";
             this.btnTFQPrevious.UseVisualStyleBackColor = false;
             this.btnTFQPrevious.Click += new System.EventHandler(this.btnTFQPrevious_Click);
             // 
             // btnAddTFQ
             // 
-            this.btnAddTFQ.BackColor = System.Drawing.Color.Snow;
+            this.btnAddTFQ.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnAddTFQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddTFQ.Location = new System.Drawing.Point(6, 358);
+            this.btnAddTFQ.ForeColor = System.Drawing.Color.White;
+            this.btnAddTFQ.Location = new System.Drawing.Point(6, 373);
             this.btnAddTFQ.Name = "btnAddTFQ";
-            this.btnAddTFQ.Size = new System.Drawing.Size(175, 33);
+            this.btnAddTFQ.Size = new System.Drawing.Size(178, 32);
             this.btnAddTFQ.TabIndex = 26;
             this.btnAddTFQ.Text = "Add Question";
             this.btnAddTFQ.UseVisualStyleBackColor = false;
@@ -519,8 +547,8 @@
             this.rdbtnTFQ.AutoSize = true;
             this.rdbtnTFQ.Checked = true;
             this.rdbtnTFQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtnTFQ.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.rdbtnTFQ.Location = new System.Drawing.Point(473, 124);
+            this.rdbtnTFQ.ForeColor = System.Drawing.Color.Black;
+            this.rdbtnTFQ.Location = new System.Drawing.Point(420, 171);
             this.rdbtnTFQ.Name = "rdbtnTFQ";
             this.rdbtnTFQ.Size = new System.Drawing.Size(58, 20);
             this.rdbtnTFQ.TabIndex = 9;
@@ -534,8 +562,8 @@
             this.rdbtnMCQ.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rdbtnMCQ.AutoSize = true;
             this.rdbtnMCQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtnMCQ.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.rdbtnMCQ.Location = new System.Drawing.Point(346, 124);
+            this.rdbtnMCQ.ForeColor = System.Drawing.Color.Black;
+            this.rdbtnMCQ.Location = new System.Drawing.Point(293, 171);
             this.rdbtnMCQ.Name = "rdbtnMCQ";
             this.rdbtnMCQ.Size = new System.Drawing.Size(61, 20);
             this.rdbtnMCQ.TabIndex = 10;
@@ -543,31 +571,60 @@
             this.rdbtnMCQ.UseVisualStyleBackColor = true;
             this.rdbtnMCQ.CheckedChanged += new System.EventHandler(this.rdbtnMCQ_CheckedChanged);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnGoBack);
+            this.panel1.Controls.Add(this.lblChooseCourse);
+            this.panel1.Controls.Add(this.rdbtnMCQ);
+            this.panel1.Controls.Add(this.comboBoxCourse);
+            this.panel1.Controls.Add(this.grpBoxTFQ);
+            this.panel1.Controls.Add(this.grpBoxMCQ);
+            this.panel1.Controls.Add(this.rdbtnTFQ);
+            this.panel1.Controls.Add(this.btnVieqTFQQuestions);
+            this.panel1.Controls.Add(this.btnViewMCQQuestions);
+            this.panel1.Location = new System.Drawing.Point(50, 38);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(794, 736);
+            this.panel1.TabIndex = 11;
+            // 
+            // btnGoBack
+            // 
+            this.btnGoBack.BackColor = System.Drawing.Color.DarkRed;
+            this.btnGoBack.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnGoBack.ForeColor = System.Drawing.Color.White;
+            this.btnGoBack.Location = new System.Drawing.Point(21, 643);
+            this.btnGoBack.Name = "btnGoBack";
+            this.btnGoBack.Size = new System.Drawing.Size(156, 80);
+            this.btnGoBack.TabIndex = 12;
+            this.btnGoBack.Text = "Go Back";
+            this.btnGoBack.UseVisualStyleBackColor = false;
+            this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
+            // 
             // frmManageQuestions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Brown;
-            
-            this.ClientSize = new System.Drawing.Size(878, 647);
-            this.Controls.Add(this.rdbtnMCQ);
-            this.Controls.Add(this.grpBoxTFQ);
-            this.Controls.Add(this.rdbtnTFQ);
-            this.Controls.Add(this.grpBoxMCQ);
-            this.Controls.Add(this.lblChooseCourse);
-            this.Controls.Add(this.comboBoxCourse);
+            this.BackColor = System.Drawing.Color.DarkRed;
+            this.ClientSize = new System.Drawing.Size(896, 802);
+            this.ControlBox = false;
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1033, 823);
-            this.MinimumSize = new System.Drawing.Size(896, 694);
+            this.Location = new System.Drawing.Point(650, 125);
+            this.MaximumSize = new System.Drawing.Size(1920, 1080);
+            this.MinimumSize = new System.Drawing.Size(792, 574);
             this.Name = "frmManageQuestions";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Manage Questions";
             this.Load += new System.EventHandler(this.ManageQuestions_Load);
             this.grpBoxMCQ.ResumeLayout(false);
             this.grpBoxMCQ.PerformLayout();
             this.grpBoxTFQ.ResumeLayout(false);
             this.grpBoxTFQ.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -614,5 +671,7 @@
         private System.Windows.Forms.TextBox txtAnsTFQ;
         private System.Windows.Forms.RadioButton rdbtnTFQ;
         private System.Windows.Forms.RadioButton rdbtnMCQ;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnGoBack;
     }
 }
