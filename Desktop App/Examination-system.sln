@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32126.315
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32210.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrmHome", "FrmHome\FrmHome.csproj", "{7B4128C8-E033-4426-A623-A9BCD4C17D6E}"
 EndProject
@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormCrystallRpoer", "FrmCry
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trial", "Trial\Trial.csproj", "{C1E88680-EF50-4481-8C46-5C5835B527E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrmHome2", "..\hossamforms\NewForms\Desktop App\FrmHome\FrmHome2.csproj", "{09857A1E-EB12-48E7-A71A-CC2F4A432957}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrmHome2", "C:\Users\abdo1\Downloads\Examination-system-hiso\Desktop App\FrmHome\FrmHome2.csproj", "{E2FC9668-7DB3-4166-BB8E-3E519ADF2B23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{C1E88680-EF50-4481-8C46-5C5835B527E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1E88680-EF50-4481-8C46-5C5835B527E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1E88680-EF50-4481-8C46-5C5835B527E3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{09857A1E-EB12-48E7-A71A-CC2F4A432957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09857A1E-EB12-48E7-A71A-CC2F4A432957}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09857A1E-EB12-48E7-A71A-CC2F4A432957}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09857A1E-EB12-48E7-A71A-CC2F4A432957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2FC9668-7DB3-4166-BB8E-3E519ADF2B23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2FC9668-7DB3-4166-BB8E-3E519ADF2B23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2FC9668-7DB3-4166-BB8E-3E519ADF2B23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2FC9668-7DB3-4166-BB8E-3E519ADF2B23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

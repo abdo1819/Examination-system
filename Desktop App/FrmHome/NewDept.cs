@@ -30,6 +30,9 @@ namespace FrmHome
 
         private void btnOk_Click(object sender, EventArgs e)
         {
+            if (txtDeptName.Text == "")
+                return;
+
             using (ExaminationContext MyDeptContext = new ExaminationContext())
             {
                 Department MyNewDept = new Department();

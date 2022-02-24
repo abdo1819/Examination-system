@@ -29,14 +29,18 @@ namespace FrmHome
                 Question MyQuestion = new Question();
 
                 MyQuestion.q_text = richTextBoxText.Text;
+                
+                if(textBoxAns.Text.ToLower() != "t" && textBoxAns.Text.ToLower() != "f")
+                    textBoxAns.Text = "F";
+
                 MyQuestion.corr_answer = textBoxAns.Text;
                 MyQuestion.top_id = (int)comboBoxTopic.SelectedValue;
                 MyQuestion.q_type = "TF";
 
                 MyQuestionContext.Question.Add(MyQuestion);
                 MyQuestionContext.SaveChanges();
-
             }
+            DialogResult = DialogResult.OK;
             this.Close();
         }
 
