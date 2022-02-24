@@ -29,255 +29,349 @@ namespace FrmHome
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnStudents = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Dashboard));
             this.btnQuestions = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
             this.btnCourses = new System.Windows.Forms.Button();
             this.btnDepts = new System.Windows.Forms.Button();
-            this.groupInfo = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblDept = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panelInfo = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.lblStdID = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.lblDept = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.groupInfo.SuspendLayout();
+            this.groupActions = new System.Windows.Forms.GroupBox();
+            this.panelInfo.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupActions.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnStudents
-            // 
-            this.btnStudents.Location = new System.Drawing.Point(511, 119);
-            this.btnStudents.Name = "btnStudents";
-            this.btnStudents.Size = new System.Drawing.Size(94, 46);
-            this.btnStudents.TabIndex = 0;
-            this.btnStudents.Text = "Manage Users";
-            this.btnStudents.UseVisualStyleBackColor = true;
             // 
             // btnQuestions
             // 
-            this.btnQuestions.Location = new System.Drawing.Point(511, 52);
+            this.btnQuestions.BackColor = System.Drawing.Color.DarkRed;
+            this.btnQuestions.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnQuestions.ForeColor = System.Drawing.Color.White;
+            this.btnQuestions.Location = new System.Drawing.Point(345, 79);
             this.btnQuestions.Name = "btnQuestions";
-            this.btnQuestions.Size = new System.Drawing.Size(99, 54);
+            this.btnQuestions.Size = new System.Drawing.Size(256, 100);
             this.btnQuestions.TabIndex = 1;
             this.btnQuestions.Text = "Manage Questions";
-            this.btnQuestions.UseVisualStyleBackColor = true;
+            this.btnQuestions.UseVisualStyleBackColor = false;
             this.btnQuestions.Click += new System.EventHandler(this.btnQuestions_Click);
             // 
             // btnReport
             // 
-            this.btnReport.Location = new System.Drawing.Point(511, 315);
+            this.btnReport.BackColor = System.Drawing.Color.DarkRed;
+            this.btnReport.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnReport.ForeColor = System.Drawing.Color.White;
+            this.btnReport.Location = new System.Drawing.Point(345, 610);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(99, 47);
+            this.btnReport.Size = new System.Drawing.Size(256, 100);
             this.btnReport.TabIndex = 2;
             this.btnReport.Text = "Reports Dashboard";
-            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.UseVisualStyleBackColor = false;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnCourses
             // 
-            this.btnCourses.Location = new System.Drawing.Point(511, 248);
+            this.btnCourses.BackColor = System.Drawing.Color.DarkRed;
+            this.btnCourses.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnCourses.ForeColor = System.Drawing.Color.White;
+            this.btnCourses.Location = new System.Drawing.Point(345, 433);
             this.btnCourses.Name = "btnCourses";
-            this.btnCourses.Size = new System.Drawing.Size(99, 46);
+            this.btnCourses.Size = new System.Drawing.Size(256, 100);
             this.btnCourses.TabIndex = 4;
             this.btnCourses.Text = "Manage Courses";
-            this.btnCourses.UseVisualStyleBackColor = true;
+            this.btnCourses.UseVisualStyleBackColor = false;
             this.btnCourses.Click += new System.EventHandler(this.btnCourses_Click);
             // 
             // btnDepts
             // 
-            this.btnDepts.Location = new System.Drawing.Point(511, 178);
+            this.btnDepts.BackColor = System.Drawing.Color.DarkRed;
+            this.btnDepts.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnDepts.ForeColor = System.Drawing.Color.White;
+            this.btnDepts.Location = new System.Drawing.Point(345, 256);
             this.btnDepts.Name = "btnDepts";
-            this.btnDepts.Size = new System.Drawing.Size(99, 55);
+            this.btnDepts.Size = new System.Drawing.Size(256, 100);
             this.btnDepts.TabIndex = 5;
             this.btnDepts.Text = "Manage Departments";
-            this.btnDepts.UseVisualStyleBackColor = true;
+            this.btnDepts.UseVisualStyleBackColor = false;
             this.btnDepts.Click += new System.EventHandler(this.btnDepts_Click);
             // 
-            // groupInfo
+            // panelInfo
             // 
-            this.groupInfo.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.groupInfo.Controls.Add(this.label4);
-            this.groupInfo.Controls.Add(this.lblDept);
-            this.groupInfo.Controls.Add(this.label2);
-            this.groupInfo.Controls.Add(this.lblStdID);
-            this.groupInfo.Controls.Add(this.label1);
-            this.groupInfo.Controls.Add(this.lblEmail);
-            this.groupInfo.Controls.Add(this.label3);
-            this.groupInfo.Controls.Add(this.lblAddress);
-            this.groupInfo.Controls.Add(this.label5);
-            this.groupInfo.Controls.Add(this.lblName);
-            this.groupInfo.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Bold);
-            this.groupInfo.ForeColor = System.Drawing.Color.DarkRed;
-            this.groupInfo.Location = new System.Drawing.Point(12, 40);
-            this.groupInfo.Name = "groupInfo";
-            this.groupInfo.Size = new System.Drawing.Size(358, 362);
-            this.groupInfo.TabIndex = 21;
-            this.groupInfo.TabStop = false;
-            this.groupInfo.Text = "Instructor Information";
+            this.panelInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panelInfo.BackColor = System.Drawing.Color.DarkRed;
+            this.panelInfo.Controls.Add(this.groupBox1);
+            this.panelInfo.Controls.Add(this.pictureBox2);
+            this.panelInfo.Controls.Add(this.pictureBox1);
+            this.panelInfo.Controls.Add(this.label16);
+            this.panelInfo.Controls.Add(this.btnLogout);
+            this.panelInfo.Location = new System.Drawing.Point(0, 0);
+            this.panelInfo.Name = "panelInfo";
+            this.panelInfo.Size = new System.Drawing.Size(607, 1080);
+            this.panelInfo.TabIndex = 43;
             // 
-            // label4
+            // groupBox1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkRed;
-            this.label4.Location = new System.Drawing.Point(27, 289);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 24);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Department:";
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.lblStdID);
+            this.groupBox1.Controls.Add(this.lblEmail);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.lblAddress);
+            this.groupBox1.Controls.Add(this.lblName);
+            this.groupBox1.Controls.Add(this.lblDept);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(16, 462);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(571, 384);
+            this.groupBox1.TabIndex = 33;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Instructor Info";
             // 
-            // lblDept
+            // label6
             // 
-            this.lblDept.AutoSize = true;
-            this.lblDept.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblDept.ForeColor = System.Drawing.Color.Black;
-            this.lblDept.Location = new System.Drawing.Point(230, 296);
-            this.lblDept.Name = "lblDept";
-            this.lblDept.Size = new System.Drawing.Size(55, 20);
-            this.lblDept.TabIndex = 29;
-            this.lblDept.Text = "[Dept]";
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(36, 133);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 28);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Name:";
             // 
-            // label2
+            // label7
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkRed;
-            this.label2.Location = new System.Drawing.Point(27, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 24);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Instructor ID:";
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(36, 241);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(82, 28);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Email:";
             // 
             // lblStdID
             // 
             this.lblStdID.AutoSize = true;
-            this.lblStdID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblStdID.ForeColor = System.Drawing.Color.Black;
-            this.lblStdID.Location = new System.Drawing.Point(243, 75);
+            this.lblStdID.BackColor = System.Drawing.Color.Transparent;
+            this.lblStdID.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
+            this.lblStdID.ForeColor = System.Drawing.Color.White;
+            this.lblStdID.Location = new System.Drawing.Point(205, 84);
             this.lblStdID.Name = "lblStdID";
-            this.lblStdID.Size = new System.Drawing.Size(36, 20);
+            this.lblStdID.Size = new System.Drawing.Size(55, 28);
             this.lblStdID.TabIndex = 27;
             this.lblStdID.Text = "[ID]";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(27, 227);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 24);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Email:";
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblEmail.ForeColor = System.Drawing.Color.Black;
-            this.lblEmail.Location = new System.Drawing.Point(230, 234);
+            this.lblEmail.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmail.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
+            this.lblEmail.Location = new System.Drawing.Point(205, 243);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(61, 20);
+            this.lblEmail.Size = new System.Drawing.Size(93, 28);
             this.lblEmail.TabIndex = 21;
             this.lblEmail.Text = "[Email]";
             // 
-            // label3
+            // label10
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkRed;
-            this.label3.Location = new System.Drawing.Point(27, 169);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 24);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Address:";
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(36, 82);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(161, 28);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Instructor ID:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(36, 183);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(109, 28);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Address:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(36, 303);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(153, 28);
+            this.label12.TabIndex = 28;
+            this.label12.Text = "Department:";
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblAddress.ForeColor = System.Drawing.Color.Black;
-            this.lblAddress.Location = new System.Drawing.Point(211, 176);
+            this.lblAddress.BackColor = System.Drawing.Color.Transparent;
+            this.lblAddress.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
+            this.lblAddress.ForeColor = System.Drawing.Color.White;
+            this.lblAddress.Location = new System.Drawing.Point(205, 185);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(81, 20);
+            this.lblAddress.Size = new System.Drawing.Size(120, 28);
             this.lblAddress.TabIndex = 23;
             this.lblAddress.Text = "[Address]";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkRed;
-            this.label5.Location = new System.Drawing.Point(27, 119);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 24);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Name:";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblName.ForeColor = System.Drawing.Color.Black;
-            this.lblName.Location = new System.Drawing.Point(228, 126);
+            this.lblName.BackColor = System.Drawing.Color.Transparent;
+            this.lblName.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
+            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.Location = new System.Drawing.Point(205, 135);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(63, 20);
+            this.lblName.Size = new System.Drawing.Size(93, 28);
             this.lblName.TabIndex = 25;
             this.lblName.Text = "[Name]";
             // 
+            // lblDept
+            // 
+            this.lblDept.AutoSize = true;
+            this.lblDept.BackColor = System.Drawing.Color.Transparent;
+            this.lblDept.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
+            this.lblDept.ForeColor = System.Drawing.Color.White;
+            this.lblDept.Location = new System.Drawing.Point(205, 305);
+            this.lblDept.Name = "lblDept";
+            this.lblDept.Size = new System.Drawing.Size(83, 28);
+            this.lblDept.TabIndex = 29;
+            this.lblDept.Text = "[Dept]";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(165, 174);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(249, 220);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 32;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(16, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(85, 127);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(124, 64);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(428, 32);
+            this.label16.TabIndex = 30;
+            this.label16.Text = "Information Technology Institute";
+            // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(679, 406);
+            this.btnLogout.BackColor = System.Drawing.Color.White;
+            this.btnLogout.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnLogout.ForeColor = System.Drawing.Color.DarkRed;
+            this.btnLogout.Location = new System.Drawing.Point(165, 902);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(82, 32);
-            this.btnLogout.TabIndex = 22;
+            this.btnLogout.Size = new System.Drawing.Size(249, 60);
+            this.btnLogout.TabIndex = 23;
             this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.btnLogout.UseVisualStyleBackColor = false;
+            // 
+            // groupActions
+            // 
+            this.groupActions.Controls.Add(this.btnReport);
+            this.groupActions.Controls.Add(this.btnCourses);
+            this.groupActions.Controls.Add(this.btnDepts);
+            this.groupActions.Controls.Add(this.btnQuestions);
+            this.groupActions.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold);
+            this.groupActions.ForeColor = System.Drawing.Color.DarkRed;
+            this.groupActions.Location = new System.Drawing.Point(807, 215);
+            this.groupActions.Name = "groupActions";
+            this.groupActions.Size = new System.Drawing.Size(933, 770);
+            this.groupActions.TabIndex = 44;
+            this.groupActions.TabStop = false;
+            this.groupActions.Text = "Admin Dashboard";
             // 
             // Admin_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.groupInfo);
-            this.Controls.Add(this.btnDepts);
-            this.Controls.Add(this.btnCourses);
-            this.Controls.Add(this.btnReport);
-            this.Controls.Add(this.btnQuestions);
-            this.Controls.Add(this.btnStudents);
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.ControlBox = false;
+            this.Controls.Add(this.groupActions);
+            this.Controls.Add(this.panelInfo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin_Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Dashboard";
-            this.groupInfo.ResumeLayout(false);
-            this.groupInfo.PerformLayout();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.panelInfo.ResumeLayout(false);
+            this.panelInfo.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupActions.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnStudents;
         private System.Windows.Forms.Button btnQuestions;
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnCourses;
         private System.Windows.Forms.Button btnDepts;
-        private System.Windows.Forms.GroupBox groupInfo;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblDept;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panelInfo;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblStdID;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblDept;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.GroupBox groupActions;
     }
 }

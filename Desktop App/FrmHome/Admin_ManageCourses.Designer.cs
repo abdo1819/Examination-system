@@ -322,7 +322,7 @@ namespace FrmHome
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(124, 64);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(429, 32);
+            this.label9.Size = new System.Drawing.Size(428, 32);
             this.label9.TabIndex = 30;
             this.label9.Text = "Information Technology Institute";
             // 
@@ -351,6 +351,7 @@ namespace FrmHome
             this.Controls.Add(this.groupActions);
             this.Controls.Add(this.panelInfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin_ManageCourses";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Courses";

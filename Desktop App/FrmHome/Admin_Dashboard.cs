@@ -24,6 +24,7 @@ namespace FrmHome
         {
             InitializeComponent();
             frmLogin = _frmLogin;
+            btnLogout.Click += btnLogout_Click;
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
@@ -93,6 +94,11 @@ namespace FrmHome
         {
             var frm = new frmDept();
             frm.Show();
+        }
+
+        private void btnStudents_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

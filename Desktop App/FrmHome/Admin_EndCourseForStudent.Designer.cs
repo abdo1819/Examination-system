@@ -29,6 +29,7 @@ namespace FrmHome
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_EndCourseForStudent));
             this.btnGoBack = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -147,6 +148,7 @@ namespace FrmHome
             this.ClientSize = new System.Drawing.Size(792, 574);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(700, 200);
             this.Name = "Admin_EndCourseForStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;

@@ -38,6 +38,7 @@ namespace FrmHome
             this.lblStdGradeValue = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblNoCourse = new System.Windows.Forms.Label();
+            this.labelNoExams = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +74,7 @@ namespace FrmHome
             this.lblSelectCourse.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
             this.lblSelectCourse.Location = new System.Drawing.Point(119, 102);
             this.lblSelectCourse.Name = "lblSelectCourse";
-            this.lblSelectCourse.Size = new System.Drawing.Size(500, 32);
+            this.lblSelectCourse.Size = new System.Drawing.Size(499, 32);
             this.lblSelectCourse.TabIndex = 22;
             this.lblSelectCourse.Text = "Select a Course to view your Grades:";
             this.lblSelectCourse.Visible = false;
@@ -98,7 +99,7 @@ namespace FrmHome
             this.lblStdGrade.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStdGrade.Location = new System.Drawing.Point(276, 247);
             this.lblStdGrade.Name = "lblStdGrade";
-            this.lblStdGrade.Size = new System.Drawing.Size(167, 32);
+            this.lblStdGrade.Size = new System.Drawing.Size(166, 32);
             this.lblStdGrade.TabIndex = 24;
             this.lblStdGrade.Text = "Your Grade";
             this.lblStdGrade.Visible = false;
@@ -121,6 +122,7 @@ namespace FrmHome
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.labelNoExams);
             this.panel1.Controls.Add(this.lblNoCourse);
             this.panel1.Controls.Add(this.lblSelectCourse);
             this.panel1.Controls.Add(this.lblStdGradeValue);
@@ -129,7 +131,7 @@ namespace FrmHome
             this.panel1.Controls.Add(this.comboBoxCourses);
             this.panel1.Controls.Add(this.btnShow);
             this.panel1.Location = new System.Drawing.Point(16, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(739, 526);
             this.panel1.TabIndex = 26;
@@ -141,11 +143,24 @@ namespace FrmHome
             this.lblNoCourse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblNoCourse.Location = new System.Drawing.Point(138, 165);
             this.lblNoCourse.Name = "lblNoCourse";
-            this.lblNoCourse.Size = new System.Drawing.Size(472, 32);
+            this.lblNoCourse.Size = new System.Drawing.Size(471, 32);
             this.lblNoCourse.TabIndex = 26;
             this.lblNoCourse.Text = "You are not enrolled in any course.";
             this.lblNoCourse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblNoCourse.Visible = false;
+            // 
+            // labelNoExams
+            // 
+            this.labelNoExams.AutoSize = true;
+            this.labelNoExams.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNoExams.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelNoExams.Location = new System.Drawing.Point(138, 184);
+            this.labelNoExams.Name = "labelNoExams";
+            this.labelNoExams.Size = new System.Drawing.Size(461, 32);
+            this.labelNoExams.TabIndex = 27;
+            this.labelNoExams.Text = "You haven\'t taken any exams yet.";
+            this.labelNoExams.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNoExams.Visible = false;
             // 
             // Student_ViewGrades
             // 
@@ -176,5 +191,6 @@ namespace FrmHome
         private System.Windows.Forms.Label lblStdGradeValue;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblNoCourse;
+        private System.Windows.Forms.Label labelNoExams;
     }
 }

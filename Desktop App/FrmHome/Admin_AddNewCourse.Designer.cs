@@ -29,12 +29,15 @@ namespace FrmHome
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_AddNewCourse));
             this.btnGoBack = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtCrsName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboInstructors = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +70,8 @@ namespace FrmHome
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.comboInstructors);
             this.panel1.Controls.Add(this.txtCrsName);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label1);
@@ -104,6 +109,24 @@ namespace FrmHome
             this.label1.TabIndex = 4;
             this.label1.Text = "Enter Course Name:";
             // 
+            // comboInstructors
+            // 
+            this.comboInstructors.FormattingEnabled = true;
+            this.comboInstructors.Location = new System.Drawing.Point(261, 277);
+            this.comboInstructors.Name = "comboInstructors";
+            this.comboInstructors.Size = new System.Drawing.Size(293, 24);
+            this.comboInstructors.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(64, 274);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(160, 23);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Select Instructor:";
+            // 
             // Admin_AddNewCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -112,6 +135,7 @@ namespace FrmHome
             this.ClientSize = new System.Drawing.Size(792, 574);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(700, 200);
             this.Name = "Admin_AddNewCourse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
@@ -130,5 +154,7 @@ namespace FrmHome
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCrsName;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboInstructors;
     }
 }

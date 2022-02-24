@@ -22,11 +22,6 @@ namespace FrmHome
             this.frmLogin = _frmLogin;
             this.Resize += (sender, e) => Invalidate();       
         }
-
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            
-        }
   
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -48,12 +43,17 @@ namespace FrmHome
                               join Std in frmLogin.Ctx.Student on CA.std_id equals Std.std_id
                               select new { Std.std_id,  CA.crs_id, C.crs_name, CA.grade })
                               .Where(g => g.grade != null).Where(s=>s.std_id == frmLogin.userInfo.usr_id).ToList();
+                if (Courses == null || Courses?.Count == 0)
+                    labelNoExams.Visible = true;
+                else
+                {
+                    comboBoxCourses.DataSource = Courses;
+                    comboBoxCourses.DisplayMember = "crs_name";
+                    comboBoxCourses.ValueMember = "crs_id";
+                    lblSelectCourse.Show();
+                    comboBoxCourses.Show();
+                }
 
-                comboBoxCourses.DataSource = Courses;
-                comboBoxCourses.DisplayMember = "crs_name";
-                comboBoxCourses.ValueMember = "crs_id";
-                lblSelectCourse.Show();
-                comboBoxCourses.Show();
             }
             btnShow.Enabled = false;
         }

@@ -16,6 +16,7 @@ namespace FrmHome
         Login frmLogin;
         Admin_Dashboard frmAdmin;
         List<Entities.getAllStudentsResult> Students;
+        List<Entities.getAllInstructorsResult> Instructors;
 
         public Admin_ManageCourses(Login _frmLogin, Admin_Dashboard _frmAdmin)
         {
@@ -36,6 +37,7 @@ namespace FrmHome
             lblEmail.Text = frmAdmin.Email;
             lblAddress.Text = frmAdmin.Address;
             Students = await frmLogin.Procedures.getAllStudentsAsync(new OutputParameter<int>());
+            Instructors = await frmLogin.Procedures.getAllInstructorsAsync(new OutputParameter<int>());
             base.OnLoad(e);
         }
 
@@ -63,7 +65,7 @@ namespace FrmHome
         private void button3_Click(object sender, EventArgs e)
         {
             groupActions.Visible = false;
-            Admin_AddNewCourse frmAddCourse = new Admin_AddNewCourse(frmLogin);
+            Admin_AddNewCourse frmAddCourse = new Admin_AddNewCourse(frmLogin, Instructors);
             frmAddCourse.ShowDialog();
             groupActions.Visible = true;
         }

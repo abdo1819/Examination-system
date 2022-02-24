@@ -13,10 +13,19 @@ namespace FrmHome
     public partial class Admin_AddNewCourse : Form
     {
         Login frmLogin;
-        public Admin_AddNewCourse(Login _frmLogin)
+        List<Entities.getAllInstructorsResult> Instructors;
+        public Admin_AddNewCourse(Login _frmLogin, List<Entities.getAllInstructorsResult> _Instructors)
         {
             InitializeComponent();
             frmLogin = _frmLogin;
+            Instructors = _Instructors;
+        }
+        protected override void OnLoad(EventArgs e)
+        {
+            comboInstructors.DataSource = Instructors;
+            comboInstructors.DisplayMember = "usr_id";
+            comboInstructors.ValueMember = "usr_id";
+            base.OnLoad(e);
         }
 
         private void btnGoBack_Click(object sender, EventArgs e)
@@ -30,7 +39,11 @@ namespace FrmHome
             {
                 var resultCode = await frmLogin.Procedures.Insert_CourseAsync(txtCrsName.Text, new OutputParameter<int>());
                 if (resultCode == 1)
-                    MessageBox.Show($"Successfully added {txtCrsName.Text} to the system.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                {
+                    var insID = ((Entities.getAllInstructorsResult)comboInstructors.SelectedItem).usr_id;
+                    await frmLogin.Procedures.Assign_Course_to_InstructorAsync(txtCrsName.Text, insID, new OutputParameter<int>());
+                    MessageBox.Show($"Successfully added {txtCrsName.Text} under Instructor No. {insID} to the system.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }                
                 else
                     MessageBox.Show("An error occurred, course already exists on the system", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();

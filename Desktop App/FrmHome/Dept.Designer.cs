@@ -195,6 +195,7 @@
             this.Controls.Add(this.btnViewDept);
             this.Controls.Add(this.txtDeptName);
             this.Controls.Add(this.lblDept);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1268, 771);
             this.MinimumSize = new System.Drawing.Size(977, 486);
             this.Name = "frmDept";
