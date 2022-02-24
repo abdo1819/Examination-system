@@ -72,5 +72,15 @@ namespace FrmHome
             dataGridQuestions.Columns["Course"].Visible = false;
             dataGridQuestions.Columns["Topic"].Visible = false;
         }
+
+        private void Admin_FormViewQuestions_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
