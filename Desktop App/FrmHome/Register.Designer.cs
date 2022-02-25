@@ -55,10 +55,10 @@ namespace FrmHome
             this.btnRegister.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnRegister.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
             this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(314, 347);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegister.Location = new System.Drawing.Point(419, 427);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(111, 49);
+            this.btnRegister.Size = new System.Drawing.Size(148, 60);
             this.btnRegister.TabIndex = 1;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
@@ -71,10 +71,10 @@ namespace FrmHome
             this.button2.BackColor = System.Drawing.Color.DarkRed;
             this.button2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(11, 347);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(15, 427);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 49);
+            this.button2.Size = new System.Drawing.Size(148, 60);
             this.button2.TabIndex = 1;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = false;
@@ -85,10 +85,9 @@ namespace FrmHome
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(22, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(29, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 19);
+            this.label1.Size = new System.Drawing.Size(112, 23);
             this.label1.TabIndex = 18;
             this.label1.Text = "First Name";
             // 
@@ -97,10 +96,9 @@ namespace FrmHome
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.DarkRed;
-            this.label2.Location = new System.Drawing.Point(22, 78);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(29, 96);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 19);
+            this.label2.Size = new System.Drawing.Size(113, 23);
             this.label2.TabIndex = 19;
             this.label2.Text = "Last Name";
             // 
@@ -109,10 +107,9 @@ namespace FrmHome
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.DarkRed;
-            this.label3.Location = new System.Drawing.Point(32, 125);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(43, 154);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 19);
+            this.label3.Size = new System.Drawing.Size(88, 23);
             this.label3.TabIndex = 20;
             this.label3.Text = "Address";
             // 
@@ -121,10 +118,9 @@ namespace FrmHome
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.DarkRed;
-            this.label4.Location = new System.Drawing.Point(32, 172);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(43, 212);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 19);
+            this.label4.Size = new System.Drawing.Size(70, 23);
             this.label4.TabIndex = 21;
             this.label4.Text = "E-mail";
             // 
@@ -133,10 +129,9 @@ namespace FrmHome
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.DarkRed;
-            this.label5.Location = new System.Drawing.Point(11, 219);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(15, 270);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 19);
+            this.label5.Size = new System.Drawing.Size(125, 23);
             this.label5.TabIndex = 22;
             this.label5.Text = "Department";
             // 
@@ -145,61 +140,60 @@ namespace FrmHome
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.DarkRed;
-            this.label6.Location = new System.Drawing.Point(31, 267);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(41, 329);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 19);
+            this.label6.Size = new System.Drawing.Size(100, 23);
             this.label6.TabIndex = 23;
             this.label6.Text = "Password";
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(135, 269);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Location = new System.Drawing.Point(180, 331);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(262, 20);
+            this.txtPassword.Size = new System.Drawing.Size(348, 22);
             this.txtPassword.TabIndex = 24;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(136, 171);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Location = new System.Drawing.Point(181, 210);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(262, 20);
+            this.txtEmail.Size = new System.Drawing.Size(348, 22);
             this.txtEmail.TabIndex = 26;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(136, 127);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAddress.Location = new System.Drawing.Point(181, 156);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(262, 20);
+            this.txtAddress.Size = new System.Drawing.Size(348, 22);
             this.txtAddress.TabIndex = 27;
             // 
             // txtLname
             // 
-            this.txtLname.Location = new System.Drawing.Point(136, 80);
-            this.txtLname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLname.Location = new System.Drawing.Point(181, 98);
+            this.txtLname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLname.Name = "txtLname";
-            this.txtLname.Size = new System.Drawing.Size(262, 20);
+            this.txtLname.Size = new System.Drawing.Size(348, 22);
             this.txtLname.TabIndex = 28;
             // 
             // txtFname
             // 
-            this.txtFname.Location = new System.Drawing.Point(136, 33);
-            this.txtFname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFname.Location = new System.Drawing.Point(181, 41);
+            this.txtFname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFname.Name = "txtFname";
-            this.txtFname.Size = new System.Drawing.Size(262, 20);
+            this.txtFname.Size = new System.Drawing.Size(348, 22);
             this.txtFname.TabIndex = 0;
             // 
             // comboDepts
             // 
             this.comboDepts.FormattingEnabled = true;
-            this.comboDepts.Location = new System.Drawing.Point(134, 221);
-            this.comboDepts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboDepts.Location = new System.Drawing.Point(179, 272);
+            this.comboDepts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboDepts.Name = "comboDepts";
-            this.comboDepts.Size = new System.Drawing.Size(262, 21);
+            this.comboDepts.Size = new System.Drawing.Size(348, 24);
             this.comboDepts.TabIndex = 30;
             // 
             // panel1
@@ -219,29 +213,29 @@ namespace FrmHome
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(11, 11);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(15, 14);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(414, 325);
+            this.panel1.Size = new System.Drawing.Size(552, 400);
             this.panel1.TabIndex = 31;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Register
             // 
             this.AcceptButton = this.btnRegister;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(436, 407);
+            this.ClientSize = new System.Drawing.Size(581, 501);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnRegister);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(436, 407);
+            this.MinimumSize = new System.Drawing.Size(581, 501);
             this.Name = "Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register New Student";

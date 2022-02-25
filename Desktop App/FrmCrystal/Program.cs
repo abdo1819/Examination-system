@@ -16,7 +16,7 @@ namespace ReportsForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new reportsForm());
+            //Application.Run(new reportsForm());
         }
     }
 }

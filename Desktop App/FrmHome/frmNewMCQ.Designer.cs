@@ -45,14 +45,16 @@
             this.richTextBoxText = new System.Windows.Forms.RichTextBox();
             this.lblTopic = new System.Windows.Forms.Label();
             this.comboBoxTopic = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblText
             // 
             this.lblText.AutoSize = true;
             this.lblText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblText.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblText.Location = new System.Drawing.Point(30, 58);
+            this.lblText.ForeColor = System.Drawing.Color.Black;
+            this.lblText.Location = new System.Drawing.Point(18, 104);
             this.lblText.Name = "lblText";
             this.lblText.Size = new System.Drawing.Size(126, 20);
             this.lblText.TabIndex = 0;
@@ -62,8 +64,8 @@
             // 
             this.lblAns.AutoSize = true;
             this.lblAns.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAns.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAns.Location = new System.Drawing.Point(22, 318);
+            this.lblAns.ForeColor = System.Drawing.Color.Black;
+            this.lblAns.Location = new System.Drawing.Point(3, 363);
             this.lblAns.Name = "lblAns";
             this.lblAns.Size = new System.Drawing.Size(140, 20);
             this.lblAns.TabIndex = 1;
@@ -73,8 +75,8 @@
             // 
             this.lblchA.AutoSize = true;
             this.lblchA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblchA.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblchA.Location = new System.Drawing.Point(60, 133);
+            this.lblchA.ForeColor = System.Drawing.Color.Black;
+            this.lblchA.Location = new System.Drawing.Point(48, 179);
             this.lblchA.Name = "lblchA";
             this.lblchA.Size = new System.Drawing.Size(85, 20);
             this.lblchA.TabIndex = 2;
@@ -84,8 +86,8 @@
             // 
             this.lblchC.AutoSize = true;
             this.lblchC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblchC.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblchC.Location = new System.Drawing.Point(60, 229);
+            this.lblchC.ForeColor = System.Drawing.Color.Black;
+            this.lblchC.Location = new System.Drawing.Point(48, 275);
             this.lblchC.Name = "lblchC";
             this.lblchC.Size = new System.Drawing.Size(86, 20);
             this.lblchC.TabIndex = 3;
@@ -93,45 +95,40 @@
             // 
             // textBoxA
             // 
-            this.textBoxA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxA.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBoxA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxA.Location = new System.Drawing.Point(176, 130);
+            this.textBoxA.Location = new System.Drawing.Point(164, 176);
             this.textBoxA.Name = "textBoxA";
-            this.textBoxA.Size = new System.Drawing.Size(590, 24);
+            this.textBoxA.Size = new System.Drawing.Size(652, 24);
             this.textBoxA.TabIndex = 5;
             // 
             // textBoxAns
             // 
-            this.textBoxAns.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxAns.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBoxAns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAns.Location = new System.Drawing.Point(174, 315);
+            this.textBoxAns.Location = new System.Drawing.Point(162, 361);
             this.textBoxAns.Name = "textBoxAns";
-            this.textBoxAns.Size = new System.Drawing.Size(592, 24);
+            this.textBoxAns.Size = new System.Drawing.Size(654, 24);
             this.textBoxAns.TabIndex = 5;
             // 
             // textBoxC
             // 
-            this.textBoxC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxC.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBoxC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxC.Location = new System.Drawing.Point(176, 223);
+            this.textBoxC.Location = new System.Drawing.Point(164, 269);
             this.textBoxC.Name = "textBoxC";
-            this.textBoxC.Size = new System.Drawing.Size(590, 24);
+            this.textBoxC.Size = new System.Drawing.Size(652, 24);
             this.textBoxC.TabIndex = 6;
             // 
             // btnCancel
             // 
-            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCancel.BackColor = System.Drawing.Color.DarkRed;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(602, 459);
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(14, 474);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(164, 53);
+            this.btnCancel.Size = new System.Drawing.Size(159, 53);
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -139,10 +136,11 @@
             // 
             // btnOk
             // 
-            this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnOk.BackColor = System.Drawing.Color.Transparent;
+            this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOk.BackColor = System.Drawing.Color.DarkRed;
             this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOk.Location = new System.Drawing.Point(176, 459);
+            this.btnOk.ForeColor = System.Drawing.Color.White;
+            this.btnOk.Location = new System.Drawing.Point(693, 474);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(159, 53);
             this.btnOk.TabIndex = 8;
@@ -152,32 +150,28 @@
             // 
             // textBoxD
             // 
-            this.textBoxD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxD.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBoxD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxD.Location = new System.Drawing.Point(176, 274);
+            this.textBoxD.Location = new System.Drawing.Point(164, 320);
             this.textBoxD.Name = "textBoxD";
-            this.textBoxD.Size = new System.Drawing.Size(590, 24);
+            this.textBoxD.Size = new System.Drawing.Size(652, 24);
             this.textBoxD.TabIndex = 12;
             // 
             // textBoxB
             // 
-            this.textBoxB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxB.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBoxB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxB.Location = new System.Drawing.Point(176, 175);
+            this.textBoxB.Location = new System.Drawing.Point(164, 221);
             this.textBoxB.Name = "textBoxB";
-            this.textBoxB.Size = new System.Drawing.Size(590, 24);
+            this.textBoxB.Size = new System.Drawing.Size(652, 24);
             this.textBoxB.TabIndex = 11;
             // 
             // lblchD
             // 
             this.lblchD.AutoSize = true;
             this.lblchD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblchD.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblchD.Location = new System.Drawing.Point(60, 277);
+            this.lblchD.ForeColor = System.Drawing.Color.Black;
+            this.lblchD.Location = new System.Drawing.Point(48, 323);
             this.lblchD.Name = "lblchD";
             this.lblchD.Size = new System.Drawing.Size(87, 20);
             this.lblchD.TabIndex = 10;
@@ -187,8 +181,8 @@
             // 
             this.lblchB.AutoSize = true;
             this.lblchB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblchB.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblchB.Location = new System.Drawing.Point(60, 178);
+            this.lblchB.ForeColor = System.Drawing.Color.Black;
+            this.lblchB.Location = new System.Drawing.Point(48, 224);
             this.lblchB.Name = "lblchB";
             this.lblchB.Size = new System.Drawing.Size(86, 20);
             this.lblchB.TabIndex = 9;
@@ -196,13 +190,11 @@
             // 
             // richTextBoxText
             // 
-            this.richTextBoxText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxText.BackColor = System.Drawing.SystemColors.HighlightText;
             this.richTextBoxText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxText.Location = new System.Drawing.Point(174, 28);
+            this.richTextBoxText.Location = new System.Drawing.Point(162, 74);
             this.richTextBoxText.Name = "richTextBoxText";
-            this.richTextBoxText.Size = new System.Drawing.Size(592, 84);
+            this.richTextBoxText.Size = new System.Drawing.Size(654, 84);
             this.richTextBoxText.TabIndex = 13;
             this.richTextBoxText.Text = "";
             // 
@@ -210,8 +202,8 @@
             // 
             this.lblTopic.AutoSize = true;
             this.lblTopic.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTopic.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTopic.Location = new System.Drawing.Point(77, 364);
+            this.lblTopic.ForeColor = System.Drawing.Color.Black;
+            this.lblTopic.Location = new System.Drawing.Point(65, 410);
             this.lblTopic.Name = "lblTopic";
             this.lblTopic.Size = new System.Drawing.Size(55, 20);
             this.lblTopic.TabIndex = 14;
@@ -219,47 +211,60 @@
             // 
             // comboBoxTopic
             // 
-            this.comboBoxTopic.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxTopic.BackColor = System.Drawing.SystemColors.HighlightText;
             this.comboBoxTopic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTopic.ForeColor = System.Drawing.SystemColors.MenuText;
             this.comboBoxTopic.FormattingEnabled = true;
-            this.comboBoxTopic.Location = new System.Drawing.Point(176, 361);
+            this.comboBoxTopic.Location = new System.Drawing.Point(164, 407);
             this.comboBoxTopic.Name = "comboBoxTopic";
-            this.comboBoxTopic.Size = new System.Drawing.Size(590, 26);
+            this.comboBoxTopic.Size = new System.Drawing.Size(652, 26);
             this.comboBoxTopic.TabIndex = 15;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.richTextBoxText);
+            this.panel1.Controls.Add(this.comboBoxTopic);
+            this.panel1.Controls.Add(this.lblText);
+            this.panel1.Controls.Add(this.lblTopic);
+            this.panel1.Controls.Add(this.lblAns);
+            this.panel1.Controls.Add(this.lblchA);
+            this.panel1.Controls.Add(this.textBoxD);
+            this.panel1.Controls.Add(this.lblchC);
+            this.panel1.Controls.Add(this.textBoxB);
+            this.panel1.Controls.Add(this.textBoxA);
+            this.panel1.Controls.Add(this.lblchD);
+            this.panel1.Controls.Add(this.textBoxAns);
+            this.panel1.Controls.Add(this.lblchB);
+            this.panel1.Controls.Add(this.textBoxC);
+            this.panel1.Controls.Add(this.btnOk);
+            this.panel1.Controls.Add(this.btnCancel);
+            this.panel1.Location = new System.Drawing.Point(37, 23);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(873, 543);
+            this.panel1.TabIndex = 16;
             // 
             // frmNewMCQ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Brown;
-            this.ClientSize = new System.Drawing.Size(842, 548);
-            this.Controls.Add(this.comboBoxTopic);
-            this.Controls.Add(this.lblTopic);
-            this.Controls.Add(this.richTextBoxText);
-            this.Controls.Add(this.textBoxD);
-            this.Controls.Add(this.textBoxB);
-            this.Controls.Add(this.lblchD);
-            this.Controls.Add(this.lblchB);
-            this.Controls.Add(this.btnOk);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.textBoxC);
-            this.Controls.Add(this.textBoxAns);
-            this.Controls.Add(this.textBoxA);
-            this.Controls.Add(this.lblchC);
-            this.Controls.Add(this.lblchA);
-            this.Controls.Add(this.lblAns);
-            this.Controls.Add(this.lblText);
+            this.BackColor = System.Drawing.Color.DarkRed;
+            this.ClientSize = new System.Drawing.Size(949, 601);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1063, 721);
+            this.Location = new System.Drawing.Point(660, 200);
             this.MinimumSize = new System.Drawing.Size(860, 595);
             this.Name = "frmNewMCQ";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Add New Multiple Choice Question";
             this.Load += new System.EventHandler(this.frmNewMCQ_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -281,5 +286,6 @@
         private System.Windows.Forms.RichTextBox richTextBoxText;
         private System.Windows.Forms.Label lblTopic;
         private System.Windows.Forms.ComboBox comboBoxTopic;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -55,10 +55,10 @@ namespace FrmHome
             this.button1.BackColor = System.Drawing.Color.DarkRed;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(21, 564);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(28, 694);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 52);
+            this.button1.Size = new System.Drawing.Size(161, 64);
             this.button1.TabIndex = 0;
             this.button1.Text = "Go Back";
             this.button1.UseVisualStyleBackColor = false;
@@ -76,22 +76,21 @@ namespace FrmHome
             this.dataGridQuestions.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridQuestions.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridQuestions.ColumnHeadersHeight = 29;
-            this.dataGridQuestions.Location = new System.Drawing.Point(21, 172);
-            this.dataGridQuestions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridQuestions.Location = new System.Drawing.Point(28, 212);
+            this.dataGridQuestions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridQuestions.Name = "dataGridQuestions";
             this.dataGridQuestions.RowHeadersWidth = 51;
             this.dataGridQuestions.RowTemplate.Height = 24;
-            this.dataGridQuestions.Size = new System.Drawing.Size(766, 388);
+            this.dataGridQuestions.Size = new System.Drawing.Size(1021, 478);
             this.dataGridQuestions.TabIndex = 36;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(26, 15);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(35, 18);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(235, 18);
+            this.label6.Size = new System.Drawing.Size(293, 23);
             this.label6.TabIndex = 25;
             this.label6.Text = "Select a Course to View topics:";
             // 
@@ -99,10 +98,9 @@ namespace FrmHome
             // 
             this.lblTID.AutoSize = true;
             this.lblTID.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblTID.Location = new System.Drawing.Point(242, 137);
-            this.lblTID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTID.Location = new System.Drawing.Point(323, 169);
             this.lblTID.Name = "lblTID";
-            this.lblTID.Size = new System.Drawing.Size(59, 18);
+            this.lblTID.Size = new System.Drawing.Size(73, 23);
             this.lblTID.TabIndex = 33;
             this.lblTID.Text = "[TopID]";
             // 
@@ -110,10 +108,9 @@ namespace FrmHome
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(502, 104);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(669, 128);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 18);
+            this.label11.Size = new System.Drawing.Size(51, 23);
             this.label11.TabIndex = 31;
             this.label11.Text = "TFQs";
             // 
@@ -121,23 +118,22 @@ namespace FrmHome
             // 
             this.lblMCQs.AutoSize = true;
             this.lblMCQs.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblMCQs.Location = new System.Drawing.Point(360, 137);
-            this.lblMCQs.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMCQs.Location = new System.Drawing.Point(480, 169);
             this.lblMCQs.Name = "lblMCQs";
-            this.lblMCQs.Size = new System.Drawing.Size(92, 18);
+            this.lblMCQs.Size = new System.Drawing.Size(113, 23);
             this.lblMCQs.TabIndex = 34;
             this.lblMCQs.Text = "[NoofMCQ]";
             // 
             // btnViewTFQ
             // 
             this.btnViewTFQ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnViewTFQ.BackColor = System.Drawing.Color.White;
+            this.btnViewTFQ.BackColor = System.Drawing.Color.DarkRed;
             this.btnViewTFQ.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnViewTFQ.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnViewTFQ.Location = new System.Drawing.Point(670, 84);
-            this.btnViewTFQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnViewTFQ.ForeColor = System.Drawing.Color.White;
+            this.btnViewTFQ.Location = new System.Drawing.Point(893, 103);
+            this.btnViewTFQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnViewTFQ.Name = "btnViewTFQ";
-            this.btnViewTFQ.Size = new System.Drawing.Size(117, 65);
+            this.btnViewTFQ.Size = new System.Drawing.Size(156, 80);
             this.btnViewTFQ.TabIndex = 39;
             this.btnViewTFQ.Text = "View TFQs for Topic";
             this.btnViewTFQ.UseVisualStyleBackColor = false;
@@ -147,10 +143,9 @@ namespace FrmHome
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(360, 104);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(480, 128);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 18);
+            this.label10.Size = new System.Drawing.Size(66, 23);
             this.label10.TabIndex = 30;
             this.label10.Text = "MCQs";
             // 
@@ -158,20 +153,19 @@ namespace FrmHome
             // 
             this.lblTFQs.AutoSize = true;
             this.lblTFQs.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblTFQs.Location = new System.Drawing.Point(499, 137);
-            this.lblTFQs.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTFQs.Location = new System.Drawing.Point(665, 169);
             this.lblTFQs.Name = "lblTFQs";
-            this.lblTFQs.Size = new System.Drawing.Size(66, 18);
+            this.lblTFQs.Size = new System.Drawing.Size(82, 23);
             this.lblTFQs.TabIndex = 35;
             this.lblTFQs.Text = "[NoofTF]";
             // 
             // comboCourses
             // 
             this.comboCourses.FormattingEnabled = true;
-            this.comboCourses.Location = new System.Drawing.Point(265, 15);
-            this.comboCourses.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboCourses.Location = new System.Drawing.Point(353, 18);
+            this.comboCourses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboCourses.Name = "comboCourses";
-            this.comboCourses.Size = new System.Drawing.Size(266, 21);
+            this.comboCourses.Size = new System.Drawing.Size(353, 24);
             this.comboCourses.TabIndex = 24;
             this.comboCourses.SelectedIndexChanged += new System.EventHandler(this.comboCourses_SelectedIndexChanged);
             // 
@@ -179,23 +173,22 @@ namespace FrmHome
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(234, 104);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(312, 128);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 18);
+            this.label8.Size = new System.Drawing.Size(83, 23);
             this.label8.TabIndex = 28;
             this.label8.Text = "Topic ID";
             // 
             // btnViewMCQ
             // 
             this.btnViewMCQ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnViewMCQ.BackColor = System.Drawing.Color.White;
+            this.btnViewMCQ.BackColor = System.Drawing.Color.DarkRed;
             this.btnViewMCQ.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnViewMCQ.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnViewMCQ.Location = new System.Drawing.Point(670, 15);
-            this.btnViewMCQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnViewMCQ.ForeColor = System.Drawing.Color.White;
+            this.btnViewMCQ.Location = new System.Drawing.Point(893, 18);
+            this.btnViewMCQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnViewMCQ.Name = "btnViewMCQ";
-            this.btnViewMCQ.Size = new System.Drawing.Size(117, 65);
+            this.btnViewMCQ.Size = new System.Drawing.Size(156, 80);
             this.btnViewMCQ.TabIndex = 37;
             this.btnViewMCQ.Text = "View MCQs for Topic";
             this.btnViewMCQ.UseVisualStyleBackColor = false;
@@ -205,20 +198,19 @@ namespace FrmHome
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(130, 61);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(173, 75);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 18);
+            this.label7.Size = new System.Drawing.Size(73, 23);
             this.label7.TabIndex = 26;
             this.label7.Text = "Topics:";
             // 
             // comboTopics
             // 
             this.comboTopics.FormattingEnabled = true;
-            this.comboTopics.Location = new System.Drawing.Point(265, 58);
-            this.comboTopics.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboTopics.Location = new System.Drawing.Point(353, 71);
+            this.comboTopics.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboTopics.Name = "comboTopics";
-            this.comboTopics.Size = new System.Drawing.Size(266, 21);
+            this.comboTopics.Size = new System.Drawing.Size(353, 24);
             this.comboTopics.TabIndex = 38;
             this.comboTopics.SelectedIndexChanged += new System.EventHandler(this.comboTopics_SelectedIndexChanged);
             // 
@@ -242,23 +234,24 @@ namespace FrmHome
             this.panel1.Controls.Add(this.lblTFQs);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(16, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(803, 640);
+            this.panel1.Size = new System.Drawing.Size(1071, 788);
             this.panel1.TabIndex = 40;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Admin_FormViewQuestions
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
-            this.ClientSize = new System.Drawing.Size(827, 664);
+            this.ClientSize = new System.Drawing.Size(1103, 817);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(500, 70);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Admin_FormViewQuestions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FormViewQuestions";

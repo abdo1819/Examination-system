@@ -15,97 +15,80 @@ namespace FrmHome
     public partial class frmDept : Form
     {
         BindingSource bindingSource;
-        public frmDept()
+        ExaminationContext DeptContext;
+        public frmDept(ExaminationContext _Ctx)
         {
             InitializeComponent();
+            this.DeptContext = _Ctx;
             ReloadDepts();
         }
 
-        //bool btnViewDept_Clicked = false;
-        //private void btnViewDept_Click(object sender, EventArgs e)
-        //{
-
-        //    btnViewDept_Clicked = true;
-
-            
-        //}
-
         private void ReloadDepts()
         {
-            using (ExaminationContext DeptContext = new ExaminationContext())
-            {
-                DeptContext.Department.Load();
+            DeptContext.Department.Load();
 
-                var depts = DeptContext.Department.Local.ToBindingList();
+            var depts = DeptContext.Department.Local.ToBindingList();
 
-                bindingSource = new BindingSource();
+            bindingSource = new BindingSource();
 
-                bindingSource.DataSource = depts;
+            bindingSource.DataSource = depts;
 
-                txtDeptName.DataBindings.Clear();
-                lblDeptID.DataBindings.Clear();
+            txtDeptName.DataBindings.Clear();
+            lblDeptID.DataBindings.Clear();
 
-                txtDeptName.DataBindings.Add("Text", bindingSource, "dept_name");
-                lblDeptID.DataBindings.Add("Text", bindingSource, "dept_id");
-            }
+            txtDeptName.DataBindings.Add("Text", bindingSource, "dept_name");
+            lblDeptID.DataBindings.Add("Text", bindingSource, "dept_id");
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            //if(btnViewDept_Clicked)
-                bindingSource.MoveNext();
+            bindingSource.MoveNext();
         }
 
         private void btnPrevious_Click(object sender, EventArgs e)
         {
-            //if (btnViewDept_Clicked)
-                bindingSource.MovePrevious();
+            bindingSource.MovePrevious();
         }
 
         private void btnAddDept_Click(object sender, EventArgs e)
         {
-            //if (!btnViewDept_Clicked)
-                //return;
-            
-            using (ExaminationContext DeptContext = new ExaminationContext())
-            {
-               
-                var NewDept = new frmNewDept();
-                
-                if(NewDept.ShowDialog() == DialogResult.OK)
-                    ReloadDepts();
-            }
+            this.BackColor = Color.White;
+            panel1.Visible = false;
+            var NewDept = new frmNewDept(DeptContext);
+            if (NewDept.ShowDialog() == DialogResult.OK)
+                ReloadDepts();
+            this.BackColor = Color.DarkRed;
+            panel1.Visible = true;
+
         }
 
         private void btnDeleteDept_Click(object sender, EventArgs e)
         {
-            //if (!btnViewDept_Clicked)
-                //return;
-
-            using (ExaminationContext DeptContext = new ExaminationContext())
-            {
-                Department cuurentDept = (Department)bindingSource.Current;
-                DeptContext.Department.Remove(cuurentDept);
-                DeptContext.SaveChanges();
-            }
+            Department cuurentDept = (Department)bindingSource.Current;
+            DeptContext.Department.Remove(cuurentDept);
+            DeptContext.SaveChanges();
             ReloadDepts();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (txtSrchDept.Text == "")
-                return;
-
-            using (ExaminationContext DeptContext = new ExaminationContext())
             {
+                MessageBox.Show("Please enter a valid Department name.", "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            else
+            {
+                lblExists.Visible = true;
                 var result = (from D in DeptContext.Department
-                             select D).ToList();
+                              select D).ToList();
 
                 var index = result.FindIndex(D => D.dept_name.ToLower() == txtSrchDept.Text.ToLower());
-                if (index > 0)
+                if (index >= 0)
                 {
                     bindingSource.MoveFirst();
-                    for(int i = 0; i < index; i++)
+                    for (int i = 0; i < index; i++)
                     {
                         bindingSource.MoveNext();
                     }
@@ -114,23 +97,30 @@ namespace FrmHome
 
                 else
                     lblExists.Text = $"{txtSrchDept.Text} Department doesn't exist";
-
-            }
+            }       
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            using(ExaminationContext DeptContext = new ExaminationContext())
+            var NewDeptName = txtDeptName.Text;
+            var OldDept = DeptContext.Department.Find(int.Parse(lblDeptID.Text));
+
+            if (MessageBox.Show($"Are you sure you would like to update Dept No. {lblDeptID.Text} name to {NewDeptName}?", "Confirmation",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-
-                var NewDeptName = txtDeptName.Text;
-                var OldDept = DeptContext.Department.Find(int.Parse(lblDeptID.Text));
-
                 OldDept.dept_name = NewDeptName;
                 DeptContext.SaveChanges();
-           
+                ReloadDepts();
+                MessageBox.Show($"Successfully updated Department name", "Success",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
             }
-            ReloadDepts();
+        }
+
+        private void btnGoBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

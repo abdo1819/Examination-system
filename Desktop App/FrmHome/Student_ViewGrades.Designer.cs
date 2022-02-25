@@ -37,8 +37,8 @@ namespace FrmHome
             this.lblStdGrade = new System.Windows.Forms.Label();
             this.lblStdGradeValue = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblNoCourse = new System.Windows.Forms.Label();
             this.labelNoExams = new System.Windows.Forms.Label();
+            this.lblNoCourse = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +81,7 @@ namespace FrmHome
             // 
             // btnShow
             // 
-            this.btnShow.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnShow.BackColor = System.Drawing.Color.DarkRed;
             this.btnShow.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShow.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnShow.Location = new System.Drawing.Point(537, 400);
@@ -136,19 +136,6 @@ namespace FrmHome
             this.panel1.Size = new System.Drawing.Size(739, 526);
             this.panel1.TabIndex = 26;
             // 
-            // lblNoCourse
-            // 
-            this.lblNoCourse.AutoSize = true;
-            this.lblNoCourse.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoCourse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblNoCourse.Location = new System.Drawing.Point(138, 165);
-            this.lblNoCourse.Name = "lblNoCourse";
-            this.lblNoCourse.Size = new System.Drawing.Size(471, 32);
-            this.lblNoCourse.TabIndex = 26;
-            this.lblNoCourse.Text = "You are not enrolled in any course.";
-            this.lblNoCourse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblNoCourse.Visible = false;
-            // 
             // labelNoExams
             // 
             this.labelNoExams.AutoSize = true;
@@ -161,6 +148,19 @@ namespace FrmHome
             this.labelNoExams.Text = "You haven\'t taken any exams yet.";
             this.labelNoExams.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelNoExams.Visible = false;
+            // 
+            // lblNoCourse
+            // 
+            this.lblNoCourse.AutoSize = true;
+            this.lblNoCourse.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoCourse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblNoCourse.Location = new System.Drawing.Point(138, 165);
+            this.lblNoCourse.Name = "lblNoCourse";
+            this.lblNoCourse.Size = new System.Drawing.Size(471, 32);
+            this.lblNoCourse.TabIndex = 26;
+            this.lblNoCourse.Text = "You are not enrolled in any course.";
+            this.lblNoCourse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNoCourse.Visible = false;
             // 
             // Student_ViewGrades
             // 

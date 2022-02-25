@@ -45,7 +45,7 @@ namespace FrmHome
         protected override void OnLoad(EventArgs e)
         {
             Dept = (from D in frmLogin.Ctx.Department
-                           join S in frmLogin.Ctx.Student on D.dept_id equals S.dept_id
+                           join I in frmLogin.Ctx.Instructor on D.dept_id equals I.dept_id
                            select D.dept_name).FirstOrDefault();
             UsrID = $"{frmLogin.userInfo.usr_id}";
             EmpName = $"{frmLogin.userInfo.f_name} {frmLogin.userInfo.l_name}";
@@ -72,7 +72,7 @@ namespace FrmHome
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            ReportsForm.reportsForm frmReports = new reportsForm();
+            ReportsForm.reportsForm frmReports = new reportsForm(Dept, UsrID, EmpName, Email, Address);
             frmReports.ShowDialog();
         }
 
@@ -93,8 +93,10 @@ namespace FrmHome
 
         private void btnDepts_Click(object sender, EventArgs e)
         {
-            var frm = new frmDept();
-            frm.Show();
+            groupActions.Visible = false;
+            var frm = new frmDept(frmLogin.Ctx);
+            frm.ShowDialog();
+            groupActions.Visible = true;
         }
 
     }

@@ -14,12 +14,11 @@ namespace FrmHome
 {
     public partial class frmNewDept : Form
     {
-        List<Department> departments;
-        public frmNewDept()
+        ExaminationContext MyDeptContext;
+        public frmNewDept(ExaminationContext myDeptContext)
         {
             InitializeComponent();
-
-
+            MyDeptContext = myDeptContext;
         }
         public string DeptName;
         private void btnCancel_Click(object sender, EventArgs e)
@@ -31,9 +30,10 @@ namespace FrmHome
         private void btnOk_Click(object sender, EventArgs e)
         {
             if (txtDeptName.Text == "")
-                return;
-
-            using (ExaminationContext MyDeptContext = new ExaminationContext())
+                MessageBox.Show("Please enter a valid Department name.", "Error",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+            else
             {
                 Department MyNewDept = new Department();
                 MyNewDept.dept_name = txtDeptName.Text;
@@ -41,9 +41,12 @@ namespace FrmHome
 
                 MyDeptContext.Department.Add(MyNewDept);
                 MyDeptContext.SaveChanges();
+                MessageBox.Show($"Inserted {txtDeptName.Text} into the system successfully.", "Success",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+                DialogResult = DialogResult.OK;
+                this.Close();
             }
-            DialogResult = DialogResult.OK;
-            this.Close();
         }
 
         private void frmNewDept_Load(object sender, EventArgs e)
@@ -51,8 +54,6 @@ namespace FrmHome
             using (ExaminationContext MyInstructorContext = new ExaminationContext())
             {
                 MyInstructorContext.User.Load();
-
-                //departments = MyDeptContext.Department.Local.ToList();
 
                 DeptName = txtDeptName.Text;
                 comboBoxMgrID.DataSource = MyInstructorContext.User.Local.Where(U => U.user_type == "I").ToList();

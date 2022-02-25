@@ -264,6 +264,12 @@
     <Compile Include="Context\ExaminationContext.cs" />
     <Compile Include="Context\ExaminationContext.Functions.cs" />
     <Compile Include="Context\ExaminationContextProcedures.cs" />
+    <Compile Include="Context\viewStudnetIndepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Context\viewStudnetIndepartment.Designer.cs">
+      <DependentUpon>viewStudnetIndepartment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dept.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -442,6 +448,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_ManageCourses.resx">
       <DependentUpon>Admin_ManageCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Context\viewStudnetIndepartment.resx">
+      <DependentUpon>viewStudnetIndepartment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dept.resx">
       <DependentUpon>Dept.cs</DependentUpon>

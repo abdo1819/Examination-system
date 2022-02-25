@@ -13,9 +13,14 @@ namespace ReportsForm
 {
     public partial class reportsForm : Form
     {
-        public reportsForm()
+        public reportsForm(string _Dept, string _UsrID, string _EmpName, string _Email, string _Address)
         {
             InitializeComponent();
+            lblDept.Text = _Dept;
+            lblUsrID.Text = _UsrID;
+            lblName.Text = _EmpName;
+            lblEmail.Text = _Email;
+            lblAddress.Text = _Address;
         }
 
         private void userBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -29,7 +34,7 @@ namespace ReportsForm
         private void button1_Click(object sender, EventArgs e)
         {
             ViewExam r = new ViewExam();
-            r.Show();
+            r.ShowDialog();
             //Form1 frm = new Form1();
             //frm.Show();
         }
@@ -47,7 +52,7 @@ namespace ReportsForm
             insert_StudentTableAdapter1.Fill(dtIns, "das", "das", "address", "adsf@fssa", "dasda", 100, ref stuId);
             dtIns.AcceptChanges();
 
-            Trace.WriteLine(stuId);
+            //Trace.WriteLine(stuId);
             //foreach (var row in dtIns)
             //{
             //    Trace.WriteLine(row.);
@@ -57,7 +62,7 @@ namespace ReportsForm
         private void button2_Click(object sender, EventArgs e)
         {
             CourseTopic topics_report = new CourseTopic();
-            topics_report.Show();
+            topics_report.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -69,19 +74,24 @@ namespace ReportsForm
         private void button4_Click(object sender, EventArgs e)
         {
             viewStudnetIndepartment frm = new viewStudnetIndepartment();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void btnViewGrades_Click(object sender, EventArgs e)
         {
             ViewStudentGrades frmGrades = new ViewStudentGrades();
-            frmGrades.Show();
+            frmGrades.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             ViewInstructorCourses frmIns = new ViewInstructorCourses();
-            frmIns.Show();
+            frmIns.ShowDialog();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

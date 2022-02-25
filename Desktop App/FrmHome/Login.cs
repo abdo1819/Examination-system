@@ -22,7 +22,6 @@ namespace FrmHome
             Ctx = new ExaminationContext();
             Procedures = new ExaminationContextProcedures(Ctx);
             InitializeComponent();
-            this.Resize += (sender, e) => Trace.WriteLine(this.Size);
             this.FormClosed += (sender, e) => Ctx?.Dispose();
         }
 
@@ -41,6 +40,7 @@ namespace FrmHome
         private async void btnLogin_Click(object sender, EventArgs e)
         {
             btnLogin.Enabled = false;
+            btnRegister.Enabled = false;
             var users = await Procedures.GetUserAsync(txtEmail.Text, txtPassword.Text, new OutputParameter<int>());
             
             if (users.Count == 0)
@@ -68,13 +68,16 @@ namespace FrmHome
                                     
             }
             btnLogin.Enabled = true;
-                
+            btnRegister.Enabled = true;
+
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            btnRegister.Visible = false;
             Register frmRegister = new Register(this);
-            frmRegister.ShowDialog();   
+            frmRegister.ShowDialog();
+            btnRegister.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
