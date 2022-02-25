@@ -1,0 +1,89 @@
+QuestionAssumtions:
+    - 
+    priority: 5
+    topic: "Examination"
+    question: what is the duration of exam
+    assumtion: exam duration is fixed and set at program level by admin
+    # reviewer-note: please uncomment me and write your note here
+    
+    - 
+    priority: 3
+    topic: "Examination"
+    affected-etities: ["Exam","course"]
+    question: who many exams per course?
+    assumtion: student can take multible exams per course but only the last one is saved as grade
+    # reviewer-note: please uncomment me and write your note here
+
+    -
+    priority: 0
+    question: does department have set of teaching topics or courses?
+    topic: "teaching"
+    affected-etities: ["Department","Course","Topic"]
+    assumtion: yes, department has set of topics but no direct relation to courses \
+    in another hand the each course is contained in a topic and can have mulitple topics
+    # reviewer-note: please uncomment me and write your note here
+
+    -
+    priority: 1
+    question: how many choices in MCQ question
+    topic: "examination"
+    affected-entities: ["question"]
+    assumtion: MCQ are always 4 choices
+    
+    -
+    priority: 0
+    topic: "mangment"
+    affected-etities: ["Course","Sudent"]
+    question: can student exist without a any course?
+    assumtion: no, each student in system must have at least one course
+    # reviewer-note: please uncomment me and write your note here
+
+    - 
+    priority: 0
+    topic: "mangment"
+    affected-etities: ["Course","Student"]
+    question: can student exist without a department?
+    assumtion: no, each student in system must one department and one only
+    # reviewer-note: please uncomment me and write your note here
+
+    -
+    priority: 0
+    topic: "teaching"
+    affected-etities: ["Course","Instractor"]
+    question: can two or more instuctors teach same course?
+    assumtion: no, course is only teached by one instructor
+    # reviewer-note: please uncomment me and write your note here
+
+    - 
+    priority: 0
+    topic: "teaching"
+    affected-etities: ["Course","Instractor"]
+    question: can two or more instuctors teach same course?
+    assumtion: no, course is only teached by one instructor
+    # reviewer-note: please uncomment me and write your note here
+
+    -
+    priority: 0
+    topic: "managment"
+    affected-etities: ["Course","Instractor"]
+    question: can instructor exist without having any course to teach?
+    assumtion: yes
+    # reviewer-note: please uncomment me and write your note here
+
+    -
+    priority: 0
+    topic: "managment"
+    affected-etities: ["Course","Instractor"]
+    question: can instructor exist without having any course to teach?
+    assumtion: yes
+    # reviewer-note: please uncomment me and write your note here
+
+
+drafted:
+#     -
+#     priority: 0
+#     topic: "Examination"
+#     affected-etities: ["Exam","Question"]
+#     question: is there a chance for the number of question to change
+#     assumtion: yes, number of question may change in future and we should build flexable database for that matter
+#     # reviewer-note: please uncomment me and write your note here

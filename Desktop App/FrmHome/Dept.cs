@@ -122,5 +122,10 @@ namespace FrmHome
         {
             this.Close();
         }
+
+        private void frmDept_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

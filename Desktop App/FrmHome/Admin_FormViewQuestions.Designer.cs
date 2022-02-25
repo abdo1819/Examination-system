@@ -257,7 +257,7 @@ namespace FrmHome
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Location = new System.Drawing.Point(500, 70);
+            this.Location = new System.Drawing.Point(600, 150);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Admin_FormViewQuestions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
