@@ -2,10 +2,10 @@
 project for adv-database-systems course in ITI
 
 # team members
-- abdelrahman ragab hashem
-- hussam
+- abdelrahman ragab
+- hussam saiid
 - mohamed fathey
-- islam mahrouse
+- islam mahrous
 
 
 # demos and report 
