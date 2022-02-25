@@ -48,9 +48,10 @@ namespace FrmHome
             this.btnGoBack.BackColor = System.Drawing.Color.DarkRed;
             this.btnGoBack.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnGoBack.ForeColor = System.Drawing.Color.White;
-            this.btnGoBack.Location = new System.Drawing.Point(18, 422);
+            this.btnGoBack.Location = new System.Drawing.Point(14, 343);
+            this.btnGoBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGoBack.Name = "btnGoBack";
-            this.btnGoBack.Size = new System.Drawing.Size(156, 80);
+            this.btnGoBack.Size = new System.Drawing.Size(117, 65);
             this.btnGoBack.TabIndex = 0;
             this.btnGoBack.Text = "Go Back";
             this.btnGoBack.UseVisualStyleBackColor = false;
@@ -61,9 +62,10 @@ namespace FrmHome
             this.btnConfirm.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnConfirm.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(564, 422);
+            this.btnConfirm.Location = new System.Drawing.Point(423, 343);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(156, 80);
+            this.btnConfirm.Size = new System.Drawing.Size(117, 65);
             this.btnConfirm.TabIndex = 2;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = false;
@@ -81,54 +83,60 @@ namespace FrmHome
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnConfirm);
             this.panel1.Controls.Add(this.btnGoBack);
-            this.panel1.Location = new System.Drawing.Point(25, 23);
+            this.panel1.Location = new System.Drawing.Point(11, 11);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(739, 526);
+            this.panel1.Size = new System.Drawing.Size(554, 427);
             this.panel1.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(210, 56);
+            this.label4.Location = new System.Drawing.Point(158, 46);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(304, 28);
+            this.label4.Size = new System.Drawing.Size(241, 23);
             this.label4.TabIndex = 10;
             this.label4.Text = "Enroll Student in a Course";
             // 
             // comboStudent
             // 
             this.comboStudent.FormattingEnabled = true;
-            this.comboStudent.Location = new System.Drawing.Point(274, 157);
+            this.comboStudent.Location = new System.Drawing.Point(206, 128);
+            this.comboStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboStudent.Name = "comboStudent";
-            this.comboStudent.Size = new System.Drawing.Size(324, 24);
+            this.comboStudent.Size = new System.Drawing.Size(244, 21);
             this.comboStudent.TabIndex = 9;
             this.comboStudent.SelectedIndexChanged += new System.EventHandler(this.comboStudent_SelectedIndexChanged);
             // 
             // comboCourse
             // 
             this.comboCourse.FormattingEnabled = true;
-            this.comboCourse.Location = new System.Drawing.Point(274, 232);
+            this.comboCourse.Location = new System.Drawing.Point(206, 188);
+            this.comboCourse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboCourse.Name = "comboCourse";
-            this.comboCourse.Size = new System.Drawing.Size(324, 24);
+            this.comboCourse.Size = new System.Drawing.Size(244, 21);
             this.comboCourse.TabIndex = 8;
             this.comboCourse.SelectedIndexChanged += new System.EventHandler(this.comboCourse_SelectedIndexChanged);
             // 
             // comboInstructor
             // 
             this.comboInstructor.FormattingEnabled = true;
-            this.comboInstructor.Location = new System.Drawing.Point(274, 307);
+            this.comboInstructor.Location = new System.Drawing.Point(206, 249);
+            this.comboInstructor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboInstructor.Name = "comboInstructor";
-            this.comboInstructor.Size = new System.Drawing.Size(324, 24);
+            this.comboInstructor.Size = new System.Drawing.Size(244, 21);
             this.comboInstructor.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(113, 158);
+            this.label1.Location = new System.Drawing.Point(85, 128);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 23);
+            this.label1.Size = new System.Drawing.Size(112, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "Select Student";
             // 
@@ -136,9 +144,10 @@ namespace FrmHome
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(113, 233);
+            this.label2.Location = new System.Drawing.Point(85, 189);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 23);
+            this.label2.Size = new System.Drawing.Size(110, 18);
             this.label2.TabIndex = 5;
             this.label2.Text = "Select Course";
             // 
@@ -146,22 +155,24 @@ namespace FrmHome
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(113, 307);
+            this.label3.Location = new System.Drawing.Point(85, 249);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(155, 23);
+            this.label3.Size = new System.Drawing.Size(124, 18);
             this.label3.TabIndex = 6;
             this.label3.Text = "Select Instructor";
             // 
             // Admin_AssignStudentToCourse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
-            this.ClientSize = new System.Drawing.Size(792, 574);
+            this.ClientSize = new System.Drawing.Size(577, 451);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(700, 200);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Admin_AssignStudentToCourse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Admin_AssignStudentToCourse";

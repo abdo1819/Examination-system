@@ -67,8 +67,10 @@ namespace ReportsForm
 
         private void button3_Click(object sender, EventArgs e)
         {
+            grbDashBoard.Visible = false;
             customSelectionUserExam frm = new customSelectionUserExam();
             frm.ShowDialog();
+            grbDashBoard.Visible = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
