@@ -2,6 +2,19 @@
 project for adv-database-systems course in ITI
 an Examination system
 
+
+# running 
+
+## 1. restore database backup 
+[database backup](Database/Database%20Backup/Examination.bak)
+
+
+
+## 2. run desktop app
+- unzip the reslease
+- run [Release - Desktop App/FrmHome.exe](Release%20-%20Desktop%20App/frmHome.exe)
+
+
 # testing credintials
 
 ## instructor user
@@ -15,13 +28,6 @@ password: admin
 username: test
 password: test
 ```
-
-
-
-
-
-
-
 
 # demos and report 
 [documentation folder](Database/Documentation)
@@ -56,9 +62,8 @@ cd initiateDB
 .\testEnv.ps1
 ```
 this will 
-- [x] create database `examination`
-- [x] create all required tables or update them if they already exist
-- [x] populate tables with data 
-
+- create database `examination`
+- create all required tables or update them if they already exist
+- populate tables with data 
 
 
