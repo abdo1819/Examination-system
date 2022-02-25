@@ -42,7 +42,7 @@ namespace Trial
         public List<RadioButton> radioButtons = new List<RadioButton>();
         public Dictionary<int, string> StdAnswers = new Dictionary<int, string>();
         public List<Label> ansLabels = new List<Label>();
-        TimeSpan CountDown = new TimeSpan(0, 0, 30);
+        TimeSpan CountDown = new TimeSpan(0, 1, 00);
 
 
         private void Form1_Load(object sender, EventArgs e)
