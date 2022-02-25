@@ -41,7 +41,7 @@ password: test
 
 # EERD 
 * if you use dark theme click the image for background
-![ERD](Database/design/ERD.drawio.svg)
+![ERD](Database/Design/ERD.drawio.svg)
 
 # mapping to tables
 
