@@ -1,6 +1,5 @@
 # Examination-system
 project for adv-database-systems course in ITI
-an Examination system
 
 # team members
 - abdelrahman ragab hashem
