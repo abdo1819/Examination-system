@@ -694,6 +694,39 @@ END
 GO
 -- TODO : Handle Student/Course enrollement
 
+/* -------------------------------------------------------------------------- */
+/*                               view exam by id                              */
+/* -------------------------------------------------------------------------- */
+
+
+CREATE OR ALTER Proc getAllExamsInfo
+AS
+select e.ex_id , c.crs_name, s.dept_name
+from Exam e
+	inner join course c
+	on c.crs_id = e.crs_id
+	inner join Exam_Answer ea
+	on e.ex_id = ea.ex_id
+	inner join v_Students s
+	on s.usr_id = ea.std_id
+GO
+
+
+
+CREATE OR ALTER PROC getExamInfo @ex_id int
+AS
+BEGIN
+select e.ex_id , c.crs_name, s.dept_name
+from Exam e
+	inner join course c
+	on c.crs_id = e.crs_id
+	inner join Exam_Answer ea
+	on e.ex_id = ea.ex_id
+	inner join v_Students s
+	on s.usr_id = ea.std_id
+where @ex_id = e.ex_id
+end
+GO
 /* ------------------------------------------------------------------------------- */
 /*                                       Delete Exam                               */
 /* ------------------------------------------------------------------------------- */
