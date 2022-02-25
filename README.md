@@ -24,7 +24,7 @@ password: test
 
 
 # demos and report 
-[documentation forder](Database/Documentation)
+[documentation folder](Database/Documentation)
 ## reports 
 1. [Topics in Course](./Database/Documentation/view%20Topics%20in%20Course%20Sample.pdf)
 2. [Exam student Sample](./Database/Documentation/view%20Exam%20student%20Sample%20_html.pdf)
