@@ -2,6 +2,10 @@
 project for adv-database-systems course in ITI
 an Examination system
 
+# for demos and report 
+[documentation](./documentation)
+
+
 # prepare DEV-environment
 run sql scripts in folder `./initiateDB`
 or you can use the following command:
