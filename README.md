@@ -1,6 +1,45 @@
 # Examination-system
 project for adv-database-systems course in ITI
-an Examination system
+
+# team members
+- abdelrahman ragab
+- hussam saiid
+- mohamed fathey
+- islam mahrous
+
+
+# demos and report 
+[documentation folder](Database/Documentation)
+
+## database dictionay
+[database dictionary](Database/Documentation/Database%20Dictionary.pdf)
+
+## reports 
+1. [Topics in Course](Database/documentation/reports/view%20Topics%20in%20Course%20Sample.pdf)
+2. [Exam student Sample](Database/documentation/reports/view%20Exam%20student%20Sample%20_html.pdf)
+3. [Exam with answers sample](Database/documentation/reports/view%20Exam%20with%20answers%20sample.pdf)
+4. [instructor courses](Database/documentation/reports/view%20instructor%20courses.pdf)
+5. [Student grade](Database/documentation/reports/view%20Student%20grade.pdf)
+6. [students_in_department](Database/documentation/reports/view%20students_in_department.pdf)
+
+## demo
+- [full walkthrough](./Demo.mp4)
+- [take exam](Database/demo/reports/take_exam.webm)
+- [open report](Database/demo/reports/newUI_ExamAnser.webm)
+
+
+
+# running 
+
+## 1. restore database backup 
+[database backup](Database/Database%20Backup/Examination.bak)
+
+
+
+## 2. run desktop app
+- unzip the reslease
+- run [Release - Desktop App/FrmHome.exe](Release%20-%20Desktop%20App/frmHome.exe)
+
 
 # testing credintials
 
@@ -18,30 +57,9 @@ password: test
 
 
 
-
-
-
-
-
-# demos and report 
-[documentation](./Database/documentation)
-## reports 
-1. [Topics in Course](Database/documentation/reports/view%20Topics%20in%20Course%20Sample.pdf)
-2. [Exam student Sample](Database/documentation/reports/view%20Exam%20student%20Sample%20_html.pdf)
-3. [Exam with answers sample](Database/documentation/reports/view%20Exam%20with%20answers%20sample.pdf)
-4. [instructor courses](Database/documentation/reports/view%20instructor%20courses.pdf)
-5. [Student grade](Database/documentation/reports/view%20Student%20grade.pdf)
-6. [students_in_department](Database/documentation/reports/view%20students_in_department.pdf)
-
-## demos
-- [full walkthrough](./Demo.mp4)
-- [take exam](Database/demo/reports/take_exam.webm)
-- [open report](Database/demo/reports/newUI_ExamAnser.webm)
-
-
 # EERD 
 * if you use dark theme click the image for background
-![ERD](Database/design/ERD.drawio.svg)
+![ERD](Database/Design/ERD.drawio.svg)
 
 # mapping to tables
 
@@ -56,9 +74,8 @@ cd initiateDB
 .\testEnv.ps1
 ```
 this will 
-- [x] create database `examination`
-- [x] create all required tables or update them if they already exist
-- [x] populate tables with data 
-
+- create database `examination`
+- create all required tables or update them if they already exist
+- populate tables with data 
 
 
