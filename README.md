@@ -24,19 +24,19 @@ password: test
 
 
 # demos and report 
-[documentation](./Database/documentation)
+[documentation forder](Database/Documentation)
 ## reports 
-1. [Topics in Course](./Database/documentation/view%20Topics%20in%20Course%20Sample.pdf)
-2. [Exam student Sample](./Database/documentation/view%20Exam%20student%20Sample%20_html.pdf)
-3. [Exam with answers sample](./Database/documentation/view%20Exam%20with%20answers%20sample.pdf)
-4. [instructor courses](./Database/documentation/view%20instructor%20courses.pdf)
-5. [Student grade](./Database/documentation/view%20Student%20grade.pdf)
-6. [students_in_department](./Database/documentation/view%20students_in_department.pdf)
+1. [Topics in Course](./Database/Documentation/view%20Topics%20in%20Course%20Sample.pdf)
+2. [Exam student Sample](./Database/Documentation/view%20Exam%20student%20Sample%20_html.pdf)
+3. [Exam with answers sample](./Database/Documentation/view%20Exam%20with%20answers%20sample.pdf)
+4. [instructor courses](./Database/Documentation/view%20instructor%20courses.pdf)
+5. [Student grade](./Database/Documentation/view%20Student%20grade.pdf)
+6. [students_in_department](./Database/Documentation/view%20students_in_department.pdf)
 
 ## demos
 - [full walkthrough](./Demo.mp4)
-- [take exam](./Database/documentation/take_exam.webm)
-- [open report](./Database/documentation/newUI_ExamAnser.webm)
+- [take exam](./Database/Documentation/take_exam.webm)
+- [open report](./Database/Documentation/newUI_ExamAnser.webm)
 
 
 # EERD 
